@@ -312,17 +312,22 @@ function render(lang){
       body.appendChild(p);
     });
   });
+  const slugs=['september-coast','the-return','private-view','last-harvest'];
+  document.querySelectorAll('.chapter').forEach((ch,i)=>{
+    ch.querySelectorAll('a.cta, a.chapimg').forEach(a=>a.setAttribute('href', slugs[i]+'/?lang='+lang));
+  });
 }
 
+const LANGS=['fr','en','nl'];
+function setLang(lang){
+  if(!LANGS.includes(lang)) lang='en';
+  document.querySelectorAll('.toggle button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+  render(lang);
+}
 document.querySelectorAll('.toggle button').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.toggle button').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    render(btn.dataset.lang);
-  });
+  btn.addEventListener('click',()=>setLang(btn.dataset.lang));
 });
-
-render('en');
+setLang((new URLSearchParams(location.search).get('lang')||'en').toLowerCase());
 
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });

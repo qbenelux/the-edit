@@ -96,11 +96,14 @@ function render(lang){
   const b=document.querySelector('[data-body]');b.innerHTML='';
   d.body.forEach((para,i)=>{const el=document.createElement('p');if(i===0)el.className='lede';el.textContent=para;b.appendChild(el);});
 }
-document.querySelectorAll('.toggle button').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('.toggle button').forEach(x=>x.classList.remove('active'));
-  btn.classList.add('active');render(btn.dataset.lang);
-}));
-render('en');
+const LANGS=['fr','en','nl'];
+function setLang(lang){
+  if(!LANGS.includes(lang)) lang='en';
+  document.querySelectorAll('.toggle button').forEach(x=>x.classList.toggle('active', x.dataset.lang===lang));
+  render(lang);
+}
+document.querySelectorAll('.toggle button').forEach(btn=>btn.addEventListener('click',()=>setLang(btn.dataset.lang)));
+setLang((new URLSearchParams(location.search).get('lang')||'en').toLowerCase());
 </script>
 </body>
 </html>
