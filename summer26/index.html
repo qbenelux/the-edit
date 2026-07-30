@@ -148,7 +148,6 @@
     <h2 data-title="0"></h2>
     <div class="body" data-body="0"></div>
     <a class="cta" href="#" data-cta="0"></a>
-    <div class="slug"><span class="lbl" data-lbl></span> <span data-slug="0"></span></div>
   </article>
 
   <article class="chapter" data-anim id="chap-1">
@@ -156,7 +155,6 @@
     <h2 data-title="1"></h2>
     <div class="body" data-body="1"></div>
     <a class="cta" href="#" data-cta="1"></a>
-    <div class="slug"><span class="lbl" data-lbl></span> <span data-slug="1"></span></div>
   </article>
 
   <article class="chapter" data-anim id="chap-2">
@@ -164,7 +162,6 @@
     <h2 data-title="2"></h2>
     <div class="body" data-body="2"></div>
     <a class="cta" href="#" data-cta="2"></a>
-    <div class="slug"><span class="lbl" data-lbl></span> <span data-slug="2"></span></div>
   </article>
 
   <article class="chapter" data-anim id="chap-3">
@@ -172,7 +169,6 @@
     <h2 data-title="3"></h2>
     <div class="body" data-body="3"></div>
     <a class="cta" href="#" data-cta="3"></a>
-    <div class="slug"><span class="lbl" data-lbl></span> <span data-slug="3"></span></div>
   </article>
 </main>
 
@@ -187,31 +183,30 @@ const DATA = {
   en:{
     kicker:"The August Edition",
     intro:"August arrives quietly, at the hour when summer begins to loosen its hold. The light lengthens, the crowds thin, and the season turns inward, toward slower mornings and the pleasures that reveal themselves only to those who linger. This edition follows that turning: from a coast rediscovered in September, through the quiet ritual of returning, into the first cultural openings of autumn and the last harvests of the year. Four chapters, one movement, the art of arriving as others depart.",
-    slugLabel:"Suggested address",
     footer:"Curated for members · The Edit is published monthly",
     sections:[
-      {cat:"Travel", title:"The September Coast", slug:"quintessentially.com/the-edit/september-coast", cta:"Let the season slow with you",
+      {cat:"Travel", title:"The September Coast", cta:"Let the season slow with you",
        body:[
         "There is a moment, somewhere after the last week of August, when the Mediterranean exhales. The parasols fold away, the harbours quiet, and the sea holds its warmth a little longer than the calendar suggests.",
         "September light falls differently here, softer, more forgiving. Lunches stretch into afternoons. A table by the water, unbookable for weeks, is suddenly yours. The coast belongs, for a while, to those who know when to come.",
         "We open the houses that reserve their finest suites for this season: a villa above Cap Ferrat, a retreat suspended over the Amalfi cliffs, a quiet address in the Aeolian islands. Each stay is tailored to the rhythm you keep, with a chef, a boat, and the introductions that turn a visit into something closer to belonging.",
         "The season does not end. It simply grows quieter, and more yours."
        ]},
-      {cat:"Art of Living", title:"The Return", slug:"quintessentially.com/the-edit/the-return", cta:"Ease back into your own rhythm",
+      {cat:"Art of Living", title:"The Return", cta:"Ease back into your own rhythm",
        body:[
         "The return is rarely spoken of, yet everyone knows its weight, the morning the city calls you back, and summer folds itself into memory.",
         "There is a grace in coming home well. The wardrobe shifts from linen to wool, from bare to considered. Days regain their edges. The desk, the routine, the familiar streets all wait to be reclaimed rather than endured.",
         "We help you meet the season on your own terms: a wardrobe refreshed with the houses that understand restraint, a study rearranged, a calendar composed rather than filled. The small architecture of a life resumed with intention.",
         "Autumn is not a retreat from summer. It is summer, matured."
        ]},
-      {cat:"Culture & Access", title:"The Private View", slug:"quintessentially.com/the-edit/private-view", cta:"Step in before the doors open",
+      {cat:"Culture & Access", title:"The Private View", cta:"Step in before the doors open",
        body:[
         "Before a season is announced to the world, it is shown to a few. The gallery lit after hours, the fair walked before the doors open, the collection seen while the paint is barely dry.",
         "Autumn is when culture returns to the cities, London, Paris, the quieter capitals in between. Fairs and openings crowd the weeks, and the distance between attending and belonging is measured in access.",
         "We arrange what the calendar withholds: private views ahead of the public days, conversations with the gallerists and curators who shape the season, a seat at the dinners that follow. Where the crowd sees a queue, you find an open door.",
         "The best of a season is rarely on the wall. It is in the room before the room fills."
        ]},
-      {cat:"Gastronomy", title:"The Last Harvest", slug:"quintessentially.com/the-edit/last-harvest", cta:"Taste the turning of the season",
+      {cat:"Gastronomy", title:"The Last Harvest", cta:"Taste the turning of the season",
        body:[
         "As the vines turn and the first cold settles into the soil, the table receives its final gifts of the year.",
         "This is the season of gathering, of vendange under a low sun, of the first truffles lifted from the earth, of kitchens that cook close to the source. The flavours deepen as the days shorten.",
@@ -223,31 +218,30 @@ const DATA = {
   fr:{
     kicker:"L'édition d'août",
     intro:"Août s'installe sans bruit, à l'heure où l'été desserre son étreinte. La lumière s'allonge, les foules s'espacent, et la saison se replie vers l'intérieur, vers les matins lents et les plaisirs qui ne se livrent qu'à ceux qui s'attardent. Cette édition suit ce basculement : d'une côte retrouvée en septembre au rituel discret du retour, jusqu'aux premières ouvertures culturelles de l'automne et aux dernières récoltes de l'année. Quatre chapitres, un même mouvement, l'art d'arriver quand les autres s'en vont.",
-    slugLabel:"Adresse suggérée",
     footer:"Composé pour les membres · The Edit paraît chaque mois",
     sections:[
-      {cat:"Voyage", title:"La Côte de Septembre", slug:"quintessentially.com/the-edit/september-coast", cta:"Laissez la saison ralentir avec vous",
+      {cat:"Voyage", title:"La Côte de Septembre", cta:"Laissez la saison ralentir avec vous",
        body:[
         "Il existe un moment, quelque part après la dernière semaine d'août, où la Méditerranée respire enfin. Les parasols se replient, les ports s'apaisent, et la mer garde sa chaleur un peu plus longtemps que le calendrier ne le laisse croire.",
         "La lumière de septembre tombe autrement, plus douce, plus indulgente. Les déjeuners s'étirent jusqu'au soir. Une table au bord de l'eau, introuvable des semaines durant, vous revient sans effort. La côte appartient, un temps, à ceux qui savent quand venir.",
         "Nous ouvrons les maisons qui réservent à cette saison leurs plus belles suites : une villa au-dessus du Cap Ferrat, un refuge suspendu sur la côte amalfitaine, une adresse tranquille aux îles Éoliennes. Chaque séjour épouse le rythme qui est le vôtre, avec un chef, un bateau et les introductions qui transforment une visite en un sentiment d'appartenance.",
         "La saison ne s'achève pas. Elle se fait seulement plus silencieuse, et plus vôtre."
        ]},
-      {cat:"Art de vivre", title:"Le Retour", slug:"quintessentially.com/the-edit/the-return", cta:"Retrouvez votre propre tempo",
+      {cat:"Art de vivre", title:"Le Retour", cta:"Retrouvez votre propre tempo",
        body:[
         "On parle rarement du retour, et pourtant chacun en connaît le poids, ce matin où la ville vous rappelle, où l'été se range doucement du côté des souvenirs.",
         "Il y a une grâce à rentrer avec justesse. La garde-robe passe du lin à la laine, du dénudé au pensé. Les journées retrouvent leurs contours. Le bureau, les habitudes, les rues familières attendent qu'on les reprenne, non qu'on les subisse.",
         "Nous vous aidons à retrouver la saison à vos conditions : une garde-robe renouvelée auprès des maisons qui entendent la retenue, un bureau réagencé, un agenda composé plutôt que rempli. La fine architecture d'une vie que l'on reprend avec intention.",
         "L'automne n'est pas un renoncement à l'été. Il en est la maturité."
        ]},
-      {cat:"Culture & Accès", title:"L'Avant-Première", slug:"quintessentially.com/the-edit/private-view", cta:"Entrez avant l'ouverture des portes",
+      {cat:"Culture & Accès", title:"L'Avant-Première", cta:"Entrez avant l'ouverture des portes",
        body:[
         "Avant d'être annoncée au monde, une saison se montre à quelques-uns. La galerie éclairée après la fermeture, la foire parcourue avant l'ouverture, la collection vue quand la peinture est à peine sèche.",
         "L'automne ramène la culture dans les villes, Londres, Paris, les capitales plus discrètes entre les deux. Les foires et les vernissages emplissent les semaines, et toute la distance entre assister et appartenir se mesure à l'accès.",
         "Nous organisons ce que le calendrier retient : des avant-premières avant les jours d'ouverture, des échanges avec les galeristes et les commissaires qui dessinent la saison, une place aux dîners qui suivent. Là où la foule voit une file, vous trouvez une porte ouverte.",
         "Le meilleur d'une saison est rarement sur le mur. Il est dans la pièce avant que la pièce ne se remplisse."
        ]},
-      {cat:"Gastronomie", title:"La Dernière Récolte", slug:"quintessentially.com/the-edit/last-harvest", cta:"Goûtez le basculement de la saison",
+      {cat:"Gastronomie", title:"La Dernière Récolte", cta:"Goûtez le basculement de la saison",
        body:[
         "Tandis que les vignes se teintent et que le premier froid gagne la terre, la table reçoit ses derniers présents de l'année.",
         "C'est la saison des vendanges sous un soleil bas, des premières truffes tirées du sol, des cuisines qui travaillent au plus près de la source. Les saveurs s'approfondissent à mesure que les jours raccourcissent.",
@@ -259,31 +253,30 @@ const DATA = {
   nl:{
     kicker:"De augustus-editie",
     intro:"Augustus komt in alle stilte, op het uur waarop de zomer haar greep laat vieren. Het licht rekt zich uit, de drukte dunt uit, en het seizoen keert naar binnen, naar trage ochtenden en genoegens die zich enkel tonen aan wie blijft dralen. Deze editie volgt die kentering: van een kust die in september wordt herontdekt, via het stille ritueel van het terugkeren, naar de eerste culturele openingen van de herfst en de laatste oogsten van het jaar. Vier hoofdstukken, één beweging, de kunst van het aankomen wanneer anderen vertrekken.",
-    slugLabel:"Voorgestelde link",
     footer:"Samengesteld voor leden · The Edit verschijnt maandelijks",
     sections:[
-      {cat:"Reizen", title:"De Kust van September", slug:"quintessentially.com/the-edit/september-coast", cta:"Laat het seizoen met u vertragen",
+      {cat:"Reizen", title:"De Kust van September", cta:"Laat het seizoen met u vertragen",
        body:[
         "Er is een moment, ergens na de laatste week van augustus, waarop de Middellandse Zee weer ademhaalt. De parasols worden opgevouwen, de havens komen tot rust, en de zee houdt haar warmte iets langer vast dan de kalender doet vermoeden.",
         "Het septemberlicht valt anders, zachter, milder. Lunches rekken zich uit tot in de avond. Een tafel aan het water, wekenlang onvindbaar, is opeens de uwe. De kust behoort een tijdlang toe aan wie weet wanneer te komen.",
         "Wij openen de huizen die hun mooiste suites voor dit seizoen bewaren: een villa boven Cap Ferrat, een verblijf hoog boven de Amalfikust, een stil adres op de Eolische eilanden. Elk verblijf voegt zich naar het ritme dat het uwe is, met een chef, een boot en de introducties die van een bezoek een gevoel van thuishoren maken.",
         "Het seizoen eindigt niet. Het wordt enkel stiller, en meer het uwe."
        ]},
-      {cat:"Levenskunst", title:"De Terugkeer", slug:"quintessentially.com/the-edit/the-return", cta:"Vind uw eigen ritme terug",
+      {cat:"Levenskunst", title:"De Terugkeer", cta:"Vind uw eigen ritme terug",
        body:[
         "Over de terugkeer wordt zelden gesproken, en toch kent iedereen haar gewicht, de ochtend waarop de stad u terugroept, waarop de zomer zich zacht bij de herinneringen voegt.",
         "Er schuilt gratie in een goede thuiskomst. De garderobe verschuift van linnen naar wol, van ontbloot naar doordacht. De dagen hervinden hun contouren. Het bureau, de gewoonten, de vertrouwde straten wachten om heroverd te worden, niet om ondergaan te worden.",
         "Wij helpen u het seizoen op uw eigen voorwaarden te hervinden: een garderobe vernieuwd bij de huizen die ingetogenheid verstaan, een werkkamer heringericht, een agenda gecomponeerd in plaats van gevuld. De fijne architectuur van een leven dat men met intentie hervat.",
         "De herfst is geen afscheid van de zomer. Hij is de zomer, gerijpt."
        ]},
-      {cat:"Cultuur & Toegang", title:"Het Besloten Uur", slug:"quintessentially.com/the-edit/private-view", cta:"Treed binnen voordat de deuren opengaan",
+      {cat:"Cultuur & Toegang", title:"Het Besloten Uur", cta:"Treed binnen voordat de deuren opengaan",
        body:[
         "Voordat een seizoen aan de wereld wordt aangekondigd, toont het zich aan enkelen. De galerie verlicht na sluitingstijd, de beurs doorlopen voordat de deuren opengaan, de collectie gezien terwijl de verf nog nauwelijks droog is.",
         "De herfst brengt de cultuur terug naar de steden, Londen, Parijs, de stillere hoofdsteden daartussen. Beurzen en vernissages vullen de weken, en de afstand tussen aanwezig zijn en erbij horen laat zich meten in toegang.",
         "Wij regelen wat de kalender achterhoudt: besloten previews vóór de publieke dagen, gesprekken met de galeriehouders en curatoren die het seizoen vormgeven, een plaats aan de diners die volgen. Waar de menigte een rij ziet, vindt u een open deur.",
         "Het beste van een seizoen hangt zelden aan de muur. Het bevindt zich in de zaal voordat de zaal zich vult."
        ]},
-      {cat:"Gastronomie", title:"De Laatste Oogst", slug:"quintessentially.com/the-edit/last-harvest", cta:"Proef de kentering van het seizoen",
+      {cat:"Gastronomie", title:"De Laatste Oogst", cta:"Proef de kentering van het seizoen",
        body:[
         "Terwijl de wijnstokken verkleuren en de eerste kou zich in de aarde nestelt, ontvangt de tafel haar laatste geschenken van het jaar.",
         "Dit is het seizoen van de pluk, van de vendange onder een lage zon, van de eerste truffels uit de grond gelicht, van keukens die dicht bij de bron werken. De smaken verdiepen naarmate de dagen korten.",
@@ -304,7 +297,6 @@ function render(lang){
     document.querySelector('[data-cat="'+i+'"]').textContent = s.cat;
     document.querySelector('[data-title="'+i+'"]').textContent = s.title;
     document.querySelector('[data-cta="'+i+'"]').textContent = s.cta;
-    document.querySelector('[data-slug="'+i+'"]').textContent = s.slug;
     const body = document.querySelector('[data-body="'+i+'"]');
     body.innerHTML = '';
     s.body.forEach((para,pi)=>{
@@ -314,7 +306,6 @@ function render(lang){
       body.appendChild(p);
     });
   });
-  document.querySelectorAll('[data-lbl]').forEach(el=>{ el.textContent = d.slugLabel; });
 }
 
 document.querySelectorAll('.toggle button').forEach(btn=>{
