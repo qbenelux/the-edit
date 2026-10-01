@@ -3,107 +3,467 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Edit · Summer ’26</title>
+
+<title>Where Winter Waits · The Edit</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --bg:#0a0908;--ink:#ece6db;--body:#b8b1a4;--muted:#8a8478;
-    --line:#3a3120;--accent:#c9a961;
-    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
-    --sans:Helvetica,Arial,sans-serif;
+:root{
+  --bg:#080807;
+  --ink:#ece6db;
+  --body:#b8b1a4;
+  --muted:#8a8478;
+  --line:#302819;
+  --accent:#c9a961;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:Helvetica,Arial,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:var(--bg);
+  color:var(--body);
+  font-family:var(--serif);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* HEADER */
+
+header{
+  height:68px;
+  background:#080807;
+  border-bottom:1px solid #211d15;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 36px;
+  position:relative;
+  z-index:10;
+}
+
+.wordmark{
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  color:var(--ink);
+}
+
+.language{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:.22em;
+}
+
+.language button{
+  background:none;
+  border:none;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:.22em;
+  cursor:pointer;
+  padding:5px 7px;
+}
+
+.language button.active{
+  color:var(--accent);
+  border-bottom:1px solid var(--accent);
+}
+
+.language .sep{
+  color:#3a3120;
+}
+
+.edition{
+  font-size:15px;
+  font-style:italic;
+  color:var(--ink);
+}
+
+
+/* HERO */
+
+.hero{
+  height:430px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(5,5,4,.08) 0%,
+    rgba(5,5,4,.12) 45%,
+    rgba(5,5,4,.82) 100%
+  );
+}
+
+.hero-content{
+  position:absolute;
+  z-index:2;
+  left:clamp(35px,6vw,80px);
+  bottom:48px;
+}
+
+.category{
+  font-family:var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.35em;
+  font-size:9px;
+  color:var(--accent);
+  margin-bottom:12px;
+}
+
+h1{
+  color:var(--ink);
+  font-size:clamp(46px,5vw,68px);
+  font-weight:300;
+  line-height:1;
+}
+
+
+/* ARTICLE */
+
+.article{
+  max-width:590px;
+  margin:0 auto;
+  padding:70px 30px 85px;
+}
+
+.article p{
+  font-size:18px;
+  line-height:1.75;
+  margin-bottom:25px;
+  color:var(--body);
+}
+
+.article p:first-child{
+  color:var(--ink);
+  font-size:20px;
+}
+
+
+/* CTA */
+
+.cta{
+  display:inline-block;
+  margin-top:10px;
+  color:var(--accent);
+  font-size:21px;
+  font-style:italic;
+  text-decoration:none;
+  border-bottom:1px solid var(--line);
+  padding-bottom:5px;
+  transition:.25s ease;
+}
+
+.cta:hover{
+  border-color:var(--accent);
+}
+
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid #211d15;
+  text-align:center;
+  padding:48px 20px;
+}
+
+.footer-logo{
+  font-family:var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.42em;
+  font-size:9px;
+  color:var(--ink);
+  margin-bottom:15px;
+}
+
+.footer-edition{
+  font-style:italic;
+  color:var(--muted);
+  font-size:16px;
+  margin-bottom:18px;
+}
+
+.footer-small{
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:.14em;
+  color:#716b60;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  header{
+    padding:0 18px;
+    height:64px;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{background:var(--bg);color:var(--body);font-family:var(--serif);line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
-  header{position:sticky;top:0;z-index:50;background:rgba(10,9,8,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,5vw,64px);gap:16px;flex-wrap:wrap;}
-  .wordmark{font-family:var(--sans);font-weight:400;letter-spacing:0.42em;font-size:11px;text-transform:uppercase;color:var(--ink);white-space:nowrap;}
-  .edition-title{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(15px,2.2vw,19px);color:var(--ink);white-space:nowrap;}
-  .toggle{display:flex;align-items:center;gap:2px;}
-  .toggle button{background:none;border:none;cursor:pointer;padding:6px 10px;color:var(--muted);font-family:var(--sans);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;transition:color .3s ease;}
-  .toggle button:hover{color:var(--ink);}
-  .toggle button.active{color:var(--accent);border-bottom:1px solid var(--accent);}
-  .toggle .sep{color:var(--line);}
 
-  .hero{position:relative;width:100%;height:clamp(380px,64vh,640px);overflow:hidden;}
-  .hero img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0.9) brightness(0.92);}
-  .hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,0.96) 0%,rgba(10,9,8,0.25) 45%,rgba(10,9,8,0.45) 100%);}
-  .hero .cap{position:absolute;left:0;right:0;bottom:0;padding:0 clamp(22px,6vw,64px) clamp(30px,5vw,56px);}
-  .hero .eyebrow{display:flex;align-items:center;gap:14px;font-family:var(--sans);font-weight:400;letter-spacing:0.34em;font-size:10.5px;text-transform:uppercase;color:var(--muted);margin-bottom:18px;}
-  .hero .eyebrow .num{color:var(--accent);}
-  .hero .eyebrow .dot{width:3px;height:3px;border-radius:50%;background:var(--accent);opacity:.6;}
-  .hero h1{font-weight:300;font-size:clamp(38px,8vw,74px);line-height:1.02;color:var(--ink);max-width:16ch;}
-
-  main{max-width:680px;margin:0 auto;padding:clamp(48px,8vw,88px) clamp(22px,6vw,40px) 0;}
-  main p{font-size:clamp(18px,2.4vw,21px);color:var(--body);margin-bottom:24px;}
-  main p.lede{color:var(--ink);font-size:clamp(20px,2.7vw,24px);}
-  .cta-wrap{margin:clamp(30px,5vw,44px) 0 0;}
-  .cta{display:inline-block;font-style:italic;font-size:clamp(20px,2.8vw,26px);color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:4px;text-decoration:none;transition:border-color .3s ease;}
-  .cta:hover{border-color:var(--accent);}
-
-  footer{margin-top:clamp(64px,11vw,120px);border-top:1px solid var(--line);padding:clamp(48px,8vw,72px) clamp(22px,6vw,40px);text-align:center;}
-  footer .mark{font-family:var(--sans);font-weight:400;letter-spacing:0.42em;font-size:10.5px;text-transform:uppercase;color:var(--ink);margin-bottom:20px;}
-  footer .edition{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(17px,2.4vw,21px);color:var(--muted);}
-  footer .fine{margin-top:26px;font-family:var(--sans);font-weight:400;font-size:11px;letter-spacing:0.14em;color:var(--muted);}
-
-  @media (max-width:560px){
-    header{justify-content:center;text-align:center;padding:14px 18px;}
-    .wordmark{order:1;flex-basis:100%;}
-    .toggle{order:2;}
-    .edition-title{order:3;flex-basis:100%;}
+  .edition{
+    display:none;
   }
+
+  .language{
+    position:static;
+    transform:none;
+  }
+
+  .hero{
+    height:480px;
+  }
+
+  .hero-content{
+    left:25px;
+    bottom:40px;
+  }
+
+  h1{
+    font-size:46px;
+  }
+
+  .article{
+    padding:55px 25px 70px;
+  }
+}
 </style>
 </head>
+
+
 <body>
+
 <header>
-  <div class="wordmark">Quintessentially</div>
-  <nav class="toggle" aria-label="Language">
-    <button data-lang="fr">FR</button><span class="sep">/</span><button data-lang="en" class="active">EN</button><span class="sep">/</span><button data-lang="nl">NL</button>
-  </nav>
-  <div class="edition-title">The Edit · Summer ’26</div>
+
+  <div class="wordmark">
+    Quintessentially
+  </div>
+
+  <div class="language">
+    <button data-lang="fr">FR</button>
+    <span class="sep">/</span>
+    <button data-lang="en" class="active">EN</button>
+    <span class="sep">/</span>
+    <button data-lang="nl">NL</button>
+  </div>
+
+  <div class="edition">
+    The Edit · Autumn ’26
+  </div>
+
 </header>
 
-<div class="hero">
-  <img src="https://mcusercontent.com/ef9402d099265186fdcd8864a/images/facce438-e329-fb2c-46d5-29338c30b500.jpg" alt="">
-  <div class="veil"></div>
-  <div class="cap">
-    <div class="eyebrow"><span class="num">III</span><span class="dot"></span><span data-cat></span></div>
-    <h1 data-title></h1>
-  </div>
-</div>
 
-<main>
-  <div class="body" data-body></div>
-  <div class="cta-wrap"><a class="cta" data-cta href="mailto:qbenelux@quintessentially.com?subject=The%20Edit%20%C2%B7%20Summer%20%E2%80%9926%20%C2%B7%20The%20Private%20View"></a></div>
+<section class="hero">
+
+  <img src="winter housee.png" alt="Winter house and festive table">
+
+  <div class="hero-content">
+
+    <div class="category" data-category>
+      Travel
+    </div>
+
+    <h1 data-title>
+      Where Winter Waits
+    </h1>
+
+  </div>
+
+</section>
+
+
+<main class="article">
+
+  <div data-body></div>
+
+  <a
+    class="cta"
+    data-cta
+    href="mailto:qbenelux@quintessentially.com?subject=The%20Edit%20%C2%B7%20Autumn%20%E2%80%9926%20%C2%B7%20Where%20Winter%20Waits">
+    Step into a slower winter
+  </a>
+
 </main>
 
+
 <footer>
-  <div class="mark">Quintessentially</div>
-  <div class="edition">The Edit · Summer ’26</div>
-  <div class="fine" data-footer></div>
+
+  <div class="footer-logo">
+    Quintessentially
+  </div>
+
+  <div class="footer-edition">
+    The Edit · Autumn ’26
+  </div>
+
+  <div class="footer-small" data-footer>
+    Curated for members · The Edit is published monthly
+  </div>
+
 </footer>
 
+
 <script>
-const D = {"en":{"cat":"Culture & Access","title":"The Private View","cta":"Step in before the doors open","body":["Before a season is announced to the world, it is shown to a few. The gallery lit after hours, the fair walked before the doors open, the collection seen while the paint is barely dry.","Autumn is when culture returns to the cities, London, Paris, the quieter capitals in between. Fairs and openings crowd the weeks, and the distance between attending and belonging is measured in access.","We arrange what the calendar withholds: private views ahead of the public days, conversations with the gallerists and curators who shape the season, a seat at the dinners that follow. Where the crowd sees a queue, you find an open door.","The best of a season is rarely on the wall. It is in the room before the room fills."],"kicker":"The August Edition","footer":"Curated for members · The Edit is published monthly"},"fr":{"cat":"Culture & Accès","title":"L'Avant-Première","cta":"Entrez avant l'ouverture des portes","body":["Avant d'être annoncée au monde, une saison se montre à quelques-uns. La galerie éclairée après la fermeture, la foire parcourue avant l'ouverture, la collection vue quand la peinture est à peine sèche.","L'automne ramène la culture dans les villes, Londres, Paris, les capitales plus discrètes entre les deux. Les foires et les vernissages emplissent les semaines, et toute la distance entre assister et appartenir se mesure à l'accès.","Nous organisons ce que le calendrier retient : des avant-premières avant les jours d'ouverture, des échanges avec les galeristes et les commissaires qui dessinent la saison, une place aux dîners qui suivent. Là où la foule voit une file, vous trouvez une porte ouverte.","Le meilleur d'une saison est rarement sur le mur. Il est dans la pièce avant que la pièce ne se remplisse."],"kicker":"L'édition d'août","footer":"Composé pour les membres · The Edit paraît chaque mois"},"nl":{"cat":"Cultuur & Toegang","title":"Het Besloten Uur","cta":"Treed binnen voordat de deuren opengaan","body":["Voordat een seizoen aan de wereld wordt aangekondigd, toont het zich aan enkelen. De galerie verlicht na sluitingstijd, de beurs doorlopen voordat de deuren opengaan, de collectie gezien terwijl de verf nog nauwelijks droog is.","De herfst brengt de cultuur terug naar de steden, Londen, Parijs, de stillere hoofdsteden daartussen. Beurzen en vernissages vullen de weken, en de afstand tussen aanwezig zijn en erbij horen laat zich meten in toegang.","Wij regelen wat de kalender achterhoudt: besloten previews vóór de publieke dagen, gesprekken met de galeriehouders en curatoren die het seizoen vormgeven, een plaats aan de diners die volgen. Waar de menigte een rij ziet, vindt u een open deur.","Het beste van een seizoen hangt zelden aan de muur. Het bevindt zich in de zaal voordat de zaal zich vult."],"kicker":"De augustus-editie","footer":"Samengesteld voor leden · The Edit verschijnt maandelijks"}};
+
+const D = {
+
+  en: {
+    category: "Travel",
+    title: "Where Winter Waits",
+    body: [
+      "Winter has its own way of bringing people together. As the days shorten and the air turns crisp, weekends become an invitation to retreat somewhere quieter, with family, close friends, and time that asks nothing of you.",
+      
+      "Here, the day belongs entirely to you. Stay in until evening, gather around a beautifully set table, or let dinner become the occasion itself. There is no itinerary to follow, only the pleasure of deciding how the day unfolds.",
+      
+      "The setting may change, from a secluded villa to a country estate or snow-covered chalet, but the feeling should remain effortless. Tell us what you have in mind, and we will quietly bring the pieces together, leaving you with nothing but the reason you came.",
+      
+      "This winter, let the house be private, the table full, and the time entirely yours."
+    ],
+    cta: "Step into a slower winter",
+    footer: "Curated for members · The Edit is published monthly"
+  },
+
+
+  fr: {
+    category: "Voyage",
+    title: "Là où l’hiver vous attend",
+    body: [
+      "L’hiver a sa propre façon de réunir les gens. À mesure que les jours raccourcissent et que l’air se rafraîchit, les week-ends deviennent une invitation à se retirer dans un lieu plus paisible, en famille ou entre amis proches, avec du temps qui n’exige rien de vous.",
+      
+      "Ici, la journée vous appartient entièrement. Restez à l’intérieur jusqu’au soir, retrouvez-vous autour d’une table soigneusement dressée ou faites du dîner l’occasion elle-même. Aucun itinéraire à suivre, seulement le plaisir de décider comment la journée se déroulera.",
+      
+      "Le décor peut changer, d’une villa isolée à une demeure de campagne ou un chalet enneigé, mais le sentiment doit rester le même : celui d’une simplicité absolue. Dites-nous ce que vous imaginez et nous en réunirons discrètement chaque détail, afin qu’il ne vous reste que la raison de votre venue.",
+      
+      "Cet hiver, que la maison soit privée, la table généreuse et le temps entièrement à vous."
+    ],
+    cta: "Entrez dans un hiver plus lent",
+    footer: "Sélectionné pour nos membres · The Edit paraît chaque mois"
+  },
+
+
+  nl: {
+    category: "Reizen",
+    title: "Waar de winter wacht",
+    body: [
+      "De winter heeft zijn eigen manier om mensen samen te brengen. Wanneer de dagen korter worden en de lucht frisser aanvoelt, nodigen weekends uit om zich terug te trekken naar een rustigere plek, samen met familie of goede vrienden, met tijd die niets van u vraagt.",
+      
+      "Hier behoort de dag volledig aan u toe. Blijf binnen tot de avond valt, kom samen rond een prachtig gedekte tafel of maak van het diner de gelegenheid op zich. Er is geen programma dat gevolgd moet worden, alleen het plezier om zelf te bepalen hoe de dag verloopt.",
+      
+      "De omgeving kan veranderen, van een afgelegen villa tot een landgoed of een besneeuwd chalet, maar het gevoel moet moeiteloos blijven. Vertel ons wat u in gedachten heeft en wij brengen de verschillende elementen discreet samen, zodat u zich alleen hoeft te richten op de reden waarom u gekomen bent.",
+      
+      "Laat deze winter het huis privé zijn, de tafel gevuld en de tijd volledig van u."
+    ],
+    cta: "Stap een rustigere winter binnen",
+    footer: "Samengesteld voor onze leden · The Edit verschijnt maandelijks"
+  }
+
+};
+
+
 function render(lang){
-  const d=D[lang];
-  document.documentElement.lang=lang;
-  document.querySelector('[data-cat]').textContent=d.cat;
-  document.querySelector('[data-title]').textContent=d.title;
-  document.querySelector('[data-cta]').textContent=d.cta;
-  document.querySelector('[data-footer]').textContent=d.footer;
-  const b=document.querySelector('[data-body]');b.innerHTML='';
-  d.body.forEach((para,i)=>{const el=document.createElement('p');if(i===0)el.className='lede';el.textContent=para;b.appendChild(el);});
+
+  const d = D[lang];
+
+  document.documentElement.lang = lang;
+
+  document.querySelector("[data-category]").textContent = d.category;
+
+  document.querySelector("[data-title]").textContent = d.title;
+
+  document.querySelector("[data-cta]").textContent = d.cta;
+
+  document.querySelector("[data-footer]").textContent = d.footer;
+
+
+  const body = document.querySelector("[data-body]");
+
+  body.innerHTML = "";
+
+
+  d.body.forEach((paragraph) => {
+
+    const p = document.createElement("p");
+
+    p.textContent = paragraph;
+
+    body.appendChild(p);
+
+  });
+
 }
-const LANGS=['fr','en','nl'];
+
+
 function setLang(lang){
-  if(!LANGS.includes(lang)) lang='en';
-  document.querySelectorAll('.toggle button').forEach(x=>x.classList.toggle('active', x.dataset.lang===lang));
+
+  if(!D[lang]){
+    lang = "en";
+  }
+
+  document.querySelectorAll("[data-lang]").forEach(button => {
+
+    button.classList.toggle(
+      "active",
+      button.dataset.lang === lang
+    );
+
+  });
+
   render(lang);
+
+
+  const url = new URL(window.location);
+
+  url.searchParams.set("lang", lang);
+
+  window.history.replaceState({}, "", url);
+
 }
-document.querySelectorAll('.toggle button').forEach(btn=>btn.addEventListener('click',()=>setLang(btn.dataset.lang)));
-setLang((new URLSearchParams(location.search).get('lang')||'en').toLowerCase());
+
+
+document.querySelectorAll("[data-lang]").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    setLang(button.dataset.lang);
+
+  });
+
+});
+
+
+const initialLang =
+  new URLSearchParams(window.location.search).get("lang") || "en";
+
+setLang(initialLang.toLowerCase());
+
 </script>
+
+
 </body>
 </html>
