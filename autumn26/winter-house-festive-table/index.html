@@ -35,8 +35,6 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-/* HEADER */
-
 header{
   height:68px;
   background:#080807;
@@ -64,17 +62,26 @@ header{
   font-family:var(--sans);
   font-size:9px;
   letter-spacing:.22em;
+}
+
+.language button{
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:6px 8px;
   color:var(--muted);
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:.22em;
 }
 
-.language span{
-  margin:0 8px;
-}
-
-.language .active{
+.language button.active{
   color:var(--accent);
   border-bottom:1px solid var(--accent);
-  padding-bottom:5px;
+}
+
+.sep{
+  color:#3a3120;
 }
 
 .edition{
@@ -151,7 +158,7 @@ h1{
   color:var(--body);
 }
 
-.article .intro{
+.article p:first-child{
   color:var(--ink);
   font-size:20px;
 }
@@ -168,7 +175,6 @@ h1{
   text-decoration:none;
   border-bottom:1px solid var(--line);
   padding-bottom:5px;
-  transition:.25s ease;
 }
 
 .cta:hover{
@@ -243,35 +249,28 @@ footer{
     padding:55px 25px 70px;
   }
 }
-
 </style>
 </head>
 
+
 <body>
-
-
-<!-- HEADER -->
 
 <header>
 
-  <div class="wordmark">
-    Quintessentially
-  </div>
+  <div class="wordmark">Quintessentially</div>
 
   <div class="language">
-    <span>FR</span>
-    <span class="active">EN</span>
-    <span>NL</span>
+    <button type="button" data-lang="fr">FR</button>
+    <span class="sep">/</span>
+    <button type="button" data-lang="en">EN</button>
+    <span class="sep">/</span>
+    <button type="button" data-lang="nl">NL</button>
   </div>
 
-  <div class="edition">
-    The Edit · Autumn ’26
-  </div>
+  <div class="edition">The Edit · Autumn ’26</div>
 
 </header>
 
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -279,68 +278,169 @@ footer{
 
   <div class="hero-content">
 
-    <div class="category">
-      Travel
-    </div>
+    <div class="category" id="category"></div>
 
-    <h1>
-      Where Winter Waits
-    </h1>
+    <h1 id="title"></h1>
 
   </div>
 
 </section>
 
 
-<!-- ARTICLE -->
-
 <main class="article">
 
-  <p class="intro">
-    Winter has its own way of bringing people together. As the days shorten and the air turns crisp, weekends become an invitation to retreat somewhere quieter, with family, close friends, and time that asks nothing of you.
-  </p>
-
-  <p>
-    Here, the day belongs entirely to you. Stay in until evening, gather around a beautifully set table, or let dinner become the occasion itself. There is no itinerary to follow, only the pleasure of deciding how the day unfolds.
-  </p>
-
-  <p>
-    The setting may change, from a secluded villa to a country estate or snow-covered chalet, but the feeling should remain effortless. Tell us what you have in mind, and we will quietly bring the pieces together, leaving you with nothing but the reason you came.
-  </p>
-
-  <p>
-    This winter, let the house be private, the table full, and the time entirely yours.
-  </p>
-
-
-  <!-- CLICKING THIS OPENS AN EMAIL -->
+  <div id="articleBody"></div>
 
   <a
     class="cta"
-    href="mailto:qbenelux@quintessentially.com?subject=Where%20Winter%20Waits">
-    Step into a slower winter
+    id="cta"
+    href="mailto:qbenelux@quintessentially.com?subject=The%20Edit%20%C2%B7%20Autumn%20%E2%80%9926%20%C2%B7%20Where%20Winter%20Waits">
   </a>
 
 </main>
 
 
-<!-- FOOTER -->
-
 <footer>
 
-  <div class="footer-logo">
-    Quintessentially
-  </div>
+  <div class="footer-logo">Quintessentially</div>
 
-  <div class="footer-edition">
-    The Edit · Autumn ’26
-  </div>
+  <div class="footer-edition">The Edit · Autumn ’26</div>
 
-  <div class="footer-small">
-    Curated for members · The Edit is published monthly
-  </div>
+  <div class="footer-small" id="footerText"></div>
 
 </footer>
+
+
+<script>
+
+const content = {
+
+  en: {
+    category: "Travel",
+    title: "Where Winter Waits",
+    paragraphs: [
+      "Winter has its own way of bringing people together. As the days shorten and the air turns crisp, weekends become an invitation to retreat somewhere quieter, with family, close friends, and time that asks nothing of you.",
+
+      "Here, the day belongs entirely to you. Stay in until evening, gather around a beautifully set table, or let dinner become the occasion itself. There is no itinerary to follow, only the pleasure of deciding how the day unfolds.",
+
+      "The setting may change, from a secluded villa to a country estate or snow-covered chalet, but the feeling should remain effortless. Tell us what you have in mind, and we will quietly bring the pieces together, leaving you with nothing but the reason you came.",
+
+      "This winter, let the house be private, the table full, and the time entirely yours."
+    ],
+    cta: "Step into a slower winter",
+    footer: "Curated for members · The Edit is published monthly"
+  },
+
+
+  fr: {
+    category: "Voyage",
+    title: "Là où l’hiver vous attend",
+    paragraphs: [
+      "L’hiver a sa propre façon de réunir les gens. À mesure que les jours raccourcissent et que l’air se rafraîchit, les week-ends deviennent une invitation à se retirer dans un lieu plus paisible, en famille ou entre amis proches, avec du temps qui n’exige rien de vous.",
+
+      "Ici, la journée vous appartient entièrement. Restez à l’intérieur jusqu’au soir, retrouvez-vous autour d’une table soigneusement dressée ou faites du dîner l’occasion elle-même. Aucun itinéraire à suivre, seulement le plaisir de décider comment la journée se déroulera.",
+
+      "Le décor peut changer, d’une villa isolée à une demeure de campagne ou un chalet enneigé, mais le sentiment doit rester le même : celui d’une simplicité absolue. Dites-nous ce que vous imaginez et nous en réunirons discrètement chaque détail, afin qu’il ne vous reste que la raison de votre venue.",
+
+      "Cet hiver, que la maison soit privée, la table généreuse et le temps entièrement à vous."
+    ],
+    cta: "Entrez dans un hiver plus lent",
+    footer: "Sélectionné pour nos membres · The Edit paraît chaque mois"
+  },
+
+
+  nl: {
+    category: "Reizen",
+    title: "Waar de winter wacht",
+    paragraphs: [
+      "De winter heeft zijn eigen manier om mensen samen te brengen. Wanneer de dagen korter worden en de lucht frisser aanvoelt, nodigen weekends uit om zich terug te trekken naar een rustigere plek, samen met familie of goede vrienden, met tijd die niets van u vraagt.",
+
+      "Hier behoort de dag volledig aan u toe. Blijf binnen tot de avond valt, kom samen rond een prachtig gedekte tafel of maak van het diner de gelegenheid op zich. Er is geen programma dat gevolgd moet worden, alleen het plezier om zelf te bepalen hoe de dag verloopt.",
+
+      "De omgeving kan veranderen, van een afgelegen villa tot een landgoed of een besneeuwd chalet, maar het gevoel moet moeiteloos blijven. Vertel ons wat u in gedachten heeft en wij brengen de verschillende elementen discreet samen, zodat u zich alleen hoeft te richten op de reden waarom u gekomen bent.",
+
+      "Laat deze winter het huis privé zijn, de tafel gevuld en de tijd volledig van u."
+    ],
+    cta: "Stap een rustigere winter binnen",
+    footer: "Samengesteld voor onze leden · The Edit verschijnt maandelijks"
+  }
+
+};
+
+
+function showLanguage(lang){
+
+  if(!content[lang]){
+    lang = "en";
+  }
+
+  const data = content[lang];
+
+  document.documentElement.lang = lang;
+
+  document.getElementById("category").textContent = data.category;
+
+  document.getElementById("title").textContent = data.title;
+
+  document.getElementById("cta").textContent = data.cta;
+
+  document.getElementById("footerText").textContent = data.footer;
+
+
+  const articleBody = document.getElementById("articleBody");
+
+  articleBody.innerHTML = "";
+
+
+  data.paragraphs.forEach(function(text){
+
+    const paragraph = document.createElement("p");
+
+    paragraph.textContent = text;
+
+    articleBody.appendChild(paragraph);
+
+  });
+
+
+  document.querySelectorAll("[data-lang]").forEach(function(button){
+
+    if(button.dataset.lang === lang){
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+
+  });
+
+
+  const newUrl = new URL(window.location.href);
+
+  newUrl.searchParams.set("lang", lang);
+
+  window.history.replaceState({}, "", newUrl);
+
+}
+
+
+document.querySelectorAll("[data-lang]").forEach(function(button){
+
+  button.addEventListener("click", function(){
+
+    showLanguage(button.dataset.lang);
+
+  });
+
+});
+
+
+const params = new URLSearchParams(window.location.search);
+
+const startingLanguage = params.get("lang") || "en";
+
+showLanguage(startingLanguage);
+
+</script>
 
 
 </body>
