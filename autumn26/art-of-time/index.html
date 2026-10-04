@@ -152,7 +152,7 @@ h1{
 .article{
   max-width:590px;
   margin:0 auto;
-  padding:70px 30px 55px;
+  padding:70px 30px 50px;
 }
 
 .article p{
@@ -201,43 +201,37 @@ h1{
 }
 
 
-/* GALLERY */
+/* IMAGE GALLERY */
 
 .gallery{
-  max-width:1050px;
+  max-width:900px;
   margin:0 auto;
-  padding:25px 30px 75px;
+  padding:30px 30px 75px;
 }
 
 .gallery-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-  margin-bottom:16px;
+  grid-template-columns:repeat(3, 1fr);
+  gap:14px;
 }
 
-.gallery-grid img{
+.gallery-item{
   width:100%;
-  height:420px;
-  object-fit:cover;
-  display:block;
-}
-
-.gallery-wide{
-  width:100%;
-  height:520px;
+  height:260px;
   overflow:hidden;
+  background:#0d0d0c;
 }
 
-.gallery-wide img{
+.gallery-item img{
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:center;
   display:block;
 }
 
 
-/* CONTACT SECTION */
+/* CONTACT */
 
 .contact{
   max-width:590px;
@@ -346,27 +340,21 @@ footer{
   }
 
   .gallery{
-    padding:15px 18px 60px;
+    padding:20px 25px 60px;
   }
 
   .gallery-grid{
     grid-template-columns:1fr;
-    gap:14px;
-    margin-bottom:14px;
+    gap:12px;
   }
 
-  .gallery-grid img{
-    height:390px;
-  }
-
-  .gallery-wide{
-    height:390px;
+  .gallery-item{
+    height:280px;
   }
 
   .contact{
     padding:0 25px 70px;
   }
-
 }
 
 </style>
@@ -376,30 +364,21 @@ footer{
 <body>
 
 
-<!-- HEADER -->
-
 <header>
 
   <div class="wordmark">Quintessentially</div>
 
   <div class="language">
-
     <button type="button" data-lang="fr">FR</button>
-
     <span class="sep">/</span>
-
     <button type="button" data-lang="en">EN</button>
-
     <span class="sep">/</span>
-
     <button type="button" data-lang="nl">NL</button>
-
   </div>
 
   <div class="edition">The Edit · Autumn ’26</div>
 
 </header>
-
 
 
 <!-- HERO -->
@@ -412,10 +391,7 @@ footer{
 
   <div class="hero-content">
 
-    <div
-      class="category"
-      id="category">
-    </div>
+    <div class="category" id="category"></div>
 
     <h1 id="title"></h1>
 
@@ -424,15 +400,11 @@ footer{
 </section>
 
 
-
 <!-- ARTICLE -->
 
 <main class="article">
 
   <div id="articleBody"></div>
-
-
-  <!-- TENTIMES WEBSITE -->
 
   <div class="tentimes-link">
 
@@ -454,37 +426,36 @@ footer{
 </main>
 
 
-
 <!-- IMAGE GALLERY -->
 
 <section class="gallery">
 
   <div class="gallery-grid">
 
-    <img
-      src="tentimes.detail.png"
-      alt="The details of fine watchmaking"
-      loading="lazy">
+    <div class="gallery-item">
+      <img
+        src="tentimes.detail.png"
+        alt="Fine watchmaking at Tentimes"
+        loading="lazy">
+    </div>
 
-    <img
-      src="tentimes.watches.png"
-      alt="Tentimes watches"
-      loading="lazy">
+    <div class="gallery-item">
+      <img
+        src="tentimes.watches.png"
+        alt="Tentimes watches"
+        loading="lazy">
+    </div>
 
-  </div>
-
-
-  <div class="gallery-wide">
-
-    <img
-      src="tentimes.webp"
-      alt="Tentimes watchmaking experience"
-      loading="lazy">
+    <div class="gallery-item">
+      <img
+        src="tentimes.webp"
+        alt="Tentimes watchmaking experience"
+        loading="lazy">
+    </div>
 
   </div>
 
 </section>
-
 
 
 <!-- CONTACT -->
@@ -507,7 +478,6 @@ footer{
 </section>
 
 
-
 <!-- FOOTER -->
 
 <footer>
@@ -528,13 +498,9 @@ footer{
 </footer>
 
 
-
 <script>
 
 const content = {
-
-
-  /* ENGLISH */
 
   en: {
 
@@ -573,9 +539,6 @@ const content = {
 
   },
 
-
-
-  /* FRENCH */
 
   fr: {
 
@@ -616,9 +579,6 @@ const content = {
 
   },
 
-
-
-  /* DUTCH */
 
   nl: {
 
@@ -662,7 +622,6 @@ const content = {
 };
 
 
-
 function showLanguage(lang){
 
   if(!content[lang]){
@@ -671,9 +630,7 @@ function showLanguage(lang){
 
   const data = content[lang];
 
-
   document.documentElement.lang = lang;
-
 
   document.getElementById("category").textContent =
     data.category;
@@ -697,14 +654,10 @@ function showLanguage(lang){
     data.footer;
 
 
-
-  /* ARTICLE PARAGRAPHS */
-
   const articleBody =
     document.getElementById("articleBody");
 
   articleBody.innerHTML = "";
-
 
   data.paragraphs.forEach(function(text){
 
@@ -717,9 +670,6 @@ function showLanguage(lang){
 
   });
 
-
-
-  /* ACTIVE LANGUAGE */
 
   document
     .querySelectorAll("[data-lang]")
@@ -738,9 +688,6 @@ function showLanguage(lang){
     });
 
 
-
-  /* ADD LANGUAGE TO URL */
-
   const newUrl =
     new URL(window.location.href);
 
@@ -754,9 +701,6 @@ function showLanguage(lang){
 
 }
 
-
-
-/* LANGUAGE BUTTONS */
 
 document
   .querySelectorAll("[data-lang]")
@@ -776,9 +720,6 @@ document
   });
 
 
-
-/* STARTING LANGUAGE */
-
 const params =
   new URLSearchParams(
     window.location.search
@@ -790,7 +731,6 @@ const startingLanguage =
 showLanguage(startingLanguage);
 
 </script>
-
 
 </body>
 </html>
