@@ -152,7 +152,7 @@ h1{
 .article{
   max-width:590px;
   margin:0 auto;
-  padding:70px 30px 50px;
+  padding:70px 30px 45px;
 }
 
 .article p{
@@ -193,7 +193,6 @@ h1{
   text-decoration:none;
   border-bottom:1px solid var(--line);
   padding-bottom:5px;
-  transition:border-color .2s ease;
 }
 
 .tentimes-button:hover{
@@ -201,33 +200,35 @@ h1{
 }
 
 
-/* IMAGE GALLERY */
+/* THREE EQUAL IMAGES */
 
 .gallery{
-  max-width:900px;
+  width:100%;
+  max-width:1000px;
   margin:0 auto;
-  padding:30px 30px 75px;
+  padding:25px 30px 75px;
 }
 
 .gallery-grid{
   display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:14px;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:16px;
+  width:100%;
 }
 
 .gallery-item{
   width:100%;
-  height:260px;
+  aspect-ratio:4 / 3;
   overflow:hidden;
-  background:#0d0d0c;
+  background:#11110f;
 }
 
 .gallery-item img{
   width:100%;
   height:100%;
+  display:block;
   object-fit:cover;
   object-position:center;
-  display:block;
 }
 
 
@@ -236,7 +237,7 @@ h1{
 .contact{
   max-width:590px;
   margin:0 auto;
-  padding:5px 30px 85px;
+  padding:0 30px 85px;
   text-align:center;
 }
 
@@ -263,7 +264,6 @@ h1{
   text-decoration:none;
   border-bottom:1px solid var(--line);
   padding-bottom:5px;
-  transition:border-color .2s ease;
 }
 
 .cta:hover{
@@ -305,7 +305,7 @@ footer{
 
 /* MOBILE */
 
-@media(max-width:600px){
+@media(max-width:700px){
 
   header{
     padding:0 18px;
@@ -336,7 +336,7 @@ footer{
   }
 
   .article{
-    padding:55px 25px 45px;
+    padding:55px 25px 40px;
   }
 
   .gallery{
@@ -345,11 +345,11 @@ footer{
 
   .gallery-grid{
     grid-template-columns:1fr;
-    gap:12px;
+    gap:14px;
   }
 
   .gallery-item{
-    height:280px;
+    aspect-ratio:4 / 3;
   }
 
   .contact{
@@ -426,7 +426,7 @@ footer{
 </main>
 
 
-<!-- IMAGE GALLERY -->
+<!-- THREE IMAGES -->
 
 <section class="gallery">
 
@@ -435,7 +435,7 @@ footer{
     <div class="gallery-item">
       <img
         src="tentimes.detail.png"
-        alt="Fine watchmaking at Tentimes"
+        alt="Fine watchmaking details at Tentimes"
         loading="lazy">
     </div>
 
@@ -659,6 +659,7 @@ function showLanguage(lang){
 
   articleBody.innerHTML = "";
 
+
   data.paragraphs.forEach(function(text){
 
     const paragraph =
@@ -676,13 +677,9 @@ function showLanguage(lang){
     .forEach(function(button){
 
       if(button.dataset.lang === lang){
-
         button.classList.add("active");
-
       } else {
-
         button.classList.remove("active");
-
       }
 
     });
