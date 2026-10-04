@@ -1,1 +1,796 @@
-<!-- Art of Time -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Art of Time · The Edit</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#080807;
+  --ink:#ece6db;
+  --body:#b8b1a4;
+  --muted:#8a8478;
+  --line:#302819;
+  --accent:#c9a961;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:Helvetica,Arial,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:var(--bg);
+  color:var(--body);
+  font-family:var(--serif);
+  -webkit-font-smoothing:antialiased;
+}
+
+
+/* HEADER */
+
+header{
+  height:68px;
+  background:#080807;
+  border-bottom:1px solid #211d15;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 36px;
+  position:relative;
+  z-index:10;
+}
+
+.wordmark{
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  color:var(--ink);
+}
+
+.language{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:.22em;
+}
+
+.language button{
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:6px 8px;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:.22em;
+}
+
+.language button.active{
+  color:var(--accent);
+  border-bottom:1px solid var(--accent);
+}
+
+.sep{
+  color:#3a3120;
+}
+
+.edition{
+  font-size:15px;
+  font-style:italic;
+  color:var(--ink);
+}
+
+
+/* HERO */
+
+.hero{
+  height:430px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(5,5,4,.06) 0%,
+    rgba(5,5,4,.12) 45%,
+    rgba(5,5,4,.84) 100%
+  );
+}
+
+.hero-content{
+  position:absolute;
+  z-index:2;
+  left:clamp(35px,6vw,80px);
+  bottom:48px;
+}
+
+.category{
+  font-family:var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.35em;
+  font-size:9px;
+  color:var(--accent);
+  margin-bottom:12px;
+}
+
+h1{
+  color:var(--ink);
+  font-size:clamp(46px,5vw,68px);
+  font-weight:300;
+  line-height:1;
+}
+
+
+/* ARTICLE */
+
+.article{
+  max-width:590px;
+  margin:0 auto;
+  padding:70px 30px 55px;
+}
+
+.article p{
+  font-size:18px;
+  line-height:1.75;
+  margin-bottom:25px;
+  color:var(--body);
+}
+
+.article p:first-child{
+  color:var(--ink);
+  font-size:20px;
+}
+
+
+/* TENTIMES WEBSITE */
+
+.tentimes-link{
+  margin-top:38px;
+  padding-top:30px;
+  border-top:1px solid var(--line);
+}
+
+.tentimes-label{
+  font-family:var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.30em;
+  font-size:8px;
+  color:var(--muted);
+  margin-bottom:13px;
+}
+
+.tentimes-button{
+  display:inline-block;
+  color:var(--accent);
+  font-size:21px;
+  font-style:italic;
+  text-decoration:none;
+  border-bottom:1px solid var(--line);
+  padding-bottom:5px;
+  transition:border-color .2s ease;
+}
+
+.tentimes-button:hover{
+  border-color:var(--accent);
+}
+
+
+/* GALLERY */
+
+.gallery{
+  max-width:1050px;
+  margin:0 auto;
+  padding:25px 30px 75px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:16px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  display:block;
+}
+
+.gallery-wide{
+  width:100%;
+  height:520px;
+  overflow:hidden;
+}
+
+.gallery-wide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+
+/* CONTACT SECTION */
+
+.contact{
+  max-width:590px;
+  margin:0 auto;
+  padding:5px 30px 85px;
+  text-align:center;
+}
+
+.contact-line{
+  width:40px;
+  height:1px;
+  background:var(--accent);
+  margin:0 auto 30px;
+}
+
+.contact-text{
+  color:var(--ink);
+  font-size:22px;
+  line-height:1.5;
+  font-style:italic;
+  margin-bottom:20px;
+}
+
+.cta{
+  display:inline-block;
+  color:var(--accent);
+  font-size:19px;
+  font-style:italic;
+  text-decoration:none;
+  border-bottom:1px solid var(--line);
+  padding-bottom:5px;
+  transition:border-color .2s ease;
+}
+
+.cta:hover{
+  border-color:var(--accent);
+}
+
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid #211d15;
+  text-align:center;
+  padding:48px 20px;
+}
+
+.footer-logo{
+  font-family:var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.42em;
+  font-size:9px;
+  color:var(--ink);
+  margin-bottom:15px;
+}
+
+.footer-edition{
+  font-style:italic;
+  color:var(--muted);
+  font-size:16px;
+  margin-bottom:18px;
+}
+
+.footer-small{
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:.14em;
+  color:#716b60;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  header{
+    padding:0 18px;
+    height:64px;
+  }
+
+  .edition{
+    display:none;
+  }
+
+  .language{
+    position:static;
+    transform:none;
+  }
+
+  .hero{
+    height:480px;
+  }
+
+  .hero-content{
+    left:25px;
+    right:25px;
+    bottom:40px;
+  }
+
+  h1{
+    font-size:46px;
+  }
+
+  .article{
+    padding:55px 25px 45px;
+  }
+
+  .gallery{
+    padding:15px 18px 60px;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+    margin-bottom:14px;
+  }
+
+  .gallery-grid img{
+    height:390px;
+  }
+
+  .gallery-wide{
+    height:390px;
+  }
+
+  .contact{
+    padding:0 25px 70px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="wordmark">Quintessentially</div>
+
+  <div class="language">
+
+    <button type="button" data-lang="fr">FR</button>
+
+    <span class="sep">/</span>
+
+    <button type="button" data-lang="en">EN</button>
+
+    <span class="sep">/</span>
+
+    <button type="button" data-lang="nl">NL</button>
+
+  </div>
+
+  <div class="edition">The Edit · Autumn ’26</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <img
+    src="tentimes.hero.webp"
+    alt="Tentimes watchmaking experience">
+
+  <div class="hero-content">
+
+    <div
+      class="category"
+      id="category">
+    </div>
+
+    <h1 id="title"></h1>
+
+  </div>
+
+</section>
+
+
+
+<!-- ARTICLE -->
+
+<main class="article">
+
+  <div id="articleBody"></div>
+
+
+  <!-- TENTIMES WEBSITE -->
+
+  <div class="tentimes-link">
+
+    <div
+      class="tentimes-label"
+      id="tentimesLabel">
+    </div>
+
+    <a
+      class="tentimes-button"
+      id="tentimesButton"
+      href="https://www.tentimes.eu/"
+      target="_blank"
+      rel="noopener noreferrer">
+    </a>
+
+  </div>
+
+</main>
+
+
+
+<!-- IMAGE GALLERY -->
+
+<section class="gallery">
+
+  <div class="gallery-grid">
+
+    <img
+      src="tentimes.detail.png"
+      alt="The details of fine watchmaking"
+      loading="lazy">
+
+    <img
+      src="tentimes.watches.png"
+      alt="Tentimes watches"
+      loading="lazy">
+
+  </div>
+
+
+  <div class="gallery-wide">
+
+    <img
+      src="tentimes.webp"
+      alt="Tentimes watchmaking experience"
+      loading="lazy">
+
+  </div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+  <div class="contact-line"></div>
+
+  <div
+    class="contact-text"
+    id="contactText">
+  </div>
+
+  <a
+    class="cta"
+    id="cta"
+    href="mailto:qbenelux@quintessentially.com?subject=The%20Edit%20%C2%B7%20Autumn%20%E2%80%9926%20%C2%B7%20The%20Art%20of%20Time">
+  </a>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-logo">
+    Quintessentially
+  </div>
+
+  <div class="footer-edition">
+    The Edit · Autumn ’26
+  </div>
+
+  <div
+    class="footer-small"
+    id="footerText">
+  </div>
+
+</footer>
+
+
+
+<script>
+
+const content = {
+
+
+  /* ENGLISH */
+
+  en: {
+
+    category: "Experience",
+
+    title: "The Art of Time",
+
+    paragraphs: [
+
+      "We spend our lives measuring time. Rarely do we stop long enough to understand what makes it move.",
+
+      "There is something almost meditative in the world of fine watchmaking. The delicacy of a movement, the precision of hands set into place, the patience required for something designed to outlive a season, perhaps even its first owner.",
+
+      "In Paris and Lyon, Tentimes invites you into the world behind the dial. Over the course of an intimate horological experience, you discover the craft from within before creating a timepiece entirely your own. From the dial and hands to the strap and finishing details, each element is selected according to your own taste, bringing together a watch that reflects you rather than a collection.",
+
+      "Piece by piece, you then assemble your creation yourself, watching your choices slowly take form on the workbench.",
+
+      "You arrive with a few hours to spare. You leave wearing them differently.",
+
+      "Make time your own."
+
+    ],
+
+    tentimesLabel: "Discover the experience",
+
+    tentimesButton: "Visit Tentimes",
+
+    contactText:
+      "Would you like to create a timepiece of your own?",
+
+    cta:
+      "Let us arrange the experience",
+
+    footer:
+      "Curated for members · The Edit is published monthly"
+
+  },
+
+
+
+  /* FRENCH */
+
+  fr: {
+
+    category: "Expérience",
+
+    title: "L’Art du Temps",
+
+    paragraphs: [
+
+      "Nous passons notre vie à mesurer le temps. Rares sont les moments où nous nous arrêtons assez longtemps pour comprendre ce qui le fait avancer.",
+
+      "Il y a quelque chose de presque méditatif dans l’univers de la haute horlogerie. La délicatesse d’un mouvement, la précision des aiguilles mises en place, la patience nécessaire pour créer un objet destiné à traverser les saisons, et peut-être même à survivre à son premier propriétaire.",
+
+      "À Paris et à Lyon, Tentimes vous invite à découvrir l’univers qui se cache derrière le cadran. Au cours d’une expérience horlogère intimiste, vous découvrez le savoir-faire de l’intérieur avant de créer une montre entièrement à votre image. Du cadran et des aiguilles au bracelet et aux détails de finition, chaque élément est choisi selon vos goûts afin de créer une pièce qui vous ressemble.",
+
+      "Pièce après pièce, vous assemblez ensuite vous-même votre création et voyez progressivement vos choix prendre forme sur l’établi.",
+
+      "Vous arrivez avec quelques heures devant vous. Vous repartez en les portant autrement.",
+
+      "Faites du temps le vôtre."
+
+    ],
+
+    tentimesLabel:
+      "Découvrez l’expérience",
+
+    tentimesButton:
+      "Découvrir Tentimes",
+
+    contactText:
+      "Souhaitez-vous créer votre propre garde-temps ?",
+
+    cta:
+      "Laissez-nous organiser l’expérience",
+
+    footer:
+      "Sélectionné pour nos membres · The Edit paraît chaque mois"
+
+  },
+
+
+
+  /* DUTCH */
+
+  nl: {
+
+    category: "Beleving",
+
+    title: "De Kunst van Tijd",
+
+    paragraphs: [
+
+      "We brengen ons leven door met het meten van tijd. Zelden staan we lang genoeg stil om te begrijpen wat haar in beweging brengt.",
+
+      "Er schuilt iets bijna meditatiefs in de wereld van de fijne horlogerie. De verfijning van een uurwerk, de precisie waarmee de wijzers worden geplaatst en het geduld dat nodig is voor iets dat ontworpen is om langer mee te gaan dan een seizoen, en misschien zelfs langer dan de eerste eigenaar.",
+
+      "In Parijs en Lyon nodigt Tentimes u uit in de wereld achter de wijzerplaat. Tijdens een intieme horlogebeleving ontdekt u het vakmanschap van binnenuit voordat u een uurwerk creëert dat volledig van uzelf is. Van de wijzerplaat en wijzers tot het bandje en de afwerkingsdetails: elk element wordt gekozen volgens uw eigen smaak, waardoor een horloge ontstaat dat u weerspiegelt.",
+
+      "Onderdeel voor onderdeel stelt u vervolgens zelf uw creatie samen en ziet u uw keuzes langzaam vorm krijgen op de werkbank.",
+
+      "U komt aan met een paar vrije uren. U vertrekt met een andere kijk op tijd.",
+
+      "Maak tijd van uzelf."
+
+    ],
+
+    tentimesLabel:
+      "Ontdek de ervaring",
+
+    tentimesButton:
+      "Bezoek Tentimes",
+
+    contactText:
+      "Wilt u zelf een uniek uurwerk creëren?",
+
+    cta:
+      "Laat ons de ervaring organiseren",
+
+    footer:
+      "Samengesteld voor onze leden · The Edit verschijnt maandelijks"
+
+  }
+
+};
+
+
+
+function showLanguage(lang){
+
+  if(!content[lang]){
+    lang = "en";
+  }
+
+  const data = content[lang];
+
+
+  document.documentElement.lang = lang;
+
+
+  document.getElementById("category").textContent =
+    data.category;
+
+  document.getElementById("title").textContent =
+    data.title;
+
+  document.getElementById("tentimesLabel").textContent =
+    data.tentimesLabel;
+
+  document.getElementById("tentimesButton").textContent =
+    data.tentimesButton;
+
+  document.getElementById("contactText").textContent =
+    data.contactText;
+
+  document.getElementById("cta").textContent =
+    data.cta;
+
+  document.getElementById("footerText").textContent =
+    data.footer;
+
+
+
+  /* ARTICLE PARAGRAPHS */
+
+  const articleBody =
+    document.getElementById("articleBody");
+
+  articleBody.innerHTML = "";
+
+
+  data.paragraphs.forEach(function(text){
+
+    const paragraph =
+      document.createElement("p");
+
+    paragraph.textContent = text;
+
+    articleBody.appendChild(paragraph);
+
+  });
+
+
+
+  /* ACTIVE LANGUAGE */
+
+  document
+    .querySelectorAll("[data-lang]")
+    .forEach(function(button){
+
+      if(button.dataset.lang === lang){
+
+        button.classList.add("active");
+
+      } else {
+
+        button.classList.remove("active");
+
+      }
+
+    });
+
+
+
+  /* ADD LANGUAGE TO URL */
+
+  const newUrl =
+    new URL(window.location.href);
+
+  newUrl.searchParams.set("lang", lang);
+
+  window.history.replaceState(
+    {},
+    "",
+    newUrl
+  );
+
+}
+
+
+
+/* LANGUAGE BUTTONS */
+
+document
+  .querySelectorAll("[data-lang]")
+  .forEach(function(button){
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        showLanguage(
+          button.dataset.lang
+        );
+
+      }
+    );
+
+  });
+
+
+
+/* STARTING LANGUAGE */
+
+const params =
+  new URLSearchParams(
+    window.location.search
+  );
+
+const startingLanguage =
+  params.get("lang") || "en";
+
+showLanguage(startingLanguage);
+
+</script>
+
+
+</body>
+</html>
