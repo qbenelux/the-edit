@@ -38,7 +38,7 @@
       margin: 0 auto;
     }
 
-    /* ---------- HEADER ---------- */
+    /* HEADER */
 
     .topbar {
       position: relative;
@@ -76,7 +76,7 @@
       color: #e8e1d6;
     }
 
-    /* ---------- IMAGES ---------- */
+    /* IMAGES */
 
     .image-frame {
       width: 100%;
@@ -84,32 +84,32 @@
       padding: 0;
       overflow: hidden;
       background: #050505;
-      border: 0 !important;
-      outline: 0 !important;
+      border: none !important;
+      outline: none !important;
       box-shadow: none !important;
       line-height: 0;
     }
 
     .image-frame img {
       display: block;
-      width: 100.8%;
+      width: 101%;
       max-width: none;
       height: auto;
-      margin: -1px -0.4%;
+      margin: -2px -0.5%;
       padding: 0;
-      border: 0 !important;
-      outline: 0 !important;
+      border: none !important;
+      outline: none !important;
       box-shadow: none !important;
-      transform: scale(1.006);
-      transform-origin: center center;
+      transform: scale(1.008);
+      transform-origin: center;
     }
 
     .section-image {
-      margin-top: 25px;
-      margin-bottom: 18px;
+      margin-top: 27px;
+      margin-bottom: 20px;
     }
 
-    /* ---------- HERO ---------- */
+    /* HERO */
 
     .hero {
       margin-bottom: 19px;
@@ -117,14 +117,14 @@
 
     .hero-text {
       text-align: center;
-      padding: 0 12px;
-      margin-bottom: 23px;
+      padding: 0 10px;
+      margin-bottom: 25px;
     }
 
     h1 {
       color: #f1ebe1;
       font-size: 25px;
-      line-height: 1.08;
+      line-height: 1.1;
       font-weight: 400;
       margin: 19px auto 7px;
       max-width: 520px;
@@ -138,7 +138,7 @@
       font-style: italic;
     }
 
-    /* ---------- BODY ---------- */
+    /* BODY */
 
     .content {
       width: 100%;
@@ -153,7 +153,7 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      margin: 21px 0 13px;
+      margin: 23px 0 14px;
       color: #eee7dc;
       font-size: 19px;
       line-height: 1.25;
@@ -168,10 +168,41 @@
       background: #443a29;
     }
 
-    /* ---------- ENDING ---------- */
+    /* KEY DATES */
+
+    .dates-section {
+      margin-top: 31px;
+    }
+
+    .dates-list {
+      width: 100%;
+      margin-top: 3px;
+    }
+
+    .date-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding: 10px 0;
+      border-bottom: 1px solid #322c22;
+      font-size: 14px;
+      color: #ddd6ca;
+    }
+
+    .date {
+      color: #b79b4e;
+      white-space: nowrap;
+    }
+
+    .event {
+      text-align: right;
+    }
+
+    /* ENDING */
 
     .closing {
-      margin-top: 23px;
+      margin-top: 30px;
       padding-top: 21px;
       border-top: 1px solid #443a29;
       text-align: center;
@@ -191,7 +222,7 @@
       padding-bottom: 3px;
     }
 
-    /* ---------- MOBILE ---------- */
+    /* MOBILE */
 
     @media only screen and (max-width: 620px) {
       .page {
@@ -223,6 +254,11 @@
       body {
         font-size: 14px;
       }
+
+      .date-row {
+        gap: 15px;
+        font-size: 13px;
+      }
     }
   </style>
 </head>
@@ -230,42 +266,57 @@
 <body>
 
 <div class="page">
+
   <main class="container">
 
     <!-- HEADER -->
+
     <header class="topbar">
-      <div class="brand">QUINTESSENTIALLY</div>
+
+      <div class="brand">
+        QUINTESSENTIALLY
+      </div>
 
       <nav class="languages">
         <a href="?lang=fr">FR</a>
-        <a href="?lang=en" class="active">EN</a>
+        <a href="?lang=en">EN</a>
         <a href="?lang=nl">NL</a>
       </nav>
+
     </header>
 
 
     <!-- IMAGE 1 -->
+
     <div class="image-frame hero">
-      <img src="crans 1.jpg"
-           alt="Crans-Montana"
-           draggable="false">
+      <img
+        src="crans 1.jpg"
+        alt="Crans-Montana"
+        draggable="false"
+      >
     </div>
 
 
     <!-- TITLE -->
-    <div class="hero-text">
-      <h1>Crans-Montana 2027: The Alpine World Ski Championships</h1>
 
-      <p class="subtitle">
+    <div class="hero-text">
+
+      <h1 id="title">
+        Crans-Montana 2027: The Alpine World Ski Championships
+      </h1>
+
+      <p class="subtitle" id="subtitle">
         The World’s Best Return to Crans-Montana
       </p>
+
     </div>
 
 
-    <!-- INTRODUCTION -->
     <div class="content">
 
-      <p>
+      <!-- INTRO -->
+
+      <p id="intro1">
         In February 2027, all eyes turn to Crans-Montana, Switzerland,
         as the FIS Alpine World Ski Championships return to the resort
         after forty years. For two weeks, the world’s leading skiers
@@ -274,7 +325,7 @@
         mountain destinations.
       </p>
 
-      <p>
+      <p id="intro2">
         The programme will feature the sport’s major disciplines,
         including downhill, Super-G, giant slalom and slalom,
         alongside team events. Highlights include the women’s downhill
@@ -284,19 +335,23 @@
 
 
       <!-- IMAGE 2 -->
+
       <div class="image-frame section-image">
-        <img src="crans 2.png"
-             alt="Alpine skiing at Crans-Montana"
-             draggable="false">
+        <img
+          src="crans 2.png"
+          alt="Alpine skiing at Crans-Montana"
+          draggable="false"
+        >
       </div>
 
 
-      <!-- SECTION 1 -->
-      <h2 class="section-title">
+      <!-- MORE THAN A CHAMPIONSHIP -->
+
+      <h2 class="section-title" id="section1">
         More Than a Championship
       </h2>
 
-      <p>
+      <p id="text1">
         Beyond the competition, Crans-Montana will take on a festive
         atmosphere throughout the Championships. Medal ceremonies,
         concerts, fan experiences and après-ski events will accompany
@@ -304,7 +359,7 @@
         mountain dining and spectacular Alpine scenery.
       </p>
 
-      <p>
+      <p id="text2">
         It is an opportunity to combine the excitement of world-class
         sport with a winter escape in one of Switzerland’s most
         celebrated mountain destinations.
@@ -312,19 +367,23 @@
 
 
       <!-- IMAGE 3 -->
+
       <div class="image-frame section-image">
-        <img src="crans 3.jpg"
-             alt="Crans-Montana in winter"
-             draggable="false">
+        <img
+          src="crans 3.jpg"
+          alt="Crans-Montana in winter"
+          draggable="false"
+        >
       </div>
 
 
-      <!-- SECTION 2 -->
-      <h2 class="section-title">
+      <!-- EXPERIENCE -->
+
+      <h2 class="section-title" id="section2">
         Experience Crans-Montana 2027
       </h2>
 
-      <p>
+      <p id="text3">
         Whether for a major race weekend or a longer stay in the Alps,
         we can arrange every element around the Championships, from
         accommodation and travel to experiences throughout your time
@@ -332,101 +391,350 @@
       </p>
 
 
-      <!-- CLOSING -->
-      <div class="closing">
+      <!-- KEY DATES -->
+
+      <section class="dates-section">
+
+        <h2 class="section-title" id="datesTitle">
+          Key Dates
+        </h2>
+
+        <div class="dates-list">
+
+          <div class="date-row">
+            <span class="date" id="date1">
+              6 February 2027
+            </span>
+
+            <span class="event" id="event1">
+              Women’s Downhill
+            </span>
+          </div>
+
+
+          <div class="date-row">
+            <span class="date" id="date2">
+              7 February 2027
+            </span>
+
+            <span class="event" id="event2">
+              Men’s Downhill
+            </span>
+          </div>
+
+
+          <div class="date-row">
+            <span class="date" id="date3">
+              13 February 2027
+            </span>
+
+            <span class="event" id="event3">
+              Women’s Slalom Final
+            </span>
+          </div>
+
+
+          <div class="date-row">
+            <span class="date" id="date4">
+              14 February 2027
+            </span>
+
+            <span class="event" id="event4">
+              Men’s Slalom Final
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ENDING -->
+
+      <div class="closing" id="closing">
         Experience the world of Alpine skiing at its highest level.
       </div>
 
+
       <div class="contact">
-        <a href="mailto:concierge.belgium@quintessentially.com">
+
+        <a
+          id="contact"
+          href="mailto:concierge.belgium@quintessentially.com"
+        >
           Contact me for more information
         </a>
+
       </div>
 
     </div>
 
   </main>
+
 </div>
 
 
 <script>
-  const translations = {
 
-    en: {
-      title: "Crans-Montana 2027: The Alpine World Ski Championships",
-      subtitle: "The World’s Best Return to Crans-Montana",
-      intro1: "In February 2027, all eyes turn to Crans-Montana, Switzerland, as the FIS Alpine World Ski Championships return to the resort after forty years. For two weeks, the world’s leading skiers will compete for 11 world titles, bringing the excitement of elite alpine sport to one of Switzerland’s most celebrated mountain destinations.",
-      intro2: "The programme will feature the sport’s major disciplines, including downhill, Super-G, giant slalom and slalom, alongside team events. Highlights include the women’s downhill on 6 February, the men’s downhill on 7 February, and the final slalom races on 13 and 14 February.",
-      section1: "More Than a Championship",
-      text1: "Beyond the competition, Crans-Montana will take on a festive atmosphere throughout the Championships. Medal ceremonies, concerts, fan experiences and après-ski events will accompany the racing, while the resort itself offers exceptional skiing, mountain dining and spectacular Alpine scenery.",
-      text2: "It is an opportunity to combine the excitement of world-class sport with a winter escape in one of Switzerland’s most celebrated mountain destinations.",
-      section2: "Experience Crans-Montana 2027",
-      text3: "Whether for a major race weekend or a longer stay in the Alps, we can arrange every element around the Championships, from accommodation and travel to experiences throughout your time in Crans-Montana.",
-      closing: "Experience the world of Alpine skiing at its highest level.",
-      contact: "Contact me for more information"
-    },
+const translations = {
 
-    fr: {
-      title: "Crans-Montana 2027 : Les Championnats du monde de ski alpin",
-      subtitle: "Les meilleurs skieurs du monde reviennent à Crans-Montana",
-      intro1: "En février 2027, tous les regards se tourneront vers Crans-Montana, en Suisse, à l’occasion du retour des Championnats du monde FIS de ski alpin dans la station, quarante ans après leur dernière édition sur place. Pendant deux semaines, les meilleurs skieurs du monde se disputeront 11 titres mondiaux dans l’une des destinations alpines les plus renommées de Suisse.",
-      intro2: "Le programme réunira les grandes disciplines du ski alpin, notamment la descente, le Super-G, le slalom géant et le slalom, ainsi que des épreuves par équipes. Parmi les temps forts figurent la descente féminine le 6 février, la descente masculine le 7 février et les dernières épreuves de slalom les 13 et 14 février.",
-      section1: "Bien plus qu’un championnat",
-      text1: "Au-delà de la compétition, Crans-Montana vivra au rythme d’une atmosphère festive pendant toute la durée des Championnats. Cérémonies de remise des médailles, concerts, animations pour les supporters et événements après-ski accompagneront les courses, tandis que la station offrira ski d’exception, gastronomie en altitude et paysages alpins spectaculaires.",
-      text2: "Une occasion de combiner l’intensité du sport de haut niveau avec une escapade hivernale dans l’une des destinations de montagne les plus réputées de Suisse.",
-      section2: "Vivez Crans-Montana 2027",
-      text3: "Que vous souhaitiez assister à un grand week-end de compétition ou prolonger votre séjour dans les Alpes, nous pouvons organiser chaque détail autour des Championnats, de l’hébergement et du voyage aux expériences qui rythmeront votre séjour à Crans-Montana.",
-      closing: "Vivez le ski alpin au plus haut niveau.",
-      contact: "Contactez-moi pour plus d’informations"
-    },
+  en: {
 
-    nl: {
-      title: "Crans-Montana 2027: De Wereldkampioenschappen Alpineskiën",
-      subtitle: "De wereldtop keert terug naar Crans-Montana",
-      intro1: "In februari 2027 zijn alle ogen gericht op Crans-Montana in Zwitserland, wanneer de FIS Wereldkampioenschappen Alpineskiën na veertig jaar terugkeren naar het resort. Twee weken lang strijden de beste skiërs ter wereld om 11 wereldtitels in een van de meest gerenommeerde bergbestemmingen van Zwitserland.",
-      intro2: "Het programma omvat de belangrijkste disciplines van het alpineskiën, waaronder afdaling, Super-G, reuzenslalom en slalom, naast teamwedstrijden. Hoogtepunten zijn de afdaling voor vrouwen op 6 februari, de afdaling voor mannen op 7 februari en de laatste slalomwedstrijden op 13 en 14 februari.",
-      section1: "Meer dan een kampioenschap",
-      text1: "Naast de wedstrijden krijgt Crans-Montana tijdens de kampioenschappen een feestelijke sfeer. Medailleceremonies, concerten, fanactiviteiten en après-ski-evenementen vullen de races aan, terwijl het resort zelf uitzonderlijk skiën, gastronomie in de bergen en spectaculaire Alpenlandschappen biedt.",
-      text2: "Het is een kans om de spanning van topsport te combineren met een winterverblijf in een van de meest gevierde bergbestemmingen van Zwitserland.",
-      section2: "Beleef Crans-Montana 2027",
-      text3: "Of u nu kiest voor een belangrijk raceweekend of een langer verblijf in de Alpen, wij kunnen elk onderdeel rond de kampioenschappen organiseren, van accommodatie en vervoer tot ervaringen tijdens uw verblijf in Crans-Montana.",
-      closing: "Beleef de wereld van het alpineskiën op het allerhoogste niveau.",
-      contact: "Contacteer mij voor meer informatie"
-    }
-  };
+    title:
+      "Crans-Montana 2027: The Alpine World Ski Championships",
+
+    subtitle:
+      "The World’s Best Return to Crans-Montana",
+
+    intro1:
+      "In February 2027, all eyes turn to Crans-Montana, Switzerland, as the FIS Alpine World Ski Championships return to the resort after forty years. For two weeks, the world’s leading skiers will compete for 11 world titles, bringing the excitement of elite alpine sport to one of Switzerland’s most celebrated mountain destinations.",
+
+    intro2:
+      "The programme will feature the sport’s major disciplines, including downhill, Super-G, giant slalom and slalom, alongside team events. Highlights include the women’s downhill on 6 February, the men’s downhill on 7 February, and the final slalom races on 13 and 14 February.",
+
+    section1:
+      "More Than a Championship",
+
+    text1:
+      "Beyond the competition, Crans-Montana will take on a festive atmosphere throughout the Championships. Medal ceremonies, concerts, fan experiences and après-ski events will accompany the racing, while the resort itself offers exceptional skiing, mountain dining and spectacular Alpine scenery.",
+
+    text2:
+      "It is an opportunity to combine the excitement of world-class sport with a winter escape in one of Switzerland’s most celebrated mountain destinations.",
+
+    section2:
+      "Experience Crans-Montana 2027",
+
+    text3:
+      "Whether for a major race weekend or a longer stay in the Alps, we can arrange every element around the Championships, from accommodation and travel to experiences throughout your time in Crans-Montana.",
+
+    datesTitle:
+      "Key Dates",
+
+    date1:
+      "6 February 2027",
+
+    event1:
+      "Women’s Downhill",
+
+    date2:
+      "7 February 2027",
+
+    event2:
+      "Men’s Downhill",
+
+    date3:
+      "13 February 2027",
+
+    event3:
+      "Women’s Slalom Final",
+
+    date4:
+      "14 February 2027",
+
+    event4:
+      "Men’s Slalom Final",
+
+    closing:
+      "Experience the world of Alpine skiing at its highest level.",
+
+    contact:
+      "Contact me for more information"
+  },
 
 
-  const params = new URLSearchParams(window.location.search);
-  const lang = translations[params.get("lang")] ? params.get("lang") : "en";
-  const t = translations[lang];
+  fr: {
 
-  document.documentElement.lang = lang;
+    title:
+      "Crans-Montana 2027 : Les Championnats du monde de ski alpin",
 
-  document.querySelector("h1").textContent = t.title;
-  document.querySelector(".subtitle").textContent = t.subtitle;
+    subtitle:
+      "Les meilleurs skieurs du monde reviennent à Crans-Montana",
 
-  const paragraphs = document.querySelectorAll(".content > p");
+    intro1:
+      "En février 2027, tous les regards se tourneront vers Crans-Montana, en Suisse, à l’occasion du retour des Championnats du monde FIS de ski alpin dans la station, quarante ans après leur dernière édition sur place. Pendant deux semaines, les meilleurs skieurs du monde se disputeront 11 titres mondiaux dans l’une des destinations alpines les plus renommées de Suisse.",
 
-  paragraphs[0].textContent = t.intro1;
-  paragraphs[1].textContent = t.intro2;
-  paragraphs[2].textContent = t.text1;
-  paragraphs[3].textContent = t.text2;
-  paragraphs[4].textContent = t.text3;
+    intro2:
+      "Le programme réunira les grandes disciplines du ski alpin, notamment la descente, le Super-G, le slalom géant et le slalom, ainsi que des épreuves par équipes. Parmi les temps forts figurent la descente féminine le 6 février, la descente masculine le 7 février et les dernières épreuves de slalom les 13 et 14 février.",
 
-  const sectionTitles = document.querySelectorAll(".section-title");
-  sectionTitles[0].textContent = t.section1;
-  sectionTitles[1].textContent = t.section2;
+    section1:
+      "Bien plus qu’un championnat",
 
-  document.querySelector(".closing").textContent = t.closing;
-  document.querySelector(".contact a").textContent = t.contact;
+    text1:
+      "Au-delà de la compétition, Crans-Montana vivra au rythme d’une atmosphère festive pendant toute la durée des Championnats. Cérémonies de remise des médailles, concerts, animations pour les supporters et événements après-ski accompagneront les courses, tandis que la station offrira ski d’exception, gastronomie en altitude et paysages alpins spectaculaires.",
 
-  document.querySelectorAll(".languages a").forEach(link => {
-    link.classList.remove("active");
+    text2:
+      "Une occasion de combiner l’intensité du sport de haut niveau avec une escapade hivernale dans l’une des destinations de montagne les plus réputées de Suisse.",
 
-    if (link.getAttribute("href") === "?lang=" + lang) {
-      link.classList.add("active");
-    }
-  });
+    section2:
+      "Vivez Crans-Montana 2027",
+
+    text3:
+      "Que vous souhaitiez assister à un grand week-end de compétition ou prolonger votre séjour dans les Alpes, nous pouvons organiser chaque détail autour des Championnats, de l’hébergement et du voyage aux expériences qui rythmeront votre séjour à Crans-Montana.",
+
+    datesTitle:
+      "Dates clés",
+
+    date1:
+      "6 février 2027",
+
+    event1:
+      "Descente féminine",
+
+    date2:
+      "7 février 2027",
+
+    event2:
+      "Descente masculine",
+
+    date3:
+      "13 février 2027",
+
+    event3:
+      "Finale du slalom féminin",
+
+    date4:
+      "14 février 2027",
+
+    event4:
+      "Finale du slalom masculin",
+
+    closing:
+      "Vivez le ski alpin au plus haut niveau.",
+
+    contact:
+      "Contactez-moi pour plus d’informations"
+  },
+
+
+  nl: {
+
+    title:
+      "Crans-Montana 2027: De Wereldkampioenschappen Alpineskiën",
+
+    subtitle:
+      "De wereldtop keert terug naar Crans-Montana",
+
+    intro1:
+      "In februari 2027 zijn alle ogen gericht op Crans-Montana in Zwitserland, wanneer de FIS Wereldkampioenschappen Alpineskiën na veertig jaar terugkeren naar het resort. Twee weken lang strijden de beste skiërs ter wereld om 11 wereldtitels in een van de meest gerenommeerde bergbestemmingen van Zwitserland.",
+
+    intro2:
+      "Het programma omvat de belangrijkste disciplines van het alpineskiën, waaronder afdaling, Super-G, reuzenslalom en slalom, naast teamwedstrijden. Hoogtepunten zijn de afdaling voor vrouwen op 6 februari, de afdaling voor mannen op 7 februari en de laatste slalomwedstrijden op 13 en 14 februari.",
+
+    section1:
+      "Meer dan een kampioenschap",
+
+    text1:
+      "Naast de wedstrijden krijgt Crans-Montana tijdens de kampioenschappen een feestelijke sfeer. Medailleceremonies, concerten, fanactiviteiten en après-ski-evenementen vullen de races aan, terwijl het resort zelf uitzonderlijk skiën, gastronomie in de bergen en spectaculaire Alpenlandschappen biedt.",
+
+    text2:
+      "Het is een kans om de spanning van topsport te combineren met een winterverblijf in een van de meest gevierde bergbestemmingen van Zwitserland.",
+
+    section2:
+      "Beleef Crans-Montana 2027",
+
+    text3:
+      "Of u nu kiest voor een belangrijk raceweekend of een langer verblijf in de Alpen, wij kunnen elk onderdeel rond de kampioenschappen organiseren, van accommodatie en vervoer tot ervaringen tijdens uw verblijf in Crans-Montana.",
+
+    datesTitle:
+      "Belangrijke data",
+
+    date1:
+      "6 februari 2027",
+
+    event1:
+      "Afdaling vrouwen",
+
+    date2:
+      "7 februari 2027",
+
+    event2:
+      "Afdaling mannen",
+
+    date3:
+      "13 februari 2027",
+
+    event3:
+      "Finale slalom vrouwen",
+
+    date4:
+      "14 februari 2027",
+
+    event4:
+      "Finale slalom mannen",
+
+    closing:
+      "Beleef de wereld van het alpineskiën op het allerhoogste niveau.",
+
+    contact:
+      "Contacteer mij voor meer informatie"
+  }
+
+};
+
+
+/* GET LANGUAGE */
+
+const params = new URLSearchParams(window.location.search);
+
+let lang = params.get("lang");
+
+if (!translations[lang]) {
+  lang = "en";
+}
+
+const t = translations[lang];
+
+document.documentElement.lang = lang;
+
+
+/* APPLY TRANSLATION */
+
+const fields = [
+  "title",
+  "subtitle",
+  "intro1",
+  "intro2",
+  "section1",
+  "text1",
+  "text2",
+  "section2",
+  "text3",
+  "datesTitle",
+  "date1",
+  "event1",
+  "date2",
+  "event2",
+  "date3",
+  "event3",
+  "date4",
+  "event4",
+  "closing",
+  "contact"
+];
+
+fields.forEach(function(field) {
+
+  const element = document.getElementById(field);
+
+  if (element && t[field]) {
+    element.textContent = t[field];
+  }
+
+});
+
+
+/* ACTIVE LANGUAGE */
+
+document.querySelectorAll(".languages a").forEach(function(link) {
+
+  link.classList.remove("active");
+
+  if (link.getAttribute("href") === "?lang=" + lang) {
+    link.classList.add("active");
+  }
+
+});
+
 </script>
 
 </body>
