@@ -7,6 +7,7 @@
   <title>Crans-Montana 2027 | Quintessentially</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -38,7 +39,10 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     .topbar {
       position: relative;
@@ -46,37 +50,59 @@
       text-align: center;
     }
 
-    .brand {
-      margin: 0;
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 7px;
-      line-height: 1.2;
-    }
+    /* TRANSLATIONS ABOVE QUINTESSENTIALLY */
 
     .languages {
-      position: absolute;
-      right: 0;
-      top: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+
+      position: static;
+
+      margin-bottom: 18px;
+
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 8px;
-      letter-spacing: 1px;
+      font-size: 9px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     .languages a {
       color: #8e7a43;
       text-decoration: none;
-      margin-left: 9px;
+      margin: 0;
     }
 
     .languages a.active {
-      color: #e8e1d6;
+      color: #ffffff;
     }
 
-    /* IMAGES */
+    .languages .dot {
+      color: #443a29;
+    }
+
+
+    /* QUINTESSENTIALLY */
+
+    .brand {
+      margin: 0;
+
+      color: #ffffff;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      letter-spacing: 7px;
+      line-height: 1.1;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       IMAGES
+    ========================= */
 
     .image-frame {
       width: 100%;
@@ -84,22 +110,28 @@
       padding: 0;
       overflow: hidden;
       background: #050505;
+
       border: none !important;
       outline: none !important;
       box-shadow: none !important;
+
       line-height: 0;
     }
 
     .image-frame img {
       display: block;
+
       width: 101%;
       max-width: none;
       height: auto;
+
       margin: -2px -0.5%;
       padding: 0;
+
       border: none !important;
       outline: none !important;
       box-shadow: none !important;
+
       transform: scale(1.008);
       transform-origin: center;
     }
@@ -109,7 +141,10 @@
       margin-bottom: 20px;
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       margin-bottom: 19px;
@@ -123,22 +158,30 @@
 
     h1 {
       color: #f1ebe1;
+
       font-size: 25px;
       line-height: 1.1;
       font-weight: 400;
+
       margin: 19px auto 7px;
+
       max-width: 520px;
     }
 
     .subtitle {
       margin: 0;
+
       color: #b79b4e;
+
       font-size: 16px;
       line-height: 1.4;
       font-style: italic;
     }
 
-    /* BODY */
+
+    /* =========================
+       BODY
+    ========================= */
 
     .content {
       width: 100%;
@@ -149,26 +192,40 @@
       margin: 0 0 16px;
     }
 
+
+    /* =========================
+       SECTION TITLES
+    ========================= */
+
     .section-title {
       display: flex;
       align-items: center;
       gap: 14px;
+
       margin: 23px 0 14px;
+
       color: #eee7dc;
+
       font-size: 19px;
       line-height: 1.25;
+
       font-weight: 400;
       font-style: italic;
     }
 
     .section-title::after {
       content: "";
+
       height: 1px;
       flex: 1;
+
       background: #443a29;
     }
 
-    /* KEY DATES */
+
+    /* =========================
+       KEY DATES
+    ========================= */
 
     .dates-section {
       margin-top: 31px;
@@ -183,9 +240,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       gap: 25px;
+
       padding: 10px 0;
+
       border-bottom: 1px solid #322c22;
+
       font-size: 14px;
       color: #ddd6ca;
     }
@@ -199,12 +260,17 @@
       text-align: right;
     }
 
-    /* ENDING */
+
+    /* =========================
+       ENDING
+    ========================= */
 
     .closing {
       margin-top: 30px;
       padding-top: 21px;
+
       border-top: 1px solid #443a29;
+
       text-align: center;
       font-style: italic;
     }
@@ -216,15 +282,23 @@
 
     .contact a {
       display: inline-block;
+
       color: #b79b4e;
+
       text-decoration: none;
+
       border-bottom: 1px solid #b79b4e;
+
       padding-bottom: 3px;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media only screen and (max-width: 620px) {
+
       .page {
         padding: 25px 18px 55px;
       }
@@ -233,14 +307,15 @@
         max-width: 100%;
       }
 
-      .brand {
-        font-size: 15px;
-        letter-spacing: 5px;
-      }
-
       .languages {
         position: static;
-        margin-top: 13px;
+        margin-bottom: 15px;
+      }
+
+      .brand {
+        font-size: 27px;
+        letter-spacing: 5px;
+        line-height: 1.15;
       }
 
       h1 {
@@ -259,9 +334,12 @@
         gap: 15px;
         font-size: 13px;
       }
+
     }
+
   </style>
 </head>
+
 
 <body>
 
@@ -269,35 +347,65 @@
 
   <main class="container">
 
-    <!-- HEADER -->
+
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <header class="topbar">
+
+
+      <!-- TRANSLATIONS -->
+
+      <nav class="languages">
+
+        <a href="?lang=fr">
+          FR
+        </a>
+
+        <span class="dot">·</span>
+
+        <a href="?lang=en">
+          EN
+        </a>
+
+        <span class="dot">·</span>
+
+        <a href="?lang=nl">
+          NL
+        </a>
+
+      </nav>
+
+
+      <!-- QUINTESSENTIALLY -->
 
       <div class="brand">
         QUINTESSENTIALLY
       </div>
 
-      <nav class="languages">
-        <a href="?lang=fr">FR</a>
-        <a href="?lang=en">EN</a>
-        <a href="?lang=nl">NL</a>
-      </nav>
 
     </header>
 
 
-    <!-- IMAGE 1 -->
+    <!-- =========================
+         IMAGE 1
+    ========================= -->
 
     <div class="image-frame hero">
+
       <img
         src="crans 1.jpg"
         alt="Crans-Montana"
         draggable="false"
       >
+
     </div>
 
 
-    <!-- TITLE -->
+    <!-- =========================
+         TITLE
+    ========================= -->
 
     <div class="hero-text">
 
@@ -312,7 +420,12 @@
     </div>
 
 
+    <!-- =========================
+         CONTENT
+    ========================= -->
+
     <div class="content">
+
 
       <!-- INTRO -->
 
@@ -337,11 +450,13 @@
       <!-- IMAGE 2 -->
 
       <div class="image-frame section-image">
+
         <img
           src="crans 2.png"
           alt="Alpine skiing at Crans-Montana"
           draggable="false"
         >
+
       </div>
 
 
@@ -369,11 +484,13 @@
       <!-- IMAGE 3 -->
 
       <div class="image-frame section-image">
+
         <img
           src="crans 3.jpg"
           alt="Crans-Montana in winter"
           draggable="false"
         >
+
       </div>
 
 
@@ -391,7 +508,9 @@
       </p>
 
 
-      <!-- KEY DATES -->
+      <!-- =========================
+           KEY DATES
+      ========================= -->
 
       <section class="dates-section">
 
@@ -401,7 +520,9 @@
 
         <div class="dates-list">
 
+
           <div class="date-row">
+
             <span class="date" id="date1">
               6 February 2027
             </span>
@@ -409,10 +530,12 @@
             <span class="event" id="event1">
               Women’s Downhill
             </span>
+
           </div>
 
 
           <div class="date-row">
+
             <span class="date" id="date2">
               7 February 2027
             </span>
@@ -420,10 +543,12 @@
             <span class="event" id="event2">
               Men’s Downhill
             </span>
+
           </div>
 
 
           <div class="date-row">
+
             <span class="date" id="date3">
               13 February 2027
             </span>
@@ -431,10 +556,12 @@
             <span class="event" id="event3">
               Women’s Slalom Final
             </span>
+
           </div>
 
 
           <div class="date-row">
+
             <span class="date" id="date4">
               14 February 2027
             </span>
@@ -442,14 +569,18 @@
             <span class="event" id="event4">
               Men’s Slalom Final
             </span>
+
           </div>
+
 
         </div>
 
       </section>
 
 
-      <!-- ENDING -->
+      <!-- =========================
+           ENDING
+      ========================= -->
 
       <div class="closing" id="closing">
         Experience the world of Alpine skiing at its highest level.
@@ -467,6 +598,7 @@
 
       </div>
 
+
     </div>
 
   </main>
@@ -476,7 +608,17 @@
 
 <script>
 
+
+/* ==========================================================
+   TRANSLATIONS
+========================================================== */
+
 const translations = {
+
+
+  /* =========================
+     ENGLISH
+  ========================= */
 
   en: {
 
@@ -539,8 +681,13 @@ const translations = {
 
     contact:
       "Contact me for more information"
+
   },
 
+
+  /* =========================
+     FRENCH
+  ========================= */
 
   fr: {
 
@@ -603,8 +750,13 @@ const translations = {
 
     contact:
       "Contactez-moi pour plus d’informations"
+
   },
 
+
+  /* =========================
+     DUTCH
+  ========================= */
 
   nl: {
 
@@ -667,29 +819,41 @@ const translations = {
 
     contact:
       "Contacteer mij voor meer informatie"
+
   }
 
 };
 
 
-/* GET LANGUAGE */
+/* =========================
+   GET LANGUAGE
+========================= */
 
-const params = new URLSearchParams(window.location.search);
+const params =
+  new URLSearchParams(
+    window.location.search
+  );
 
-let lang = params.get("lang");
+let lang =
+  params.get("lang");
 
 if (!translations[lang]) {
   lang = "en";
 }
 
-const t = translations[lang];
+const t =
+  translations[lang];
 
-document.documentElement.lang = lang;
+document.documentElement.lang =
+  lang;
 
 
-/* APPLY TRANSLATION */
+/* =========================
+   APPLY TRANSLATION
+========================= */
 
 const fields = [
+
   "title",
   "subtitle",
   "intro1",
@@ -710,30 +874,53 @@ const fields = [
   "event4",
   "closing",
   "contact"
+
 ];
+
 
 fields.forEach(function(field) {
 
-  const element = document.getElementById(field);
+  const element =
+    document.getElementById(field);
 
-  if (element && t[field]) {
-    element.textContent = t[field];
+  if (
+    element &&
+    t[field]
+  ) {
+
+    element.textContent =
+      t[field];
+
   }
 
 });
 
 
-/* ACTIVE LANGUAGE */
+/* =========================
+   ACTIVE LANGUAGE
+========================= */
 
-document.querySelectorAll(".languages a").forEach(function(link) {
+document
+  .querySelectorAll(".languages a")
+  .forEach(function(link) {
 
-  link.classList.remove("active");
+    link.classList.remove(
+      "active"
+    );
 
-  if (link.getAttribute("href") === "?lang=" + lang) {
-    link.classList.add("active");
-  }
+    if (
+      link.getAttribute("href") ===
+      "?lang=" + lang
+    ) {
 
-});
+      link.classList.add(
+        "active"
+      );
+
+    }
+
+  });
+
 
 </script>
 
