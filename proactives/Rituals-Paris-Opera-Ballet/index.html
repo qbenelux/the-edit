@@ -1,454 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Rituals – Paris Opera Ballet | Quintessentially</title>
+<title>Rituals – Paris Opera Ballet | Quintessentially</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
 
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background: #050505;
-      color: #ddd6ca;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 15px;
-      line-height: 1.65;
-    }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #050505;
+  color: #ddd6ca;
+}
 
-    .page {
-      width: 100%;
-      min-height: 100vh;
-      padding: 42px 20px 70px;
-      background: #050505;
-    }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
 
-    .container {
-      width: 100%;
-      max-width: 680px;
-      margin: 0 auto;
-    }
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 42px 20px 70px;
+  background: #050505;
+}
 
-    /* HEADER */
+.container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
 
-    .header {
-      position: relative;
-      margin-bottom: 28px;
-      text-align: center;
-    }
 
-    .brand {
-      margin: 0;
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 19px;
-      font-weight: 400;
-      letter-spacing: 7px;
-      line-height: 1;
-    }
+/* =========================
+   HEADER
+========================= */
 
-    .languages {
-      position: absolute;
-      right: 0;
-      top: 1px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 8px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+.header {
+  position: relative;
+  margin-bottom: 28px;
+  text-align: center;
+}
 
-    .languages a {
-      margin-left: 11px;
-      color: #9b8a62;
-      text-decoration: none;
-    }
+.brand {
+  margin: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 7px;
+  line-height: 1;
+}
 
-    .languages a.active {
-      color: #f0e8da;
-    }
+.languages {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
-    /* IMAGES - tiny crop removes white edges */
+.languages a {
+  margin-left: 11px;
+  color: #9b8a62;
+  text-decoration: none;
+}
 
-    .image-crop {
-      width: 100%;
-      overflow: hidden;
-      background: #050505;
-      line-height: 0;
-      border: 0;
-      outline: 0;
-    }
+.languages a.active {
+  color: #f0e8da;
+}
 
-    .image-crop img {
-      display: block;
-      width: calc(100% + 4px);
-      max-width: none;
-      height: auto;
-      margin: -2px;
-      border: 0 !important;
-      outline: 0 !important;
-      box-shadow: none !important;
-    }
 
-    .hero {
-      margin-bottom: 26px;
-    }
+/* =========================
+   IMAGES
+   WHITE EDGE FIX
+========================= */
 
-    /* TITLE */
+.image-crop {
+  width: 100%;
+  overflow: hidden;
+  background: #050505;
+  line-height: 0;
+  border: 0;
+  outline: 0;
+}
 
-    .intro {
-      margin: 0 0 31px;
-      text-align: center;
-    }
+.image-crop img {
+  display: block;
+  width: calc(100% + 4px);
+  max-width: none;
+  height: auto;
+  margin: -2px;
 
-    h1 {
-      margin: 0 0 3px;
-      color: #eee8df;
-      font-size: 30px;
-      line-height: 1.15;
-      font-weight: 400;
-    }
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
 
-    .subtitle {
-      margin: 0;
-      color: #c3a865;
-      font-size: 14px;
-      line-height: 1.4;
-      font-style: italic;
-      font-weight: 400;
-    }
+.hero {
+  margin-bottom: 26px;
+}
 
-    /* BODY */
 
-    p {
-      margin: 0 0 19px;
-      font-weight: 400;
-    }
+/* =========================
+   MAIN TITLE
+========================= */
 
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin: 29px 0 17px;
-      color: #e7e0d5;
-      font-size: 20px;
-      line-height: 1.25;
-      font-weight: 600;
-      font-style: italic;
-    }
+.intro {
+  margin: 0 0 31px;
+  text-align: center;
+}
 
-    .section-title::after {
-      content: "";
-      height: 1px;
-      flex: 1;
-      background: #322c22;
-    }
+h1 {
+  margin: 0 0 3px;
+  color: #eee8df;
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 400;
+}
 
-    /* THREE WORKS */
+.subtitle {
+  margin: 0;
+  color: #c3a865;
+  font-size: 14px;
+  line-height: 1.4;
+  font-style: italic;
+  font-weight: 400;
+}
 
-    .work {
-      margin: 0 0 19px;
-    }
 
-    .work-name {
-      display: block;
-      margin-bottom: 1px;
-      color: #eee8df;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-      line-height: 1.4;
-      font-weight: 700;
-      letter-spacing: .3px;
-    }
+/* =========================
+   BODY TEXT
+========================= */
 
-    .work-credit {
-      display: block;
-      margin-bottom: 1px;
-      color: #ded6ca;
-      font-style: italic;
-      font-weight: 400;
-    }
+p {
+  margin: 0 0 19px;
+  font-weight: 400;
+}
 
-    .work-description {
-      margin: 0;
-      font-weight: 400;
-    }
 
-    /* TWO IMAGES */
+/* =========================
+   SECTION TITLES
+   ITALIC — NOT BOLD
+========================= */
 
-    .image-pair {
-      display: flex;
-      width: 100%;
-      gap: 10px;
-      margin: 31px 0 27px;
-    }
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 
-    .image-pair .image-crop {
-      width: calc(50% - 5px);
-      height: 390px;
-    }
+  margin: 29px 0 17px;
 
-    .image-pair img {
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
-      object-fit: cover;
-      object-position: center;
-      margin: -2px;
-    }
+  color: #e7e0d5;
 
-    /* LOCATION */
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.25;
 
-    .details {
-      margin-top: 28px;
-      padding: 19px 0;
-      border-top: 1px solid #322c22;
-      border-bottom: 1px solid #322c22;
-    }
+  font-weight: 400;
+  font-style: italic;
+}
 
-    .details p {
-      margin: 0;
-      font-weight: 400;
-    }
+.section-title::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #322c22;
+}
 
-    .location-label {
-      color: #eee8df;
-      font-weight: 700;
-    }
 
-    /* CLOSING */
+/* =========================
+   THREE WORKS
+========================= */
 
-    .closing {
-      margin-top: 24px;
-      text-align: center;
-    }
+.work {
+  margin: 0 0 19px;
+}
 
-    .closing-line {
-      margin-bottom: 18px;
-      color: #eee8df;
-      font-style: italic;
-      font-weight: 400;
-    }
+.work-name {
+  display: block;
+  margin-bottom: 1px;
 
-    .contact {
-      display: inline-block;
-      padding-bottom: 3px;
-      color: #c3a865;
-      text-decoration: none;
-      border-bottom: 1px solid #c3a865;
-    }
+  color: #eee8df;
 
-    /* MOBILE */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
 
-    @media (max-width: 700px) {
-      .page {
-        padding: 30px 18px 55px;
-      }
+  font-weight: 700;
+  letter-spacing: .3px;
+}
 
-      .brand {
-        font-size: 15px;
-        letter-spacing: 5px;
-      }
+.work-credit {
+  display: block;
+  margin-bottom: 1px;
 
-      .languages {
-        position: static;
-        margin-top: 15px;
-      }
+  color: #ded6ca;
 
-      h1 {
-        font-size: 26px;
-      }
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+}
 
-      .section-title {
-        font-size: 18px;
-      }
+.work-description {
+  margin: 0;
+  font-weight: 400;
+}
 
-      .image-pair {
-        gap: 7px;
-      }
 
-      .image-pair .image-crop {
-        width: calc(50% - 3.5px);
-        height: 300px;
-      }
-    }
-  </style>
+/* =========================
+   TWO IMAGES
+========================= */
+
+.image-pair {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin: 31px 0 27px;
+}
+
+.image-pair .image-crop {
+  width: calc(50% - 5px);
+  height: 390px;
+}
+
+.image-pair img {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+
+  object-fit: cover;
+  object-position: center;
+
+  margin: -2px;
+
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.details {
+  margin-top: 28px;
+  padding: 19px 0;
+
+  border-top: 1px solid #322c22;
+  border-bottom: 1px solid #322c22;
+}
+
+.details p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.location-label {
+  color: #eee8df;
+  font-weight: 700;
+}
+
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.closing-line {
+  margin-bottom: 18px;
+  color: #eee8df;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.contact {
+  display: inline-block;
+  padding-bottom: 3px;
+
+  color: #c3a865;
+  text-decoration: none;
+
+  border-bottom: 1px solid #c3a865;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .page {
+    padding: 30px 18px 55px;
+  }
+
+  .brand {
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
+
+  .languages {
+    position: static;
+    margin-top: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .image-pair {
+    gap: 7px;
+  }
+
+  .image-pair .image-crop {
+    width: calc(50% - 3.5px);
+    height: 300px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <main class="page">
-    <div class="container">
+<main class="page">
 
-      <!-- HEADER -->
-      <header class="header">
-
-        <div class="brand">
-          QUINTESSENTIALLY
-        </div>
-
-        <nav class="languages">
-          <a href="?lang=fr">FR</a>
-          <a href="?lang=en" class="active">EN</a>
-          <a href="?lang=nl">NL</a>
-        </nav>
-
-      </header>
+<div class="container">
 
 
-      <!-- IMAGE 1 -->
-      <div class="image-crop hero">
-        <img src="ballet 1.jpg" alt="Paris Opera Ballet">
-      </div>
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header class="header">
+
+    <div class="brand">
+      QUINTESSENTIALLY
+    </div>
+
+    <nav class="languages">
+
+      <a href="?lang=fr">
+        FR
+      </a>
+
+      <a href="?lang=en" class="active">
+        EN
+      </a>
+
+      <a href="?lang=nl">
+        NL
+      </a>
+
+    </nav>
+
+  </header>
 
 
-      <!-- TITLE -->
-      <div class="intro">
+  <!-- =========================
+       IMAGE 1
+  ========================= -->
 
-        <h1>Rituals – Paris Opera Ballet</h1>
+  <div class="image-crop hero">
 
-        <p class="subtitle">
-          An Evening of Ballet at the Opéra Bastille
-        </p>
+    <img
+      src="ballet 1.jpg"
+      alt="Paris Opera Ballet"
+    >
 
-      </div>
-
-
-      <!-- INTRODUCTION -->
-      <p>
-        This winter, Paris welcomes an exceptional programme of dance at the
-        Opéra Bastille. From 2 December 2026 to 2 January 2027, the Paris Opera
-        Ballet presents <em>Rituals</em>, bringing together three works performed
-        as part of one evening. Moving from classical elegance to bold
-        contemporary expression, the programme offers three very different
-        interpretations of movement, music and choreography.
-      </p>
+  </div>
 
 
-      <!-- THREE WORKS -->
-      <h2 class="section-title">
-        Three Works, One Evening
-      </h2>
+  <!-- =========================
+       TITLE
+  ========================= -->
+
+  <div class="intro">
+
+    <h1>
+      Rituals – Paris Opera Ballet
+    </h1>
+
+    <p class="subtitle">
+      An Evening of Ballet at the Opéra Bastille
+    </p>
+
+  </div>
 
 
-      <div class="work">
+  <!-- =========================
+       INTRODUCTION
+  ========================= -->
 
-        <span class="work-name">
-          SUITE EN BLANC
-        </span>
-
-        <span class="work-credit">
-          Serge Lifar · Music by Édouard Lalo
-        </span>
-
-        <p class="work-description">
-          A graceful celebration of classical technique and the elegance of
-          the French ballet tradition.
-        </p>
-
-      </div>
+  <p>
+    This winter, Paris welcomes an exceptional programme of dance at the
+    Opéra Bastille. From 2 December 2026 to 2 January 2027, the Paris Opera
+    Ballet presents <em>Rituals</em>, bringing together three works performed
+    as part of one evening. Moving from classical elegance to bold
+    contemporary expression, the programme offers three very different
+    interpretations of movement, music and choreography.
+  </p>
 
 
-      <div class="work">
+  <!-- =========================
+       THREE WORKS
+  ========================= -->
 
-        <span class="work-name">
-          BOLÉRO X
-        </span>
-
-        <span class="work-credit">
-          Shahar Binyamini · Music by Maurice Ravel
-        </span>
-
-        <p class="work-description">
-          A hypnotic and energetic work where movement builds alongside the
-          unmistakable rhythm of <em>Boléro</em>.
-        </p>
-
-      </div>
+  <h2 class="section-title">
+    Three Works, One Evening
+  </h2>
 
 
-      <div class="work">
+  <!-- SUITE EN BLANC -->
 
-        <span class="work-name">
-          THE RITE OF SPRING
-        </span>
+  <div class="work">
 
-        <span class="work-credit">
-          Pina Bausch · Music by Igor Stravinsky
-        </span>
+    <span class="work-name">
+      SUITE EN BLANC
+    </span>
 
-        <p class="work-description">
-          Raw, powerful and intensely expressive, performed on an
-          earth-covered stage in one of Bausch’s most celebrated works.
-        </p>
+    <span class="work-credit">
+      Serge Lifar · Music by Édouard Lalo
+    </span>
 
-      </div>
+    <p class="work-description">
+      A graceful celebration of classical technique and the elegance
+      of the French ballet tradition.
+    </p>
 
-
-      <!-- IMAGES 2 + 3 -->
-      <div class="image-pair">
-
-        <div class="image-crop">
-          <img src="ballet 2.jpg" alt="Paris Opera Ballet dancer">
-        </div>
-
-        <div class="image-crop">
-          <img src="ballet 3.jpg" alt="Ballet shoes">
-        </div>
-
-      </div>
+  </div>
 
 
-      <!-- FINAL SECTION -->
-      <h2 class="section-title">
-        A Cultural Evening in Paris
-      </h2>
+  <!-- BOLERO X -->
 
-      <p>
-        A performance at the Opéra Bastille is a wonderful addition to a
-        winter escape in Paris, whether paired with dinner in the city or made
-        part of a longer stay. <em>Rituals</em> brings together the artistry of
-        the Paris Opera Ballet and three remarkable works for an evening that
-        goes far beyond a traditional night at the ballet. Allow us to secure
-        your seats and shape the rest of your Paris evening around the
-        performance.
-      </p>
+  <div class="work">
 
+    <span class="work-name">
+      BOLÉRO X
+    </span>
 
-      <!-- LOCATION -->
-      <div class="details">
+    <span class="work-credit">
+      Shahar Binyamini · Music by Maurice Ravel
+    </span>
 
-        <p>
-          <span class="location-label">Location:</span>
-          Opéra Bastille, Place de la Bastille, 75012 Paris
-        </p>
+    <p class="work-description">
+      A hypnotic and energetic work where movement builds alongside
+      the unmistakable rhythm of <em>Boléro</em>.
+    </p>
 
-      </div>
+  </div>
 
 
-      <!-- CLOSING -->
-      <div class="closing">
+  <!-- THE RITE OF SPRING -->
 
-        <p class="closing-line">
-          Make <em>Rituals</em> part of your next stay in Paris.
-        </p>
+  <div class="work">
 
-        <a class="contact"
-           href="mailto:brussels@quintessentially.com">
-          Contact me for more information
-        </a>
+    <span class="work-name">
+      THE RITE OF SPRING
+    </span>
 
-      </div>
+    <span class="work-credit">
+      Pina Bausch · Music by Igor Stravinsky
+    </span>
+
+    <p class="work-description">
+      Raw, powerful and intensely expressive, performed on an
+      earth-covered stage in one of Bausch’s most celebrated works.
+    </p>
+
+  </div>
+
+
+  <!-- =========================
+       IMAGES 2 + 3
+  ========================= -->
+
+  <div class="image-pair">
+
+    <div class="image-crop">
+
+      <img
+        src="ballet 2.jpg"
+        alt="Paris Opera Ballet dancer"
+      >
 
     </div>
-  </main>
+
+
+    <div class="image-crop">
+
+      <img
+        src="ballet 3.jpg"
+        alt="Ballet shoes"
+      >
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       CULTURAL EVENING
+  ========================= -->
+
+  <h2 class="section-title">
+    A Cultural Evening in Paris
+  </h2>
+
+
+  <p>
+    A performance at the Opéra Bastille is a wonderful addition to a
+    winter escape in Paris, whether paired with dinner in the city or
+    made part of a longer stay. <em>Rituals</em> brings together the
+    artistry of the Paris Opera Ballet and three remarkable works for
+    an evening that goes far beyond a traditional night at the ballet.
+    Allow us to secure your seats and shape the rest of your Paris
+    evening around the performance.
+  </p>
+
+
+  <!-- =========================
+       LOCATION
+  ========================= -->
+
+  <div class="details">
+
+    <p>
+
+      <span class="location-label">
+        Location:
+      </span>
+
+      Opéra Bastille, Place de la Bastille, 75012 Paris
+
+    </p>
+
+  </div>
+
+
+  <!-- =========================
+       CLOSING
+  ========================= -->
+
+  <div class="closing">
+
+    <p class="closing-line">
+      Make <em>Rituals</em> part of your next stay in Paris.
+    </p>
+
+    <a
+      class="contact"
+      href="mailto:brussels@quintessentially.com">
+      Contact me for more information
+    </a>
+
+  </div>
+
+
+</div>
+
+</main>
 
 </body>
 </html>
