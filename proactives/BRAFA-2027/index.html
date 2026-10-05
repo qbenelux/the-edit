@@ -7,339 +7,397 @@
 <title>BRAFA Art Fair 2027 | Quintessentially</title>
 
 <style>
-  :root{
-    --bg:#070706;
-    --text:#e8e3d9;
-    --body:#c8c1b5;
-    --muted:#948c7e;
-    --gold:#b99a54;
-    --line:#30291c;
-  }
 
-  *{
-    box-sizing:border-box;
-  }
+:root{
+  --bg:#070706;
+  --text:#e8e3d9;
+  --body:#c8c1b5;
+  --muted:#948c7e;
+  --gold:#b99a54;
+  --line:#30291c;
+}
 
-  html{
-    scroll-behavior:smooth;
-  }
+*{
+  box-sizing:border-box;
+}
 
-  body{
-    margin:0;
-    padding:0;
-    background:var(--bg);
-    color:var(--body);
-    font-family:Georgia, "Times New Roman", serif;
-    -webkit-font-smoothing:antialiased;
-  }
+html{
+  scroll-behavior:smooth;
+}
 
-  img{
-    display:block;
-    max-width:100%;
-  }
+body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--body);
+  font-family:Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing:antialiased;
+}
 
-  /* =========================
-     PAGE
-  ========================= */
+
+/* =========================
+   REMOVE IMAGE BORDERS
+========================= */
+
+img{
+  display:block;
+  max-width:100%;
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page{
+  width:100%;
+  max-width:760px;
+  margin:0 auto;
+  padding:0 30px 80px;
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.top{
+  position:relative;
+  padding:42px 0 30px;
+  text-align:center;
+}
+
+.logo{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:24px;
+  font-weight:400;
+  letter-spacing:.42em;
+  color:#ffffff;
+  text-transform:uppercase;
+}
+
+.languages{
+  position:absolute;
+  right:0;
+  top:50px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:9px;
+  letter-spacing:.15em;
+}
+
+.languages button{
+  border:0;
+  background:none;
+  padding:3px 5px;
+  color:#716b61;
+  cursor:pointer;
+  font-size:9px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.languages button.active{
+  color:var(--gold);
+}
+
+.languages span{
+  color:#40392e;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  width:100%;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  object-position:center;
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.title-block{
+  text-align:center;
+  padding:30px 20px 45px;
+}
+
+.title-block h1{
+  margin:0;
+  color:#f1ede5;
+  font-size:38px;
+  line-height:1.1;
+  font-weight:400;
+}
+
+.title-block h2{
+  margin:9px 0 0;
+  color:var(--text);
+  font-size:18px;
+  line-height:1.4;
+  font-style:italic;
+  font-weight:400;
+}
+
+
+/* =========================
+   ARTICLE
+========================= */
+
+.article{
+  max-width:650px;
+  margin:0 auto;
+}
+
+.article p{
+  margin:0 0 22px;
+  color:var(--body);
+  font-size:16px;
+  line-height:1.72;
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section{
+  margin-top:47px;
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:17px;
+  margin-bottom:20px;
+}
+
+.section-title h3{
+  margin:0;
+  color:#eee9df;
+  font-size:23px;
+  line-height:1.25;
+  font-weight:400;
+  font-style:italic;
+  white-space:nowrap;
+}
+
+.section-title::after{
+  content:"";
+  display:block;
+  flex:1;
+  height:1px;
+  background:var(--line);
+}
+
+
+/* =========================
+   ARTICLE IMAGES
+========================= */
+
+.single-image{
+  width:88%;
+  margin:38px auto 46px;
+  overflow:hidden;
+}
+
+.single-image img{
+  width:100%;
+  max-height:370px;
+  object-fit:cover;
+  object-position:center;
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+}
+
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.closing{
+  margin-top:48px;
+}
+
+.closing-line{
+  margin-top:34px !important;
+  color:#eee9df !important;
+  font-size:19px !important;
+  line-height:1.55 !important;
+  font-style:italic;
+}
+
+
+/* =========================
+   EVENT DETAILS
+========================= */
+
+.event-details{
+  margin:42px 0 30px;
+  padding:24px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.event-item{
+  text-align:center;
+}
+
+.event-label{
+  margin-bottom:8px;
+  color:var(--gold);
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:9px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+.event-value{
+  color:var(--text);
+  font-size:16px;
+  line-height:1.4;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-wrap{
+  text-align:center;
+  margin-top:27px;
+}
+
+.contact{
+  display:inline-block;
+  color:var(--gold);
+  text-decoration:none;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:10px;
+  line-height:1.5;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--gold);
+  padding-bottom:5px;
+}
+
+.contact:hover{
+  color:#d4b66f;
+  border-color:#d4b66f;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  max-width:650px;
+  margin:70px auto 0;
+  padding-top:30px;
+  border-top:1px solid var(--line);
+  text-align:center;
+}
+
+.footer-logo{
+  color:#ddd7cc;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:11px;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
 
   .page{
-    width:100%;
-    max-width:760px;
-    margin:0 auto;
-    padding:0 30px 80px;
+    padding:0 18px 60px;
   }
 
-
-  /* =========================
-     TOP
-  ========================= */
-
   .top{
-    position:relative;
-    padding:42px 0 28px;
-    text-align:center;
+    padding:32px 0 23px;
   }
 
   .logo{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:18px;
-    font-weight:400;
-    letter-spacing:.42em;
-    color:#ffffff;
-    text-transform:uppercase;
+    font-size:17px;
+    letter-spacing:.32em;
   }
 
   .languages{
-    position:absolute;
-    right:0;
-    top:47px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:9px;
-    letter-spacing:.15em;
-  }
-
-  .languages button{
-    border:0;
-    background:none;
-    padding:3px 5px;
-    color:#716b61;
-    cursor:pointer;
-    font-size:9px;
-    font-family:Arial, Helvetica, sans-serif;
-  }
-
-  .languages button.active{
-    color:var(--gold);
-  }
-
-  .languages span{
-    color:#40392e;
-  }
-
-
-  /* =========================
-     HERO
-  ========================= */
-
-  .hero{
-    width:100%;
+    position:static;
+    margin-top:14px;
   }
 
   .hero img{
-    width:100%;
-    height:420px;
-    object-fit:cover;
-    object-position:center;
+    height:300px;
   }
 
-
-  /* =========================
-     TITLE UNDER IMAGE
-  ========================= */
-
   .title-block{
-    text-align:center;
-    padding:30px 20px 45px;
+    padding:25px 10px 38px;
   }
 
   .title-block h1{
-    margin:0;
-    color:#f1ede5;
-    font-size:38px;
-    line-height:1.1;
-    font-weight:400;
+    font-size:31px;
   }
 
   .title-block h2{
-    margin:9px 0 0;
-    color:var(--text);
-    font-size:18px;
-    line-height:1.4;
-    font-style:italic;
-    font-weight:400;
-  }
-
-
-  /* =========================
-     ARTICLE
-  ========================= */
-
-  .article{
-    max-width:650px;
-    margin:0 auto;
+    font-size:16px;
   }
 
   .article p{
-    margin:0 0 22px;
-    color:var(--body);
-    font-size:16px;
-    line-height:1.72;
+    font-size:15px;
   }
 
   .section{
-    margin-top:47px;
-  }
-
-  .section-title{
-    display:flex;
-    align-items:center;
-    gap:17px;
-    margin-bottom:20px;
+    margin-top:40px;
   }
 
   .section-title h3{
-    margin:0;
-    color:#eee9df;
-    font-size:23px;
-    line-height:1.25;
-    font-weight:400;
-    font-style:italic;
-    white-space:nowrap;
+    font-size:20px;
+    white-space:normal;
   }
-
-  .section-title::after{
-    content:"";
-    display:block;
-    flex:1;
-    height:1px;
-    background:var(--line);
-  }
-
-
-  /* =========================
-     IMAGES
-  ========================= */
 
   .single-image{
-    width:88%;
-    margin:38px auto 46px;
-  }
-
-  .single-image img{
     width:100%;
-    max-height:370px;
-    object-fit:cover;
-    object-position:center;
+    margin:30px auto 38px;
   }
 
-  .image-pair{
-    width:88%;
-    margin:38px auto 48px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
+  .event-details{
+    gap:15px;
+    padding:24px 0;
   }
 
-  .image-pair img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
-    object-position:center;
+  .event-value{
+    font-size:15px;
   }
 
+}
 
-  /* =========================
-     FINAL SECTION
-  ========================= */
-
-  .closing{
-    margin-top:48px;
-  }
-
-  .closing-line{
-    margin-top:34px !important;
-    color:#eee9df !important;
-    font-size:19px !important;
-    line-height:1.55 !important;
-    font-style:italic;
-  }
-
-  .contact{
-    display:inline-block;
-    margin-top:8px;
-    color:var(--gold);
-    text-decoration:none;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:10px;
-    line-height:1.5;
-    letter-spacing:.17em;
-    text-transform:uppercase;
-    border-bottom:1px solid var(--gold);
-    padding-bottom:5px;
-  }
-
-
-  /* =========================
-     FOOTER
-  ========================= */
-
-  footer{
-    max-width:650px;
-    margin:70px auto 0;
-    padding-top:30px;
-    border-top:1px solid var(--line);
-    text-align:center;
-  }
-
-  .footer-logo{
-    color:#ddd7cc;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:9px;
-    letter-spacing:.35em;
-    text-transform:uppercase;
-  }
-
-
-  /* =========================
-     MOBILE
-  ========================= */
-
-  @media(max-width:650px){
-
-    .page{
-      padding:0 18px 60px;
-    }
-
-    .top{
-      padding:32px 0 23px;
-    }
-
-    .logo{
-      font-size:13px;
-      letter-spacing:.32em;
-    }
-
-    .languages{
-      position:static;
-      margin-top:14px;
-    }
-
-    .hero img{
-      height:300px;
-    }
-
-    .title-block{
-      padding:25px 10px 38px;
-    }
-
-    .title-block h1{
-      font-size:31px;
-    }
-
-    .title-block h2{
-      font-size:16px;
-    }
-
-    .article p{
-      font-size:15px;
-    }
-
-    .section{
-      margin-top:40px;
-    }
-
-    .section-title h3{
-      font-size:20px;
-      white-space:normal;
-    }
-
-    .single-image{
-      width:100%;
-      margin:30px auto 38px;
-    }
-
-    .image-pair{
-      width:100%;
-      gap:7px;
-    }
-
-    .image-pair img{
-      height:170px;
-    }
-
-  }
 </style>
 </head>
+
 
 <body>
 
@@ -347,7 +405,7 @@
 
 
   <!-- =========================
-       QUINTESSENTIALLY
+       TOP
   ========================= -->
 
   <div class="top">
@@ -357,29 +415,43 @@
     </div>
 
     <div class="languages">
-      <button data-lang="fr">FR</button>
+
+      <button data-lang="fr">
+        FR
+      </button>
+
       <span>·</span>
-      <button data-lang="en">EN</button>
+
+      <button data-lang="en">
+        EN
+      </button>
+
       <span>·</span>
-      <button data-lang="nl">NL</button>
+
+      <button data-lang="nl">
+        NL
+      </button>
+
     </div>
 
   </div>
 
 
   <!-- =========================
-       MAIN IMAGE
+       HERO IMAGE
   ========================= -->
 
   <div class="hero">
+
     <img
       src="brafa 1.jpg"
       alt="BRAFA Art Fair 2027">
+
   </div>
 
 
   <!-- =========================
-       TITLE BELOW IMAGE
+       TITLE
   ========================= -->
 
   <div class="title-block">
@@ -399,7 +471,9 @@
        ARTICLE
   ========================= -->
 
-  <main class="article" id="articleContent">
+  <main
+    class="article"
+    id="articleContent">
   </main>
 
 
@@ -408,10 +482,13 @@
   ========================= -->
 
   <footer>
+
     <div class="footer-logo">
       QUINTESSENTIALLY
     </div>
+
   </footer>
+
 
 </div>
 
@@ -427,9 +504,11 @@ const translations = {
 
 en: {
 
-  title: "BRAFA Art Fair 2027",
+  title:
+    "BRAFA Art Fair 2027",
 
-  subtitle: "A Celebration of Art in Brussels",
+  subtitle:
+    "A Celebration of Art in Brussels",
 
   intro: `
     For eight days, BRAFA Art Fair transforms Brussels Expo into a remarkable
@@ -489,7 +568,13 @@ en: {
     "Experience BRAFA and discover the art that speaks to you.",
 
   contact:
-    "Contact me for more information"
+    "Contact me for more information",
+
+  dateLabel:
+    "Date",
+
+  locationLabel:
+    "Location"
 
 },
 
@@ -565,7 +650,13 @@ fr: {
     "Vivez BRAFA et découvrez l’art qui vous parle.",
 
   contact:
-    "Contactez-moi pour plus d’informations"
+    "Contactez-moi pour plus d’informations",
+
+  dateLabel:
+    "Date",
+
+  locationLabel:
+    "Lieu"
 
 },
 
@@ -640,7 +731,13 @@ nl: {
     "Beleef BRAFA en ontdek de kunst die u aanspreekt.",
 
   contact:
-    "Contacteer mij voor meer informatie"
+    "Contacteer mij voor meer informatie",
+
+  dateLabel:
+    "Datum",
+
+  locationLabel:
+    "Locatie"
 
 }
 
@@ -648,48 +745,66 @@ nl: {
 
 
 /* ==========================================================
-   BUILD ARTICLE
+   RENDER LANGUAGE
 ========================================================== */
 
 function renderLanguage(lang){
 
   if(!translations[lang]){
-    lang="en";
+    lang = "en";
   }
 
   const t = translations[lang];
 
   document.documentElement.lang = lang;
 
-  document.getElementById("mainTitle").textContent =
-    t.title;
 
-  document.getElementById("mainSubtitle").textContent =
-    t.subtitle;
+  /* TITLE */
+
+  document.getElementById(
+    "mainTitle"
+  ).textContent = t.title;
+
+  document.getElementById(
+    "mainSubtitle"
+  ).textContent = t.subtitle;
 
 
-  document.getElementById("articleContent").innerHTML = `
+  /* ARTICLE */
+
+  document.getElementById(
+    "articleContent"
+  ).innerHTML = `
+
+
+    <!-- INTRODUCTION -->
 
     <p>
       ${t.intro}
     </p>
 
 
-    <!-- FIRST EXTRA IMAGE -->
+    <!-- IMAGE 2 -->
 
     <div class="single-image">
+
       <img
         src="brafa 2.jpg"
         alt="BRAFA Art Fair">
+
     </div>
 
 
-    <!-- PRESTIGIOUS ART FAIR -->
+    <!-- PRESTIGIOUS INTERNATIONAL ART FAIR -->
 
     <section class="section">
 
       <div class="section-title">
-        <h3>${t.prestigiousTitle}</h3>
+
+        <h3>
+          ${t.prestigiousTitle}
+        </h3>
+
       </div>
 
       <p>
@@ -708,7 +823,11 @@ function renderLanguage(lang){
     <section class="section">
 
       <div class="section-title">
-        <h3>${t.discoveryTitle}</h3>
+
+        <h3>
+          ${t.discoveryTitle}
+        </h3>
+
       </div>
 
       <p>
@@ -722,12 +841,14 @@ function renderLanguage(lang){
     </section>
 
 
-    <!-- SECOND EXTRA IMAGE -->
+    <!-- IMAGE 3 -->
 
     <div class="single-image">
+
       <img
         src="brafa 3.jpg"
         alt="BRAFA Art Fair Brussels">
+
     </div>
 
 
@@ -736,29 +857,73 @@ function renderLanguage(lang){
     <section class="section closing">
 
       <div class="section-title">
-        <h3>${t.experienceTitle}</h3>
+
+        <h3>
+          ${t.experienceTitle}
+        </h3>
+
       </div>
 
       <p>
         ${t.experience}
       </p>
 
+
       <p class="closing-line">
         ${t.closing}
       </p>
 
-      <a
-        class="contact"
-        href="mailto:qbenelux@quintessentially.com?subject=BRAFA%20Art%20Fair%202027">
-        ${t.contact} →
-      </a>
+
+      <!-- DATE + LOCATION -->
+
+      <div class="event-details">
+
+        <div class="event-item">
+
+          <div class="event-label">
+            ${t.dateLabel}
+          </div>
+
+          <div class="event-value">
+            24–31 January 2027
+          </div>
+
+        </div>
+
+
+        <div class="event-item">
+
+          <div class="event-label">
+            ${t.locationLabel}
+          </div>
+
+          <div class="event-value">
+            Brussels Expo
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div class="contact-wrap">
+
+        <a
+          class="contact"
+          href="mailto:qbenelux@quintessentially.com?subject=BRAFA%20Art%20Fair%202027">
+          ${t.contact} →
+        </a>
+
+      </div>
 
     </section>
 
   `;
 
 
-  /* ACTIVE LANGUAGE BUTTON */
+  /* ACTIVE LANGUAGE */
 
   document
     .querySelectorAll("[data-lang]")
@@ -772,7 +937,7 @@ function renderLanguage(lang){
     });
 
 
-  /* PUT LANGUAGE IN URL */
+  /* UPDATE URL */
 
   const url =
     new URL(window.location.href);
@@ -814,7 +979,7 @@ document
 
 
 /* ==========================================================
-   INITIAL LANGUAGE
+   STARTING LANGUAGE
 ========================================================== */
 
 const params =
