@@ -37,7 +37,6 @@ body{
 
 /* =========================
    ALL IMAGES
-   REMOVE WHITE EDGE
 ========================= */
 
 img{
@@ -109,11 +108,12 @@ img{
 
 /* =========================
    HERO
-   2PX CROP TO REMOVE EDGE
+   SAME WIDTH — NATURAL HEIGHT
 ========================= */
 
 .hero{
-  width:100%;
+  width:88%;
+  margin:0 auto;
   overflow:hidden;
   background:var(--bg);
 }
@@ -121,10 +121,8 @@ img{
 .hero img{
   display:block;
   width:calc(100% + 4px);
+  height:auto;
   max-width:none;
-  height:424px;
-  object-fit:cover;
-  object-position:center;
   margin:-2px;
   border:0 !important;
   outline:0 !important;
@@ -212,7 +210,7 @@ img{
 
 /* =========================
    ARTICLE IMAGES
-   2PX CROP TO REMOVE EDGE
+   SAME WIDTH — NATURAL HEIGHT
 ========================= */
 
 .single-image{
@@ -225,10 +223,8 @@ img{
 .single-image img{
   display:block;
   width:calc(100% + 4px);
+  height:auto;
   max-width:none;
-  max-height:370px;
-  object-fit:cover;
-  object-position:center;
   margin:-2px;
   border:0 !important;
   outline:0 !important;
@@ -360,8 +356,9 @@ footer{
     margin-top:14px;
   }
 
-  .hero img{
-    height:304px;
+  .hero,
+  .single-image{
+    width:100%;
   }
 
   .title-block{
@@ -390,7 +387,6 @@ footer{
   }
 
   .single-image{
-    width:100%;
     margin:30px auto 38px;
   }
 
@@ -407,7 +403,6 @@ footer{
 
 </style>
 </head>
-
 
 <body>
 
