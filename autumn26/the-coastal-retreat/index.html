@@ -37,7 +37,9 @@ body{
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
   height:68px;
@@ -95,7 +97,9 @@ header{
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
   height:430px;
@@ -116,12 +120,13 @@ header{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    to bottom,
-    rgba(5,5,4,.08) 0%,
-    rgba(5,5,4,.12) 45%,
-    rgba(5,5,4,.82) 100%
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(5,5,4,.08) 0%,
+      rgba(5,5,4,.12) 45%,
+      rgba(5,5,4,.82) 100%
+    );
 }
 
 .hero-content{
@@ -148,7 +153,9 @@ h1{
 }
 
 
-/* ARTICLE */
+/* =========================
+   ARTICLE
+========================= */
 
 .article{
   max-width:590px;
@@ -169,10 +176,60 @@ h1{
 }
 
 
-/* MEMBER BENEFITS */
+/* =========================
+   SINGLE IMAGE
+========================= */
+
+.single-image{
+  width:min(680px, calc(100vw - 50px));
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  margin:45px 0 52px;
+}
+
+.single-image img{
+  width:100%;
+  height:auto;
+  max-height:440px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+
+/* =========================
+   TWO IMAGES SIDE BY SIDE
+========================= */
+
+.image-pair{
+  width:min(680px, calc(100vw - 50px));
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+
+  margin:45px 0 52px;
+}
+
+.image-pair img{
+  width:100%;
+  height:290px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+
+/* =========================
+   MEMBER BENEFITS
+========================= */
 
 .benefits{
-  margin:42px 0 38px;
+  margin:52px 0 38px;
   padding:30px 0 28px;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
@@ -222,7 +279,9 @@ h1{
 }
 
 
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 .cta{
   display:inline-block;
@@ -240,7 +299,9 @@ h1{
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   border-top:1px solid #211d15;
@@ -272,7 +333,9 @@ footer{
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
@@ -308,8 +371,24 @@ footer{
     padding:55px 25px 70px;
   }
 
+  .single-image,
+  .image-pair{
+    width:100%;
+    left:auto;
+    transform:none;
+    margin:35px 0 42px;
+  }
+
+  .image-pair{
+    gap:8px;
+  }
+
+  .image-pair img{
+    height:200px;
+  }
+
   .benefits{
-    margin:35px 0 32px;
+    margin:40px 0 32px;
     padding:27px 0;
   }
 
@@ -322,32 +401,46 @@ footer{
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-  <div class="wordmark">Quintessentially</div>
+  <div class="wordmark">
+    Quintessentially
+  </div>
 
   <div class="language">
 
-    <button type="button" data-lang="fr">FR</button>
+    <button type="button" data-lang="fr">
+      FR
+    </button>
 
     <span class="sep">/</span>
 
-    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="en">
+      EN
+    </button>
 
     <span class="sep">/</span>
 
-    <button type="button" data-lang="nl">NL</button>
+    <button type="button" data-lang="nl">
+      NL
+    </button>
 
   </div>
 
-  <div class="edition">The Edit · Autumn ’26</div>
+  <div class="edition">
+    The Edit · Autumn ’26
+  </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -369,7 +462,9 @@ footer{
 </section>
 
 
-<!-- ARTICLE -->
+<!-- =========================
+     ARTICLE
+========================= -->
 
 <main class="article">
 
@@ -390,7 +485,7 @@ footer{
   </section>
 
 
-  <!-- EMAIL CTA -->
+  <!-- CTA -->
 
   <a
     class="cta"
@@ -401,7 +496,9 @@ footer{
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -426,7 +523,9 @@ footer{
 const content = {
 
 
-  /* ENGLISH */
+  /* =========================
+     ENGLISH
+  ========================= */
 
   en: {
 
@@ -472,7 +571,9 @@ const content = {
   },
 
 
-  /* FRENCH */
+  /* =========================
+     FRENCH
+  ========================= */
 
   fr: {
 
@@ -518,7 +619,9 @@ const content = {
   },
 
 
-  /* DUTCH */
+  /* =========================
+     DUTCH
+  ========================= */
 
   nl: {
 
@@ -567,6 +670,10 @@ const content = {
 
 
 
+/* =========================
+   DISPLAY LANGUAGE
+========================= */
+
 function showLanguage(lang){
 
   if(!content[lang]){
@@ -576,6 +683,7 @@ function showLanguage(lang){
   const data = content[lang];
 
   document.documentElement.lang = lang;
+
 
   document.getElementById("category").textContent =
     data.category;
@@ -593,14 +701,17 @@ function showLanguage(lang){
     data.footer;
 
 
-  /* ARTICLE */
+  /* =========================
+     ARTICLE + IMAGES
+  ========================= */
 
   const articleBody =
     document.getElementById("articleBody");
 
   articleBody.innerHTML = "";
 
-  data.paragraphs.forEach(function(text){
+
+  data.paragraphs.forEach(function(text, index){
 
     const paragraph =
       document.createElement("p");
@@ -609,15 +720,68 @@ function showLanguage(lang){
 
     articleBody.appendChild(paragraph);
 
+
+
+    /* =========================
+       AFTER PARAGRAPH 1
+
+       ONE LARGE IMAGE
+       EXTERIOR / BEACH
+    ========================= */
+
+    if(index === 0){
+
+      const singleImage =
+        document.createElement("div");
+
+      singleImage.className =
+        "single-image";
+
+      singleImage.innerHTML =
+        '<img src="normandy 1.webp" alt="Deauville and the Normandy coast">';
+
+      articleBody.appendChild(singleImage);
+
+    }
+
+
+
+    /* =========================
+       AFTER PARAGRAPH 3
+
+       TWO IMAGES SIDE BY SIDE
+       HOTEL HALL + HOTEL ROOM
+    ========================= */
+
+    if(index === 2){
+
+      const imagePair =
+        document.createElement("div");
+
+      imagePair.className =
+        "image-pair";
+
+      imagePair.innerHTML =
+        '<img src="normandy 2.jpg" alt="Hôtel Barrière Le Normandy interior">' +
+        '<img src="normandy 3.jpeg" alt="Room at Hôtel Barrière Le Normandy">';
+
+      articleBody.appendChild(imagePair);
+
+    }
+
   });
 
 
-  /* BENEFITS */
+
+  /* =========================
+     BENEFITS
+  ========================= */
 
   const benefitsList =
     document.getElementById("benefitsList");
 
   benefitsList.innerHTML = "";
+
 
   data.benefits.forEach(function(text){
 
@@ -631,7 +795,10 @@ function showLanguage(lang){
   });
 
 
-  /* ACTIVE LANGUAGE */
+
+  /* =========================
+     ACTIVE LANGUAGE BUTTON
+  ========================= */
 
   document
     .querySelectorAll("[data-lang]")
@@ -641,7 +808,7 @@ function showLanguage(lang){
 
         button.classList.add("active");
 
-      } else {
+      }else{
 
         button.classList.remove("active");
 
@@ -650,7 +817,10 @@ function showLanguage(lang){
     });
 
 
-  /* LANGUAGE IN URL */
+
+  /* =========================
+     UPDATE URL LANGUAGE
+  ========================= */
 
   const newUrl =
     new URL(window.location.href);
@@ -666,7 +836,10 @@ function showLanguage(lang){
 }
 
 
-/* LANGUAGE BUTTONS */
+
+/* =========================
+   LANGUAGE BUTTONS
+========================= */
 
 document
   .querySelectorAll("[data-lang]")
@@ -686,7 +859,10 @@ document
   });
 
 
-/* STARTING LANGUAGE */
+
+/* =========================
+   STARTING LANGUAGE
+========================= */
 
 const params =
   new URLSearchParams(
