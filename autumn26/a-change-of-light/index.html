@@ -1,1 +1,849 @@
-vv
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Change of Light · The Edit</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#080807;
+  --text:#b8b1a4;
+  --heading:#ece6db;
+  --muted:#8a8478;
+  --line:#302819;
+  --gold:#c9a961;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-weight:300;
+}
+
+img{
+  display:block;
+  width:100%;
+}
+
+/* HEADER */
+
+.topbar{
+  height:68px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:0 34px;
+  border-bottom:1px solid rgba(201,169,97,.15);
+  background:#080807;
+}
+
+.brand{
+  font-family:Inter, Arial, sans-serif;
+  font-size:8px;
+  letter-spacing:.34em;
+  color:#eee9df;
+  text-transform:uppercase;
+}
+
+.languages{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  font-family:Inter, Arial, sans-serif;
+  font-size:8px;
+  letter-spacing:.2em;
+}
+
+.languages button{
+  border:0;
+  background:none;
+  padding:4px 2px;
+  color:#777166;
+  cursor:pointer;
+  font:inherit;
+}
+
+.languages button.active{
+  color:var(--gold);
+  border-bottom:1px solid var(--gold);
+}
+
+.edition{
+  justify-self:end;
+  font-size:11px;
+  font-style:italic;
+  color:#9b9487;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  height:480px;
+  min-height:420px;
+  overflow:hidden;
+  background:#111;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 48%;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.60) 0%,
+      rgba(0,0,0,.18) 48%,
+      rgba(0,0,0,.16) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.30) 0%,
+      transparent 55%
+    );
+}
+
+.hero-content{
+  position:absolute;
+  z-index:2;
+  left:6.5%;
+  bottom:72px;
+}
+
+.eyebrow{
+  margin:0 0 12px;
+  font-family:Inter, Arial, sans-serif;
+  font-size:9px;
+  font-weight:400;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+
+.hero h1{
+  margin:0;
+  color:#f0ebe2;
+  font-size:58px;
+  line-height:.95;
+  font-weight:300;
+  letter-spacing:-.02em;
+}
+
+/* ARTICLE */
+
+.article{
+  width:min(760px, calc(100% - 48px));
+  margin:0 auto;
+  padding:76px 0 30px;
+}
+
+.intro{
+  margin-bottom:82px;
+}
+
+.intro p{
+  margin:0;
+  font-size:21px;
+  line-height:1.62;
+  color:#cbc4b7;
+  font-style:italic;
+}
+
+/* CITY */
+
+.city{
+  margin-bottom:92px;
+}
+
+.city-name{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:23px;
+}
+
+.city-name h2{
+  margin:0;
+  color:var(--heading);
+  font-size:36px;
+  line-height:1;
+  font-weight:400;
+  font-style:italic;
+}
+
+.city-name::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    rgba(201,169,97,.45),
+    rgba(201,169,97,0)
+  );
+}
+
+.city-text{
+  font-size:18px;
+  line-height:1.72;
+  color:var(--text);
+}
+
+.city-text p{
+  margin:0;
+}
+
+.city-text strong{
+  color:#d8d0c2;
+  font-weight:500;
+}
+
+/* THREE IMAGE ROW */
+
+.gallery{
+  width:min(1180px, calc(100% - 64px));
+  margin:36px auto 96px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.gallery-item{
+  height:285px;
+  overflow:hidden;
+  background:#111;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s ease;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.025);
+}
+
+/* ENDING */
+
+.closing{
+  width:min(760px, calc(100% - 48px));
+  margin:0 auto;
+  padding:0 0 100px;
+}
+
+.closing p{
+  font-size:19px;
+  line-height:1.7;
+  margin:0 0 20px;
+}
+
+.cta-wrap{
+  margin-top:42px;
+  padding-top:25px;
+  border-top:1px solid var(--line);
+}
+
+.cta-label{
+  margin-bottom:10px;
+  font-family:Inter, Arial, sans-serif;
+  font-size:8px;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:#777166;
+}
+
+.cta{
+  display:inline-block;
+  color:var(--gold);
+  font-size:18px;
+  font-style:italic;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  padding-bottom:3px;
+  transition:border-color .2s ease;
+}
+
+.cta:hover{
+  border-color:var(--gold);
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid rgba(201,169,97,.12);
+  padding:30px 34px 38px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-brand{
+  font-family:Inter, Arial, sans-serif;
+  font-size:8px;
+  letter-spacing:.3em;
+  color:#777166;
+  text-transform:uppercase;
+}
+
+.footer-edit{
+  font-size:11px;
+  font-style:italic;
+  color:#686258;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+  .topbar{
+    padding:0 18px;
+  }
+
+  .edition{
+    display:none;
+  }
+
+  .topbar{
+    grid-template-columns:1fr auto;
+  }
+
+  .hero{
+    height:390px;
+  }
+
+  .hero-content{
+    left:25px;
+    bottom:45px;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .article{
+    padding-top:55px;
+  }
+
+  .intro{
+    margin-bottom:62px;
+  }
+
+  .city{
+    margin-bottom:45px;
+  }
+
+  .gallery{
+    width:calc(100% - 40px);
+    grid-template-columns:1fr;
+    gap:10px;
+    margin-top:28px;
+    margin-bottom:72px;
+  }
+
+  .gallery-item{
+    height:320px;
+  }
+
+  .closing{
+    padding-bottom:70px;
+  }
+}
+
+@media(max-width:480px){
+
+  .hero{
+    height:340px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .article,
+  .closing{
+    width:calc(100% - 38px);
+  }
+
+  .intro p{
+    font-size:19px;
+  }
+
+  .city-name h2{
+    font-size:32px;
+  }
+
+  .city-text{
+    font-size:17px;
+  }
+
+  .gallery-item{
+    height:270px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+
+  <div class="brand">Quintessentially</div>
+
+  <div class="languages">
+    <button id="frBtn" onclick="setLanguage('fr')">FR</button>
+    <button id="enBtn" class="active" onclick="setLanguage('en')">EN</button>
+    <button id="nlBtn" onclick="setLanguage('nl')">NL</button>
+  </div>
+
+  <div class="edition">The Edit · Autumn '26</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <img
+    src="hero.png"
+    alt="New York illuminated during winter"
+  >
+
+  <div class="hero-content">
+    <p class="eyebrow" id="heroEyebrow">Winter Cities</p>
+    <h1 id="heroTitle">A Change of Light</h1>
+  </div>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<main>
+
+<section class="article">
+
+  <div class="intro">
+    <p id="intro">
+      There is a moment each winter when the city begins to belong to the evening.
+      Daylight slips away, façades glow against the cold, and streets once hurried
+      through become places worth lingering in.
+    </p>
+  </div>
+
+
+  <!-- PARIS -->
+
+  <section class="city">
+
+    <div class="city-name">
+      <h2 id="parisTitle">Paris</h2>
+    </div>
+
+    <div class="city-text">
+      <p id="parisText">
+        Paris takes on a different rhythm in the final weeks of the year.
+        Begin beneath the lights of the Champs-Élysées, cross the Seine as evening
+        settles over the city, then make the Opéra the occasion. Puccini’s
+        <em>Turandot</em>, one of opera’s great dramatic works, is performed at the
+        Opéra Bastille from <strong>27 November to 27 December 2026</strong>, while
+        <em>Pulsations</em>, an evening of contemporary ballet, takes over the
+        Palais Garnier from <strong>4 December 2026 to 2 January 2027</strong>.
+        Between Christmas and New Year, Paris offers evenings where the city and
+        the performance seem to belong together.
+      </p>
+    </div>
+
+  </section>
+
+</section>
+
+
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="paris.jpg" alt="Paris in winter">
+  </div>
+
+  <div class="gallery-item">
+    <img src="paris 2.jpg" alt="Paris festive season">
+  </div>
+
+  <div class="gallery-item">
+    <img src="paris 3.jpeg" alt="Paris cultural evening">
+  </div>
+</div>
+
+
+<section class="article" style="padding-top:0;">
+
+  <!-- LONDON -->
+
+  <section class="city">
+
+    <div class="city-name">
+      <h2 id="londonTitle">London</h2>
+    </div>
+
+    <div class="city-text">
+      <p id="londonText">
+        In London, Christmas belongs to the evening. Walk beneath the lights of
+        Bond Street and Regent Street before making your way to the Royal Opera
+        House, where The Royal Ballet’s <em>The Nutcracker</em> returns from
+        <strong>3 December 2026 to 13 January 2027</strong>. The classic Christmas
+        ballet, set to Tchaikovsky’s celebrated score, has become one of London’s
+        great festive traditions. Afterwards, the evening can continue over dinner
+        in Mayfair while the city remains illuminated outside.
+      </p>
+    </div>
+
+  </section>
+
+</section>
+
+
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="london 1.jpg" alt="London at Christmas">
+  </div>
+
+  <div class="gallery-item">
+    <img src="london 2.jpg" alt="London winter evening">
+  </div>
+
+  <div class="gallery-item">
+    <img src="london 3.jpg" alt="London festive season">
+  </div>
+</div>
+
+
+<section class="article" style="padding-top:0;">
+
+  <!-- NEW YORK -->
+
+  <section class="city">
+
+    <div class="city-name">
+      <h2 id="nyTitle">New York</h2>
+    </div>
+
+    <div class="city-text">
+      <p id="nyText">
+        Few cities embrace the final days of the year quite like New York.
+        See the Rockefeller Center Christmas Tree above the ice, walk Fifth Avenue
+        beneath its festive lights, then head to Lincoln Center. Mozart’s
+        <em>The Magic Flute</em>, a fantastical opera presented in its
+        family-friendly holiday production, returns to the Metropolitan Opera from
+        <strong>11 December 2026 to 2 January 2027</strong>. On
+        <strong>31 December 2026</strong>, the Met also premieres a new production
+        of Puccini’s <em>La Fanciulla del West</em>, an opera set during the
+        California Gold Rush, as part of its New Year’s Eve gala.
+      </p>
+    </div>
+
+  </section>
+
+</section>
+
+
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="ny 1.jpg" alt="New York at Christmas">
+  </div>
+
+  <div class="gallery-item">
+    <img src="ny 2.jpg" alt="New York winter lights">
+  </div>
+
+  <div class="gallery-item">
+    <img src="ny 3.jpg" alt="New York festive season">
+  </div>
+</div>
+
+
+<!-- CLOSING -->
+
+<section class="closing">
+
+  <p id="closingOne">
+    Whether it is Christmas in London, the final days of the year in Paris,
+    or New Year’s Eve in New York, we can shape the stay around the city
+    and the moments you want to experience.
+  </p>
+
+  <p id="closingTwo">
+    And if winter is calling you somewhere else, we can take care of that too.
+  </p>
+
+  <div class="cta-wrap">
+
+    <div class="cta-label" id="ctaLabel">
+      Begin your winter escape
+    </div>
+
+    <a
+      class="cta"
+      id="cta"
+      href="mailto:?subject=A%20Change%20of%20Light%20%E2%80%94%20Winter%20City%20Escape"
+    >
+      Meet winter somewhere new ⟶
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+  <div class="footer-brand">Quintessentially</div>
+  <div class="footer-edit">The Edit · Autumn '26</div>
+</footer>
+
+
+<script>
+
+const translations = {
+
+en: {
+
+  eyebrow:"Winter Cities",
+  title:"A Change of Light",
+
+  intro:`There is a moment each winter when the city begins to belong to the evening.
+  Daylight slips away, façades glow against the cold, and streets once hurried
+  through become places worth lingering in.`,
+
+  parisTitle:"Paris",
+
+  paris:`Paris takes on a different rhythm in the final weeks of the year.
+  Begin beneath the lights of the Champs-Élysées, cross the Seine as evening
+  settles over the city, then make the Opéra the occasion. Puccini’s
+  <em>Turandot</em>, one of opera’s great dramatic works, is performed at the
+  Opéra Bastille from <strong>27 November to 27 December 2026</strong>, while
+  <em>Pulsations</em>, an evening of contemporary ballet, takes over the
+  Palais Garnier from <strong>4 December 2026 to 2 January 2027</strong>.
+  Between Christmas and New Year, Paris offers evenings where the city and
+  the performance seem to belong together.`,
+
+  londonTitle:"London",
+
+  london:`In London, Christmas belongs to the evening. Walk beneath the lights
+  of Bond Street and Regent Street before making your way to the Royal Opera
+  House, where The Royal Ballet’s <em>The Nutcracker</em> returns from
+  <strong>3 December 2026 to 13 January 2027</strong>. The classic Christmas
+  ballet, set to Tchaikovsky’s celebrated score, has become one of London’s
+  great festive traditions. Afterwards, the evening can continue over dinner
+  in Mayfair while the city remains illuminated outside.`,
+
+  nyTitle:"New York",
+
+  ny:`Few cities embrace the final days of the year quite like New York.
+  See the Rockefeller Center Christmas Tree above the ice, walk Fifth Avenue
+  beneath its festive lights, then head to Lincoln Center. Mozart’s
+  <em>The Magic Flute</em>, a fantastical opera presented in its family-friendly
+  holiday production, returns to the Metropolitan Opera from
+  <strong>11 December 2026 to 2 January 2027</strong>. On
+  <strong>31 December 2026</strong>, the Met also premieres a new production
+  of Puccini’s <em>La Fanciulla del West</em>, an opera set during the
+  California Gold Rush, as part of its New Year’s Eve gala.`,
+
+  closingOne:`Whether it is Christmas in London, the final days of the year
+  in Paris, or New Year’s Eve in New York, we can shape the stay around the
+  city and the moments you want to experience.`,
+
+  closingTwo:`And if winter is calling you somewhere else, we can take care
+  of that too.`,
+
+  ctaLabel:"Begin your winter escape",
+  cta:"Meet winter somewhere new ⟶"
+},
+
+
+fr: {
+
+  eyebrow:"Escapades hivernales",
+  title:"A Change of Light",
+
+  intro:`Chaque hiver vient un moment où la ville semble appartenir à la soirée.
+  La lumière du jour s’efface, les façades s’illuminent dans le froid et les rues
+  que l’on traversait autrefois à la hâte invitent soudain à s’attarder.`,
+
+  parisTitle:"Paris",
+
+  paris:`Paris adopte un autre rythme durant les dernières semaines de l’année.
+  Commencez sous les lumières des Champs-Élysées, traversez la Seine tandis que
+  le soir tombe sur la ville, puis faites de l’Opéra le point culminant de la soirée.
+  <em>Turandot</em> de Puccini, l’une des grandes œuvres dramatiques de l’opéra,
+  est présenté à l’Opéra Bastille du
+  <strong>27 novembre au 27 décembre 2026</strong>, tandis que
+  <em>Pulsations</em>, une soirée consacrée au ballet contemporain, investit
+  le Palais Garnier du <strong>4 décembre 2026 au 2 janvier 2027</strong>.
+  Entre Noël et le Nouvel An, Paris offre des soirées où la ville et le spectacle
+  semblent ne faire qu’un.`,
+
+  londonTitle:"Londres",
+
+  london:`À Londres, Noël appartient à la soirée. Promenez-vous sous les
+  illuminations de Bond Street et Regent Street avant de rejoindre le Royal
+  Opera House, où <em>The Nutcracker</em> du Royal Ballet revient du
+  <strong>3 décembre 2026 au 13 janvier 2027</strong>. Ce grand classique de
+  Noël, porté par la célèbre partition de Tchaïkovski, est devenu l’une des
+  traditions festives emblématiques de Londres. La soirée peut ensuite se
+  poursuivre autour d’un dîner à Mayfair tandis que la ville reste illuminée.`,
+
+  nyTitle:"New York",
+
+  ny:`Peu de villes célèbrent les derniers jours de l’année comme New York.
+  Admirez le sapin de Noël du Rockefeller Center au-dessus de la patinoire,
+  parcourez Fifth Avenue sous ses lumières de fête, puis rejoignez Lincoln Center.
+  <em>The Magic Flute</em> de Mozart, présenté dans sa production familiale
+  des fêtes, revient au Metropolitan Opera du
+  <strong>11 décembre 2026 au 2 janvier 2027</strong>. Le
+  <strong>31 décembre 2026</strong>, le Met dévoile également une nouvelle
+  production de <em>La Fanciulla del West</em> de Puccini dans le cadre de
+  son gala du réveillon du Nouvel An.`,
+
+  closingOne:`Que vous choisissiez Noël à Londres, les derniers jours de
+  l’année à Paris ou le réveillon du Nouvel An à New York, nous pouvons
+  imaginer votre séjour autour de la ville et des moments que vous souhaitez vivre.`,
+
+  closingTwo:`Et si l’hiver vous appelle ailleurs, nous pouvons également
+  nous en charger.`,
+
+  ctaLabel:"Imaginez votre escapade hivernale",
+  cta:"Vivez l’hiver ailleurs ⟶"
+},
+
+
+nl: {
+
+  eyebrow:"Winterse steden",
+  title:"A Change of Light",
+
+  intro:`Elke winter komt er een moment waarop de stad van de avond lijkt te worden.
+  Het daglicht verdwijnt, gevels lichten op in de kou en straten waar je normaal
+  haastig doorheen loopt, nodigen plots uit om wat langer te blijven.`,
+
+  parisTitle:"Parijs",
+
+  paris:`Parijs krijgt tijdens de laatste weken van het jaar een ander ritme.
+  Begin onder de lichtjes van de Champs-Élysées, steek de Seine over terwijl
+  de avond over de stad valt en maak van de Opéra het hoogtepunt van de avond.
+  Puccini’s <em>Turandot</em>, een van de grote dramatische werken uit de
+  operawereld, wordt in de Opéra Bastille opgevoerd van
+  <strong>27 november tot 27 december 2026</strong>. <em>Pulsations</em>,
+  een avond rond hedendaags ballet, is te zien in het Palais Garnier van
+  <strong>4 december 2026 tot 2 januari 2027</strong>. Tussen Kerstmis en
+  Nieuwjaar biedt Parijs avonden waarop de stad en de voorstelling haast
+  bij elkaar lijken te horen.`,
+
+  londonTitle:"Londen",
+
+  london:`In Londen behoort Kerstmis toe aan de avond. Wandel onder de
+  verlichting van Bond Street en Regent Street voordat u richting het Royal
+  Opera House gaat, waar <em>The Nutcracker</em> van The Royal Ballet terugkeert
+  van <strong>3 december 2026 tot 13 januari 2027</strong>. Het klassieke
+  kerstballet op de beroemde muziek van Tsjaikovski is uitgegroeid tot een
+  van Londens bekendste feestelijke tradities. Daarna kan de avond verdergaan
+  met een diner in Mayfair terwijl de stad buiten verlicht blijft.`,
+
+  nyTitle:"New York",
+
+  ny:`Weinig steden beleven de laatste dagen van het jaar zoals New York.
+  Bekijk de kerstboom van Rockefeller Center boven de ijsbaan, wandel langs
+  Fifth Avenue onder de feestverlichting en ga daarna richting Lincoln Center.
+  Mozarts <em>The Magic Flute</em>, in de familievriendelijke feestdagenproductie,
+  keert terug naar de Metropolitan Opera van
+  <strong>11 december 2026 tot 2 januari 2027</strong>. Op
+  <strong>31 december 2026</strong> gaat bij de Met bovendien een nieuwe
+  productie van Puccini’s <em>La Fanciulla del West</em> in première tijdens
+  het oudejaarsgala.`,
+
+  closingOne:`Of het nu Kerstmis in Londen is, de laatste dagen van het jaar
+  in Parijs of oudejaarsavond in New York: wij kunnen het verblijf vormgeven
+  rond de stad en de momenten die u wilt beleven.`,
+
+  closingTwo:`En als de winter u ergens anders naartoe roept, kunnen wij ook
+  daarvoor zorgen.`,
+
+  ctaLabel:"Begin uw winterse reis",
+  cta:"Ontdek de winter ergens anders ⟶"
+}
+
+};
+
+
+function setLanguage(lang){
+
+  const t = translations[lang];
+
+  document.documentElement.lang = lang;
+
+  document.getElementById("heroEyebrow").textContent = t.eyebrow;
+  document.getElementById("heroTitle").textContent = t.title;
+
+  document.getElementById("intro").textContent = t.intro;
+
+  document.getElementById("parisTitle").textContent = t.parisTitle;
+  document.getElementById("parisText").innerHTML = t.paris;
+
+  document.getElementById("londonTitle").textContent = t.londonTitle;
+  document.getElementById("londonText").innerHTML = t.london;
+
+  document.getElementById("nyTitle").textContent = t.nyTitle;
+  document.getElementById("nyText").innerHTML = t.ny;
+
+  document.getElementById("closingOne").textContent = t.closingOne;
+  document.getElementById("closingTwo").textContent = t.closingTwo;
+
+  document.getElementById("ctaLabel").textContent = t.ctaLabel;
+  document.getElementById("cta").textContent = t.cta;
+
+  document.querySelectorAll(".languages button")
+    .forEach(button => button.classList.remove("active"));
+
+  document.getElementById(lang + "Btn").classList.add("active");
+
+  const url = new URL(window.location.href);
+  url.searchParams.set("lang", lang);
+  window.history.replaceState({}, "", url);
+
+}
+
+
+const params = new URLSearchParams(window.location.search);
+const requestedLanguage = params.get("lang");
+
+if(["en","fr","nl"].includes(requestedLanguage)){
+  setLanguage(requestedLanguage);
+}
+
+</script>
+
+</body>
+</html>
