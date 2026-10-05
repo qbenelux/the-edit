@@ -27,9 +27,9 @@
 
     .page {
       width: 100%;
-      background: #050505;
       min-height: 100vh;
       padding: 42px 20px 70px;
+      background: #050505;
     }
 
     .container {
@@ -67,16 +67,16 @@
     }
 
     .languages a {
+      margin-left: 11px;
       color: #9b8a62;
       text-decoration: none;
-      margin-left: 11px;
     }
 
     .languages a.active {
       color: #f0e8da;
     }
 
-    /* IMAGES */
+    /* IMAGES - tiny crop removes white edges */
 
     .image-crop {
       width: 100%;
@@ -105,8 +105,8 @@
     /* TITLE */
 
     .intro {
-      text-align: center;
       margin: 0 0 31px;
+      text-align: center;
     }
 
     h1 {
@@ -123,21 +123,14 @@
       font-size: 14px;
       line-height: 1.4;
       font-style: italic;
+      font-weight: 400;
     }
 
     /* BODY */
 
     p {
       margin: 0 0 19px;
-    }
-
-    strong {
-      color: #eee8df;
-      font-weight: 700;
-    }
-
-    em {
-      color: #ded6ca;
+      font-weight: 400;
     }
 
     .section-title {
@@ -148,7 +141,7 @@
       color: #e7e0d5;
       font-size: 20px;
       line-height: 1.25;
-      font-weight: 400;
+      font-weight: 600;
       font-style: italic;
     }
 
@@ -181,10 +174,12 @@
       margin-bottom: 1px;
       color: #ded6ca;
       font-style: italic;
+      font-weight: 400;
     }
 
     .work-description {
       margin: 0;
+      font-weight: 400;
     }
 
     /* TWO IMAGES */
@@ -209,7 +204,7 @@
       margin: -2px;
     }
 
-    /* DETAILS */
+    /* LOCATION */
 
     .details {
       margin-top: 28px;
@@ -220,7 +215,15 @@
 
     .details p {
       margin: 0;
+      font-weight: 400;
     }
+
+    .location-label {
+      color: #eee8df;
+      font-weight: 700;
+    }
+
+    /* CLOSING */
 
     .closing {
       margin-top: 24px;
@@ -231,6 +234,7 @@
       margin-bottom: 18px;
       color: #eee8df;
       font-style: italic;
+      font-weight: 400;
     }
 
     .contact {
@@ -301,8 +305,7 @@
 
       <!-- IMAGE 1 -->
       <div class="image-crop hero">
-        <img src="ballet 1.jpg"
-             alt="Paris Opera Ballet">
+        <img src="ballet 1.jpg" alt="Paris Opera Ballet">
       </div>
 
 
@@ -320,13 +323,12 @@
 
       <!-- INTRODUCTION -->
       <p>
-        This winter, <strong>Paris welcomes an exceptional programme of dance
-        at the Opéra Bastille.</strong> From <strong>2 December 2026 to
-        2 January 2027</strong>, the Paris Opera Ballet presents
-        <em>Rituals</em>, bringing together three works performed as part of
-        one evening. Moving from classical elegance to bold contemporary
-        expression, the programme offers three very different interpretations
-        of movement, music and choreography.
+        This winter, Paris welcomes an exceptional programme of dance at the
+        Opéra Bastille. From 2 December 2026 to 2 January 2027, the Paris Opera
+        Ballet presents <em>Rituals</em>, bringing together three works performed
+        as part of one evening. Moving from classical elegance to bold
+        contemporary expression, the programme offers three very different
+        interpretations of movement, music and choreography.
       </p>
 
 
@@ -394,13 +396,11 @@
       <div class="image-pair">
 
         <div class="image-crop">
-          <img src="ballet 2.jpg"
-               alt="Paris Opera Ballet dancer">
+          <img src="ballet 2.jpg" alt="Paris Opera Ballet dancer">
         </div>
 
         <div class="image-crop">
-          <img src="ballet 3.jpg"
-               alt="Ballet shoes">
+          <img src="ballet 3.jpg" alt="Ballet shoes">
         </div>
 
       </div>
@@ -412,13 +412,13 @@
       </h2>
 
       <p>
-        A performance at the <strong>Opéra Bastille</strong> is a wonderful
-        addition to a winter escape in Paris, whether paired with dinner in
-        the city or made part of a longer stay. <em>Rituals</em> brings
-        together the artistry of the Paris Opera Ballet and three remarkable
-        works for an evening that goes far beyond a traditional night at the
-        ballet. <strong>Allow us to secure your seats and shape the rest of
-        your Paris evening around the performance.</strong>
+        A performance at the Opéra Bastille is a wonderful addition to a
+        winter escape in Paris, whether paired with dinner in the city or made
+        part of a longer stay. <em>Rituals</em> brings together the artistry of
+        the Paris Opera Ballet and three remarkable works for an evening that
+        goes far beyond a traditional night at the ballet. Allow us to secure
+        your seats and shape the rest of your Paris evening around the
+        performance.
       </p>
 
 
@@ -426,7 +426,7 @@
       <div class="details">
 
         <p>
-          <strong>Location:</strong>
+          <span class="location-label">Location:</span>
           Opéra Bastille, Place de la Bastille, 75012 Paris
         </p>
 
@@ -437,7 +437,7 @@
       <div class="closing">
 
         <p class="closing-line">
-          <strong>Make <em>Rituals</em> part of your next stay in Paris.</strong>
+          Make <em>Rituals</em> part of your next stay in Paris.
         </p>
 
         <a class="contact"
