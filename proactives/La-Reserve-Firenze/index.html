@@ -31,7 +31,7 @@ body{
 
 .page{
   width:100%;
-  padding:44px 20px 70px;
+  padding:30px 20px 70px;
 }
 
 .container{
@@ -46,63 +46,95 @@ body{
 ========================= */
 
 .header{
-  position:relative;
   text-align:center;
   margin-bottom:30px;
 }
 
+
+/* TRANSLATION BUTTONS */
+
+.languages{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:7px;
+
+  margin-bottom:18px;
+
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:9px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.languages button{
+  border:0;
+  background:none;
+
+  padding:3px 5px;
+
+  color:#716b61;
+
+  cursor:pointer;
+
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:9px;
+}
+
+.languages button:hover{
+  color:#a88a4b;
+}
+
+.languages button.active{
+  color:#d3b06a;
+}
+
+.languages span{
+  color:#40392e;
+}
+
+
+/* QUINTESSENTIALLY */
+
 .brand{
   font-family:Arial, Helvetica, sans-serif;
-  font-size:44px;
+  font-size:42px;
   font-weight:400;
   letter-spacing:.30em;
   line-height:1.1;
+
   color:#ffffff;
+
   text-transform:uppercase;
-}
-
-.languages{
-  position:absolute;
-  right:0;
-  top:5px;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size:9px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-.languages a{
-  color:#a88a4b;
-  text-decoration:none;
-  margin-left:12px;
-}
-
-.languages a.active{
-  color:#ffffff;
 }
 
 
 /* =========================
-   REMOVE IMAGE EDGES
+   IMAGES
 ========================= */
 
 img{
   display:block !important;
+
   border:0 !important;
-  border-width:0 !important;
   outline:0 !important;
-  outline-width:0 !important;
   box-shadow:none !important;
+
   padding:0 !important;
+
   background:#050505 !important;
 }
 
 .image-block{
   position:relative;
+
   display:block;
-  width:100%;
-  margin:32px 0 31px;
+
+  width:88%;
+
+  margin:32px auto 31px;
   padding:0;
+
   overflow:hidden;
 
   border:0 !important;
@@ -110,6 +142,8 @@ img{
   box-shadow:none !important;
 
   background:#050505 !important;
+
+  line-height:0;
 }
 
 .image-block.first{
@@ -124,6 +158,7 @@ img{
   height:auto !important;
 
   position:relative;
+
   left:-3px;
   top:-3px;
 
@@ -144,12 +179,15 @@ img{
 
 .intro-title{
   text-align:center;
+
   padding:24px 20px 27px;
 }
 
 .intro-title h1{
-  margin:0 0 4px;
+  margin:0 0 5px;
+
   color:#f3eee6;
+
   font-size:34px;
   line-height:1.15;
   font-weight:400;
@@ -157,10 +195,14 @@ img{
 
 .intro-title .subtitle{
   margin:0;
+
   color:#d3b06a;
+
   font-size:16px;
   line-height:1.4;
+
   font-style:italic;
+  font-weight:400;
 }
 
 
@@ -170,13 +212,19 @@ img{
 
 .text{
   width:100%;
+  max-width:650px;
+
   margin:0 auto;
+
   text-align:left;
 }
 
 .text p{
   margin:0 0 19px;
+
   font-size:16px;
+  line-height:1.72;
+
   color:#cfc8bd;
 }
 
@@ -193,16 +241,25 @@ img{
 .section-title{
   display:flex;
   align-items:center;
+
+  width:100%;
+  max-width:650px;
+
   gap:16px;
-  margin:31px 0 15px;
+
+  margin:31px auto 15px;
 }
 
 .section-title h2{
   margin:0;
+
   white-space:nowrap;
+
   color:#eee7dc;
+
   font-size:22px;
   line-height:1.25;
+
   font-weight:400;
   font-style:italic;
 }
@@ -210,6 +267,7 @@ img{
 .section-title .line{
   height:1px;
   flex:1;
+
   background:#332b20;
 }
 
@@ -219,7 +277,10 @@ img{
 ========================= */
 
 .details{
-  margin-top:31px;
+  width:100%;
+  max-width:650px;
+
+  margin:31px auto 0;
   padding:21px 0;
 
   border-top:1px solid #332b20;
@@ -228,7 +289,9 @@ img{
 
 .details p{
   margin:0;
+
   color:#cfc8bd;
+
   font-size:15px;
 }
 
@@ -243,27 +306,38 @@ img{
 
 .closing{
   margin-top:29px;
+  text-align:center;
 }
 
 .closing-line{
   color:#eee7dc !important;
+
   font-size:19px !important;
   font-style:italic;
 }
 
 .contact{
   display:inline-block;
+
   margin-top:5px;
+  padding-bottom:4px;
 
   color:#d3b06a;
 
   font-family:Arial, Helvetica, sans-serif;
-  font-size:11px;
+  font-size:10px;
   font-weight:600;
-  letter-spacing:2px;
+  letter-spacing:.17em;
 
   text-transform:uppercase;
   text-decoration:none;
+
+  border-bottom:1px solid #d3b06a;
+}
+
+.contact:hover{
+  color:#e2c27d;
+  border-color:#e2c27d;
 }
 
 
@@ -274,7 +348,15 @@ img{
 @media(max-width:700px){
 
   .page{
-    padding:28px 18px 50px;
+    padding:25px 18px 50px;
+  }
+
+  .header{
+    margin-bottom:23px;
+  }
+
+  .languages{
+    margin-bottom:15px;
   }
 
   .brand{
@@ -283,13 +365,8 @@ img{
     line-height:1.15;
   }
 
-  .languages{
-    position:static;
-    margin-top:13px;
-  }
-
-  .languages a{
-    margin:0 6px;
+  .image-block{
+    width:100%;
   }
 
   .intro-title{
@@ -332,31 +409,42 @@ img{
 
 <header class="header">
 
+
+  <!-- TRANSLATIONS -->
+
+  <div class="languages">
+
+    <button data-lang="fr">
+      FR
+    </button>
+
+    <span>·</span>
+
+    <button data-lang="en">
+      EN
+    </button>
+
+    <span>·</span>
+
+    <button data-lang="nl">
+      NL
+    </button>
+
+  </div>
+
+
+  <!-- LOGO -->
+
   <div class="brand">
     QUINTESSENTIALLY
   </div>
 
-  <nav class="languages">
-
-    <a href="?lang=fr" data-lang-link="fr">
-      FR
-    </a>
-
-    <a href="?lang=en" data-lang-link="en">
-      EN
-    </a>
-
-    <a href="?lang=nl" data-lang-link="nl">
-      NL
-    </a>
-
-  </nav>
 
 </header>
 
 
 <!-- =========================
-     IMAGE 1 — HERO
+     IMAGE 1
 ========================= -->
 
 <div class="image-block first">
@@ -376,18 +464,13 @@ img{
 
 <div class="intro-title">
 
-  <h1
-    data-en="La Réserve Firenze"
-    data-fr="La Réserve Firenze"
-    data-nl="La Réserve Firenze">
+  <h1 id="mainTitle">
     La Réserve Firenze
   </h1>
 
   <p
     class="subtitle"
-    data-en="A Private Residence in the Heart of Florence"
-    data-fr="Une résidence privée au cœur de Florence"
-    data-nl="Een privéresidentie in het hart van Florence">
+    id="mainSubtitle">
     A Private Residence in the Heart of Florence
   </p>
 
@@ -395,208 +478,10 @@ img{
 
 
 <!-- =========================
-     INTRO
+     ARTICLE
 ========================= -->
 
-<div class="text">
-
-  <p
-    data-en="This October, La Réserve Firenze introduces a more intimate way to experience the Tuscan capital. Set within a beautifully restored 15th-century palazzo in Oltrarno, La Réserve Firenze offers just six private apartments. Each combines the privacy of a Florentine residence with thoughtful service, moments from the city’s cultural treasures."
-    data-fr="Cet octobre, La Réserve Firenze propose une manière plus intime de découvrir la capitale toscane. Installée dans un magnifique palais du XVe siècle restauré au cœur de l’Oltrarno, La Réserve Firenze ne compte que six appartements privés. Chacun associe l’intimité d’une résidence florentine à un service attentionné, à quelques pas des trésors culturels de la ville."
-    data-nl="Deze oktober introduceert La Réserve Firenze een intiemere manier om de Toscaanse hoofdstad te beleven. Gevestigd in een prachtig gerestaureerd 15e-eeuws palazzo in Oltrarno, biedt La Réserve Firenze slechts zes privéappartementen. Elk combineert de privacy van een Florentijnse residentie met attente service, op korte afstand van de culturele schatten van de stad.">
-    This October, <strong>La Réserve Firenze</strong> introduces a more intimate way to experience the Tuscan capital. Set within a beautifully restored 15th-century palazzo in Oltrarno, La Réserve Firenze offers just six private apartments. Each combines the privacy of a Florentine residence with thoughtful service, moments from the city’s cultural treasures.
-  </p>
-
-</div>
-
-
-<!-- =========================
-     RENAISSANCE SECTION
-========================= -->
-
-<div class="section-title">
-
-  <h2
-    data-en="Renaissance Grandeur, Reimagined"
-    data-fr="La grandeur de la Renaissance, réinventée"
-    data-nl="Renaissancegrandeur, opnieuw geïnterpreteerd">
-    Renaissance Grandeur, Reimagined
-  </h2>
-
-  <div class="line"></div>
-
-</div>
-
-
-<div class="text">
-
-  <p
-    data-en="Restored by renowned interior design duo Gilles & Boissier, the palazzo brings Renaissance character together with contemporary elegance. Original frescoes and historic details give each apartment its distinctive character, while refined interiors add a sense of understated luxury."
-    data-fr="Restauré par le célèbre duo de designers d’intérieur Gilles & Boissier, le palais associe le caractère de la Renaissance à une élégance contemporaine. Fresques originales et détails historiques confèrent à chaque appartement une identité unique, tandis que les intérieurs raffinés apportent une touche de luxe discret."
-    data-nl="Het palazzo werd gerestaureerd door het gerenommeerde interieurduo Gilles & Boissier en brengt renaissancekarakter samen met hedendaagse elegantie. Originele fresco’s en historische details geven elk appartement een eigen karakter, terwijl de verfijnde interieurs een gevoel van ingetogen luxe toevoegen.">
-    Restored by renowned interior design duo <strong>Gilles &amp; Boissier</strong>, the palazzo brings Renaissance character together with contemporary elegance. Original frescoes and historic details give each apartment its distinctive character, while refined interiors add a sense of understated luxury.
-  </p>
-
-  <p
-    data-en="The six residences range from an intimate one-bedroom apartment to a three-bedroom duplex with a 55 m² private terrace, each with its own character and connection to the city."
-    data-fr="Les six résidences vont d’un appartement intime d’une chambre à un duplex de trois chambres doté d’une terrasse privée de 55 m², chacune possédant son propre caractère et son lien particulier avec la ville."
-    data-nl="De zes residenties variëren van een intiem appartement met één slaapkamer tot een duplex met drie slaapkamers en een privéterras van 55 m², elk met een eigen karakter en verbinding met de stad.">
-    The six residences range from an intimate one-bedroom apartment to a three-bedroom duplex with a <strong>55 m² private terrace</strong>, each with its own character and connection to the city.
-  </p>
-
-</div>
-
-
-<!-- =========================
-     IMAGE 2
-========================= -->
-
-<div class="image-block">
-
-  <img
-    src="la reserve 2.jpg"
-    alt="La Réserve Firenze residence"
-    class="full-image"
-  >
-
-</div>
-
-
-<!-- =========================
-     PRIVACY SECTION
-========================= -->
-
-<div class="section-title">
-
-  <h2
-    data-en="The Privacy of a Residence"
-    data-fr="L’intimité d’une résidence"
-    data-nl="De privacy van een residentie">
-    The Privacy of a Residence
-  </h2>
-
-  <div class="line"></div>
-
-</div>
-
-
-<div class="text">
-
-  <p
-    data-en="Here, the independence of a private apartment is complemented by attentive service. A butler, housekeeper and concierge are available throughout the stay, while a private chef can prepare dinner at home using ingredients sourced from the nearby Santo Spirito market."
-    data-fr="Ici, l’indépendance d’un appartement privé s’accompagne d’un service attentionné. Un majordome, une gouvernante et un concierge sont disponibles tout au long du séjour, tandis qu’un chef privé peut préparer le dîner à domicile à partir de produits provenant du marché voisin de Santo Spirito."
-    data-nl="Hier wordt de onafhankelijkheid van een privéappartement aangevuld met attente service. Een butler, housekeeper en conciërge staan gedurende het verblijf ter beschikking, terwijl een privéchef thuis het diner kan bereiden met ingrediënten van de nabijgelegen Santo Spirito-markt.">
-    Here, the independence of a private apartment is complemented by attentive service. A <strong>butler, housekeeper and concierge</strong> are available throughout the stay, while a private chef can prepare dinner at home using ingredients sourced from the nearby Santo Spirito market.
-  </p>
-
-  <p
-    data-en="Guests can also retreat to the library and garden patio or enjoy an evening aperitivo on the shared terrace overlooking Santo Spirito and the Pitti Palace."
-    data-fr="Les hôtes peuvent également se retirer dans la bibliothèque et le patio-jardin, ou savourer un aperitivo en soirée sur la terrasse commune avec vue sur Santo Spirito et le palais Pitti."
-    data-nl="Gasten kunnen zich ook terugtrekken in de bibliotheek en de tuinpatio, of 's avonds genieten van een aperitivo op het gedeelde terras met uitzicht op Santo Spirito en het Pitti-paleis.">
-    Guests can also retreat to the library and garden patio or enjoy an evening aperitivo on the shared terrace overlooking <strong>Santo Spirito and the Pitti Palace</strong>.
-  </p>
-
-</div>
-
-
-<!-- =========================
-     IMAGE 3
-========================= -->
-
-<div class="image-block">
-
-  <img
-    src="la reserve 3.jpg"
-    alt="La Réserve Firenze in Florence"
-    class="full-image"
-  >
-
-</div>
-
-
-<!-- =========================
-     FLORENCE SECTION
-========================= -->
-
-<div class="section-title">
-
-  <h2
-    data-en="Florence, at Your Own Pace"
-    data-fr="Florence, à votre rythme"
-    data-nl="Florence, op uw eigen tempo">
-    Florence, at Your Own Pace
-  </h2>
-
-  <div class="line"></div>
-
-</div>
-
-
-<div class="text">
-
-  <p
-    data-en="Step outside and the galleries, boutiques and hidden addresses of Oltrarno are close at hand. Return, and La Réserve Firenze becomes your own quiet corner of the city — private, elegant and unmistakably Florentine."
-    data-fr="Sortez, et les galeries, boutiques et adresses confidentielles de l’Oltrarno sont à portée de main. À votre retour, La Réserve Firenze devient votre propre refuge au cœur de la ville — privé, élégant et résolument florentin."
-    data-nl="Stap naar buiten en de galeries, boetieks en verborgen adressen van Oltrarno liggen binnen handbereik. Bij terugkomst wordt La Réserve Firenze uw eigen rustige plek in de stad — privé, elegant en onmiskenbaar Florentijns.">
-    Step outside and the galleries, boutiques and hidden addresses of Oltrarno are close at hand. Return, and La Réserve Firenze becomes your own quiet corner of the city — private, elegant and unmistakably Florentine.
-  </p>
-
-  <p
-    data-en="Whether for a few days or a longer Tuscan escape, every stay can be shaped around how you wish to experience Florence."
-    data-fr="Que ce soit pour quelques jours ou pour une escapade toscane plus longue, chaque séjour peut être imaginé selon votre manière de découvrir Florence."
-    data-nl="Of het nu voor enkele dagen is of voor een langer Toscaans verblijf, elk verblijf kan worden afgestemd op de manier waarop u Florence wilt beleven.">
-    Whether for a few days or a longer Tuscan escape, every stay can be shaped around how you wish to experience Florence.
-  </p>
-
-</div>
-
-
-<!-- =========================
-     ADDRESS
-========================= -->
-
-<div class="details">
-
-  <p>
-
-    <strong
-      data-en="Address:"
-      data-fr="Adresse :"
-      data-nl="Adres:">
-      Address:
-    </strong>
-
-    Via Santo Spirito 6, 50125 Florence, Italy
-
-  </p>
-
-</div>
-
-
-<!-- =========================
-     END
-========================= -->
-
-<div class="text closing">
-
-  <p
-    class="closing-line"
-    data-en="Make Florence feel like your own."
-    data-fr="Faites de Florence votre propre ville."
-    data-nl="Laat Florence als uw eigen stad aanvoelen.">
-    Make Florence feel like your own.
-  </p>
-
-  <a
-    class="contact"
-    href="mailto:belgium@quintessentially.com"
-    data-en="Contact me for more information →"
-    data-fr="Contactez-moi pour plus d’informations →"
-    data-nl="Neem contact met mij op voor meer informatie →">
-    Contact me for more information →
-  </a>
-
-</div>
+<div id="articleContent"></div>
 
 
 </main>
@@ -604,54 +489,523 @@ img{
 </div>
 
 
-<!-- =========================
-     LANGUAGE SWITCHING
-========================= -->
-
 <script>
 
-(function(){
 
-  const params =
-    new URLSearchParams(window.location.search);
+/* ==========================================================
+   TRANSLATIONS
+========================================================== */
 
-  let lang =
-    params.get("lang") || "en";
+const translations = {
 
-  if(!["en","fr","nl"].includes(lang)){
+
+/* =========================
+   ENGLISH
+========================= */
+
+en:{
+
+  title:
+    "La Réserve Firenze",
+
+  subtitle:
+    "A Private Residence in the Heart of Florence",
+
+  intro:`
+    This October, La Réserve Firenze introduces a more intimate way to
+    experience the Tuscan capital. Set within a beautifully restored
+    15th-century palazzo in Oltrarno, La Réserve Firenze offers just six
+    private apartments. Each combines the privacy of a Florentine residence
+    with thoughtful service, moments from the city’s cultural treasures.
+  `,
+
+  renaissanceTitle:
+    "Renaissance Grandeur, Reimagined",
+
+  renaissance1:`
+    Restored by renowned interior design duo Gilles &amp; Boissier, the
+    palazzo brings Renaissance character together with contemporary elegance.
+    Original frescoes and historic details give each apartment its distinctive
+    character, while refined interiors add a sense of understated luxury.
+  `,
+
+  renaissance2:`
+    The six residences range from an intimate one-bedroom apartment to a
+    three-bedroom duplex with a 55 m² private terrace, each with its own
+    character and connection to the city.
+  `,
+
+  privacyTitle:
+    "The Privacy of a Residence",
+
+  privacy1:`
+    Here, the independence of a private apartment is complemented by attentive
+    service. A butler, housekeeper and concierge are available throughout the
+    stay, while a private chef can prepare dinner at home using ingredients
+    sourced from the nearby Santo Spirito market.
+  `,
+
+  privacy2:`
+    Guests can also retreat to the library and garden patio or enjoy an evening
+    aperitivo on the shared terrace overlooking Santo Spirito and the Pitti
+    Palace.
+  `,
+
+  florenceTitle:
+    "Florence, at Your Own Pace",
+
+  florence1:`
+    Step outside and the galleries, boutiques and hidden addresses of Oltrarno
+    are close at hand. Return, and La Réserve Firenze becomes your own quiet
+    corner of the city — private, elegant and unmistakably Florentine.
+  `,
+
+  florence2:`
+    Whether for a few days or a longer Tuscan escape, every stay can be shaped
+    around how you wish to experience Florence.
+  `,
+
+  addressLabel:
+    "Address:",
+
+  address:
+    "Via Santo Spirito 6, 50125 Florence, Italy",
+
+  closing:
+    "Make Florence feel like your own.",
+
+  contact:
+    "Contact me for more information"
+
+},
+
+
+/* =========================
+   FRENCH
+========================= */
+
+fr:{
+
+  title:
+    "La Réserve Firenze",
+
+  subtitle:
+    "Une résidence privée au cœur de Florence",
+
+  intro:`
+    Cet octobre, La Réserve Firenze propose une manière plus intime de
+    découvrir la capitale toscane. Installée dans un magnifique palais du
+    XVe siècle restauré au cœur de l’Oltrarno, La Réserve Firenze ne compte
+    que six appartements privés. Chacun associe l’intimité d’une résidence
+    florentine à un service attentionné, à quelques pas des trésors culturels
+    de la ville.
+  `,
+
+  renaissanceTitle:
+    "La grandeur de la Renaissance, réinventée",
+
+  renaissance1:`
+    Restauré par le célèbre duo de designers d’intérieur Gilles &amp; Boissier,
+    le palais associe le caractère de la Renaissance à une élégance
+    contemporaine. Fresques originales et détails historiques confèrent à
+    chaque appartement une identité unique, tandis que les intérieurs raffinés
+    apportent une touche de luxe discret.
+  `,
+
+  renaissance2:`
+    Les six résidences vont d’un appartement intime d’une chambre à un duplex
+    de trois chambres doté d’une terrasse privée de 55 m², chacune possédant
+    son propre caractère et son lien particulier avec la ville.
+  `,
+
+  privacyTitle:
+    "L’intimité d’une résidence",
+
+  privacy1:`
+    Ici, l’indépendance d’un appartement privé s’accompagne d’un service
+    attentionné. Un majordome, une gouvernante et un concierge sont disponibles
+    tout au long du séjour, tandis qu’un chef privé peut préparer le dîner à
+    domicile à partir de produits provenant du marché voisin de Santo Spirito.
+  `,
+
+  privacy2:`
+    Les hôtes peuvent également se retirer dans la bibliothèque et le
+    patio-jardin, ou savourer un aperitivo en soirée sur la terrasse commune
+    avec vue sur Santo Spirito et le palais Pitti.
+  `,
+
+  florenceTitle:
+    "Florence, à votre rythme",
+
+  florence1:`
+    Sortez, et les galeries, boutiques et adresses confidentielles de
+    l’Oltrarno sont à portée de main. À votre retour, La Réserve Firenze devient
+    votre propre refuge au cœur de la ville — privé, élégant et résolument
+    florentin.
+  `,
+
+  florence2:`
+    Que ce soit pour quelques jours ou pour une escapade toscane plus longue,
+    chaque séjour peut être imaginé selon votre manière de découvrir Florence.
+  `,
+
+  addressLabel:
+    "Adresse :",
+
+  address:
+    "Via Santo Spirito 6, 50125 Florence, Italie",
+
+  closing:
+    "Faites de Florence votre propre ville.",
+
+  contact:
+    "Contactez-moi pour plus d’informations"
+
+},
+
+
+/* =========================
+   DUTCH
+========================= */
+
+nl:{
+
+  title:
+    "La Réserve Firenze",
+
+  subtitle:
+    "Een privéresidentie in het hart van Florence",
+
+  intro:`
+    Deze oktober introduceert La Réserve Firenze een intiemere manier om de
+    Toscaanse hoofdstad te beleven. Gevestigd in een prachtig gerestaureerd
+    15e-eeuws palazzo in Oltrarno, biedt La Réserve Firenze slechts zes
+    privéappartementen. Elk combineert de privacy van een Florentijnse
+    residentie met attente service, op korte afstand van de culturele schatten
+    van de stad.
+  `,
+
+  renaissanceTitle:
+    "Renaissancegrandeur, opnieuw geïnterpreteerd",
+
+  renaissance1:`
+    Het palazzo werd gerestaureerd door het gerenommeerde interieurduo
+    Gilles &amp; Boissier en brengt renaissancekarakter samen met hedendaagse
+    elegantie. Originele fresco’s en historische details geven elk appartement
+    een eigen karakter, terwijl de verfijnde interieurs een gevoel van
+    ingetogen luxe toevoegen.
+  `,
+
+  renaissance2:`
+    De zes residenties variëren van een intiem appartement met één slaapkamer
+    tot een duplex met drie slaapkamers en een privéterras van 55 m², elk met
+    een eigen karakter en verbinding met de stad.
+  `,
+
+  privacyTitle:
+    "De privacy van een residentie",
+
+  privacy1:`
+    Hier wordt de onafhankelijkheid van een privéappartement aangevuld met
+    attente service. Een butler, housekeeper en conciërge staan gedurende het
+    verblijf ter beschikking, terwijl een privéchef thuis het diner kan
+    bereiden met ingrediënten van de nabijgelegen Santo Spirito-markt.
+  `,
+
+  privacy2:`
+    Gasten kunnen zich ook terugtrekken in de bibliotheek en de tuinpatio,
+    of 's avonds genieten van een aperitivo op het gedeelde terras met uitzicht
+    op Santo Spirito en het Pitti-paleis.
+  `,
+
+  florenceTitle:
+    "Florence, op uw eigen tempo",
+
+  florence1:`
+    Stap naar buiten en de galeries, boetieks en verborgen adressen van
+    Oltrarno liggen binnen handbereik. Bij terugkomst wordt La Réserve Firenze
+    uw eigen rustige plek in de stad — privé, elegant en onmiskenbaar
+    Florentijns.
+  `,
+
+  florence2:`
+    Of het nu voor enkele dagen is of voor een langer Toscaans verblijf,
+    elk verblijf kan worden afgestemd op de manier waarop u Florence wilt
+    beleven.
+  `,
+
+  addressLabel:
+    "Adres:",
+
+  address:
+    "Via Santo Spirito 6, 50125 Florence, Italië",
+
+  closing:
+    "Laat Florence als uw eigen stad aanvoelen.",
+
+  contact:
+    "Neem contact met mij op voor meer informatie"
+
+}
+
+};
+
+
+/* ==========================================================
+   RENDER
+========================================================== */
+
+function renderLanguage(lang){
+
+  if(!translations[lang]){
     lang="en";
   }
+
+  const t=translations[lang];
 
   document.documentElement.lang=lang;
 
 
+  /* TITLE */
+
   document
-    .querySelectorAll("[data-en]")
-    .forEach(function(element){
+    .getElementById("mainTitle")
+    .textContent=t.title;
 
-      const translation =
-        element.getAttribute("data-"+lang);
+  document
+    .getElementById("mainSubtitle")
+    .textContent=t.subtitle;
 
-      if(translation){
-        element.textContent=translation;
-      }
+
+  /* ARTICLE */
+
+  document
+    .getElementById("articleContent")
+    .innerHTML=`
+
+
+      <!-- INTRO -->
+
+      <div class="text">
+
+        <p>
+          ${t.intro}
+        </p>
+
+      </div>
+
+
+      <!-- RENAISSANCE -->
+
+      <div class="section-title">
+
+        <h2>
+          ${t.renaissanceTitle}
+        </h2>
+
+        <div class="line"></div>
+
+      </div>
+
+
+      <div class="text">
+
+        <p>
+          ${t.renaissance1}
+        </p>
+
+        <p>
+          ${t.renaissance2}
+        </p>
+
+      </div>
+
+
+      <!-- IMAGE 2 -->
+
+      <div class="image-block">
+
+        <img
+          src="la reserve 2.jpg"
+          alt="La Réserve Firenze residence"
+          class="full-image"
+        >
+
+      </div>
+
+
+      <!-- PRIVACY -->
+
+      <div class="section-title">
+
+        <h2>
+          ${t.privacyTitle}
+        </h2>
+
+        <div class="line"></div>
+
+      </div>
+
+
+      <div class="text">
+
+        <p>
+          ${t.privacy1}
+        </p>
+
+        <p>
+          ${t.privacy2}
+        </p>
+
+      </div>
+
+
+      <!-- IMAGE 3 -->
+
+      <div class="image-block">
+
+        <img
+          src="la reserve 3.jpg"
+          alt="La Réserve Firenze in Florence"
+          class="full-image"
+        >
+
+      </div>
+
+
+      <!-- FLORENCE -->
+
+      <div class="section-title">
+
+        <h2>
+          ${t.florenceTitle}
+        </h2>
+
+        <div class="line"></div>
+
+      </div>
+
+
+      <div class="text">
+
+        <p>
+          ${t.florence1}
+        </p>
+
+        <p>
+          ${t.florence2}
+        </p>
+
+      </div>
+
+
+      <!-- ADDRESS -->
+
+      <div class="details">
+
+        <p>
+
+          <strong>
+            ${t.addressLabel}
+          </strong>
+
+          ${t.address}
+
+        </p>
+
+      </div>
+
+
+      <!-- CLOSING -->
+
+      <div class="text closing">
+
+        <p class="closing-line">
+          ${t.closing}
+        </p>
+
+        <a
+          class="contact"
+          href="mailto:belgium@quintessentially.com"
+        >
+          ${t.contact} →
+        </a>
+
+      </div>
+
+    `;
+
+
+  /* ACTIVE LANGUAGE */
+
+  document
+    .querySelectorAll("[data-lang]")
+    .forEach(function(button){
+
+      button.classList.toggle(
+        "active",
+        button.dataset.lang===lang
+      );
 
     });
 
 
-  document
-    .querySelectorAll("[data-lang-link]")
-    .forEach(function(link){
+  /* UPDATE URL */
 
-      if(
-        link.getAttribute("data-lang-link")===lang
-      ){
-        link.classList.add("active");
+  const url=
+    new URL(window.location.href);
+
+  url.searchParams.set(
+    "lang",
+    lang
+  );
+
+  window.history.replaceState(
+    {},
+    "",
+    url
+  );
+
+}
+
+
+/* ==========================================================
+   LANGUAGE BUTTONS
+========================================================== */
+
+document
+  .querySelectorAll("[data-lang]")
+  .forEach(function(button){
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        renderLanguage(
+          button.dataset.lang
+        );
+
       }
+    );
 
-    });
+  });
 
-})();
+
+/* ==========================================================
+   START LANGUAGE
+========================================================== */
+
+const params=
+  new URLSearchParams(
+    window.location.search
+  );
+
+const initialLanguage=
+  params.get("lang") || "en";
+
+renderLanguage(
+  initialLanguage
+);
 
 </script>
 
