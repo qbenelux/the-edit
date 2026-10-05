@@ -7,313 +7,389 @@
 <title>Ludovisi e Cadore | Quintessentially</title>
 
 <style>
-* {
-  box-sizing: border-box;
+
+*{
+  box-sizing:border-box;
 }
 
 html,
-body {
-  margin: 0;
-  padding: 0;
-  background: #050505;
-  color: #e8e2d8;
+body{
+  margin:0;
+  padding:0;
+  background:#050505;
+  color:#e8e2d8;
 }
 
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.65;
+body{
+  font-family:Georgia, "Times New Roman", serif;
+  line-height:1.65;
 }
 
-.page {
-  width: 100%;
-  padding: 44px 20px 70px;
+.page{
+  width:100%;
+  padding:44px 20px 70px;
 }
 
-/* CENTERED CONTENT COLUMN */
-.container {
-  width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
+.container{
+  width:100%;
+  max-width:760px;
+  margin:0 auto;
 }
 
-/* HEADER */
-.header {
-  position: relative;
-  text-align: center;
-  margin-bottom: 30px;
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+  position:relative;
+  text-align:center;
+  margin-bottom:30px;
 }
 
-.brand {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  font-weight: 500;
-  letter-spacing: 8px;
-  color: #ffffff;
-  text-transform: uppercase;
+.brand{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:21px;
+  font-weight:500;
+  letter-spacing:8px;
+  color:#ffffff;
+  text-transform:uppercase;
 }
 
-.languages {
-  position: absolute;
-  right: 0;
-  top: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.languages{
+  position:absolute;
+  right:0;
+  top:5px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
 }
 
-.languages a {
-  color: #a88a4b;
-  text-decoration: none;
-  margin-left: 12px;
+.languages a{
+  color:#a88a4b;
+  text-decoration:none;
+  margin-left:12px;
 }
 
-.languages a.active {
-  color: #ffffff;
+.languages a.active{
+  color:#ffffff;
 }
 
-/* SINGLE IMAGES */
-.full-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
+
+/* =========================
+   GLOBAL IMAGE RESET
+========================= */
+
+img{
+  display:block !important;
+  border:0 !important;
+  border-width:0 !important;
+  outline:0 !important;
+  outline-width:0 !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  background:none !important;
 }
 
-/* TITLE BELOW FIRST IMAGE */
-.intro-title {
-  text-align: center;
-  padding: 24px 20px 26px;
+
+/* =========================
+   IMAGE 1 + IMAGE 2
+   CROPS 2PX FROM EACH EDGE
+========================= */
+
+.image-block{
+  position:relative;
+  display:block;
+  width:100%;
+  margin:32px 0 31px;
+  padding:0;
+  overflow:hidden;
+
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+
+  background:#050505;
 }
 
-.intro-title h1 {
-  margin: 0 0 4px;
-  color: #f3eee6;
-  font-size: 34px;
-  line-height: 1.15;
-  font-weight: 400;
+.image-block.first{
+  margin-top:0;
 }
 
-.intro-title .subtitle {
-  margin: 0;
-  color: #d3b06a;
-  font-size: 16px;
-  line-height: 1.4;
-  font-style: italic;
+.image-block .full-image{
+  display:block !important;
+
+  width:calc(100% + 4px) !important;
+  max-width:none !important;
+  height:auto !important;
+
+  margin:-2px !important;
+  padding:0 !important;
+
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+
+  background:#050505 !important;
 }
 
-/* ARTICLE TEXT */
-.text {
-  width: 100%;
-  margin: 0 auto;
-  text-align: left;
+
+/* =========================
+   TITLE
+========================= */
+
+.intro-title{
+  text-align:center;
+  padding:24px 20px 26px;
 }
 
-.text p {
-  margin: 0 0 19px;
-  font-size: 16px;
-  color: #cfc8bd;
+.intro-title h1{
+  margin:0 0 4px;
+  color:#f3eee6;
+  font-size:34px;
+  line-height:1.15;
+  font-weight:400;
 }
 
-/* IMAGE BLOCK */
-.image-block {
-  display: block;
-  width: 100%;
-  margin: 32px 0 31px;
-  padding: 0;
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  overflow: hidden;
+.intro-title .subtitle{
+  margin:0;
+  color:#d3b06a;
+  font-size:16px;
+  line-height:1.4;
+  font-style:italic;
 }
 
-/* SECTION HEADINGS */
-.section-title {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin: 30px 0 15px;
+
+/* =========================
+   TEXT
+========================= */
+
+.text{
+  width:100%;
+  margin:0 auto;
+  text-align:left;
 }
 
-.section-title h2 {
-  margin: 0;
-  white-space: nowrap;
-  color: #eee7dc;
-  font-size: 22px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-style: italic;
+.text p{
+  margin:0 0 19px;
+  font-size:16px;
+  color:#cfc8bd;
 }
 
-.section-title .line {
-  height: 1px;
-  flex: 1;
-  background: #332b20;
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin:30px 0 15px;
 }
 
-/* TWO IMAGES NEXT TO EACH OTHER */
-.image-pair {
-  display: flex;
-  width: 100%;
-  gap: 12px;
-  margin: 31px 0 33px;
-  padding: 0;
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
+.section-title h2{
+  margin:0;
+  white-space:nowrap;
+  color:#eee7dc;
+  font-size:22px;
+  line-height:1.25;
+  font-weight:400;
+  font-style:italic;
 }
 
-.image-pair .image-half {
-  display: block;
-  width: calc(50% - 6px);
-  height: 390px;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
+.section-title .line{
+  height:1px;
+  flex:1;
+  background:#332b20;
 }
 
-.image-pair img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin: 0;
-  padding: 0;
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
+
+/* =========================
+   IMAGES 3 + 4
+========================= */
+
+.image-pair{
+  display:flex;
+  width:100%;
+  gap:12px;
+
+  margin:31px 0 33px;
+  padding:0;
+
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+  background:#050505;
 }
 
-/* ADDRESS */
-.details {
-  margin-top: 31px;
-  padding: 21px 0;
-  border-top: 1px solid #332b20;
-  border-bottom: 1px solid #332b20;
+.image-half{
+  position:relative;
+  display:block;
+
+  width:calc(50% - 6px);
+  height:390px;
+
+  margin:0;
+  padding:0;
+
+  overflow:hidden;
+
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+
+  background:#050505;
 }
 
-.details p {
-  margin: 0;
-  color: #cfc8bd;
-  font-size: 15px;
+
+/*
+   IMPORTANT:
+   Images 3 + 4 are deliberately made
+   slightly larger than their containers.
+
+   This clips approximately 2px from
+   every side and removes the white seam.
+*/
+
+.image-half img{
+  position:absolute;
+
+  top:-2px;
+  left:-2px;
+
+  width:calc(100% + 4px) !important;
+  height:calc(100% + 4px) !important;
+
+  max-width:none !important;
+
+  object-fit:cover;
+  object-position:center;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+
+  background:#050505 !important;
 }
 
-.details strong {
-  color: #eee7dc;
+
+/* =========================
+   ADDRESS
+========================= */
+
+.details{
+  margin-top:31px;
+  padding:21px 0;
+
+  border-top:1px solid #332b20;
+  border-bottom:1px solid #332b20;
 }
 
-/* ENDING */
-.closing {
-  margin-top: 29px;
+.details p{
+  margin:0;
+  color:#cfc8bd;
+  font-size:15px;
 }
 
-.closing-line {
-  color: #eee7dc !important;
-  font-size: 19px !important;
-  font-style: italic;
+.details strong{
+  color:#eee7dc;
 }
 
-.contact {
-  display: inline-block;
-  margin-top: 5px;
-  color: #d3b06a;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
+
+/* =========================
+   ENDING
+========================= */
+
+.closing{
+  margin-top:29px;
 }
 
-/* REMOVE ALL IMAGE BORDERS / WHITE STRIPES */
-img,
-.full-image,
-.image-block img,
-.image-pair img,
-.image-half img {
-  border: none !important;
-  border-width: 0 !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  padding: 0 !important;
+.closing-line{
+  color:#eee7dc !important;
+  font-size:19px !important;
+  font-style:italic;
 }
 
-.image-block,
-.image-pair,
-.image-half {
-  border: none !important;
-  border-width: 0 !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
+.contact{
+  display:inline-block;
+  margin-top:5px;
+
+  color:#d3b06a;
+
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+  text-decoration:none;
 }
 
-/* MOBILE */
-@media (max-width: 700px) {
 
-  .page {
-    padding: 28px 18px 50px;
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .page{
+    padding:28px 18px 50px;
   }
 
-  .brand {
-    font-size: 16px;
-    letter-spacing: 5px;
+  .brand{
+    font-size:16px;
+    letter-spacing:5px;
   }
 
-  .languages {
-    position: static;
-    margin-top: 13px;
+  .languages{
+    position:static;
+    margin-top:13px;
   }
 
-  .languages a {
-    margin: 0 6px;
+  .languages a{
+    margin:0 6px;
   }
 
-  .intro-title {
-    padding: 20px 10px 23px;
+  .intro-title{
+    padding:20px 10px 23px;
   }
 
-  .intro-title h1 {
-    font-size: 29px;
+  .intro-title h1{
+    font-size:29px;
   }
 
-  .intro-title .subtitle {
-    font-size: 15px;
+  .intro-title .subtitle{
+    font-size:15px;
   }
 
-  .text p {
-    font-size: 15px;
+  .text p{
+    font-size:15px;
   }
 
-  .section-title h2 {
-    font-size: 19px;
-    white-space: normal;
+  .section-title h2{
+    font-size:19px;
+    white-space:normal;
   }
 
-  .image-pair {
-    gap: 8px;
+  .image-pair{
+    gap:8px;
   }
 
-  .image-pair .image-half {
-    width: calc(50% - 4px);
-    height: 260px;
+  .image-half{
+    width:calc(50% - 4px);
+    height:260px;
   }
+
 }
+
 </style>
 </head>
+
 
 <body>
 
@@ -321,209 +397,261 @@ img,
 
 <main class="container">
 
-  <!-- HEADER -->
-  <header class="header">
 
-    <div class="brand">
-      QUINTESSENTIALLY
-    </div>
+<!-- =========================
+     HEADER
+========================= -->
 
-    <nav class="languages">
-      <a href="?lang=fr" data-lang-link="fr">FR</a>
-      <a href="?lang=en" data-lang-link="en">EN</a>
-      <a href="?lang=nl" data-lang-link="nl">NL</a>
-    </nav>
+<header class="header">
 
-  </header>
-
-
-  <!-- IMAGE 1 -->
-  <div class="image-block" style="margin-top:0;">
-    <img
-      src="ludo 1.jpg"
-      alt="Ludovisi e Cadore"
-      class="full-image"
-    >
+  <div class="brand">
+    QUINTESSENTIALLY
   </div>
 
+  <nav class="languages">
 
-  <!-- TITLE -->
-  <div class="intro-title">
-
-    <h1
-      data-en="Ludovisi e Cadore"
-      data-fr="Ludovisi e Cadore"
-      data-nl="Ludovisi e Cadore">
-      Ludovisi e Cadore
-    </h1>
-
-    <p
-      class="subtitle"
-      data-en="A New Expression of Roman Cuisine"
-      data-fr="Une nouvelle expression de la cuisine romaine"
-      data-nl="Een nieuwe interpretatie van de Romeinse keuken">
-      A New Expression of Roman Cuisine
-    </p>
-
-  </div>
-
-
-  <!-- INTRODUCTION -->
-  <div class="text">
-
-    <p
-      data-en="This October, Ludovisi e Cadore introduces a new chapter in Rome’s dining scene. Behind the restaurant is Giovanni Passerini, the Roman-born chef whose years in Paris shaped a distinctive culinary style before leading him back to the flavours of his home city."
-      data-fr="En octobre, Ludovisi e Cadore ouvre un nouveau chapitre de la scène gastronomique romaine. Derrière le restaurant se trouve Giovanni Passerini, chef né à Rome, dont les années passées à Paris ont façonné un style culinaire singulier avant de le ramener aux saveurs de sa ville natale."
-      data-nl="Deze oktober opent Ludovisi e Cadore een nieuw hoofdstuk in de culinaire wereld van Rome. Achter het restaurant staat Giovanni Passerini, de in Rome geboren chef wiens jaren in Parijs zijn kenmerkende culinaire stijl vormden voordat hij terugkeerde naar de smaken van zijn geboortestad.">
-      This October, Ludovisi e Cadore introduces a new chapter in Rome’s dining scene. Behind the restaurant is Giovanni Passerini, the Roman-born chef whose years in Paris shaped a distinctive culinary style before leading him back to the flavours of his home city.
-    </p>
-
-    <p
-      data-en="Drawing inspiration from the richness of Roman tradition, Passerini approaches familiar recipes with precision, creativity and a contemporary sensibility. His cooking remains closely connected to its origins while allowing each dish to take on a character of its own. Ludovisi e Cadore is a return to his roots, reinterpreted through years of experience beyond them."
-      data-fr="S’inspirant de la richesse de la tradition romaine, Passerini aborde les recettes familières avec précision, créativité et sensibilité contemporaine. Sa cuisine reste profondément liée à ses origines tout en permettant à chaque plat d’affirmer son propre caractère. Ludovisi e Cadore marque un retour à ses racines, réinterprétées à travers des années d’expérience au-delà de Rome."
-      data-nl="Geïnspireerd door de rijkdom van de Romeinse traditie benadert Passerini vertrouwde recepten met precisie, creativiteit en een eigentijdse gevoeligheid. Zijn keuken blijft nauw verbonden met haar oorsprong, terwijl elk gerecht een eigen karakter krijgt. Ludovisi e Cadore is een terugkeer naar zijn roots, opnieuw geïnterpreteerd door jarenlange ervaring daarbuiten.">
-      Drawing inspiration from the richness of Roman tradition, Passerini approaches familiar recipes with precision, creativity and a contemporary sensibility. His cooking remains closely connected to its origins while allowing each dish to take on a character of its own. Ludovisi e Cadore is a return to his roots, reinterpreted through years of experience beyond them.
-    </p>
-
-  </div>
-
-
-  <!-- IMAGE 2 -->
-  <div class="image-block">
-    <img
-      src="ludo 2.jpg"
-      alt="Rome"
-      class="full-image"
-    >
-  </div>
-
-
-  <!-- ROMAN TRADITION -->
-  <div class="section-title">
-
-    <h2
-      data-en="Roman Tradition Through a Refined Lens"
-      data-fr="La tradition romaine sous un regard raffiné"
-      data-nl="Romeinse traditie door een verfijnde lens">
-      Roman Tradition Through a Refined Lens
-    </h2>
-
-    <div class="line"></div>
-
-  </div>
-
-
-  <div class="text">
-
-    <p
-      data-en="At Ludovisi e Cadore, Roman cuisine takes centre stage. Passerini draws particular inspiration from quinto quarto, a historic tradition deeply connected to the city's culinary identity, approaching it with delicacy and modern precision."
-      data-fr="Chez Ludovisi e Cadore, la cuisine romaine occupe le devant de la scène. Passerini puise notamment son inspiration dans le quinto quarto, une tradition historique profondément liée à l’identité culinaire de la ville, qu’il aborde avec délicatesse et précision contemporaine."
-      data-nl="Bij Ludovisi e Cadore staat de Romeinse keuken centraal. Passerini haalt bijzondere inspiratie uit quinto quarto, een historische traditie die nauw verbonden is met de culinaire identiteit van de stad, en benadert deze met verfijning en moderne precisie.">
-      At Ludovisi e Cadore, Roman cuisine takes centre stage. Passerini draws particular inspiration from <strong>quinto quarto</strong>, a historic tradition deeply connected to the city's culinary identity, approaching it with delicacy and modern precision.
-    </p>
-
-    <p
-      data-en="Dishes such as ‘trippa alla romana’ and ‘fettuccine ai regaje’ reflect this philosophy. The generosity of traditional Roman cooking meets the refined sensibility Passerini developed during his years in Paris, bringing a fresh perspective to familiar flavours while remaining true to their origins."
-      data-fr="Des plats tels que la ‘trippa alla romana’ et les ‘fettuccine ai regaje’ illustrent cette philosophie. La générosité de la cuisine romaine traditionnelle rencontre la sensibilité raffinée que Passerini a développée au cours de ses années parisiennes, apportant un regard nouveau sur des saveurs familières tout en restant fidèle à leurs origines."
-      data-nl="Gerechten zoals ‘trippa alla romana’ en ‘fettuccine ai regaje’ weerspiegelen deze filosofie. De gulheid van de traditionele Romeinse keuken ontmoet de verfijnde gevoeligheid die Passerini tijdens zijn jaren in Parijs ontwikkelde, waardoor vertrouwde smaken een nieuw perspectief krijgen zonder hun oorsprong te verliezen.">
-      Dishes such as <strong>‘trippa alla romana’</strong> and <strong>‘fettuccine ai regaje’</strong> reflect this philosophy. The generosity of traditional Roman cooking meets the refined sensibility Passerini developed during his years in Paris, bringing a fresh perspective to familiar flavours while remaining true to their origins.
-    </p>
-
-  </div>
-
-
-  <!-- IMAGES 3 + 4 -->
-  <div class="image-pair">
-
-    <div class="image-half">
-      <img
-        src="ludo 3.jpg"
-        alt="Cuisine at Ludovisi e Cadore"
-      >
-    </div>
-
-    <div class="image-half">
-      <img
-        src="ludo 4.jpg"
-        alt="Chef Giovanni Passerini"
-      >
-    </div>
-
-  </div>
-
-
-  <!-- CINEMATIC SETTING -->
-  <div class="section-title">
-
-    <h2
-      data-en="A Cinematic Setting in the Heart of Rome"
-      data-fr="Un décor cinématographique au cœur de Rome"
-      data-nl="Een filmische setting in het hart van Rome">
-      A Cinematic Setting in the Heart of Rome
-    </h2>
-
-    <div class="line"></div>
-
-  </div>
-
-
-  <div class="text">
-
-    <p
-      data-en="Set within Experimental Roma, moments from Via Veneto and Villa Borghese, Ludovisi e Cadore offers an intimate setting for experiencing Rome at its most elegant. Designed by Rodolphe Parente, the interiors combine warm tones and refined details, creating an atmosphere that feels sophisticated yet unmistakably Roman."
-      data-fr="Installé au sein d’Experimental Roma, à quelques pas de Via Veneto et de Villa Borghese, Ludovisi e Cadore offre un cadre intime pour découvrir Rome sous son jour le plus élégant. Imaginés par Rodolphe Parente, les intérieurs associent des tons chaleureux à des détails raffinés, créant une atmosphère sophistiquée et résolument romaine."
-      data-nl="Ludovisi e Cadore bevindt zich in Experimental Roma, op korte afstand van Via Veneto en Villa Borghese, en biedt een intieme setting om Rome op zijn elegantst te beleven. De interieurs, ontworpen door Rodolphe Parente, combineren warme tinten met verfijnde details en creëren een sfeer die zowel sophisticated als onmiskenbaar Romeins aanvoelt.">
-      Set within <strong>Experimental Roma</strong>, moments from Via Veneto and Villa Borghese, Ludovisi e Cadore offers an intimate setting for experiencing Rome at its most elegant. Designed by <strong>Rodolphe Parente</strong>, the interiors combine warm tones and refined details, creating an atmosphere that feels sophisticated yet unmistakably Roman.
-    </p>
-
-    <p
-      data-en="Whether for an intimate dinner or as part of your next stay in the Eternal City, allow us to arrange your table and take care of every detail for an effortless evening in Rome."
-      data-fr="Que ce soit pour un dîner intime ou dans le cadre de votre prochain séjour dans la Ville Éternelle, laissez-nous organiser votre table et prendre soin de chaque détail pour une soirée sans effort à Rome."
-      data-nl="Of het nu gaat om een intiem diner of als onderdeel van uw volgende verblijf in de Eeuwige Stad, laat ons uw tafel reserveren en elk detail verzorgen voor een zorgeloze avond in Rome.">
-      Whether for an intimate dinner or as part of your next stay in the Eternal City, allow us to arrange your table and take care of every detail for an effortless evening in Rome.
-    </p>
-
-  </div>
-
-
-  <!-- ADDRESS -->
-  <div class="details">
-
-    <p>
-      <strong
-        data-en="Address:"
-        data-fr="Adresse :"
-        data-nl="Adres:">
-        Address:
-      </strong>
-
-      Ludovisi e Cadore – Experimental Roma, Via Veneto, Rome
-    </p>
-
-  </div>
-
-
-  <!-- END -->
-  <div class="text closing">
-
-    <p
-      class="closing-line"
-      data-en="Discover a new taste of Rome."
-      data-fr="Découvrez une nouvelle facette de Rome."
-      data-nl="Ontdek een nieuwe smaak van Rome.">
-      Discover a new taste of Rome.
-    </p>
-
-    <a
-      class="contact"
-      href="mailto:belgium@quintessentially.com"
-      data-en="Contact me for more information →"
-      data-fr="Contactez-moi pour plus d’informations →"
-      data-nl="Neem contact met mij op voor meer informatie →">
-      Contact me for more information →
+    <a href="?lang=fr" data-lang-link="fr">
+      FR
     </a>
 
+    <a href="?lang=en" data-lang-link="en">
+      EN
+    </a>
+
+    <a href="?lang=nl" data-lang-link="nl">
+      NL
+    </a>
+
+  </nav>
+
+</header>
+
+
+<!-- =========================
+     IMAGE 1
+========================= -->
+
+<div class="image-block first">
+
+  <img
+    src="ludo 1.jpg"
+    alt="Ludovisi e Cadore"
+    class="full-image"
+  >
+
+</div>
+
+
+<!-- =========================
+     TITLE
+========================= -->
+
+<div class="intro-title">
+
+  <h1
+    data-en="Ludovisi e Cadore"
+    data-fr="Ludovisi e Cadore"
+    data-nl="Ludovisi e Cadore">
+    Ludovisi e Cadore
+  </h1>
+
+  <p
+    class="subtitle"
+    data-en="A New Expression of Roman Cuisine"
+    data-fr="Une nouvelle expression de la cuisine romaine"
+    data-nl="Een nieuwe interpretatie van de Romeinse keuken">
+    A New Expression of Roman Cuisine
+  </p>
+
+</div>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<div class="text">
+
+  <p
+    data-en="This October, Ludovisi e Cadore introduces a new chapter in Rome’s dining scene. Behind the restaurant is Giovanni Passerini, the Roman-born chef whose years in Paris shaped a distinctive culinary style before leading him back to the flavours of his home city."
+    data-fr="En octobre, Ludovisi e Cadore ouvre un nouveau chapitre de la scène gastronomique romaine. Derrière le restaurant se trouve Giovanni Passerini, chef né à Rome, dont les années passées à Paris ont façonné un style culinaire singulier avant de le ramener aux saveurs de sa ville natale."
+    data-nl="Deze oktober opent Ludovisi e Cadore een nieuw hoofdstuk in de culinaire wereld van Rome. Achter het restaurant staat Giovanni Passerini, de in Rome geboren chef wiens jaren in Parijs zijn kenmerkende culinaire stijl vormden voordat hij terugkeerde naar de smaken van zijn geboortestad.">
+    This October, Ludovisi e Cadore introduces a new chapter in Rome’s dining scene. Behind the restaurant is Giovanni Passerini, the Roman-born chef whose years in Paris shaped a distinctive culinary style before leading him back to the flavours of his home city.
+  </p>
+
+  <p
+    data-en="Drawing inspiration from the richness of Roman tradition, Passerini approaches familiar recipes with precision, creativity and a contemporary sensibility. His cooking remains closely connected to its origins while allowing each dish to take on a character of its own. Ludovisi e Cadore is a return to his roots, reinterpreted through years of experience beyond them."
+    data-fr="S’inspirant de la richesse de la tradition romaine, Passerini aborde les recettes familières avec précision, créativité et sensibilité contemporaine. Sa cuisine reste profondément liée à ses origines tout en permettant à chaque plat d’affirmer son propre caractère. Ludovisi e Cadore marque un retour à ses racines, réinterprétées à travers des années d’expérience au-delà de Rome."
+    data-nl="Geïnspireerd door de rijkdom van de Romeinse traditie benadert Passerini vertrouwde recepten met precisie, creativiteit en een eigentijdse gevoeligheid. Zijn keuken blijft nauw verbonden met haar oorsprong, terwijl elk gerecht een eigen karakter krijgt. Ludovisi e Cadore is een terugkeer naar zijn roots, opnieuw geïnterpreteerd door jarenlange ervaring daarbuiten.">
+    Drawing inspiration from the richness of Roman tradition, Passerini approaches familiar recipes with precision, creativity and a contemporary sensibility. His cooking remains closely connected to its origins while allowing each dish to take on a character of its own. Ludovisi e Cadore is a return to his roots, reinterpreted through years of experience beyond them.
+  </p>
+
+</div>
+
+
+<!-- =========================
+     IMAGE 2
+========================= -->
+
+<div class="image-block">
+
+  <img
+    src="ludo 2.jpg"
+    alt="Rome"
+    class="full-image"
+  >
+
+</div>
+
+
+<!-- =========================
+     ROMAN TRADITION
+========================= -->
+
+<div class="section-title">
+
+  <h2
+    data-en="Roman Tradition Through a Refined Lens"
+    data-fr="La tradition romaine sous un regard raffiné"
+    data-nl="Romeinse traditie door een verfijnde lens">
+    Roman Tradition Through a Refined Lens
+  </h2>
+
+  <div class="line"></div>
+
+</div>
+
+
+<div class="text">
+
+  <p
+    data-en="At Ludovisi e Cadore, Roman cuisine takes centre stage. Passerini draws particular inspiration from quinto quarto, a historic tradition deeply connected to the city's culinary identity, approaching it with delicacy and modern precision."
+    data-fr="Chez Ludovisi e Cadore, la cuisine romaine occupe le devant de la scène. Passerini puise notamment son inspiration dans le quinto quarto, une tradition historique profondément liée à l’identité culinaire de la ville, qu’il aborde avec délicatesse et précision contemporaine."
+    data-nl="Bij Ludovisi e Cadore staat de Romeinse keuken centraal. Passerini haalt bijzondere inspiratie uit quinto quarto, een historische traditie die nauw verbonden is met de culinaire identiteit van de stad, en benadert deze met verfijning en moderne precisie.">
+    At Ludovisi e Cadore, Roman cuisine takes centre stage. Passerini draws particular inspiration from <strong>quinto quarto</strong>, a historic tradition deeply connected to the city's culinary identity, approaching it with delicacy and modern precision.
+  </p>
+
+  <p
+    data-en="Dishes such as ‘trippa alla romana’ and ‘fettuccine ai regaje’ reflect this philosophy. The generosity of traditional Roman cooking meets the refined sensibility Passerini developed during his years in Paris, bringing a fresh perspective to familiar flavours while remaining true to their origins."
+    data-fr="Des plats tels que la ‘trippa alla romana’ et les ‘fettuccine ai regaje’ illustrent cette philosophie. La générosité de la cuisine romaine traditionnelle rencontre la sensibilité raffinée que Passerini a développée au cours de ses années parisiennes, apportant un regard nouveau sur des saveurs familières tout en restant fidèle à leurs origines."
+    data-nl="Gerechten zoals ‘trippa alla romana’ en ‘fettuccine ai regaje’ weerspiegelen deze filosofie. De gulheid van de traditionele Romeinse keuken ontmoet de verfijnde gevoeligheid die Passerini tijdens zijn jaren in Parijs ontwikkelde, waardoor vertrouwde smaken een nieuw perspectief krijgen zonder hun oorsprong te verliezen.">
+    Dishes such as <strong>‘trippa alla romana’</strong> and <strong>‘fettuccine ai regaje’</strong> reflect this philosophy. The generosity of traditional Roman cooking meets the refined sensibility Passerini developed during his years in Paris, bringing a fresh perspective to familiar flavours while remaining true to their origins.
+  </p>
+
+</div>
+
+
+<!-- =========================
+     IMAGES 3 + 4
+========================= -->
+
+<div class="image-pair">
+
+  <div class="image-half">
+
+    <img
+      src="ludo 3.jpg"
+      alt="Cuisine at Ludovisi e Cadore"
+    >
+
   </div>
+
+  <div class="image-half">
+
+    <img
+      src="ludo 4.jpg"
+      alt="Chef Giovanni Passerini"
+    >
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     CINEMATIC SETTING
+========================= -->
+
+<div class="section-title">
+
+  <h2
+    data-en="A Cinematic Setting in the Heart of Rome"
+    data-fr="Un décor cinématographique au cœur de Rome"
+    data-nl="Een filmische setting in het hart van Rome">
+    A Cinematic Setting in the Heart of Rome
+  </h2>
+
+  <div class="line"></div>
+
+</div>
+
+
+<div class="text">
+
+  <p
+    data-en="Set within Experimental Roma, moments from Via Veneto and Villa Borghese, Ludovisi e Cadore offers an intimate setting for experiencing Rome at its most elegant. Designed by Rodolphe Parente, the interiors combine warm tones and refined details, creating an atmosphere that feels sophisticated yet unmistakably Roman."
+    data-fr="Installé au sein d’Experimental Roma, à quelques pas de Via Veneto et de Villa Borghese, Ludovisi e Cadore offre un cadre intime pour découvrir Rome sous son jour le plus élégant. Imaginés par Rodolphe Parente, les intérieurs associent des tons chaleureux à des détails raffinés, créant une atmosphère sophistiquée et résolument romaine."
+    data-nl="Ludovisi e Cadore bevindt zich in Experimental Roma, op korte afstand van Via Veneto en Villa Borghese, en biedt een intieme setting om Rome op zijn elegantst te beleven. De interieurs, ontworpen door Rodolphe Parente, combineren warme tinten met verfijnde details en creëren een sfeer die zowel sophisticated als onmiskenbaar Romeins aanvoelt.">
+    Set within <strong>Experimental Roma</strong>, moments from Via Veneto and Villa Borghese, Ludovisi e Cadore offers an intimate setting for experiencing Rome at its most elegant. Designed by <strong>Rodolphe Parente</strong>, the interiors combine warm tones and refined details, creating an atmosphere that feels sophisticated yet unmistakably Roman.
+  </p>
+
+  <p
+    data-en="Whether for an intimate dinner or as part of your next stay in the Eternal City, allow us to arrange your table and take care of every detail for an effortless evening in Rome."
+    data-fr="Que ce soit pour un dîner intime ou dans le cadre de votre prochain séjour dans la Ville Éternelle, laissez-nous organiser votre table et prendre soin de chaque détail pour une soirée sans effort à Rome."
+    data-nl="Of het nu gaat om een intiem diner of als onderdeel van uw volgende verblijf in de Eeuwige Stad, laat ons uw tafel reserveren en elk detail verzorgen voor een zorgeloze avond in Rome.">
+    Whether for an intimate dinner or as part of your next stay in the Eternal City, allow us to arrange your table and take care of every detail for an effortless evening in Rome.
+  </p>
+
+</div>
+
+
+<!-- =========================
+     ADDRESS
+========================= -->
+
+<div class="details">
+
+  <p>
+
+    <strong
+      data-en="Address:"
+      data-fr="Adresse :"
+      data-nl="Adres:">
+      Address:
+    </strong>
+
+    Ludovisi e Cadore – Experimental Roma, Via Veneto, Rome
+
+  </p>
+
+</div>
+
+
+<!-- =========================
+     END
+========================= -->
+
+<div class="text closing">
+
+  <p
+    class="closing-line"
+    data-en="Discover a new taste of Rome."
+    data-fr="Découvrez une nouvelle facette de Rome."
+    data-nl="Ontdek een nieuwe smaak van Rome.">
+    Discover a new taste of Rome.
+  </p>
+
+  <a
+    class="contact"
+    href="mailto:belgium@quintessentially.com"
+    data-en="Contact me for more information →"
+    data-fr="Contactez-moi pour plus d’informations →"
+    data-nl="Neem contact met mij op voor meer informatie →">
+    Contact me for more information →
+  </a>
+
+</div>
+
 
 </main>
 
@@ -531,36 +659,50 @@ img,
 
 
 <script>
-(function () {
 
-  const params = new URLSearchParams(window.location.search);
-  let lang = params.get("lang") || "en";
+(function(){
 
-  if (!["en", "fr", "nl"].includes(lang)) {
+  const params =
+    new URLSearchParams(window.location.search);
+
+  let lang =
+    params.get("lang") || "en";
+
+  if(!["en","fr","nl"].includes(lang)){
     lang = "en";
   }
 
   document.documentElement.lang = lang;
 
-  document.querySelectorAll("[data-en]").forEach(function(element) {
 
-    const translation = element.getAttribute("data-" + lang);
+  document
+    .querySelectorAll("[data-en]")
+    .forEach(function(element){
 
-    if (translation) {
-      element.textContent = translation;
-    }
+      const translation =
+        element.getAttribute("data-" + lang);
 
-  });
+      if(translation){
+        element.textContent = translation;
+      }
 
-  document.querySelectorAll("[data-lang-link]").forEach(function(link) {
+    });
 
-    if (link.getAttribute("data-lang-link") === lang) {
-      link.classList.add("active");
-    }
 
-  });
+  document
+    .querySelectorAll("[data-lang-link]")
+    .forEach(function(link){
+
+      if(
+        link.getAttribute("data-lang-link") === lang
+      ){
+        link.classList.add("active");
+      }
+
+    });
 
 })();
+
 </script>
 
 </body>
