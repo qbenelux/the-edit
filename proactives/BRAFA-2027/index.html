@@ -1,1 +1,833 @@
-brafa
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BRAFA Art Fair 2027 | Quintessentially</title>
+
+<style>
+  :root{
+    --bg:#070706;
+    --text:#e8e3d9;
+    --body:#c8c1b5;
+    --muted:#948c7e;
+    --gold:#b99a54;
+    --line:#30291c;
+  }
+
+  *{
+    box-sizing:border-box;
+  }
+
+  html{
+    scroll-behavior:smooth;
+  }
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--bg);
+    color:var(--body);
+    font-family:Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{
+    display:block;
+    max-width:100%;
+  }
+
+  /* =========================
+     PAGE
+  ========================= */
+
+  .page{
+    width:100%;
+    max-width:760px;
+    margin:0 auto;
+    padding:0 30px 80px;
+  }
+
+
+  /* =========================
+     TOP
+  ========================= */
+
+  .top{
+    position:relative;
+    padding:42px 0 28px;
+    text-align:center;
+  }
+
+  .logo{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+    font-weight:400;
+    letter-spacing:.42em;
+    color:#ffffff;
+    text-transform:uppercase;
+  }
+
+  .languages{
+    position:absolute;
+    right:0;
+    top:47px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:9px;
+    letter-spacing:.15em;
+  }
+
+  .languages button{
+    border:0;
+    background:none;
+    padding:3px 5px;
+    color:#716b61;
+    cursor:pointer;
+    font-size:9px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  .languages button.active{
+    color:var(--gold);
+  }
+
+  .languages span{
+    color:#40392e;
+  }
+
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero{
+    width:100%;
+  }
+
+  .hero img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    object-position:center;
+  }
+
+
+  /* =========================
+     TITLE UNDER IMAGE
+  ========================= */
+
+  .title-block{
+    text-align:center;
+    padding:30px 20px 45px;
+  }
+
+  .title-block h1{
+    margin:0;
+    color:#f1ede5;
+    font-size:38px;
+    line-height:1.1;
+    font-weight:400;
+  }
+
+  .title-block h2{
+    margin:9px 0 0;
+    color:var(--text);
+    font-size:18px;
+    line-height:1.4;
+    font-style:italic;
+    font-weight:400;
+  }
+
+
+  /* =========================
+     ARTICLE
+  ========================= */
+
+  .article{
+    max-width:650px;
+    margin:0 auto;
+  }
+
+  .article p{
+    margin:0 0 22px;
+    color:var(--body);
+    font-size:16px;
+    line-height:1.72;
+  }
+
+  .section{
+    margin-top:47px;
+  }
+
+  .section-title{
+    display:flex;
+    align-items:center;
+    gap:17px;
+    margin-bottom:20px;
+  }
+
+  .section-title h3{
+    margin:0;
+    color:#eee9df;
+    font-size:23px;
+    line-height:1.25;
+    font-weight:400;
+    font-style:italic;
+    white-space:nowrap;
+  }
+
+  .section-title::after{
+    content:"";
+    display:block;
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+
+  /* =========================
+     IMAGES
+  ========================= */
+
+  .single-image{
+    width:88%;
+    margin:38px auto 46px;
+  }
+
+  .single-image img{
+    width:100%;
+    max-height:370px;
+    object-fit:cover;
+    object-position:center;
+  }
+
+  .image-pair{
+    width:88%;
+    margin:38px auto 48px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .image-pair img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    object-position:center;
+  }
+
+
+  /* =========================
+     FINAL SECTION
+  ========================= */
+
+  .closing{
+    margin-top:48px;
+  }
+
+  .closing-line{
+    margin-top:34px !important;
+    color:#eee9df !important;
+    font-size:19px !important;
+    line-height:1.55 !important;
+    font-style:italic;
+  }
+
+  .contact{
+    display:inline-block;
+    margin-top:8px;
+    color:var(--gold);
+    text-decoration:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:10px;
+    line-height:1.5;
+    letter-spacing:.17em;
+    text-transform:uppercase;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:5px;
+  }
+
+
+  /* =========================
+     FOOTER
+  ========================= */
+
+  footer{
+    max-width:650px;
+    margin:70px auto 0;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+    text-align:center;
+  }
+
+  .footer-logo{
+    color:#ddd7cc;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:9px;
+    letter-spacing:.35em;
+    text-transform:uppercase;
+  }
+
+
+  /* =========================
+     MOBILE
+  ========================= */
+
+  @media(max-width:650px){
+
+    .page{
+      padding:0 18px 60px;
+    }
+
+    .top{
+      padding:32px 0 23px;
+    }
+
+    .logo{
+      font-size:13px;
+      letter-spacing:.32em;
+    }
+
+    .languages{
+      position:static;
+      margin-top:14px;
+    }
+
+    .hero img{
+      height:300px;
+    }
+
+    .title-block{
+      padding:25px 10px 38px;
+    }
+
+    .title-block h1{
+      font-size:31px;
+    }
+
+    .title-block h2{
+      font-size:16px;
+    }
+
+    .article p{
+      font-size:15px;
+    }
+
+    .section{
+      margin-top:40px;
+    }
+
+    .section-title h3{
+      font-size:20px;
+      white-space:normal;
+    }
+
+    .single-image{
+      width:100%;
+      margin:30px auto 38px;
+    }
+
+    .image-pair{
+      width:100%;
+      gap:7px;
+    }
+
+    .image-pair img{
+      height:170px;
+    }
+
+  }
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+
+  <!-- =========================
+       QUINTESSENTIALLY
+  ========================= -->
+
+  <div class="top">
+
+    <div class="logo">
+      QUINTESSENTIALLY
+    </div>
+
+    <div class="languages">
+      <button data-lang="fr">FR</button>
+      <span>·</span>
+      <button data-lang="en">EN</button>
+      <span>·</span>
+      <button data-lang="nl">NL</button>
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       MAIN IMAGE
+  ========================= -->
+
+  <div class="hero">
+    <img
+      src="brafa 1.jpg"
+      alt="BRAFA Art Fair 2027">
+  </div>
+
+
+  <!-- =========================
+       TITLE BELOW IMAGE
+  ========================= -->
+
+  <div class="title-block">
+
+    <h1 id="mainTitle">
+      BRAFA Art Fair 2027
+    </h1>
+
+    <h2 id="mainSubtitle">
+      A Celebration of Art in Brussels
+    </h2>
+
+  </div>
+
+
+  <!-- =========================
+       ARTICLE
+  ========================= -->
+
+  <main class="article" id="articleContent">
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+    <div class="footer-logo">
+      QUINTESSENTIALLY
+    </div>
+  </footer>
+
+</div>
+
+
+<script>
+
+const translations = {
+
+
+/* ==========================================================
+   ENGLISH
+========================================================== */
+
+en: {
+
+  title: "BRAFA Art Fair 2027",
+
+  subtitle: "A Celebration of Art in Brussels",
+
+  intro: `
+    For eight days, BRAFA Art Fair transforms Brussels Expo into a remarkable
+    world of art and exceptional craftsmanship. From 24 to 31 January 2027,
+    works spanning centuries and artistic movements are brought together under
+    one roof. From timeless masterpieces to contemporary discoveries, the fair
+    offers the pleasure of exploring art at your own pace, with something
+    unexpected waiting around every corner.
+  `,
+
+  prestigiousTitle:
+    "A Prestigious International Art Fair",
+
+  prestigious1: `
+    Bringing together <strong>150 leading galleries from 18 countries</strong>,
+    BRAFA welcomes renowned names including <strong>Almine Rech, TEMPLON,
+    Axel Vervoordt and Waddington Custot</strong>. Their presentations take you
+    from Old Masters and important 20th-century works to contemporary art and
+    collectible design.
+  `,
+
+  prestigious2: `
+    Alongside them, specialists in jewellery, sculpture and decorative arts
+    bring another dimension to the fair. Each stand has its own character,
+    making BRAFA as much about discovering new galleries as it is about the
+    works themselves.
+  `,
+
+  discoveryTitle:
+    "The Pleasure of Discovery",
+
+  discovery1: `
+    Part of BRAFA’s appeal lies in never quite knowing what will catch your eye.
+    A centuries-old masterpiece may lead you towards a striking contemporary
+    work, while an exceptional piece of jewellery or design can offer an
+    entirely different perspective.
+  `,
+
+  discovery2: `
+    Whether you arrive in search of a particular piece or simply with curiosity,
+    BRAFA invites you to explore at your own pace. It is a chance to meet
+    specialists, discover remarkable works and perhaps find something entirely
+    unexpected.
+  `,
+
+  experienceTitle:
+    "Experience BRAFA Your Way",
+
+  experience: `
+    Beyond the artworks themselves, BRAFA offers the pleasure of experiencing
+    art in an elegant international setting. We can arrange your visit around
+    your personal interests, leaving you free to focus on the galleries and
+    works that capture your attention.
+  `,
+
+  closing:
+    "Experience BRAFA and discover the art that speaks to you.",
+
+  contact:
+    "Contact me for more information"
+
+},
+
+
+/* ==========================================================
+   FRENCH
+========================================================== */
+
+fr: {
+
+  title:
+    "BRAFA Art Fair 2027",
+
+  subtitle:
+    "Une célébration de l’art à Bruxelles",
+
+  intro: `
+    Pendant huit jours, BRAFA Art Fair transforme Brussels Expo en un univers
+    remarquable consacré à l’art et au savoir-faire d’exception. Du 24 au
+    31 janvier 2027, des œuvres couvrant plusieurs siècles et mouvements
+    artistiques sont réunies sous un même toit. Des chefs-d’œuvre intemporels
+    aux découvertes contemporaines, la foire offre le plaisir d’explorer l’art
+    à votre propre rythme, avec toujours quelque chose d’inattendu à découvrir.
+  `,
+
+  prestigiousTitle:
+    "Une prestigieuse foire d’art internationale",
+
+  prestigious1: `
+    Réunissant <strong>150 galeries de premier plan provenant de 18 pays</strong>,
+    BRAFA accueille des noms renommés tels que <strong>Almine Rech, TEMPLON,
+    Axel Vervoordt et Waddington Custot</strong>. Leurs présentations vous
+    emmènent des maîtres anciens et des œuvres majeures du XXe siècle jusqu’à
+    l’art contemporain et au design de collection.
+  `,
+
+  prestigious2: `
+    À leurs côtés, des spécialistes de la joaillerie, de la sculpture et des
+    arts décoratifs apportent une autre dimension à la foire. Chaque stand
+    possède son propre caractère, faisant de BRAFA autant une occasion de
+    découvrir de nouvelles galeries que les œuvres elles-mêmes.
+  `,
+
+  discoveryTitle:
+    "Le plaisir de la découverte",
+
+  discovery1: `
+    Une partie du charme de BRAFA réside dans le fait de ne jamais savoir
+    exactement ce qui attirera votre regard. Un chef-d’œuvre vieux de plusieurs
+    siècles peut vous conduire vers une œuvre contemporaine saisissante, tandis
+    qu’un bijou ou un objet de design exceptionnel peut offrir une perspective
+    totalement différente.
+  `,
+
+  discovery2: `
+    Que vous veniez à la recherche d’une pièce particulière ou simplement par
+    curiosité, BRAFA vous invite à explorer à votre propre rythme. C’est
+    l’occasion de rencontrer des spécialistes, de découvrir des œuvres
+    remarquables et peut-être de trouver quelque chose de totalement inattendu.
+  `,
+
+  experienceTitle:
+    "Vivez BRAFA à votre manière",
+
+  experience: `
+    Au-delà des œuvres elles-mêmes, BRAFA offre le plaisir de découvrir l’art
+    dans un cadre international élégant. Nous pouvons organiser votre visite
+    autour de vos intérêts personnels, vous laissant libre de vous concentrer
+    sur les galeries et les œuvres qui retiennent votre attention.
+  `,
+
+  closing:
+    "Vivez BRAFA et découvrez l’art qui vous parle.",
+
+  contact:
+    "Contactez-moi pour plus d’informations"
+
+},
+
+
+/* ==========================================================
+   DUTCH
+========================================================== */
+
+nl: {
+
+  title:
+    "BRAFA Art Fair 2027",
+
+  subtitle:
+    "Een viering van kunst in Brussel",
+
+  intro: `
+    Acht dagen lang verandert BRAFA Art Fair Brussels Expo in een bijzondere
+    wereld van kunst en uitzonderlijk vakmanschap. Van 24 tot en met
+    31 januari 2027 worden werken uit verschillende eeuwen en kunststromingen
+    onder één dak samengebracht. Van tijdloze meesterwerken tot hedendaagse
+    ontdekkingen: de beurs biedt de mogelijkheid om kunst op uw eigen tempo
+    te ontdekken, met achter elke hoek iets onverwachts.
+  `,
+
+  prestigiousTitle:
+    "Een prestigieuze internationale kunstbeurs",
+
+  prestigious1: `
+    Met <strong>150 toonaangevende galeries uit 18 landen</strong> verwelkomt
+    BRAFA gerenommeerde namen waaronder <strong>Almine Rech, TEMPLON,
+    Axel Vervoordt en Waddington Custot</strong>. Hun presentaties lopen van
+    oude meesters en belangrijke werken uit de twintigste eeuw tot hedendaagse
+    kunst en collectible design.
+  `,
+
+  prestigious2: `
+    Daarnaast geven specialisten in juwelen, beeldhouwkunst en decoratieve
+    kunsten de beurs nog een extra dimensie. Elke stand heeft zijn eigen
+    karakter, waardoor BRAFA evenzeer draait om het ontdekken van nieuwe
+    galeries als om de kunstwerken zelf.
+  `,
+
+  discoveryTitle:
+    "Het plezier van ontdekken",
+
+  discovery1: `
+    Een deel van de aantrekkingskracht van BRAFA ligt in het feit dat u nooit
+    helemaal weet wat uw aandacht zal trekken. Een eeuwenoud meesterwerk kan
+    u naar een opvallend hedendaags werk leiden, terwijl een uitzonderlijk
+    juweel of designobject een volledig ander perspectief kan bieden.
+  `,
+
+  discovery2: `
+    Of u nu op zoek bent naar een specifiek werk of gewoon uit nieuwsgierigheid
+    komt, BRAFA nodigt u uit om op uw eigen tempo te ontdekken. Het is een kans
+    om specialisten te ontmoeten, bijzondere werken te ontdekken en misschien
+    iets volledig onverwachts te vinden.
+  `,
+
+  experienceTitle:
+    "Beleef BRAFA op uw manier",
+
+  experience: `
+    Naast de kunstwerken zelf biedt BRAFA het plezier om kunst te beleven in
+    een elegante internationale omgeving. Wij kunnen uw bezoek organiseren
+    rond uw persoonlijke interesses, zodat u zich volledig kunt richten op de
+    galeries en werken die uw aandacht trekken.
+  `,
+
+  closing:
+    "Beleef BRAFA en ontdek de kunst die u aanspreekt.",
+
+  contact:
+    "Contacteer mij voor meer informatie"
+
+}
+
+};
+
+
+/* ==========================================================
+   BUILD ARTICLE
+========================================================== */
+
+function renderLanguage(lang){
+
+  if(!translations[lang]){
+    lang="en";
+  }
+
+  const t = translations[lang];
+
+  document.documentElement.lang = lang;
+
+  document.getElementById("mainTitle").textContent =
+    t.title;
+
+  document.getElementById("mainSubtitle").textContent =
+    t.subtitle;
+
+
+  document.getElementById("articleContent").innerHTML = `
+
+    <p>
+      ${t.intro}
+    </p>
+
+
+    <!-- FIRST EXTRA IMAGE -->
+
+    <div class="single-image">
+      <img
+        src="brafa 2.jpg"
+        alt="BRAFA Art Fair">
+    </div>
+
+
+    <!-- PRESTIGIOUS ART FAIR -->
+
+    <section class="section">
+
+      <div class="section-title">
+        <h3>${t.prestigiousTitle}</h3>
+      </div>
+
+      <p>
+        ${t.prestigious1}
+      </p>
+
+      <p>
+        ${t.prestigious2}
+      </p>
+
+    </section>
+
+
+    <!-- PLEASURE OF DISCOVERY -->
+
+    <section class="section">
+
+      <div class="section-title">
+        <h3>${t.discoveryTitle}</h3>
+      </div>
+
+      <p>
+        ${t.discovery1}
+      </p>
+
+      <p>
+        ${t.discovery2}
+      </p>
+
+    </section>
+
+
+    <!-- SECOND EXTRA IMAGE -->
+
+    <div class="single-image">
+      <img
+        src="brafa 3.jpg"
+        alt="BRAFA Art Fair Brussels">
+    </div>
+
+
+    <!-- EXPERIENCE BRAFA -->
+
+    <section class="section closing">
+
+      <div class="section-title">
+        <h3>${t.experienceTitle}</h3>
+      </div>
+
+      <p>
+        ${t.experience}
+      </p>
+
+      <p class="closing-line">
+        ${t.closing}
+      </p>
+
+      <a
+        class="contact"
+        href="mailto:qbenelux@quintessentially.com?subject=BRAFA%20Art%20Fair%202027">
+        ${t.contact} →
+      </a>
+
+    </section>
+
+  `;
+
+
+  /* ACTIVE LANGUAGE BUTTON */
+
+  document
+    .querySelectorAll("[data-lang]")
+    .forEach(function(button){
+
+      button.classList.toggle(
+        "active",
+        button.dataset.lang === lang
+      );
+
+    });
+
+
+  /* PUT LANGUAGE IN URL */
+
+  const url =
+    new URL(window.location.href);
+
+  url.searchParams.set(
+    "lang",
+    lang
+  );
+
+  window.history.replaceState(
+    {},
+    "",
+    url
+  );
+
+}
+
+
+/* ==========================================================
+   LANGUAGE BUTTONS
+========================================================== */
+
+document
+  .querySelectorAll("[data-lang]")
+  .forEach(function(button){
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        renderLanguage(
+          button.dataset.lang
+        );
+
+      }
+    );
+
+  });
+
+
+/* ==========================================================
+   INITIAL LANGUAGE
+========================================================== */
+
+const params =
+  new URLSearchParams(
+    window.location.search
+  );
+
+const initialLanguage =
+  params.get("lang") || "en";
+
+renderLanguage(initialLanguage);
+
+</script>
+
+</body>
+</html>
