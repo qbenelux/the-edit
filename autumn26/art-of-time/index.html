@@ -360,7 +360,6 @@ footer{
 </style>
 </head>
 
-
 <body>
 
 
@@ -386,7 +385,7 @@ footer{
 <section class="hero">
 
   <img
-    src="heroo real.png"
+    src="./heroo%20real.png"
     alt="Tentimes watchmaking experience">
 
   <div class="hero-content">
@@ -482,18 +481,11 @@ footer{
 
 <footer>
 
-  <div class="footer-logo">
-    Quintessentially
-  </div>
+  <div class="footer-logo">Quintessentially</div>
 
-  <div class="footer-edition">
-    The Edit · Autumn ’26
-  </div>
+  <div class="footer-edition">The Edit · Autumn ’26</div>
 
-  <div
-    class="footer-small"
-    id="footerText">
-  </div>
+  <div class="footer-small" id="footerText"></div>
 
 </footer>
 
@@ -528,14 +520,11 @@ const content = {
 
     tentimesButton: "Visit Tentimes",
 
-    contactText:
-      "Would you like to create a timepiece of your own?",
+    contactText: "Would you like to create a timepiece of your own?",
 
-    cta:
-      "Let us arrange the experience",
+    cta: "Let us arrange the experience",
 
-    footer:
-      "Curated for members · The Edit is published monthly"
+    footer: "Curated for members · The Edit is published monthly"
 
   },
 
@@ -562,20 +551,15 @@ const content = {
 
     ],
 
-    tentimesLabel:
-      "Découvrez l’expérience",
+    tentimesLabel: "Découvrez l’expérience",
 
-    tentimesButton:
-      "Découvrir Tentimes",
+    tentimesButton: "Découvrir Tentimes",
 
-    contactText:
-      "Souhaitez-vous créer votre propre garde-temps ?",
+    contactText: "Souhaitez-vous créer votre propre garde-temps ?",
 
-    cta:
-      "Laissez-nous organiser l’expérience",
+    cta: "Laissez-nous organiser l’expérience",
 
-    footer:
-      "Sélectionné pour nos membres · The Edit paraît chaque mois"
+    footer: "Sélectionné pour nos membres · The Edit paraît chaque mois"
 
   },
 
@@ -602,20 +586,15 @@ const content = {
 
     ],
 
-    tentimesLabel:
-      "Ontdek de ervaring",
+    tentimesLabel: "Ontdek de ervaring",
 
-    tentimesButton:
-      "Bezoek Tentimes",
+    tentimesButton: "Bezoek Tentimes",
 
-    contactText:
-      "Wilt u zelf een uniek uurwerk creëren?",
+    contactText: "Wilt u zelf een uniek uurwerk creëren?",
 
-    cta:
-      "Laat ons de ervaring organiseren",
+    cta: "Laat ons de ervaring organiseren",
 
-    footer:
-      "Samengesteld voor onze leden · The Edit verschijnt maandelijks"
+    footer: "Samengesteld voor onze leden · The Edit verschijnt maandelijks"
 
   }
 
@@ -632,38 +611,29 @@ function showLanguage(lang){
 
   document.documentElement.lang = lang;
 
-  document.getElementById("category").textContent =
-    data.category;
+  document.getElementById("category").textContent = data.category;
 
-  document.getElementById("title").textContent =
-    data.title;
+  document.getElementById("title").textContent = data.title;
 
-  document.getElementById("tentimesLabel").textContent =
-    data.tentimesLabel;
+  document.getElementById("tentimesLabel").textContent = data.tentimesLabel;
 
-  document.getElementById("tentimesButton").textContent =
-    data.tentimesButton;
+  document.getElementById("tentimesButton").textContent = data.tentimesButton;
 
-  document.getElementById("contactText").textContent =
-    data.contactText;
+  document.getElementById("contactText").textContent = data.contactText;
 
-  document.getElementById("cta").textContent =
-    data.cta;
+  document.getElementById("cta").textContent = data.cta;
 
-  document.getElementById("footerText").textContent =
-    data.footer;
+  document.getElementById("footerText").textContent = data.footer;
 
 
-  const articleBody =
-    document.getElementById("articleBody");
+  const articleBody = document.getElementById("articleBody");
 
   articleBody.innerHTML = "";
 
 
   data.paragraphs.forEach(function(text){
 
-    const paragraph =
-      document.createElement("p");
+    const paragraph = document.createElement("p");
 
     paragraph.textContent = text;
 
@@ -672,58 +642,40 @@ function showLanguage(lang){
   });
 
 
-  document
-    .querySelectorAll("[data-lang]")
-    .forEach(function(button){
+  document.querySelectorAll("[data-lang]").forEach(function(button){
 
-      if(button.dataset.lang === lang){
-        button.classList.add("active");
-      } else {
-        button.classList.remove("active");
-      }
-
-    });
-
-
-  const newUrl =
-    new URL(window.location.href);
-
-  newUrl.searchParams.set("lang", lang);
-
-  window.history.replaceState(
-    {},
-    "",
-    newUrl
-  );
-
-}
-
-
-document
-  .querySelectorAll("[data-lang]")
-  .forEach(function(button){
-
-    button.addEventListener(
-      "click",
-      function(){
-
-        showLanguage(
-          button.dataset.lang
-        );
-
-      }
-    );
+    if(button.dataset.lang === lang){
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
 
   });
 
 
-const params =
-  new URLSearchParams(
-    window.location.search
-  );
+  const newUrl = new URL(window.location.href);
 
-const startingLanguage =
-  params.get("lang") || "en";
+  newUrl.searchParams.set("lang", lang);
+
+  window.history.replaceState({}, "", newUrl);
+
+}
+
+
+document.querySelectorAll("[data-lang]").forEach(function(button){
+
+  button.addEventListener("click", function(){
+
+    showLanguage(button.dataset.lang);
+
+  });
+
+});
+
+
+const params = new URLSearchParams(window.location.search);
+
+const startingLanguage = params.get("lang") || "en";
 
 showLanguage(startingLanguage);
 
