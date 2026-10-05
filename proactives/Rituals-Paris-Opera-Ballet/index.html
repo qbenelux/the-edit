@@ -8,6 +8,10 @@
 
 <style>
 
+/* =========================
+   GENERAL
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -64,6 +68,7 @@ body {
   position: absolute;
   right: 0;
   top: 1px;
+
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8px;
   letter-spacing: 1px;
@@ -77,35 +82,45 @@ body {
 }
 
 .languages a.active {
-  color: #f0e8da;
+  color: #ffffff;
 }
 
 
 /* =========================
    IMAGES
-   WHITE EDGE FIX
+   NO ZOOM / NO BLUR
 ========================= */
 
 .image-crop {
+  display: block;
   width: 100%;
+  margin: 0;
+  padding: 0;
+
   overflow: hidden;
-  background: #050505;
   line-height: 0;
-  border: 0;
-  outline: 0;
+
+  background: #050505;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .image-crop img {
   display: block;
-  width: calc(100% + 4px);
-  max-width: none;
-  height: auto;
-  margin: -2px;
 
-  border: 0 !important;
-  outline: 0 !important;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  border: none !important;
+  outline: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
+  background: #050505;
 }
 
 .hero {
@@ -124,7 +139,9 @@ body {
 
 h1 {
   margin: 0 0 3px;
+
   color: #eee8df;
+
   font-size: 30px;
   line-height: 1.15;
   font-weight: 400;
@@ -132,16 +149,19 @@ h1 {
 
 .subtitle {
   margin: 0;
+
   color: #c3a865;
+
   font-size: 14px;
   line-height: 1.4;
+
   font-style: italic;
   font-weight: 400;
 }
 
 
 /* =========================
-   BODY TEXT
+   BODY
 ========================= */
 
 p {
@@ -181,7 +201,7 @@ p {
 
 
 /* =========================
-   THREE WORKS
+   THREE BALLETS
 ========================= */
 
 .work {
@@ -190,6 +210,7 @@ p {
 
 .work-name {
   display: block;
+
   margin-bottom: 1px;
 
   color: #eee8df;
@@ -199,16 +220,18 @@ p {
   line-height: 1.4;
 
   font-weight: 700;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
 }
 
 .work-credit {
   display: block;
+
   margin-bottom: 1px;
 
   color: #ded6ca;
 
   font-family: Georgia, "Times New Roman", serif;
+
   font-style: italic;
   font-weight: 400;
 }
@@ -220,32 +243,49 @@ p {
 
 
 /* =========================
-   TWO IMAGES
+   IMAGES 2 + 3
 ========================= */
 
 .image-pair {
   display: flex;
+
   width: 100%;
   gap: 10px;
+
   margin: 31px 0 27px;
+  padding: 0;
+
+  background: #050505;
+
+  border: none !important;
+  outline: none !important;
 }
 
 .image-pair .image-crop {
   width: calc(50% - 5px);
-  height: 390px;
 }
 
+/*
+  IMPORTANT:
+  No forced height.
+  No object-fit.
+  No enlargement.
+
+  This keeps the actual JPG sharp.
+*/
+
 .image-pair img {
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  display: block;
 
-  object-fit: cover;
-  object-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 
-  margin: -2px;
+  margin: 0;
+  padding: 0;
 
-  border: 0 !important;
-  outline: 0 !important;
+  border: none !important;
+  outline: none !important;
   box-shadow: none !important;
 }
 
@@ -284,16 +324,20 @@ p {
 
 .closing-line {
   margin-bottom: 18px;
+
   color: #eee8df;
+
   font-style: italic;
   font-weight: 400;
 }
 
 .contact {
   display: inline-block;
+
   padding-bottom: 3px;
 
   color: #c3a865;
+
   text-decoration: none;
 
   border-bottom: 1px solid #c3a865;
@@ -320,6 +364,10 @@ p {
     margin-top: 15px;
   }
 
+  .languages a {
+    margin: 0 6px;
+  }
+
   h1 {
     font-size: 26px;
   }
@@ -335,7 +383,6 @@ p {
 
   .image-pair .image-crop {
     width: calc(50% - 3.5px);
-    height: 300px;
   }
 
 }
@@ -351,238 +398,349 @@ p {
 <div class="container">
 
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
-  <header class="header">
+<header class="header">
 
-    <div class="brand">
-      QUINTESSENTIALLY
-    </div>
+  <div class="brand">
+    QUINTESSENTIALLY
+  </div>
 
-    <nav class="languages">
+  <nav class="languages">
 
-      <a href="?lang=fr">
-        FR
-      </a>
+    <a href="?lang=fr" data-lang-link="fr">
+      FR
+    </a>
 
-      <a href="?lang=en" class="active">
-        EN
-      </a>
+    <a href="?lang=en" data-lang-link="en">
+      EN
+    </a>
 
-      <a href="?lang=nl">
-        NL
-      </a>
+    <a href="?lang=nl" data-lang-link="nl">
+      NL
+    </a>
 
-    </nav>
+  </nav>
 
-  </header>
+</header>
 
 
-  <!-- =========================
-       IMAGE 1
-  ========================= -->
+<!-- =========================
+     IMAGE 1
+========================= -->
 
-  <div class="image-crop hero">
+<div class="image-crop hero">
+
+  <img
+    src="ballet 1.jpg"
+    alt="Paris Opera Ballet"
+  >
+
+</div>
+
+
+<!-- =========================
+     TITLE
+========================= -->
+
+<div class="intro">
+
+  <h1
+    data-en="Rituals – Paris Opera Ballet"
+    data-fr="Rituals – Ballet de l’Opéra de Paris"
+    data-nl="Rituals – Ballet van de Opéra de Paris">
+    Rituals – Paris Opera Ballet
+  </h1>
+
+
+  <p
+    class="subtitle"
+    data-en="An Evening of Ballet at the Opéra Bastille"
+    data-fr="Une soirée de ballet à l’Opéra Bastille"
+    data-nl="Een avond ballet in de Opéra Bastille">
+    An Evening of Ballet at the Opéra Bastille
+  </p>
+
+</div>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<p
+  data-en="This winter, Paris welcomes an exceptional programme of dance at the Opéra Bastille. From 2 December 2026 to 2 January 2027, the Paris Opera Ballet presents Rituals, bringing together three works performed as part of one evening. Moving from classical elegance to bold contemporary expression, the programme offers three very different interpretations of movement, music and choreography."
+
+  data-fr="Cet hiver, Paris accueille un programme de danse exceptionnel à l’Opéra Bastille. Du 2 décembre 2026 au 2 janvier 2027, le Ballet de l’Opéra de Paris présente Rituals, réunissant trois œuvres au cours d’une même soirée. De l’élégance classique à une expression contemporaine audacieuse, le programme propose trois interprétations très différentes du mouvement, de la musique et de la chorégraphie."
+
+  data-nl="Deze winter verwelkomt Parijs een uitzonderlijk dansprogramma in de Opéra Bastille. Van 2 december 2026 tot 2 januari 2027 presenteert het Ballet van de Opéra de Paris Rituals, waarin drie werken tijdens één avond samenkomen. Van klassieke elegantie tot gedurfde hedendaagse expressie biedt het programma drie zeer verschillende interpretaties van beweging, muziek en choreografie.">
+
+  This winter, Paris welcomes an exceptional programme of dance at the Opéra Bastille. From 2 December 2026 to 2 January 2027, the Paris Opera Ballet presents Rituals, bringing together three works performed as part of one evening. Moving from classical elegance to bold contemporary expression, the programme offers three very different interpretations of movement, music and choreography.
+
+</p>
+
+
+<!-- =========================
+     THREE WORKS
+========================= -->
+
+<h2
+  class="section-title"
+  data-en="Three Works, One Evening"
+  data-fr="Trois œuvres, une soirée"
+  data-nl="Drie werken, één avond">
+  Three Works, One Evening
+</h2>
+
+
+<!-- SUITE EN BLANC -->
+
+<div class="work">
+
+  <span class="work-name">
+    SUITE EN BLANC
+  </span>
+
+  <span
+    class="work-credit"
+    data-en="Serge Lifar · Music by Édouard Lalo"
+    data-fr="Serge Lifar · Musique d’Édouard Lalo"
+    data-nl="Serge Lifar · Muziek van Édouard Lalo">
+    Serge Lifar · Music by Édouard Lalo
+  </span>
+
+  <p
+    class="work-description"
+    data-en="A graceful celebration of classical technique and the elegance of the French ballet tradition."
+    data-fr="Une célébration gracieuse de la technique classique et de l’élégance de la tradition française du ballet."
+    data-nl="Een sierlijke viering van klassieke techniek en de elegantie van de Franse ballettraditie.">
+    A graceful celebration of classical technique and the elegance of the French ballet tradition.
+  </p>
+
+</div>
+
+
+<!-- BOLÉRO X -->
+
+<div class="work">
+
+  <span class="work-name">
+    BOLÉRO X
+  </span>
+
+  <span
+    class="work-credit"
+    data-en="Shahar Binyamini · Music by Maurice Ravel"
+    data-fr="Shahar Binyamini · Musique de Maurice Ravel"
+    data-nl="Shahar Binyamini · Muziek van Maurice Ravel">
+    Shahar Binyamini · Music by Maurice Ravel
+  </span>
+
+  <p
+    class="work-description"
+    data-en="A hypnotic and energetic work where movement builds alongside the unmistakable rhythm of Boléro."
+    data-fr="Une œuvre hypnotique et énergique où le mouvement s’intensifie au rythme reconnaissable entre tous du Boléro."
+    data-nl="Een hypnotiserend en energiek werk waarin de beweging zich opbouwt naast het onmiskenbare ritme van Boléro.">
+    A hypnotic and energetic work where movement builds alongside the unmistakable rhythm of Boléro.
+  </p>
+
+</div>
+
+
+<!-- THE RITE OF SPRING -->
+
+<div class="work">
+
+  <span class="work-name">
+    THE RITE OF SPRING
+  </span>
+
+  <span
+    class="work-credit"
+    data-en="Pina Bausch · Music by Igor Stravinsky"
+    data-fr="Pina Bausch · Musique d’Igor Stravinsky"
+    data-nl="Pina Bausch · Muziek van Igor Stravinsky">
+    Pina Bausch · Music by Igor Stravinsky
+  </span>
+
+  <p
+    class="work-description"
+    data-en="Raw, powerful and intensely expressive, performed on an earth-covered stage in one of Bausch’s most celebrated works."
+    data-fr="Brute, puissante et intensément expressive, cette œuvre est interprétée sur une scène recouverte de terre et compte parmi les créations les plus célèbres de Bausch."
+    data-nl="Rauw, krachtig en intens expressief, uitgevoerd op een met aarde bedekt podium in een van Bauschs meest gevierde werken.">
+    Raw, powerful and intensely expressive, performed on an earth-covered stage in one of Bausch’s most celebrated works.
+  </p>
+
+</div>
+
+
+<!-- =========================
+     IMAGES 2 + 3
+========================= -->
+
+<div class="image-pair">
+
+  <div class="image-crop">
 
     <img
-      src="ballet 1.jpg"
+      src="ballet 2.jpg"
       alt="Paris Opera Ballet"
     >
 
   </div>
 
 
-  <!-- =========================
-       TITLE
-  ========================= -->
+  <div class="image-crop">
 
-  <div class="intro">
-
-    <h1>
-      Rituals – Paris Opera Ballet
-    </h1>
-
-    <p class="subtitle">
-      An Evening of Ballet at the Opéra Bastille
-    </p>
+    <img
+      src="ballet 3.jpg"
+      alt="Paris Opera Ballet"
+    >
 
   </div>
-
-
-  <!-- =========================
-       INTRODUCTION
-  ========================= -->
-
-  <p>
-    This winter, Paris welcomes an exceptional programme of dance at the
-    Opéra Bastille. From 2 December 2026 to 2 January 2027, the Paris Opera
-    Ballet presents <em>Rituals</em>, bringing together three works performed
-    as part of one evening. Moving from classical elegance to bold
-    contemporary expression, the programme offers three very different
-    interpretations of movement, music and choreography.
-  </p>
-
-
-  <!-- =========================
-       THREE WORKS
-  ========================= -->
-
-  <h2 class="section-title">
-    Three Works, One Evening
-  </h2>
-
-
-  <!-- SUITE EN BLANC -->
-
-  <div class="work">
-
-    <span class="work-name">
-      SUITE EN BLANC
-    </span>
-
-    <span class="work-credit">
-      Serge Lifar · Music by Édouard Lalo
-    </span>
-
-    <p class="work-description">
-      A graceful celebration of classical technique and the elegance
-      of the French ballet tradition.
-    </p>
-
-  </div>
-
-
-  <!-- BOLERO X -->
-
-  <div class="work">
-
-    <span class="work-name">
-      BOLÉRO X
-    </span>
-
-    <span class="work-credit">
-      Shahar Binyamini · Music by Maurice Ravel
-    </span>
-
-    <p class="work-description">
-      A hypnotic and energetic work where movement builds alongside
-      the unmistakable rhythm of <em>Boléro</em>.
-    </p>
-
-  </div>
-
-
-  <!-- THE RITE OF SPRING -->
-
-  <div class="work">
-
-    <span class="work-name">
-      THE RITE OF SPRING
-    </span>
-
-    <span class="work-credit">
-      Pina Bausch · Music by Igor Stravinsky
-    </span>
-
-    <p class="work-description">
-      Raw, powerful and intensely expressive, performed on an
-      earth-covered stage in one of Bausch’s most celebrated works.
-    </p>
-
-  </div>
-
-
-  <!-- =========================
-       IMAGES 2 + 3
-  ========================= -->
-
-  <div class="image-pair">
-
-    <div class="image-crop">
-
-      <img
-        src="ballet 2.jpg"
-        alt="Paris Opera Ballet dancer"
-      >
-
-    </div>
-
-
-    <div class="image-crop">
-
-      <img
-        src="ballet 3.jpg"
-        alt="Ballet shoes"
-      >
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================
-       CULTURAL EVENING
-  ========================= -->
-
-  <h2 class="section-title">
-    A Cultural Evening in Paris
-  </h2>
-
-
-  <p>
-    A performance at the Opéra Bastille is a wonderful addition to a
-    winter escape in Paris, whether paired with dinner in the city or
-    made part of a longer stay. <em>Rituals</em> brings together the
-    artistry of the Paris Opera Ballet and three remarkable works for
-    an evening that goes far beyond a traditional night at the ballet.
-    Allow us to secure your seats and shape the rest of your Paris
-    evening around the performance.
-  </p>
-
-
-  <!-- =========================
-       LOCATION
-  ========================= -->
-
-  <div class="details">
-
-    <p>
-
-      <span class="location-label">
-        Location:
-      </span>
-
-      Opéra Bastille, Place de la Bastille, 75012 Paris
-
-    </p>
-
-  </div>
-
-
-  <!-- =========================
-       CLOSING
-  ========================= -->
-
-  <div class="closing">
-
-    <p class="closing-line">
-      Make <em>Rituals</em> part of your next stay in Paris.
-    </p>
-
-    <a
-      class="contact"
-      href="mailto:brussels@quintessentially.com">
-      Contact me for more information
-    </a>
-
-  </div>
-
 
 </div>
 
+
+<!-- =========================
+     CULTURAL EVENING
+========================= -->
+
+<h2
+  class="section-title"
+  data-en="A Cultural Evening in Paris"
+  data-fr="Une soirée culturelle à Paris"
+  data-nl="Een culturele avond in Parijs">
+  A Cultural Evening in Paris
+</h2>
+
+
+<p
+  data-en="A performance at the Opéra Bastille is a wonderful addition to a winter escape in Paris, whether paired with dinner in the city or made part of a longer stay. Rituals brings together the artistry of the Paris Opera Ballet and three remarkable works for an evening that goes far beyond a traditional night at the ballet. Allow us to secure your seats and shape the rest of your Paris evening around the performance."
+
+  data-fr="Une représentation à l’Opéra Bastille complète parfaitement une escapade hivernale à Paris, qu’elle soit associée à un dîner en ville ou intégrée à un séjour plus long. Rituals réunit le talent du Ballet de l’Opéra de Paris et trois œuvres remarquables pour une soirée qui va bien au-delà d’une sortie traditionnelle au ballet. Laissez-nous organiser vos places et imaginer le reste de votre soirée parisienne autour de la représentation."
+
+  data-nl="Een voorstelling in de Opéra Bastille vormt een prachtige aanvulling op een winterverblijf in Parijs, gecombineerd met een diner in de stad of als onderdeel van een langer verblijf. Rituals brengt het vakmanschap van het Ballet van de Opéra de Paris en drie opmerkelijke werken samen voor een avond die veel verder gaat dan een traditionele balletvoorstelling. Laat ons uw plaatsen regelen en de rest van uw Parijse avond rond de voorstelling vormgeven.">
+
+  A performance at the Opéra Bastille is a wonderful addition to a winter escape in Paris, whether paired with dinner in the city or made part of a longer stay. Rituals brings together the artistry of the Paris Opera Ballet and three remarkable works for an evening that goes far beyond a traditional night at the ballet. Allow us to secure your seats and shape the rest of your Paris evening around the performance.
+
+</p>
+
+
+<!-- =========================
+     LOCATION
+========================= -->
+
+<div class="details">
+
+  <p>
+
+    <span
+      class="location-label"
+      data-en="Location:"
+      data-fr="Lieu :"
+      data-nl="Locatie:">
+      Location:
+    </span>
+
+    <span
+      data-en="Opéra Bastille, Place de la Bastille, 75012 Paris"
+      data-fr="Opéra Bastille, Place de la Bastille, 75012 Paris"
+      data-nl="Opéra Bastille, Place de la Bastille, 75012 Parijs">
+      Opéra Bastille, Place de la Bastille, 75012 Paris
+    </span>
+
+  </p>
+
+</div>
+
+
+<!-- =========================
+     CLOSING
+========================= -->
+
+<div class="closing">
+
+  <p
+    class="closing-line"
+    data-en="Make Rituals part of your next stay in Paris."
+    data-fr="Faites de Rituals un moment de votre prochain séjour à Paris."
+    data-nl="Maak Rituals onderdeel van uw volgende verblijf in Parijs.">
+    Make Rituals part of your next stay in Paris.
+  </p>
+
+
+  <a
+    class="contact"
+    href="mailto:brussels@quintessentially.com"
+
+    data-en="Contact me for more information"
+    data-fr="Contactez-moi pour plus d’informations"
+    data-nl="Neem contact met mij op voor meer informatie">
+
+    Contact me for more information
+
+  </a>
+
+</div>
+
+
+</div>
 </main>
+
+
+<!-- =========================
+     LANGUAGE SWITCHER
+========================= -->
+
+<script>
+
+(function () {
+
+  const params = new URLSearchParams(window.location.search);
+
+  let lang = params.get("lang") || "en";
+
+  if (!["en", "fr", "nl"].includes(lang)) {
+    lang = "en";
+  }
+
+  document.documentElement.lang = lang;
+
+
+  /* TRANSLATE */
+
+  document.querySelectorAll("[data-en]").forEach(function(element) {
+
+    const translation =
+      element.getAttribute("data-" + lang);
+
+    if (translation !== null) {
+      element.textContent = translation;
+    }
+
+  });
+
+
+  /* ACTIVE LANGUAGE */
+
+  document.querySelectorAll("[data-lang-link]").forEach(function(link) {
+
+    link.classList.remove("active");
+
+    if (
+      link.getAttribute("data-lang-link") === lang
+    ) {
+      link.classList.add("active");
+    }
+
+  });
+
+})();
+
+</script>
 
 </body>
 </html>
