@@ -64,28 +64,25 @@ img{
 ========================= */
 
 .top{
-  position:relative;
-  padding:42px 0 30px;
+  padding:30px 0 30px;
   text-align:center;
 }
 
-.logo{
-  font-family:Arial, Helvetica, sans-serif;
-  font-size:44px;
-  font-weight:400;
-  letter-spacing:.30em;
-  color:#ffffff;
-  text-transform:uppercase;
-  line-height:1.1;
-}
+
+/* TRANSLATION BUTTONS ABOVE LOGO */
 
 .languages{
-  position:absolute;
-  right:0;
-  top:50px;
+  position:static;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:7px;
+  margin-bottom:18px;
+
   font-family:Arial, Helvetica, sans-serif;
   font-size:9px;
   letter-spacing:.15em;
+  text-transform:uppercase;
 }
 
 .languages button{
@@ -98,6 +95,10 @@ img{
   font-family:Arial, Helvetica, sans-serif;
 }
 
+.languages button:hover{
+  color:#a68c52;
+}
+
 .languages button.active{
   color:var(--gold);
 }
@@ -107,9 +108,21 @@ img{
 }
 
 
+/* QUINTESSENTIALLY */
+
+.logo{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:42px;
+  font-weight:400;
+  letter-spacing:.30em;
+  color:#ffffff;
+  text-transform:uppercase;
+  line-height:1.1;
+}
+
+
 /* =========================
-   HERO
-   SAME WIDTH — NATURAL HEIGHT
+   HERO IMAGE
 ========================= */
 
 .hero{
@@ -117,14 +130,21 @@ img{
   margin:0 auto;
   overflow:hidden;
   background:var(--bg);
+  line-height:0;
+
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
 }
 
 .hero img{
   display:block;
   width:calc(100% + 4px);
-  height:auto;
   max-width:none;
+  height:auto;
+
   margin:-2px;
+
   border:0 !important;
   outline:0 !important;
   box-shadow:none !important;
@@ -132,7 +152,7 @@ img{
 
 
 /* =========================
-   TITLE
+   MAIN TITLE
 ========================= */
 
 .title-block{
@@ -142,7 +162,9 @@ img{
 
 .title-block h1{
   margin:0;
+
   color:#f1ede5;
+
   font-size:38px;
   line-height:1.1;
   font-weight:400;
@@ -150,7 +172,9 @@ img{
 
 .title-block h2{
   margin:9px 0 0;
+
   color:var(--text);
+
   font-size:18px;
   line-height:1.4;
   font-style:italic;
@@ -169,7 +193,9 @@ img{
 
 .article p{
   margin:0 0 22px;
+
   color:var(--body);
+
   font-size:16px;
   line-height:1.72;
 }
@@ -187,46 +213,62 @@ img{
   display:flex;
   align-items:center;
   gap:17px;
+
   margin-bottom:20px;
 }
 
 .section-title h3{
   margin:0;
+
   color:#eee9df;
+
   font-size:23px;
   line-height:1.25;
   font-weight:400;
   font-style:italic;
+
   white-space:nowrap;
 }
 
 .section-title::after{
   content:"";
+
   display:block;
   flex:1;
+
   height:1px;
+
   background:var(--line);
 }
 
 
 /* =========================
    ARTICLE IMAGES
-   SAME WIDTH — NATURAL HEIGHT
 ========================= */
 
 .single-image{
   width:88%;
+
   margin:38px auto 46px;
+
   overflow:hidden;
   background:var(--bg);
+  line-height:0;
+
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
 }
 
 .single-image img{
   display:block;
+
   width:calc(100% + 4px);
-  height:auto;
   max-width:none;
+  height:auto;
+
   margin:-2px;
+
   border:0 !important;
   outline:0 !important;
   box-shadow:none !important;
@@ -243,9 +285,12 @@ img{
 
 .closing-line{
   margin-top:34px !important;
+
   color:#eee9df !important;
+
   font-size:19px !important;
   line-height:1.55 !important;
+
   font-style:italic;
 }
 
@@ -257,8 +302,10 @@ img{
 .event-details{
   margin:42px 0 30px;
   padding:24px 0;
+
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
+
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
@@ -270,15 +317,19 @@ img{
 
 .event-label{
   margin-bottom:8px;
+
   color:var(--gold);
+
   font-family:Arial, Helvetica, sans-serif;
   font-size:9px;
   letter-spacing:.22em;
+
   text-transform:uppercase;
 }
 
 .event-value{
   color:var(--text);
+
   font-size:16px;
   line-height:1.4;
 }
@@ -295,14 +346,20 @@ img{
 
 .contact{
   display:inline-block;
+
   color:var(--gold);
+
   text-decoration:none;
+
   font-family:Arial, Helvetica, sans-serif;
   font-size:10px;
   line-height:1.5;
   letter-spacing:.17em;
+
   text-transform:uppercase;
+
   border-bottom:1px solid var(--gold);
+
   padding-bottom:5px;
 }
 
@@ -318,17 +375,22 @@ img{
 
 footer{
   max-width:650px;
+
   margin:70px auto 0;
   padding-top:30px;
+
   border-top:1px solid var(--line);
+
   text-align:center;
 }
 
 .footer-logo{
   color:#ddd7cc;
+
   font-family:Arial, Helvetica, sans-serif;
   font-size:11px;
   letter-spacing:.35em;
+
   text-transform:uppercase;
 }
 
@@ -344,18 +406,17 @@ footer{
   }
 
   .top{
-    padding:32px 0 23px;
+    padding:25px 0 23px;
+  }
+
+  .languages{
+    margin-bottom:15px;
   }
 
   .logo{
     font-size:27px;
     letter-spacing:.25em;
     line-height:1.15;
-  }
-
-  .languages{
-    position:static;
-    margin-top:14px;
   }
 
   .hero,
@@ -406,101 +467,115 @@ footer{
 </style>
 </head>
 
+
 <body>
 
 <div class="page">
 
 
-  <!-- =========================
-       TOP
-  ========================= -->
+<!-- =========================
+     TOP
+========================= -->
 
-  <div class="top">
+<div class="top">
 
-    <div class="logo">
-      QUINTESSENTIALLY
-    </div>
 
-    <div class="languages">
+  <!-- TRANSLATIONS -->
 
-      <button data-lang="fr">
-        FR
-      </button>
+  <div class="languages">
 
-      <span>·</span>
+    <button data-lang="fr">
+      FR
+    </button>
 
-      <button data-lang="en">
-        EN
-      </button>
+    <span>·</span>
 
-      <span>·</span>
+    <button data-lang="en">
+      EN
+    </button>
 
-      <button data-lang="nl">
-        NL
-      </button>
+    <span>·</span>
 
-    </div>
+    <button data-lang="nl">
+      NL
+    </button>
 
   </div>
 
 
-  <!-- =========================
-       HERO IMAGE
-  ========================= -->
+  <!-- LOGO -->
 
-  <div class="hero">
-
-    <img
-      src="brafa 1.jpg"
-      alt="BRAFA Art Fair 2027">
-
+  <div class="logo">
+    QUINTESSENTIALLY
   </div>
 
 
-  <!-- =========================
-       TITLE
-  ========================= -->
+</div>
 
-  <div class="title-block">
 
-    <h1 id="mainTitle">
-      BRAFA Art Fair 2027
-    </h1>
+<!-- =========================
+     IMAGE 1
+========================= -->
 
-    <h2 id="mainSubtitle">
-      A Celebration of Art in Brussels
-    </h2>
+<div class="hero">
 
+  <img
+    src="brafa 1.jpg"
+    alt="BRAFA Art Fair 2027"
+  >
+
+</div>
+
+
+<!-- =========================
+     TITLE
+========================= -->
+
+<div class="title-block">
+
+  <h1 id="mainTitle">
+    BRAFA Art Fair 2027
+  </h1>
+
+  <h2 id="mainSubtitle">
+    A Celebration of Art in Brussels
+  </h2>
+
+</div>
+
+
+<!-- =========================
+     ARTICLE
+========================= -->
+
+<main
+  class="article"
+  id="articleContent">
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footer-logo">
+    QUINTESSENTIALLY
   </div>
 
-
-  <!-- =========================
-       ARTICLE
-  ========================= -->
-
-  <main
-    class="article"
-    id="articleContent">
-  </main>
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-
-    <div class="footer-logo">
-      QUINTESSENTIALLY
-    </div>
-
-  </footer>
+</footer>
 
 
 </div>
 
 
 <script>
+
+
+/* ==========================================================
+   TRANSLATIONS
+========================================================== */
 
 const translations = {
 
@@ -581,7 +656,13 @@ en: {
     "Date",
 
   locationLabel:
-    "Location"
+    "Location",
+
+  date:
+    "24–31 January 2027",
+
+  location:
+    "Brussels Expo"
 
 },
 
@@ -663,7 +744,13 @@ fr: {
     "Date",
 
   locationLabel:
-    "Lieu"
+    "Lieu",
+
+  date:
+    "24–31 janvier 2027",
+
+  location:
+    "Brussels Expo"
 
 },
 
@@ -744,7 +831,13 @@ nl: {
     "Datum",
 
   locationLabel:
-    "Locatie"
+    "Locatie",
+
+  date:
+    "24–31 januari 2027",
+
+  location:
+    "Brussels Expo"
 
 }
 
@@ -758,179 +851,188 @@ nl: {
 function renderLanguage(lang){
 
   if(!translations[lang]){
-    lang = "en";
+    lang="en";
   }
 
-  const t = translations[lang];
+  const t=translations[lang];
 
-  document.documentElement.lang = lang;
+  document.documentElement.lang=lang;
 
 
-  /* TITLE */
+  /* MAIN TITLE */
 
-  document.getElementById(
-    "mainTitle"
-  ).textContent = t.title;
+  document
+    .getElementById("mainTitle")
+    .textContent=t.title;
 
-  document.getElementById(
-    "mainSubtitle"
-  ).textContent = t.subtitle;
+
+  document
+    .getElementById("mainSubtitle")
+    .textContent=t.subtitle;
 
 
   /* ARTICLE */
 
-  document.getElementById(
-    "articleContent"
-  ).innerHTML = `
+  document
+    .getElementById("articleContent")
+    .innerHTML=`
 
 
-    <!-- INTRODUCTION -->
+      <!-- INTRODUCTION -->
 
-    <p>
-      ${t.intro}
-    </p>
-
-
-    <!-- IMAGE 2 -->
-
-    <div class="single-image">
-
-      <img
-        src="brafa 2.jpg"
-        alt="BRAFA Art Fair">
-
-    </div>
+      <p>
+        ${t.intro}
+      </p>
 
 
-    <!-- PRESTIGIOUS INTERNATIONAL ART FAIR -->
+      <!-- IMAGE 2 -->
 
-    <section class="section">
+      <div class="single-image">
 
-      <div class="section-title">
-
-        <h3>
-          ${t.prestigiousTitle}
-        </h3>
+        <img
+          src="brafa 2.jpg"
+          alt="BRAFA Art Fair"
+        >
 
       </div>
 
-      <p>
-        ${t.prestigious1}
-      </p>
 
-      <p>
-        ${t.prestigious2}
-      </p>
+      <!-- PRESTIGIOUS INTERNATIONAL ART FAIR -->
 
-    </section>
+      <section class="section">
+
+        <div class="section-title">
+
+          <h3>
+            ${t.prestigiousTitle}
+          </h3>
+
+        </div>
+
+        <p>
+          ${t.prestigious1}
+        </p>
+
+        <p>
+          ${t.prestigious2}
+        </p>
+
+      </section>
 
 
-    <!-- PLEASURE OF DISCOVERY -->
+      <!-- PLEASURE OF DISCOVERY -->
 
-    <section class="section">
+      <section class="section">
 
-      <div class="section-title">
+        <div class="section-title">
 
-        <h3>
-          ${t.discoveryTitle}
-        </h3>
+          <h3>
+            ${t.discoveryTitle}
+          </h3>
+
+        </div>
+
+        <p>
+          ${t.discovery1}
+        </p>
+
+        <p>
+          ${t.discovery2}
+        </p>
+
+      </section>
+
+
+      <!-- IMAGE 3 -->
+
+      <div class="single-image">
+
+        <img
+          src="brafa 3.jpg"
+          alt="BRAFA Art Fair Brussels"
+        >
 
       </div>
 
-      <p>
-        ${t.discovery1}
-      </p>
 
-      <p>
-        ${t.discovery2}
-      </p>
+      <!-- EXPERIENCE BRAFA -->
 
-    </section>
+      <section class="section closing">
 
+        <div class="section-title">
 
-    <!-- IMAGE 3 -->
+          <h3>
+            ${t.experienceTitle}
+          </h3>
 
-    <div class="single-image">
+        </div>
 
-      <img
-        src="brafa 3.jpg"
-        alt="BRAFA Art Fair Brussels">
-
-    </div>
+        <p>
+          ${t.experience}
+        </p>
 
 
-    <!-- EXPERIENCE BRAFA -->
+        <!-- CLOSING SENTENCE -->
 
-    <section class="section closing">
-
-      <div class="section-title">
-
-        <h3>
-          ${t.experienceTitle}
-        </h3>
-
-      </div>
-
-      <p>
-        ${t.experience}
-      </p>
+        <p class="closing-line">
+          ${t.closing}
+        </p>
 
 
-      <p class="closing-line">
-        ${t.closing}
-      </p>
+        <!-- DATE + LOCATION -->
+
+        <div class="event-details">
 
 
-      <!-- DATE + LOCATION -->
+          <div class="event-item">
 
-      <div class="event-details">
+            <div class="event-label">
+              ${t.dateLabel}
+            </div>
 
-        <div class="event-item">
+            <div class="event-value">
+              ${t.date}
+            </div>
 
-          <div class="event-label">
-            ${t.dateLabel}
           </div>
 
-          <div class="event-value">
-            24–31 January 2027
+
+          <div class="event-item">
+
+            <div class="event-label">
+              ${t.locationLabel}
+            </div>
+
+            <div class="event-value">
+              ${t.location}
+            </div>
+
           </div>
+
 
         </div>
 
 
-        <div class="event-item">
+        <!-- CONTACT -->
 
-          <div class="event-label">
-            ${t.locationLabel}
-          </div>
+        <div class="contact-wrap">
 
-          <div class="event-value">
-            Brussels Expo
-          </div>
+          <a
+            class="contact"
+            href="mailto:qbenelux@quintessentially.com?subject=BRAFA%20Art%20Fair%202027"
+          >
+            ${t.contact} →
+          </a>
 
         </div>
 
-      </div>
+
+      </section>
+
+    `;
 
 
-      <!-- CONTACT -->
-
-      <div class="contact-wrap">
-
-        <a
-          class="contact"
-          href="mailto:qbenelux@quintessentially.com?subject=BRAFA%20Art%20Fair%202027">
-          ${t.contact} →
-        </a>
-
-      </div>
-
-    </section>
-
-  `;
-
-
-  /* ACTIVE LANGUAGE */
+  /* ACTIVE LANGUAGE BUTTON */
 
   document
     .querySelectorAll("[data-lang]")
@@ -938,7 +1040,7 @@ function renderLanguage(lang){
 
       button.classList.toggle(
         "active",
-        button.dataset.lang === lang
+        button.dataset.lang===lang
       );
 
     });
@@ -946,7 +1048,7 @@ function renderLanguage(lang){
 
   /* UPDATE URL */
 
-  const url =
+  const url=
     new URL(window.location.href);
 
   url.searchParams.set(
@@ -986,18 +1088,20 @@ document
 
 
 /* ==========================================================
-   STARTING LANGUAGE
+   START LANGUAGE
 ========================================================== */
 
-const params =
+const params=
   new URLSearchParams(
     window.location.search
   );
 
-const initialLanguage =
+const initialLanguage=
   params.get("lang") || "en";
 
-renderLanguage(initialLanguage);
+renderLanguage(
+  initialLanguage
+);
 
 </script>
 
