@@ -107,16 +107,9 @@ header{
 .hero img{
   width:100%;
   height:100%;
-  display:block;
-
-  /* Keeps the original proportions and prevents distortion */
   object-fit:cover;
-
-  /* Centers the detail image inside the wide hero */
-  object-position:center center;
-
-  /* Browser rendering */
-  image-rendering:auto;
+  object-position:center 75%;
+  display:block;
 }
 
 .hero::after{
@@ -333,10 +326,6 @@ footer{
     height:480px;
   }
 
-  .hero img{
-    object-position:center center;
-  }
-
   .hero-content{
     left:25px;
     right:25px;
@@ -396,8 +385,8 @@ footer{
 <section class="hero">
 
   <img
-    src="tentimes.detail.png"
-    alt="Fine watchmaking details at Tentimes">
+    src="hero 2.png"
+    alt="Tentimes watchmaking experience">
 
   <div class="hero-content">
 
@@ -444,8 +433,8 @@ footer{
 
     <div class="gallery-item">
       <img
-        src="hero 2.png"
-        alt="Tentimes watchmaking experience"
+        src="tentimes.detail.png"
+        alt="Fine watchmaking details at Tentimes"
         loading="lazy">
     </div>
 
