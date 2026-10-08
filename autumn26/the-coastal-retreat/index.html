@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
   --bg:#080807;
   --ink:#ece6db;
@@ -36,10 +36,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
   height:68px;
@@ -96,13 +93,10 @@ header{
   color:var(--ink);
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO — SMALLER IMAGE */
 
 .hero{
-  height:430px;
+  height:340px;
   position:relative;
   overflow:hidden;
   background:#080807;
@@ -120,13 +114,12 @@ header{
   content:"";
   position:absolute;
   inset:0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(5,5,4,.08) 0%,
-      rgba(5,5,4,.12) 45%,
-      rgba(5,5,4,.82) 100%
-    );
+  background:linear-gradient(
+    to bottom,
+    rgba(5,5,4,.08) 0%,
+    rgba(5,5,4,.12) 45%,
+    rgba(5,5,4,.82) 100%
+  );
 }
 
 .hero-content{
@@ -152,10 +145,7 @@ h1{
   line-height:1;
 }
 
-
-/* =========================
-   ARTICLE
-========================= */
+/* ARTICLE */
 
 .article{
   max-width:590px;
@@ -175,11 +165,7 @@ h1{
   font-size:20px;
 }
 
-
-/* =========================
-   SINGLE IMAGE
-   SAME WIDTH AS TEXT
-========================= */
+/* SINGLE IMAGE */
 
 .single-image{
   width:100%;
@@ -195,11 +181,7 @@ h1{
   display:block;
 }
 
-
-/* =========================
-   TWO IMAGES
-   SAME TOTAL WIDTH AS TEXT
-========================= */
+/* TWO IMAGES */
 
 .image-pair{
   width:100%;
@@ -217,10 +199,7 @@ h1{
   display:block;
 }
 
-
-/* =========================
-   MEMBER BENEFITS
-========================= */
+/* MEMBER BENEFITS */
 
 .benefits{
   margin:52px 0 38px;
@@ -272,10 +251,7 @@ h1{
   font-weight:500;
 }
 
-
-/* =========================
-   CTA
-========================= */
+/* CTA */
 
 .cta{
   display:inline-block;
@@ -292,10 +268,7 @@ h1{
   border-color:var(--accent);
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
   border-top:1px solid #211d15;
@@ -326,13 +299,9 @@ footer{
   color:#716b60;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:600px){
-
   header{
     padding:0 18px;
     height:64px;
@@ -348,7 +317,7 @@ footer{
   }
 
   .hero{
-    height:480px;
+    height:350px;
   }
 
   .hero-content{
@@ -384,149 +353,67 @@ footer{
     margin:40px 0 32px;
     padding:27px 0;
   }
-
 }
-
 </style>
 </head>
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
-
-  <div class="wordmark">
-    Quintessentially
-  </div>
+  <div class="wordmark">Quintessentially</div>
 
   <div class="language">
-
-    <button type="button" data-lang="fr">
-      FR
-    </button>
-
+    <button type="button" data-lang="fr">FR</button>
     <span class="sep">/</span>
-
-    <button type="button" data-lang="en">
-      EN
-    </button>
-
+    <button type="button" data-lang="en">EN</button>
     <span class="sep">/</span>
-
-    <button type="button" data-lang="nl">
-      NL
-    </button>
-
+    <button type="button" data-lang="nl">NL</button>
   </div>
 
-  <div class="edition">
-    The Edit · Autumn ’26
-  </div>
-
+  <div class="edition">The Edit · Autumn ’26</div>
 </header>
 
-
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
-
-  <img
-    src="deauville.png"
-    alt="Deauville">
+  <img src="ok.webp" alt="Deauville">
 
   <div class="hero-content">
-
-    <div
-      class="category"
-      id="category">
-    </div>
-
+    <div class="category" id="category"></div>
     <h1 id="title"></h1>
-
   </div>
-
 </section>
 
-
-<!-- =========================
-     ARTICLE
-========================= -->
+<!-- ARTICLE -->
 
 <main class="article">
-
   <div id="articleBody"></div>
 
-
-  <!-- MEMBER BENEFITS -->
-
   <section class="benefits">
-
-    <div
-      class="benefits-title"
-      id="benefitsTitle">
-    </div>
-
+    <div class="benefits-title" id="benefitsTitle"></div>
     <ul id="benefitsList"></ul>
-
   </section>
-
-
-  <!-- CTA -->
 
   <a
     class="cta"
     id="cta"
     href="mailto:qbenelux@quintessentially.com?subject=The%20Edit%20%C2%B7%20Autumn%20%E2%80%9926%20%C2%B7%20The%20Coastal%20Retreat">
   </a>
-
 </main>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
-
-  <div class="footer-logo">
-    Quintessentially
-  </div>
-
-  <div class="footer-edition">
-    The Edit · Autumn ’26
-  </div>
-
-  <div
-    class="footer-small"
-    id="footerText">
-  </div>
-
+  <div class="footer-logo">Quintessentially</div>
+  <div class="footer-edition">The Edit · Autumn ’26</div>
+  <div class="footer-small" id="footerText"></div>
 </footer>
 
-
 <script>
-
 const content = {
-
-
-  /* =========================
-     ENGLISH
-  ========================= */
-
   en: {
-
     category: "Travel",
-
     title: "The Coastal Retreat",
 
     paragraphs: [
-
       "There is something about Deauville that feels untouched by time. Belle Époque villas line quiet streets, horses leave their tracks along the shore, and beyond Les Planches, the Normandy sea stretches towards a pale horizon.",
 
       "At Hôtel Barrière Le Normandy, the rhythm is one of understated elegance. Mornings unfold over breakfast before Deauville draws you towards the racecourse, the boutiques or the sea. As evening falls, the town takes on another character entirely.",
@@ -534,47 +421,27 @@ const content = {
       "We shape the stay around the pleasures that bring people back to Deauville: a beautiful room overlooking the coast, mornings that begin at an unhurried table, days that move easily between the hotel and the town. Everything is considered with discretion, leaving Deauville to reveal itself at its own pace.",
 
       "Some places ask to be discovered. Deauville asks you to return."
-
     ],
 
-    benefitsTitle:
-      "Your Quintessentially Member Benefits",
+    benefitsTitle: "Your Quintessentially Member Benefits",
 
     benefits: [
-
       "<strong>Guaranteed room upgrade at booking</strong>, up to a Deluxe Suite Sea View",
-
       "<strong>Daily breakfast for two</strong> in the hotel restaurant",
-
       "<strong>USD 100 hotel credit</strong> to enjoy during your stay",
-
       "<strong>USD 300 total hotel credit for stays of seven nights or more</strong>",
-
       "<strong>Early check-in and late check-out</strong>, subject to availability"
-
     ],
 
-    cta:
-      "Let Deauville unfold for you",
-
-    footer:
-      "Curated for members · The Edit is published monthly"
-
+    cta: "Let Deauville unfold for you",
+    footer: "Curated for members · The Edit is published monthly"
   },
 
-
-  /* =========================
-     FRENCH
-  ========================= */
-
   fr: {
-
     category: "Voyage",
-
     title: "L’Échappée en Bord de Mer",
 
     paragraphs: [
-
       "Il y a quelque chose à Deauville qui semble avoir échappé au temps. Les villas Belle Époque bordent des rues paisibles, les chevaux laissent leurs traces sur le rivage et, au-delà des Planches, la mer de Normandie s’étend vers un horizon pâle.",
 
       "À l’Hôtel Barrière Le Normandy, le rythme est empreint d’une élégance discrète. Les matinées commencent autour d’un petit-déjeuner avant que Deauville ne vous entraîne vers l’hippodrome, les boutiques ou la mer. À la tombée du jour, la ville révèle un tout autre caractère.",
@@ -582,47 +449,27 @@ const content = {
       "Nous imaginons votre séjour autour de ces plaisirs qui donnent envie de revenir à Deauville : une belle chambre avec vue sur la côte, des matinées qui commencent sans hâte et des journées qui s’écoulent naturellement entre l’hôtel et la ville. Chaque détail est pensé avec discrétion, laissant Deauville se révéler à son propre rythme.",
 
       "Certains lieux demandent à être découverts. Deauville vous invite à revenir."
-
     ],
 
-    benefitsTitle:
-      "Vos avantages en tant que Membre Quintessentially",
+    benefitsTitle: "Vos avantages en tant que Membre Quintessentially",
 
     benefits: [
-
       "<strong>Surclassement garanti dès la réservation</strong>, jusqu’à une Deluxe Suite Sea View",
-
       "<strong>Petit-déjeuner quotidien pour deux</strong> au restaurant de l’hôtel",
-
       "<strong>Crédit hôtelier de 100 USD</strong> à utiliser pendant votre séjour",
-
       "<strong>Crédit hôtelier total de 300 USD pour les séjours de sept nuits ou plus</strong>",
-
       "<strong>Arrivée anticipée et départ tardif</strong>, sous réserve de disponibilité"
-
     ],
 
-    cta:
-      "Laissez Deauville se dévoiler à vous",
-
-    footer:
-      "Sélectionné pour nos membres · The Edit paraît chaque mois"
-
+    cta: "Laissez Deauville se dévoiler à vous",
+    footer: "Sélectionné pour nos membres · The Edit paraît chaque mois"
   },
 
-
-  /* =========================
-     DUTCH
-  ========================= */
-
   nl: {
-
     category: "Reizen",
-
     title: "De Kust als Toevlucht",
 
     paragraphs: [
-
       "Er is iets aan Deauville dat onaangeraakt lijkt door de tijd. Belle Époque-villa’s liggen langs rustige straten, paarden laten hun sporen achter op het strand en voorbij Les Planches strekt de Normandische zee zich uit naar een bleke horizon.",
 
       "In Hôtel Barrière Le Normandy draait alles om ingetogen elegantie. De ochtend begint rustig met ontbijt, waarna Deauville u naar de renbaan, de boetieks of de zee trekt. Wanneer de avond valt, krijgt de stad een heel ander karakter.",
@@ -630,44 +477,26 @@ const content = {
       "We geven uw verblijf vorm rond de genoegens die mensen telkens opnieuw naar Deauville brengen: een mooie kamer met uitzicht op de kust, ochtenden die rustig aan tafel beginnen en dagen die moeiteloos tussen het hotel en de stad verlopen. Elk detail wordt discreet verzorgd, zodat Deauville zich op haar eigen tempo kan onthullen.",
 
       "Sommige plaatsen vragen om ontdekt te worden. Deauville vraagt u om terug te keren."
-
     ],
 
-    benefitsTitle:
-      "Uw Quintessentially Member Benefits",
+    benefitsTitle: "Uw Quintessentially Member Benefits",
 
     benefits: [
-
       "<strong>Gegarandeerde kamerupgrade bij reservatie</strong>, tot een Deluxe Suite Sea View",
-
       "<strong>Dagelijks ontbijt voor twee</strong> in het restaurant van het hotel",
-
       "<strong>USD 100 hoteltegoed</strong> om tijdens uw verblijf te besteden",
-
       "<strong>USD 300 totaal hoteltegoed bij een verblijf van zeven nachten of langer</strong>",
-
       "<strong>Vroege check-in en late check-out</strong>, afhankelijk van beschikbaarheid"
-
     ],
 
-    cta:
-      "Laat Deauville zich voor u ontvouwen",
-
-    footer:
-      "Samengesteld voor onze leden · The Edit verschijnt maandelijks"
-
+    cta: "Laat Deauville zich voor u ontvouwen",
+    footer: "Samengesteld voor onze leden · The Edit verschijnt maandelijks"
   }
-
 };
 
-
-
-/* =========================
-   DISPLAY LANGUAGE
-========================= */
+/* DISPLAY LANGUAGE */
 
 function showLanguage(lang){
-
   if(!content[lang]){
     lang = "en";
   }
@@ -676,201 +505,78 @@ function showLanguage(lang){
 
   document.documentElement.lang = lang;
 
+  document.getElementById("category").textContent = data.category;
+  document.getElementById("title").textContent = data.title;
+  document.getElementById("benefitsTitle").textContent = data.benefitsTitle;
+  document.getElementById("cta").textContent = data.cta;
+  document.getElementById("footerText").textContent = data.footer;
 
-  document.getElementById("category").textContent =
-    data.category;
-
-  document.getElementById("title").textContent =
-    data.title;
-
-  document.getElementById("benefitsTitle").textContent =
-    data.benefitsTitle;
-
-  document.getElementById("cta").textContent =
-    data.cta;
-
-  document.getElementById("footerText").textContent =
-    data.footer;
-
-
-  /* =========================
-     ARTICLE + IMAGES
-  ========================= */
-
-  const articleBody =
-    document.getElementById("articleBody");
-
+  const articleBody = document.getElementById("articleBody");
   articleBody.innerHTML = "";
 
-
   data.paragraphs.forEach(function(text, index){
-
-    const paragraph =
-      document.createElement("p");
-
+    const paragraph = document.createElement("p");
     paragraph.textContent = text;
-
     articleBody.appendChild(paragraph);
 
-
-
-    /* =========================
-       AFTER FIRST PARAGRAPH
-
-       ONE IMAGE
-       SAME WIDTH AS TEXT
-    ========================= */
+    /* IMAGE AFTER FIRST PARAGRAPH */
 
     if(index === 0){
-
-      const singleImage =
-        document.createElement("div");
-
-      singleImage.className =
-        "single-image";
-
+      const singleImage = document.createElement("div");
+      singleImage.className = "single-image";
       singleImage.innerHTML =
         '<img src="normandy 1.webp" alt="Deauville and the Normandy coast">';
-
       articleBody.appendChild(singleImage);
-
     }
 
-
-
-    /* =========================
-       AFTER FINAL PARAGRAPH
-
-       TWO IMAGES SIDE BY SIDE
-
-       THIS MEANS:
-       "Some places ask..."
-       APPEARS ABOVE THE PHOTOS
-    ========================= */
+    /* TWO IMAGES AFTER FINAL PARAGRAPH */
 
     if(index === 3){
-
-      const imagePair =
-        document.createElement("div");
-
-      imagePair.className =
-        "image-pair";
-
+      const imagePair = document.createElement("div");
+      imagePair.className = "image-pair";
       imagePair.innerHTML =
         '<img src="normandy 2.jpg" alt="Hôtel Barrière Le Normandy interior">' +
         '<img src="normandy 3.jpeg" alt="Room at Hôtel Barrière Le Normandy">';
-
       articleBody.appendChild(imagePair);
-
     }
-
   });
 
-
-
-  /* =========================
-     BENEFITS
-  ========================= */
-
-  const benefitsList =
-    document.getElementById("benefitsList");
-
+  const benefitsList = document.getElementById("benefitsList");
   benefitsList.innerHTML = "";
 
-
   data.benefits.forEach(function(text){
-
-    const item =
-      document.createElement("li");
-
+    const item = document.createElement("li");
     item.innerHTML = text;
-
     benefitsList.appendChild(item);
-
   });
 
+  document.querySelectorAll("[data-lang]").forEach(function(button){
+    if(button.dataset.lang === lang){
+      button.classList.add("active");
+    }else{
+      button.classList.remove("active");
+    }
+  });
 
-
-  /* =========================
-     ACTIVE LANGUAGE BUTTON
-  ========================= */
-
-  document
-    .querySelectorAll("[data-lang]")
-    .forEach(function(button){
-
-      if(button.dataset.lang === lang){
-
-        button.classList.add("active");
-
-      }else{
-
-        button.classList.remove("active");
-
-      }
-
-    });
-
-
-
-  /* =========================
-     UPDATE URL LANGUAGE
-  ========================= */
-
-  const newUrl =
-    new URL(window.location.href);
-
+  const newUrl = new URL(window.location.href);
   newUrl.searchParams.set("lang", lang);
-
-  window.history.replaceState(
-    {},
-    "",
-    newUrl
-  );
-
+  window.history.replaceState({}, "", newUrl);
 }
 
+/* LANGUAGE BUTTONS */
 
-
-/* =========================
-   LANGUAGE BUTTONS
-========================= */
-
-document
-  .querySelectorAll("[data-lang]")
-  .forEach(function(button){
-
-    button.addEventListener(
-      "click",
-      function(){
-
-        showLanguage(
-          button.dataset.lang
-        );
-
-      }
-    );
-
+document.querySelectorAll("[data-lang]").forEach(function(button){
+  button.addEventListener("click", function(){
+    showLanguage(button.dataset.lang);
   });
+});
 
+/* STARTING LANGUAGE */
 
-
-/* =========================
-   STARTING LANGUAGE
-========================= */
-
-const params =
-  new URLSearchParams(
-    window.location.search
-  );
-
-const startingLanguage =
-  params.get("lang") || "en";
-
+const params = new URLSearchParams(window.location.search);
+const startingLanguage = params.get("lang") || "en";
 showLanguage(startingLanguage);
-
 </script>
-
 
 </body>
 </html>
