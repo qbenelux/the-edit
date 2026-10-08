@@ -1,1 +1,1037 @@
-v
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandarin Oriental, Marrakech | Quintessentially</title>
+  <meta name="description" content="Discover Mandarin Oriental, Marrakech with Quintessentially. Private villas, exceptional dining and exclusive experiences at the foot of the Atlas Mountains.">
+
+  <style>
+    :root {
+      --gold: #a98b58;
+      --dark: #242424;
+      --muted: #6d6a66;
+      --line: #e8e3dc;
+      --content: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--dark);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      width: 100%;
+      padding: 18px 20px 30px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(20px, 3.5vw, 32px);
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      color: #222;
+    }
+
+    .language-switcher {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 0 0 30px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: #888;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      cursor: pointer;
+      padding: 7px 3px;
+      border-bottom: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active {
+      color: var(--dark);
+      border-bottom-color: var(--gold);
+    }
+
+    /* PAGE */
+
+    .page {
+      width: min(var(--content), calc(100% - 44px));
+      margin: 0 auto;
+    }
+
+    /* HERO */
+
+    .hero {
+      margin-top: 37px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 570px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ARTICLE HEADING */
+
+    .article-heading {
+      text-align: center;
+      padding: 49px 20px 40px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.18;
+      font-weight: 400;
+      margin: 0 0 18px;
+    }
+
+    .subtitle {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+      font-size: 12px;
+      line-height: 1.9;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 auto 66px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.95;
+      color: #45413e;
+      margin: 0 0 20px;
+    }
+
+    strong {
+      color: #252525;
+      font-weight: 600;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      margin: 0 0 70px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 1.25;
+      margin: 0 0 25px;
+      color: #292622;
+    }
+
+    .section-copy {
+      max-width: 100%;
+    }
+
+    .section-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* IMAGE GRIDS */
+
+    .image-grid {
+      display: grid;
+      width: 100%;
+      gap: 12px;
+      margin-top: 32px;
+      overflow: hidden;
+    }
+
+    .image-grid img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      min-width: 0;
+    }
+
+    /* FOUR EQUAL VILLA PHOTOS */
+
+    .villa-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: repeat(2, 275px);
+    }
+
+    /* DINING: TWO ABOVE, ONE WIDE BELOW */
+
+    .dining-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: 270px 345px;
+    }
+
+    .dining-grid .wide {
+      grid-column: 1 / -1;
+    }
+
+    /* TWO EQUAL BEE PHOTOS */
+
+    .bee-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: 325px;
+    }
+
+    /* SPA: ONE WIDE ABOVE, TWO BELOW */
+
+    .spa-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: 375px 270px;
+    }
+
+    .spa-grid .wide {
+      grid-column: 1 / -1;
+    }
+
+    /* CLOSING - LEFT ALIGNED */
+
+    .closing {
+      text-align: left;
+      padding: 13px 0 80px;
+      border-top: 1px solid var(--line);
+    }
+
+    .closing h2 {
+      margin-top: 46px;
+      text-align: left;
+    }
+
+    .closing p {
+      max-width: 100%;
+      margin: 0 0 20px;
+    }
+
+    /* CONTACT LINK */
+
+    .cta {
+      display: inline-block;
+      margin-top: 19px;
+      padding: 10px 0;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      transition: color 0.2s ease;
+    }
+
+    .cta:hover {
+      color: #6e5432;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 20px 36px;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      color: #888;
+    }
+
+    /* TRANSLATION VISIBILITY */
+
+    [data-lang] {
+      display: none;
+    }
+
+    [data-lang].visible {
+      display: block;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 640px) {
+      .site-header {
+        padding: 18px 12px 25px;
+      }
+
+      .brand {
+        font-size: 21px;
+        letter-spacing: 0.13em;
+      }
+
+      .language-switcher {
+        margin-bottom: 25px;
+      }
+
+      .page {
+        width: calc(100% - 32px);
+      }
+
+      .hero {
+        margin-top: 22px;
+      }
+
+      .hero img {
+        max-height: 390px;
+      }
+
+      .article-heading {
+        padding: 37px 8px 29px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .subtitle {
+        font-size: 10px;
+        letter-spacing: 0.11em;
+      }
+
+      .intro {
+        margin-bottom: 48px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.85;
+      }
+
+      h2 {
+        font-size: 27px;
+        margin-bottom: 20px;
+      }
+
+      .section {
+        margin-bottom: 54px;
+      }
+
+      .image-grid {
+        gap: 7px;
+        margin-top: 25px;
+      }
+
+      .villa-grid {
+        grid-template-rows: repeat(2, 170px);
+      }
+
+      .dining-grid {
+        grid-template-rows: 165px 230px;
+      }
+
+      .bee-grid {
+        grid-template-rows: 190px;
+      }
+
+      .spa-grid {
+        grid-template-rows: 230px 165px;
+      }
+
+      .closing {
+        padding-bottom: 55px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .brand {
+        font-size: 17px;
+        letter-spacing: 0.11em;
+      }
+
+      .villa-grid {
+        grid-template-rows: repeat(2, 145px);
+      }
+
+      .dining-grid {
+        grid-template-rows: 145px 190px;
+      }
+
+      .bee-grid {
+        grid-template-rows: 160px;
+      }
+
+      .spa-grid {
+        grid-template-rows: 200px 145px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <!-- TRANSLATION BUTTONS ABOVE BRAND -->
+
+  <nav class="language-switcher" aria-label="Select language">
+    <button type="button" class="lang-btn active" data-switch="en" onclick="setLanguage('en')">EN</button>
+    <button type="button" class="lang-btn" data-switch="fr" onclick="setLanguage('fr')">FR</button>
+    <button type="button" class="lang-btn" data-switch="nl" onclick="setLanguage('nl')">NL</button>
+  </nav>
+
+  <div class="brand">QUINTESSENTIALLY</div>
+
+</header>
+
+<main class="page">
+
+  <!-- HERO IMAGE -->
+
+  <div class="hero">
+    <img src="mandarin hero.jpeg" alt="Mandarin Oriental, Marrakech" fetchpriority="high">
+  </div>
+
+  <!-- ================= ENGLISH ================= -->
+
+  <article data-lang="en" class="visible">
+
+    <div class="article-heading">
+      <h1>Mandarin Oriental, Marrakech</h1>
+      <div class="subtitle">
+        A Private Sanctuary at the Foot of the Atlas Mountains
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>
+        Just ten minutes from Marrakech's historic Medina,
+        Mandarin Oriental, Marrakech unfolds across 20 hectares
+        of lush gardens and centuries-old olive groves, framed
+        by the majestic Atlas Mountains. A refined blend of
+        Moroccan heritage and contemporary elegance, the resort
+        offers an intimate retreat where tranquillity and the
+        vibrant spirit of Marrakech meet.
+      </p>
+    </div>
+
+    <section class="section">
+      <h2>The Stay</h2>
+
+      <div class="section-copy">
+        <p>
+          Privacy and understated elegance define the accommodation
+          at Mandarin Oriental, Marrakech. With <strong>58 private
+          villas and seven suites</strong>, the resort offers an
+          intimate collection of beautiful retreats, where
+          traditional Moroccan architecture meets contemporary
+          comfort. Surrounded by lush gardens, the villas feature
+          secluded courtyards, private swimming pools and spacious
+          outdoor living areas, creating the perfect setting to
+          unwind in complete privacy.
+        </p>
+
+        <p>
+          From the elegant <strong>Mandarin Pool Villas</strong> to
+          the more spacious <strong>Oriental Pool Villas</strong>,
+          ideal for families or friends travelling together, each
+          offers its own sense of tranquillity. The
+          <strong>Atlas Suites</strong> provide a different
+          experience, with refined interiors, private terraces
+          and views towards the Atlas Mountains. Whether enjoying
+          a leisurely breakfast outdoors or a quiet afternoon by
+          the pool, every stay is designed to be enjoyed at your
+          own pace.
+        </p>
+      </div>
+
+      <div class="image-grid villa-grid">
+        <img src="mandarin villa 1.webp" alt="Mandarin Oriental villa exterior" loading="lazy">
+        <img src="mandarin villa 2.webp" alt="Private villa at Mandarin Oriental Marrakech" loading="lazy">
+        <img src="mandarin villa 3.webp" alt="Mandarin Oriental villa interior" loading="lazy">
+        <img src="mandarin villa 4.webp" alt="Luxury villa accommodation" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Dining &amp; Gastronomy</h2>
+
+      <div class="section-copy">
+        <p>
+          From the rich flavours of Moroccan cuisine to contemporary
+          Asian dining, Mandarin Oriental, Marrakech offers a
+          distinctive culinary experience, with each restaurant
+          bringing its own character and atmosphere.
+        </p>
+
+        <p>
+          At <strong>Shirvan</strong>, Chef Hind Nebgane celebrates
+          Moroccan flavours through regional ingredients, aromatic
+          spices and traditional cooking techniques, offering a
+          refined interpretation of the country's culinary heritage.
+          For a more vibrant evening, <strong>Ling Ling by
+          Hakkasan</strong> combines Cantonese-inspired sharing
+          dishes with creative cocktails and a lively,
+          sophisticated atmosphere.
+        </p>
+
+        <p>
+          Guests can also enjoy relaxed poolside dining at
+          <strong>Pool Garden</strong> or traditional Moroccan tea
+          at <strong>Salon Berbère</strong>. For a more intimate
+          experience, private dining can be arranged in the
+          comfort of your villa.
+        </p>
+      </div>
+
+      <div class="image-grid dining-grid">
+        <img src="dining 1.webp" alt="Dining at Mandarin Oriental Marrakech" loading="lazy">
+        <img src="dining 2.webp" alt="Restaurant at Mandarin Oriental Marrakech" loading="lazy">
+        <img class="wide" src="dining 3.webp" alt="Gastronomy at Mandarin Oriental Marrakech" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Beyond the Stay</h2>
+
+      <div class="section-copy">
+        <p>
+          Some of the most memorable experiences begin within
+          the resort's own gardens. Discover Moroccan flavours
+          through a hands-on cooking class with the hotel's chefs,
+          using fresh ingredients and aromatic herbs from its
+          organic garden. Guests can also enjoy an exclusive
+          honey masterclass, offering an insight into local
+          beekeeping, with a visit to the resort's beehives
+          followed by a specially prepared honey-inspired lunch.
+        </p>
+
+        <p>
+          Beyond the resort, Marrakech invites exploration,
+          from the winding streets of the Medina and its vibrant
+          souks to historic palaces and the workshops of local
+          artisans.
+        </p>
+      </div>
+
+      <div class="image-grid bee-grid">
+        <img src="bee 1.webp" alt="Honey experience at Mandarin Oriental Marrakech" loading="lazy">
+        <img src="bee 2.webp" alt="Beekeeping experience at Mandarin Oriental Marrakech" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Relaxation &amp; Recreation</h2>
+
+      <div class="section-copy">
+        <p>
+          At the heart of the resort, the 1,800-square-metre spa
+          offers a sanctuary devoted to restoration and wellbeing,
+          combining Mandarin Oriental's wellness philosophy with
+          Morocco's rich bathing traditions.
+        </p>
+
+        <p>
+          Experience the timeless ritual of a Moroccan hammam,
+          where steam, black soap and argan oil come together
+          in a deeply restorative treatment. Afterwards, retreat
+          to the heated indoor pool, enjoy a personalised spa
+          treatment or spend a quiet afternoon in the gardens.
+        </p>
+
+        <p>
+          For those seeking a more active escape, the resort also
+          offers yoga, tennis, padel and a fully equipped fitness
+          centre, allowing each day to find its own balance
+          between movement and relaxation.
+        </p>
+      </div>
+
+      <div class="image-grid spa-grid">
+        <img class="wide" src="spa 1.webp" alt="Mandarin Oriental Marrakech spa" loading="lazy">
+        <img src="spa 2.webp" alt="Spa facilities at Mandarin Oriental Marrakech" loading="lazy">
+        <img src="spa 3.jpeg" alt="Wellness at Mandarin Oriental Marrakech" loading="lazy">
+      </div>
+    </section>
+
+    <!-- LEFT-ALIGNED CLOSING -->
+
+    <section class="closing">
+      <h2>Marrakech Escape</h2>
+
+      <p>
+        From mornings spent beside your private pool to afternoons
+        discovering the Medina and evenings enjoying exceptional
+        cuisine, Mandarin Oriental, Marrakech offers a wonderful
+        balance between relaxation and discovery.
+      </p>
+
+      <p>
+        Whether for a romantic escape, a family holiday or a few
+        days away from everyday life, every stay can be tailored
+        to your personal preferences.
+      </p>
+
+      <a class="cta" href="mailto:qbenelux@quintessentially.com?subject=Mandarin%20Oriental%2C%20Marrakech%20-%20Stay%20Enquiry">
+        Contact your Lifestyle Manager to arrange your stay
+      </a>
+    </section>
+
+  </article>
+
+  <!-- ================= FRENCH ================= -->
+
+  <article data-lang="fr">
+
+    <div class="article-heading">
+      <h1>Mandarin Oriental, Marrakech</h1>
+      <div class="subtitle">
+        Un refuge privé au pied des montagnes de l'Atlas
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>
+        À seulement dix minutes de la médina historique de Marrakech,
+        le Mandarin Oriental, Marrakech s'étend sur 20 hectares de
+        jardins luxuriants et d'oliveraies centenaires, avec les
+        majestueuses montagnes de l'Atlas en toile de fond.
+        Alliant héritage marocain et élégance contemporaine,
+        ce resort offre une retraite intimiste où la sérénité
+        rencontre l'effervescence de Marrakech.
+      </p>
+    </div>
+
+    <section class="section">
+      <h2>Votre séjour</h2>
+
+      <div class="section-copy">
+        <p>
+          Intimité et élégance discrète caractérisent les hébergements
+          du Mandarin Oriental, Marrakech. Avec <strong>58 villas
+          privées et sept suites</strong>, le resort propose une
+          collection de refuges raffinés où l'architecture marocaine
+          traditionnelle se marie au confort contemporain.
+          Entourées de jardins luxuriants, les villas disposent
+          de patios préservés, de piscines privées et de vastes
+          espaces de vie extérieurs, invitant à une détente absolue.
+        </p>
+
+        <p>
+          Des élégantes <strong>Mandarin Pool Villas</strong> aux
+          spacieuses <strong>Oriental Pool Villas</strong>, idéales
+          pour les familles ou les séjours entre amis, chacune
+          offre une atmosphère paisible. Les <strong>Atlas Suites</strong>
+          se distinguent par leurs intérieurs raffinés, leurs
+          terrasses privées et leurs vues sur les montagnes de l'Atlas.
+          Petit-déjeuner en plein air ou après-midi au bord de la
+          piscine : ici, chaque instant se savoure à son rythme.
+        </p>
+      </div>
+
+      <div class="image-grid villa-grid">
+        <img src="mandarin villa 1.webp" alt="Villa du Mandarin Oriental Marrakech" loading="lazy">
+        <img src="mandarin villa 2.webp" alt="Villa privée à Marrakech" loading="lazy">
+        <img src="mandarin villa 3.webp" alt="Intérieur d'une villa" loading="lazy">
+        <img src="mandarin villa 4.webp" alt="Hébergement de luxe" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Restaurants &amp; Gastronomie</h2>
+
+      <div class="section-copy">
+        <p>
+          Des saveurs généreuses de la cuisine marocaine à la
+          gastronomie asiatique contemporaine, le Mandarin Oriental,
+          Marrakech propose une expérience culinaire singulière,
+          chaque restaurant possédant son propre caractère.
+        </p>
+
+        <p>
+          Au <strong>Shirvan</strong>, la cheffe Hind Nebgane
+          met à l'honneur les saveurs marocaines à travers des
+          produits régionaux, des épices parfumées et des techniques
+          culinaires traditionnelles, pour une interprétation
+          raffinée du patrimoine gastronomique du pays.
+          Pour une soirée plus animée, <strong>Ling Ling by
+          Hakkasan</strong> associe des plats d'inspiration
+          cantonaise à partager, des cocktails créatifs et
+          une atmosphère élégante et vibrante.
+        </p>
+
+        <p>
+          Le <strong>Pool Garden</strong> accueille les convives
+          pour un repas décontracté au bord de la piscine,
+          tandis que le <strong>Salon Berbère</strong> invite
+          à savourer un thé marocain traditionnel. Pour une
+          expérience plus intime, un repas privé peut également
+          être organisé dans votre villa.
+        </p>
+      </div>
+
+      <div class="image-grid dining-grid">
+        <img src="dining 1.webp" alt="Restaurant du Mandarin Oriental" loading="lazy">
+        <img src="dining 2.webp" alt="Gastronomie à Marrakech" loading="lazy">
+        <img class="wide" src="dining 3.webp" alt="Expérience gastronomique" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Au-delà du séjour</h2>
+
+      <div class="section-copy">
+        <p>
+          Certaines des plus belles expériences commencent dans
+          les jardins mêmes du resort. Découvrez les saveurs
+          marocaines lors d'un atelier de cuisine avec les chefs
+          de l'hôtel, à partir d'ingrédients frais et d'herbes
+          aromatiques du potager biologique. Une masterclass
+          exclusive consacrée au miel permet également de
+          découvrir l'apiculture locale, avec une visite des
+          ruches suivie d'un déjeuner spécialement élaboré
+          autour du miel.
+        </p>
+
+        <p>
+          Au-delà du resort, Marrakech se dévoile au fil
+          des ruelles de la médina, de ses souks animés,
+          de ses palais historiques et des ateliers
+          de ses artisans.
+        </p>
+      </div>
+
+      <div class="image-grid bee-grid">
+        <img src="bee 1.webp" alt="Expérience autour du miel" loading="lazy">
+        <img src="bee 2.webp" alt="Découverte de l'apiculture" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Détente &amp; Loisirs</h2>
+
+      <div class="section-copy">
+        <p>
+          Au cœur du resort, le spa de 1 800 m² est entièrement
+          consacré à la détente et au bien-être, associant
+          la philosophie de Mandarin Oriental aux traditions
+          marocaines du bain.
+        </p>
+
+        <p>
+          Découvrez le rituel intemporel du hammam marocain,
+          où vapeur, savon noir et huile d'argan se conjuguent
+          pour un soin profondément ressourçant. Prolongez
+          ce moment dans la piscine intérieure chauffée,
+          profitez d'un soin personnalisé ou accordez-vous
+          un après-midi paisible dans les jardins.
+        </p>
+
+        <p>
+          Pour les amateurs d'activités, le resort propose
+          également du yoga, du tennis, du padel et une salle
+          de fitness entièrement équipée, pour alterner
+          librement mouvement et relaxation.
+        </p>
+      </div>
+
+      <div class="image-grid spa-grid">
+        <img class="wide" src="spa 1.webp" alt="Spa du Mandarin Oriental Marrakech" loading="lazy">
+        <img src="spa 2.webp" alt="Installations du spa" loading="lazy">
+        <img src="spa 3.jpeg" alt="Bien-être à Marrakech" loading="lazy">
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Une escapade à Marrakech</h2>
+
+      <p>
+        Des matinées au bord de votre piscine privée aux
+        après-midi à la découverte de la médina, suivis
+        de soirées gastronomiques, le Mandarin Oriental,
+        Marrakech offre un bel équilibre entre détente
+        et découverte.
+      </p>
+
+      <p>
+        Pour une escapade romantique, des vacances en famille
+        ou quelques jours loin du quotidien, chaque séjour
+        peut être imaginé selon vos envies.
+      </p>
+
+      <a class="cta" href="mailto:qbenelux@quintessentially.com?subject=Mandarin%20Oriental%2C%20Marrakech%20-%20Demande%20de%20s%C3%A9jour">
+        Contactez votre Lifestyle Manager pour organiser votre séjour
+      </a>
+    </section>
+
+  </article>
+
+  <!-- ================= DUTCH ================= -->
+
+  <article data-lang="nl">
+
+    <div class="article-heading">
+      <h1>Mandarin Oriental, Marrakech</h1>
+      <div class="subtitle">
+        Een exclusief toevluchtsoord aan de voet van het Atlasgebergte
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>
+        Op slechts tien minuten van de historische medina van
+        Marrakech ligt Mandarin Oriental, Marrakech, verspreid
+        over 20 hectare weelderige tuinen en eeuwenoude
+        olijfboomgaarden, met het majestueuze Atlasgebergte
+        op de achtergrond. Het resort verenigt Marokkaans
+        erfgoed met hedendaagse elegantie en biedt een
+        intiem verblijf waar rust en de levendige sfeer
+        van Marrakech samenkomen.
+      </p>
+    </div>
+
+    <section class="section">
+      <h2>Het verblijf</h2>
+
+      <div class="section-copy">
+        <p>
+          Privacy en ingetogen elegantie kenmerken de accommodaties
+          van Mandarin Oriental, Marrakech. Met <strong>58
+          privévilla's en zeven suites</strong> biedt het resort
+          een exclusieve collectie verblijven waar traditionele
+          Marokkaanse architectuur samengaat met modern comfort.
+          Omringd door groene tuinen beschikken de villa's
+          over beschutte binnenplaatsen, privézwembaden
+          en ruime buitenleefruimtes, ideaal om in alle
+          privacy tot rust te komen.
+        </p>
+
+        <p>
+          Van de elegante <strong>Mandarin Pool Villas</strong>
+          tot de ruimere <strong>Oriental Pool Villas</strong>,
+          ideaal voor families of vrienden die samen reizen,
+          elke villa heeft haar eigen rustige karakter.
+          De <strong>Atlas Suites</strong> bieden een andere
+          beleving, met verfijnde interieurs, privéterrassen
+          en uitzicht op het Atlasgebergte. Of u nu buiten
+          ontbijt of een ontspannen middag aan het zwembad
+          doorbrengt, hier geniet u volledig op uw eigen tempo.
+        </p>
+      </div>
+
+      <div class="image-grid villa-grid">
+        <img src="mandarin villa 1.webp" alt="Villa van Mandarin Oriental Marrakech" loading="lazy">
+        <img src="mandarin villa 2.webp" alt="Privévilla in Marrakech" loading="lazy">
+        <img src="mandarin villa 3.webp" alt="Interieur van een villa" loading="lazy">
+        <img src="mandarin villa 4.webp" alt="Luxueuze accommodatie" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Restaurants &amp; Gastronomie</h2>
+
+      <div class="section-copy">
+        <p>
+          Van de rijke smaken van de Marokkaanse keuken tot
+          hedendaagse Aziatische gastronomie: Mandarin Oriental,
+          Marrakech biedt een bijzondere culinaire ervaring,
+          waarbij elk restaurant zijn eigen karakter
+          en sfeer heeft.
+        </p>
+
+        <p>
+          Bij <strong>Shirvan</strong> brengt chef Hind Nebgane
+          de Marokkaanse keuken tot leven met regionale
+          ingrediënten, aromatische kruiden en traditionele
+          bereidingstechnieken, in een verfijnde interpretatie
+          van het culinaire erfgoed van het land.
+          Voor een levendigere avond combineert
+          <strong>Ling Ling by Hakkasan</strong>
+          Kantonese gerechten om te delen met creatieve
+          cocktails en een stijlvolle, bruisende sfeer.
+        </p>
+
+        <p>
+          Bij <strong>Pool Garden</strong> kunnen gasten
+          ontspannen dineren aan het zwembad, terwijl
+          <strong>Salon Berbère</strong> uitnodigt om
+          te genieten van traditionele Marokkaanse thee.
+          Voor een intiemere ervaring kan ook een privédiner
+          in uw eigen villa worden georganiseerd.
+        </p>
+      </div>
+
+      <div class="image-grid dining-grid">
+        <img src="dining 1.webp" alt="Restaurant van Mandarin Oriental" loading="lazy">
+        <img src="dining 2.webp" alt="Gastronomie in Marrakech" loading="lazy">
+        <img class="wide" src="dining 3.webp" alt="Culinaire ervaring" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Meer dan een verblijf</h2>
+
+      <div class="section-copy">
+        <p>
+          Sommige van de mooiste ervaringen beginnen in
+          de tuinen van het resort zelf. Ontdek de smaken
+          van Marokko tijdens een kookworkshop met de chefs
+          van het hotel, waarbij verse ingrediënten en
+          aromatische kruiden uit de biologische tuin
+          worden gebruikt. Gasten kunnen ook deelnemen
+          aan een exclusieve honingmasterclass, met een
+          kennismaking met de lokale bijenteelt, een bezoek
+          aan de bijenkorven en een speciaal samengestelde
+          lunch waarin honing centraal staat.
+        </p>
+
+        <p>
+          Buiten het resort nodigt Marrakech uit tot
+          ontdekking, van de kronkelende straatjes van
+          de medina en de levendige souks tot historische
+          paleizen en de ateliers van lokale ambachtslieden.
+        </p>
+      </div>
+
+      <div class="image-grid bee-grid">
+        <img src="bee 1.webp" alt="Honingervaring in Marrakech" loading="lazy">
+        <img src="bee 2.webp" alt="Bijenteelt bij Mandarin Oriental" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Ontspanning &amp; Recreatie</h2>
+
+      <div class="section-copy">
+        <p>
+          In het hart van het resort biedt de spa van
+          1.800 vierkante meter een oase van rust en
+          welzijn, waar de wellnessfilosofie van
+          Mandarin Oriental samenkomt met eeuwenoude
+          Marokkaanse badtradities.
+        </p>
+
+        <p>
+          Ervaar het traditionele Marokkaanse hammamritueel,
+          waarbij stoom, zwarte zeep en arganolie zorgen
+          voor een diep ontspannende behandeling. Neem
+          daarna een duik in het verwarmde binnenzwembad,
+          geniet van een persoonlijke spabehandeling
+          of breng een rustige middag door in de tuinen.
+        </p>
+
+        <p>
+          Wie graag actief blijft, kan daarnaast genieten
+          van yoga, tennis, padel en een volledig uitgeruste
+          fitnessruimte. Zo vindt elke dag zijn eigen
+          evenwicht tussen beweging en ontspanning.
+        </p>
+      </div>
+
+      <div class="image-grid spa-grid">
+        <img class="wide" src="spa 1.webp" alt="Spa van Mandarin Oriental Marrakech" loading="lazy">
+        <img src="spa 2.webp" alt="Spafaciliteiten" loading="lazy">
+        <img src="spa 3.jpeg" alt="Wellness in Marrakech" loading="lazy">
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Een verblijf in Marrakech</h2>
+
+      <p>
+        Van ochtenden aan uw privézwembad tot middagen
+        waarin u de medina ontdekt en avonden vol
+        culinaire verwennerij: Mandarin Oriental,
+        Marrakech biedt een prachtige balans
+        tussen ontspanning en ontdekking.
+      </p>
+
+      <p>
+        Of het nu gaat om een romantisch verblijf,
+        een familievakantie of enkele dagen weg
+        van de dagelijkse drukte, elk verblijf
+        kan volledig worden afgestemd op uw wensen.
+      </p>
+
+      <a class="cta" href="mailto:qbenelux@quintessentially.com?subject=Mandarin%20Oriental%2C%20Marrakech%20-%20Verblijfsaanvraag">
+        Contacteer uw Lifestyle Manager om uw verblijf te organiseren
+      </a>
+    </section>
+
+  </article>
+
+</main>
+
+<footer>
+  QUINTESSENTIALLY &nbsp; | &nbsp; MANDARIN ORIENTAL, MARRAKECH
+</footer>
+
+<script>
+  function setLanguage(lang) {
+    const supported = ["en", "fr", "nl"];
+
+    if (!supported.includes(lang)) {
+      lang = "en";
+    }
+
+    document.querySelectorAll("[data-lang]").forEach(article => {
+      article.classList.toggle(
+        "visible",
+        article.dataset.lang === lang
+      );
+    });
+
+    document.querySelectorAll("[data-switch]").forEach(button => {
+      const isActive = button.dataset.switch === lang;
+
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    document.documentElement.lang = lang;
+
+    try {
+      localStorage.setItem("quintessentially-language", lang);
+    } catch (error) {
+      // Language switching works without localStorage.
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    let savedLanguage = "en";
+
+    try {
+      savedLanguage =
+        localStorage.getItem("quintessentially-language") || "en";
+    } catch (error) {
+      savedLanguage = "en";
+    }
+
+    setLanguage(savedLanguage);
+  });
+</script>
+
+</body>
+</html>
