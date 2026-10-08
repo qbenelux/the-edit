@@ -9,6 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 
 <style>
@@ -165,22 +166,41 @@ h1{
   font-size:20px;
 }
 
-/* THREE IMAGES SIDE BY SIDE */
+/* THREE IMAGES — WIDER THAN THE TEXT */
 
 .image-pair{
-  width:100%;
+  width:calc(100% + 180px);
+  margin:38px 0 48px -90px;
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:8px;
-  margin:34px 0 48px;
+  gap:10px;
 }
 
 .image-pair img{
   width:100%;
-  height:180px;
+  height:220px;
   object-fit:cover;
   object-position:center;
   display:block;
+}
+
+/* OFFICIAL HOTEL WEBSITE LINK */
+
+.hotel-link{
+  display:block;
+  width:fit-content;
+  margin:-25px 0 45px;
+  color:var(--accent);
+  font-family:var(--serif);
+  font-size:17px;
+  font-style:italic;
+  text-decoration:none;
+  border-bottom:1px solid var(--line);
+  padding-bottom:4px;
+}
+
+.hotel-link:hover{
+  border-bottom-color:var(--accent);
 }
 
 /* MEMBER BENEFITS */
@@ -283,6 +303,15 @@ footer{
   color:#716b60;
 }
 
+/* TABLET — KEEP IMAGES WITHIN VIEWPORT */
+
+@media(max-width:800px) and (min-width:601px){
+  .image-pair{
+    width:calc(100% + 80px);
+    margin-left:-40px;
+  }
+}
+
 /* MOBILE */
 
 @media(max-width:600px){
@@ -320,12 +349,18 @@ footer{
   }
 
   .image-pair{
-    gap:6px;
+    width:100%;
     margin:30px 0 40px;
+    gap:6px;
   }
 
   .image-pair img{
-    height:125px;
+    height:135px;
+  }
+
+  .hotel-link{
+    margin:-20px 0 38px;
+    font-size:16px;
   }
 
   .benefits{
@@ -355,7 +390,7 @@ footer{
   <div class="edition">The Edit · Autumn ’26</div>
 </header>
 
-<!-- HERO — UNCHANGED -->
+<!-- HERO — ORIGINAL IMAGE -->
 
 <section class="hero">
   <img src="deauville.png" alt="Deauville">
@@ -423,6 +458,7 @@ const content = {
       "<strong>Early check-in and late check-out</strong>, subject to availability"
     ],
 
+    hotelLink: "Discover Hôtel Barrière Le Normandy ↗",
     cta: "Let Deauville unfold for you",
     footer: "Curated for members · The Edit is published monthly"
   },
@@ -453,6 +489,7 @@ const content = {
       "<strong>Arrivée anticipée et départ tardif</strong>, sous réserve de disponibilité"
     ],
 
+    hotelLink: "Découvrir l’Hôtel Barrière Le Normandy ↗",
     cta: "Laissez Deauville se dévoiler à vous",
     footer: "Sélectionné pour nos membres · The Edit paraît chaque mois"
   },
@@ -483,13 +520,13 @@ const content = {
       "<strong>Vroege check-in en late check-out</strong>, afhankelijk van beschikbaarheid"
     ],
 
+    hotelLink: "Ontdek Hôtel Barrière Le Normandy ↗",
     cta: "Laat Deauville zich voor u ontvouwen",
     footer: "Samengesteld voor onze leden · The Edit verschijnt maandelijks"
   }
-
 };
 
-/* LANGUAGE FUNCTION */
+/* TRANSLATION FUNCTION */
 
 function showLanguage(lang){
 
@@ -507,7 +544,7 @@ function showLanguage(lang){
   document.getElementById("cta").textContent = data.cta;
   document.getElementById("footerText").textContent = data.footer;
 
-  /* ARTICLE TEXT */
+  /* ARTICLE PARAGRAPHS AND IMAGES */
 
   const articleBody = document.getElementById("articleBody");
   articleBody.innerHTML = "";
@@ -518,7 +555,7 @@ function showLanguage(lang){
     paragraph.textContent = text;
     articleBody.appendChild(paragraph);
 
-    /* THREE IMAGES AFTER THE FINAL PARAGRAPH */
+    /* THREE IMAGES AFTER FINAL PARAGRAPH */
 
     if(index === 3){
 
@@ -531,8 +568,21 @@ function showLanguage(lang){
         '<img src="normandy 3.jpeg" alt="Room at Hôtel Barrière Le Normandy">';
 
       articleBody.appendChild(imagePair);
-    }
 
+      /* OFFICIAL HOTEL WEBSITE */
+
+      const hotelLink = document.createElement("a");
+
+      hotelLink.href =
+        "https://www.hotelsbarriere.com/deauville/le-normandy";
+
+      hotelLink.target = "_blank";
+      hotelLink.rel = "noopener noreferrer";
+      hotelLink.className = "hotel-link";
+      hotelLink.textContent = data.hotelLink;
+
+      articleBody.appendChild(hotelLink);
+    }
   });
 
   /* MEMBER BENEFITS */
@@ -552,14 +602,14 @@ function showLanguage(lang){
     button.classList.toggle("active", button.dataset.lang === lang);
   });
 
-  /* UPDATE LANGUAGE IN URL */
+  /* LANGUAGE IN URL */
 
   const newUrl = new URL(window.location.href);
   newUrl.searchParams.set("lang", lang);
   window.history.replaceState({}, "", newUrl);
 }
 
-/* LANGUAGE BUTTON EVENTS */
+/* LANGUAGE BUTTONS */
 
 document.querySelectorAll("[data-lang]").forEach(function(button){
   button.addEventListener("click", function(){
