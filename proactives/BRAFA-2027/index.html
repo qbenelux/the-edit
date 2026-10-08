@@ -9,12 +9,12 @@
 
 <style>
 :root{
-  --bg:#070706;
-  --text:#e8e3d9;
-  --body:#c8c1b5;
-  --muted:#948c7e;
-  --gold:#b99a54;
-  --line:#30291c;
+  --bg:#ffffff;
+  --text:#242424;
+  --body:#45413e;
+  --muted:#77716a;
+  --gold:#a98b58;
+  --line:#e8e3dc;
 }
 
 *{
@@ -34,8 +34,6 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-/* ALL IMAGES */
-
 img{
   display:block;
   border:0 !important;
@@ -52,24 +50,23 @@ img{
   padding:0 30px 80px;
 }
 
-/* TOP */
+/* HEADER */
 
 .top{
-  padding:30px 0 30px;
+  padding:30px 0;
   text-align:center;
 }
 
-/* TRANSLATION BUTTONS */
+/* LANGUAGE BUTTONS */
 
 .languages{
-  position:static;
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:7px;
-  margin-bottom:18px;
+  gap:9px;
+  margin-bottom:25px;
   font-family:Arial, Helvetica, sans-serif;
-  font-size:9px;
+  font-size:10px;
   letter-spacing:.15em;
   text-transform:uppercase;
 }
@@ -77,48 +74,47 @@ img{
 .languages button{
   border:0;
   background:none;
-  padding:3px 5px;
-  color:#716b61;
+  padding:5px;
+  color:#888;
   cursor:pointer;
-  font-size:9px;
+  font-size:10px;
   font-family:Arial, Helvetica, sans-serif;
+  letter-spacing:.12em;
 }
 
-.languages button:hover{
-  color:#a68c52;
-}
-
+.languages button:hover,
 .languages button.active{
   color:var(--gold);
 }
 
-.languages span{
-  color:#40392e;
+.languages button.active{
+  border-bottom:1px solid var(--gold);
 }
 
-/* LOGO */
+.languages span{
+  color:#d8d3cb;
+}
+
+/* QUINTESSENTIALLY LOGO */
 
 .logo{
   font-family:Arial, Helvetica, sans-serif;
-  font-size:42px;
+  font-size:clamp(30px, 4.5vw, 52px);
   font-weight:400;
-  letter-spacing:.30em;
-  color:#ffffff;
+  letter-spacing:.20em;
+  color:#222222;
   text-transform:uppercase;
-  line-height:1.1;
+  line-height:1.2;
 }
 
-/* HERO IMAGE */
+/* HERO */
 
 .hero{
   width:100%;
   margin:0 auto;
   overflow:hidden;
-  background:var(--bg);
+  background:#fff;
   line-height:0;
-  border:0 !important;
-  outline:0 !important;
-  box-shadow:none !important;
 }
 
 .hero img{
@@ -127,33 +123,32 @@ img{
   max-width:none;
   height:auto;
   margin:0 0 0 -2px;
-  border:0 !important;
-  outline:0 !important;
-  box-shadow:none !important;
 }
 
 /* MAIN TITLE */
 
 .title-block{
   text-align:center;
-  padding:30px 20px 45px;
+  padding:38px 20px 45px;
 }
 
 .title-block h1{
   margin:0;
-  color:#f1ede5;
+  color:var(--text);
   font-size:38px;
-  line-height:1.1;
+  line-height:1.15;
   font-weight:400;
 }
 
 .title-block h2{
-  margin:9px 0 0;
+  margin:14px 0 0;
   color:var(--gold);
-  font-size:18px;
-  line-height:1.4;
-  font-style:italic;
-  font-weight:400;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:15px;
+  line-height:1.6;
+  letter-spacing:.10em;
+  font-style:normal;
+  font-weight:700;
 }
 
 /* ARTICLE */
@@ -168,7 +163,12 @@ img{
   margin:0 0 22px;
   color:var(--body);
   font-size:16px;
-  line-height:1.72;
+  line-height:1.85;
+}
+
+.article strong{
+  color:#292622;
+  font-weight:600;
 }
 
 /* SECTION TITLES */
@@ -181,13 +181,13 @@ img{
   display:flex;
   align-items:center;
   gap:17px;
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
 
 .section-title h3{
   margin:0;
-  color:#eee9df;
-  font-size:23px;
+  color:#292622;
+  font-size:25px;
   line-height:1.25;
   font-weight:400;
   font-style:italic;
@@ -208,11 +208,8 @@ img{
   width:100%;
   margin:38px auto 46px;
   overflow:hidden;
-  background:var(--bg);
+  background:#ffffff;
   line-height:0;
-  border:0 !important;
-  outline:0 !important;
-  box-shadow:none !important;
 }
 
 .single-image img{
@@ -221,9 +218,6 @@ img{
   max-width:none;
   height:auto;
   margin:0 0 0 -2px;
-  border:0 !important;
-  outline:0 !important;
-  box-shadow:none !important;
 }
 
 /* FINAL SECTION */
@@ -234,7 +228,7 @@ img{
 
 .closing-line{
   margin-top:34px !important;
-  color:#eee9df !important;
+  color:#292622 !important;
   font-size:19px !important;
   line-height:1.55 !important;
   font-style:italic;
@@ -260,7 +254,7 @@ img{
   margin-bottom:8px;
   color:var(--gold);
   font-family:Arial, Helvetica, sans-serif;
-  font-size:9px;
+  font-size:10px;
   letter-spacing:.22em;
   text-transform:uppercase;
 }
@@ -283,17 +277,17 @@ img{
   color:var(--gold);
   text-decoration:none;
   font-family:Arial, Helvetica, sans-serif;
-  font-size:10px;
+  font-size:11px;
   line-height:1.5;
-  letter-spacing:.17em;
+  letter-spacing:.13em;
   text-transform:uppercase;
   border-bottom:1px solid var(--gold);
-  padding-bottom:5px;
+  padding-bottom:6px;
 }
 
 .contact:hover{
-  color:#d4b66f;
-  border-color:#d4b66f;
+  color:#785b32;
+  border-color:#785b32;
 }
 
 /* FOOTER */
@@ -307,10 +301,10 @@ footer{
 }
 
 .footer-logo{
-  color:#ddd7cc;
+  color:#77716a;
   font-family:Arial, Helvetica, sans-serif;
   font-size:11px;
-  letter-spacing:.35em;
+  letter-spacing:.30em;
   text-transform:uppercase;
 }
 
@@ -327,34 +321,31 @@ footer{
   }
 
   .languages{
-    margin-bottom:15px;
+    margin-bottom:22px;
   }
 
   .logo{
-    font-size:27px;
-    letter-spacing:.25em;
-    line-height:1.15;
-  }
-
-  .hero,
-  .single-image{
-    width:100%;
+    font-size:clamp(22px, 5.5vw, 32px);
+    letter-spacing:.12em;
+    line-height:1.2;
   }
 
   .title-block{
-    padding:25px 10px 38px;
+    padding:30px 10px 38px;
   }
 
   .title-block h1{
-    font-size:24px;
+    font-size:28px;
   }
 
   .title-block h2{
-    font-size:16px;
+    font-size:12px;
+    letter-spacing:.06em;
   }
 
   .article p{
     font-size:15px;
+    line-height:1.85;
   }
 
   .section{
@@ -362,7 +353,7 @@ footer{
   }
 
   .section-title h3{
-    font-size:20px;
+    font-size:21px;
     white-space:normal;
   }
 
@@ -379,7 +370,6 @@ footer{
     font-size:15px;
   }
 }
-
 </style>
 </head>
 
@@ -387,11 +377,9 @@ footer{
 
 <div class="page">
 
-  <!-- TOP -->
+  <!-- HEADER -->
 
   <div class="top">
-
-    <!-- TRANSLATIONS -->
 
     <div class="languages">
       <button type="button" data-lang="fr">FR</button>
@@ -401,19 +389,17 @@ footer{
       <button type="button" data-lang="nl">NL</button>
     </div>
 
-    <!-- LOGO -->
-
     <div class="logo">
       QUINTESSENTIALLY
     </div>
 
   </div>
 
-  <!-- IMAGE 1 -->
+  <!-- HERO IMAGE -->
 
   <div class="hero">
     <img
-      src="brafa 4.jpg"
+      src="brafa%204.jpg"
       alt="BRAFA Art Fair 2027"
     >
   </div>
@@ -496,7 +482,7 @@ const translations = {
       "The Pleasure of Discovery",
 
     discovery1: `
-      Part of BRAFA’s appeal lies in never quite knowing what will catch your eye.
+      Part of BRAFA's appeal lies in never quite knowing what will catch your eye.
       A centuries-old masterpiece may lead you towards a striking contemporary
       work, while an exceptional piece of jewellery or design can offer an
       entirely different perspective.
@@ -546,26 +532,26 @@ const translations = {
       "BRAFA Art Fair 2027",
 
     subtitle:
-      "Une célébration de l’art à Bruxelles",
+      "Une célébration de l'art à Bruxelles",
 
     intro: `
       Pendant huit jours, BRAFA Art Fair transforme Brussels Expo en un univers
-      remarquable consacré à l’art et au savoir-faire d’exception. Du 24 au
+      remarquable consacré à l'art et au savoir-faire d'exception. Du 24 au
       31 janvier 2027, des œuvres couvrant plusieurs siècles et mouvements
-      artistiques sont réunies sous un même toit. Des chefs-d’œuvre intemporels
-      aux découvertes contemporaines, la foire offre le plaisir d’explorer l’art
-      à votre propre rythme, avec toujours quelque chose d’inattendu à découvrir.
+      artistiques sont réunies sous un même toit. Des chefs-d'œuvre intemporels
+      aux découvertes contemporaines, la foire offre le plaisir d'explorer l'art
+      à votre propre rythme, avec toujours quelque chose d'inattendu à découvrir.
     `,
 
     prestigiousTitle:
-      "Une prestigieuse foire d’art internationale",
+      "Une prestigieuse foire d'art internationale",
 
     prestigious1: `
       Réunissant <strong>150 galeries de premier plan provenant de 18 pays</strong>,
       BRAFA accueille des noms renommés tels que <strong>Almine Rech, TEMPLON,
       Axel Vervoordt et Waddington Custot</strong>. Leurs présentations vous
-      emmènent des maîtres anciens et des œuvres majeures du XXe siècle jusqu’à
-      l’art contemporain et au design de collection.
+      emmènent des maîtres anciens et des œuvres majeures du XXe siècle jusqu'à
+      l'art contemporain et au design de collection.
     `,
 
     prestigious2: `
@@ -580,16 +566,16 @@ const translations = {
 
     discovery1: `
       Une partie du charme de BRAFA réside dans le fait de ne jamais savoir
-      exactement ce qui attirera votre regard. Un chef-d’œuvre vieux de plusieurs
+      exactement ce qui attirera votre regard. Un chef-d'œuvre vieux de plusieurs
       siècles peut vous conduire vers une œuvre contemporaine saisissante, tandis
-      qu’un bijou ou un objet de design exceptionnel peut offrir une perspective
+      qu'un bijou ou un objet de design exceptionnel peut offrir une perspective
       totalement différente.
     `,
 
     discovery2: `
-      Que vous veniez à la recherche d’une pièce particulière ou simplement par
-      curiosité, BRAFA vous invite à explorer à votre propre rythme. C’est
-      l’occasion de rencontrer des spécialistes, de découvrir des œuvres
+      Que vous veniez à la recherche d'une pièce particulière ou simplement par
+      curiosité, BRAFA vous invite à explorer à votre propre rythme. C'est
+      l'occasion de rencontrer des spécialistes, de découvrir des œuvres
       remarquables et peut-être de trouver quelque chose de totalement inattendu.
     `,
 
@@ -597,17 +583,17 @@ const translations = {
       "Vivez BRAFA à votre manière",
 
     experience: `
-      Au-delà des œuvres elles-mêmes, BRAFA offre le plaisir de découvrir l’art
+      Au-delà des œuvres elles-mêmes, BRAFA offre le plaisir de découvrir l'art
       dans un cadre international élégant. Nous pouvons organiser votre visite
       autour de vos intérêts personnels, vous laissant libre de vous concentrer
       sur les galeries et les œuvres qui retiennent votre attention.
     `,
 
     closing:
-      "Vivez BRAFA et découvrez l’art qui vous parle.",
+      "Vivez BRAFA et découvrez l'art qui vous parle.",
 
     contact:
-      "Contactez-moi pour plus d’informations",
+      "Contactez-moi pour plus d'informations",
 
     dateLabel:
       "Date",
@@ -718,8 +704,6 @@ function renderLanguage(lang){
 
   document.documentElement.lang=lang;
 
-  /* MAIN TITLE */
-
   document
     .getElementById("mainTitle")
     .textContent=t.title;
@@ -727,8 +711,6 @@ function renderLanguage(lang){
   document
     .getElementById("mainSubtitle")
     .textContent=t.subtitle;
-
-  /* ARTICLE */
 
   document
     .getElementById("articleContent")
@@ -744,8 +726,9 @@ function renderLanguage(lang){
 
       <div class="single-image">
         <img
-          src="brafa 2.jpg"
+          src="brafa%202.jpg"
           alt="BRAFA Art Fair"
+          loading="lazy"
         >
       </div>
 
@@ -793,8 +776,9 @@ function renderLanguage(lang){
 
       <div class="single-image">
         <img
-          src="brafa 3.jpg"
+          src="brafa%203.jpg"
           alt="BRAFA Art Fair Brussels"
+          loading="lazy"
         >
       </div>
 
@@ -812,13 +796,11 @@ function renderLanguage(lang){
           ${t.experience}
         </p>
 
-        <!-- CLOSING SENTENCE -->
-
         <p class="closing-line">
           ${t.closing}
         </p>
 
-        <!-- DATE + LOCATION -->
+        <!-- DATE AND LOCATION -->
 
         <div class="event-details">
 
@@ -873,6 +855,11 @@ function renderLanguage(lang){
       button.classList.toggle(
         "active",
         button.dataset.lang===lang
+      );
+
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.lang===lang)
       );
 
     });
