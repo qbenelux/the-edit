@@ -1,629 +1,490 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Crans-Montana 2027 | Quintessentially</title>
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background: #050505;
-      color: #e8e1d6;
-    }
-
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 15px;
-      line-height: 1.65;
-    }
-
-    .page {
-      width: 100%;
-      min-height: 100vh;
-      background: #050505;
-      padding: 38px 20px 70px;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 540px;
-      margin: 0 auto;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    .topbar {
-      position: relative;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    /* TRANSLATIONS ABOVE QUINTESSENTIALLY */
-
-    .languages {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 7px;
-
-      position: static;
-
-      margin-bottom: 18px;
-
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    .languages a {
-      color: #8e7a43;
-      text-decoration: none;
-      margin: 0;
-    }
-
-    .languages a.active {
-      color: #ffffff;
-    }
-
-    .languages .dot {
-      color: #443a29;
-    }
-
-
-    /* QUINTESSENTIALLY */
-
-    .brand {
-      margin: 0;
-
-      color: #ffffff;
-
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 42px;
-      font-weight: 400;
-      letter-spacing: 7px;
-      line-height: 1.1;
-
-      text-transform: uppercase;
-    }
-
-
-    /* =========================
-       IMAGES
-    ========================= */
-
-    .image-frame {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: #050505;
-
-      border: none !important;
-      outline: none !important;
-      box-shadow: none !important;
-
-      line-height: 0;
-    }
-
-    .image-frame img {
-      display: block;
-
-      width: 101%;
-      max-width: none;
-      height: auto;
-
-      margin: -2px -0.5%;
-      padding: 0;
-
-      border: none !important;
-      outline: none !important;
-      box-shadow: none !important;
-
-      transform: scale(1.008);
-      transform-origin: center;
-    }
-
-    .section-image {
-      margin-top: 27px;
-      margin-bottom: 20px;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      margin-bottom: 19px;
-    }
-
-    .hero-text {
-      text-align: center;
-      padding: 0 10px;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      color: #f1ebe1;
-
-      font-size: 25px;
-      line-height: 1.1;
-      font-weight: 400;
-
-      margin: 19px auto 7px;
-
-      max-width: 520px;
-    }
-
-    .subtitle {
-      margin: 0;
-
-      color: #b79b4e;
-
-      font-size: 16px;
-      line-height: 1.4;
-      font-style: italic;
-    }
-
-
-    /* =========================
-       BODY
-    ========================= */
-
-    .content {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    p {
-      margin: 0 0 16px;
-    }
-
-
-    /* =========================
-       SECTION TITLES
-    ========================= */
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-
-      margin: 23px 0 14px;
-
-      color: #eee7dc;
-
-      font-size: 19px;
-      line-height: 1.25;
-
-      font-weight: 400;
-      font-style: italic;
-    }
-
-    .section-title::after {
-      content: "";
-
-      height: 1px;
-      flex: 1;
-
-      background: #443a29;
-    }
-
-
-    /* =========================
-       KEY DATES
-    ========================= */
-
-    .dates-section {
-      margin-top: 31px;
-    }
-
-    .dates-list {
-      width: 100%;
-      margin-top: 3px;
-    }
-
-    .date-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      gap: 25px;
-
-      padding: 10px 0;
-
-      border-bottom: 1px solid #322c22;
-
-      font-size: 14px;
-      color: #ddd6ca;
-    }
-
-    .date {
-      color: #b79b4e;
-      white-space: nowrap;
-    }
-
-    .event {
-      text-align: right;
-    }
-
-
-    /* =========================
-       ENDING
-    ========================= */
-
-    .closing {
-      margin-top: 30px;
-      padding-top: 21px;
-
-      border-top: 1px solid #443a29;
-
-      text-align: center;
-      font-style: italic;
-    }
-
-    .contact {
-      margin-top: 16px;
-      text-align: center;
-    }
-
-    .contact a {
-      display: inline-block;
-
-      color: #b79b4e;
-
-      text-decoration: none;
-
-      border-bottom: 1px solid #b79b4e;
-
-      padding-bottom: 3px;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media only screen and (max-width: 620px) {
-
-      .page {
-        padding: 25px 18px 55px;
-      }
-
-      .container {
-        max-width: 100%;
-      }
-
-      .languages {
-        position: static;
-        margin-bottom: 15px;
-      }
-
-      .brand {
-        font-size: 27px;
-        letter-spacing: 5px;
-        line-height: 1.15;
-      }
-
-      h1 {
-        font-size: 23px;
-      }
-
-      .section-title {
-        font-size: 18px;
-      }
-
-      body {
-        font-size: 14px;
-      }
-
-      .date-row {
-        gap: 15px;
-        font-size: 13px;
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crans-Montana 2027 | Quintessentially</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #050505;
+  color: #e8e1d6;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #050505;
+  padding: 38px 20px 70px;
+}
+
+.container {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.topbar {
+  position: relative;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.languages a {
+  color: #8e7a43;
+  text-decoration: none;
+}
+
+.languages a.active {
+  color: #ffffff;
+}
+
+.languages .dot {
+  color: #443a29;
+}
+
+.brand {
+  margin: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 7px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* IMAGES */
+
+.image-frame {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #050505;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  line-height: 0;
+}
+
+.image-frame img {
+  display: block;
+  width: 101%;
+  max-width: none;
+  height: auto;
+  margin: -2px -0.5%;
+  padding: 0;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transform: scale(1.008);
+  transform-origin: center;
+}
+
+.section-image {
+  margin-top: 27px;
+  margin-bottom: 20px;
+}
+
+/* HERO */
+
+.hero {
+  margin-bottom: 19px;
+}
+
+.hero-text {
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 29px;
+}
+
+h1 {
+  color: #f1ebe1;
+  font-size: 28px;
+  line-height: 1.15;
+  font-weight: 400;
+  margin: 19px auto 7px;
+  max-width: 520px;
+}
+
+.subtitle {
+  margin: 0;
+  color: #f1ebe1;
+  font-size: 18px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.hero-tagline {
+  margin: 10px 0 0;
+  color: #b79b4e;
+  font-size: 14px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* BODY */
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+/* SECTION HEADINGS */
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 35px 0 19px;
+  color: #f1ebe1;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.section-title::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #75613e;
+}
+
+/* KEY DATES */
+
+.dates-section {
+  margin-top: 31px;
+}
+
+.dates-list {
+  width: 100%;
+  margin-top: 3px;
+}
+
+.date-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 10px 0;
+  border-bottom: 1px solid #322c22;
+  font-size: 14px;
+  color: #ddd6ca;
+}
+
+.date {
+  color: #b79b4e;
+  white-space: nowrap;
+}
+
+.event {
+  text-align: right;
+}
+
+/* ENDING */
+
+.closing {
+  margin-top: 30px;
+  padding-top: 21px;
+  border-top: 1px solid #443a29;
+  text-align: center;
+  font-style: italic;
+}
+
+.contact {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.contact a {
+  display: inline-block;
+  color: #b79b4e;
+  text-decoration: none;
+  border-bottom: 1px solid #b79b4e;
+  padding-bottom: 3px;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 620px) {
+  .page {
+    padding: 25px 18px 55px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .languages {
+    margin-bottom: 15px;
+  }
+
+  .brand {
+    font-size: 27px;
+    letter-spacing: 5px;
+    line-height: 1.15;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .date-row {
+    gap: 15px;
+    font-size: 13px;
+  }
+}
+</style>
 </head>
-
 
 <body>
 
 <div class="page">
+<main class="container">
 
-  <main class="container">
+<header class="topbar">
 
+  <nav class="languages">
+    <a href="?lang=fr">FR</a>
+    <span class="dot">·</span>
+    <a href="?lang=en">EN</a>
+    <span class="dot">·</span>
+    <a href="?lang=nl">NL</a>
+  </nav>
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+  <div class="brand">
+    QUINTESSENTIALLY
+  </div>
 
-    <header class="topbar">
+</header>
 
+<!-- IMAGE 1 -->
 
-      <!-- TRANSLATIONS -->
+<div class="image-frame hero">
+  <img
+    src="crans 1.jpg"
+    alt="Crans-Montana"
+    draggable="false"
+  >
+</div>
 
-      <nav class="languages">
+<!-- TITLE -->
 
-        <a href="?lang=fr">
-          FR
-        </a>
+<div class="hero-text">
 
-        <span class="dot">·</span>
+  <h1 id="title">
+    Crans-Montana 2027
+  </h1>
 
-        <a href="?lang=en">
-          EN
-        </a>
+  <p class="subtitle" id="event-title">
+    The Alpine World Ski Championships
+  </p>
 
-        <span class="dot">·</span>
-
-        <a href="?lang=nl">
-          NL
-        </a>
-
-      </nav>
-
-
-      <!-- QUINTESSENTIALLY -->
-
-      <div class="brand">
-        QUINTESSENTIALLY
-      </div>
-
-
-    </header>
-
-
-    <!-- =========================
-         IMAGE 1
-    ========================= -->
-
-    <div class="image-frame hero">
-
-      <img
-        src="crans 1.jpg"
-        alt="Crans-Montana"
-        draggable="false"
-      >
-
-    </div>
-
-
-    <!-- =========================
-         TITLE
-    ========================= -->
-
-    <div class="hero-text">
-
-      <h1 id="title">
-        Crans-Montana 2027: The Alpine World Ski Championships
-      </h1>
-
-      <p class="subtitle" id="subtitle">
-        The World’s Best Return to Crans-Montana
-      </p>
-
-    </div>
-
-
-    <!-- =========================
-         CONTENT
-    ========================= -->
-
-    <div class="content">
-
-
-      <!-- INTRO -->
-
-      <p id="intro1">
-        In February 2027, all eyes turn to Crans-Montana, Switzerland,
-        as the FIS Alpine World Ski Championships return to the resort
-        after forty years. For two weeks, the world’s leading skiers
-        will compete for 11 world titles, bringing the excitement of
-        elite alpine sport to one of Switzerland’s most celebrated
-        mountain destinations.
-      </p>
-
-      <p id="intro2">
-        The programme will feature the sport’s major disciplines,
-        including downhill, Super-G, giant slalom and slalom,
-        alongside team events. Highlights include the women’s downhill
-        on 6 February, the men’s downhill on 7 February, and the final
-        slalom races on 13 and 14 February.
-      </p>
-
-
-      <!-- IMAGE 2 -->
-
-      <div class="image-frame section-image">
-
-        <img
-          src="crans 2.png"
-          alt="Alpine skiing at Crans-Montana"
-          draggable="false"
-        >
-
-      </div>
-
-
-      <!-- MORE THAN A CHAMPIONSHIP -->
-
-      <h2 class="section-title" id="section1">
-        More Than a Championship
-      </h2>
-
-      <p id="text1">
-        Beyond the competition, Crans-Montana will take on a festive
-        atmosphere throughout the Championships. Medal ceremonies,
-        concerts, fan experiences and après-ski events will accompany
-        the racing, while the resort itself offers exceptional skiing,
-        mountain dining and spectacular Alpine scenery.
-      </p>
-
-      <p id="text2">
-        It is an opportunity to combine the excitement of world-class
-        sport with a winter escape in one of Switzerland’s most
-        celebrated mountain destinations.
-      </p>
-
-
-      <!-- IMAGE 3 -->
-
-      <div class="image-frame section-image">
-
-        <img
-          src="crans 3.jpg"
-          alt="Crans-Montana in winter"
-          draggable="false"
-        >
-
-      </div>
-
-
-      <!-- EXPERIENCE -->
-
-      <h2 class="section-title" id="section2">
-        Experience Crans-Montana 2027
-      </h2>
-
-      <p id="text3">
-        Whether for a major race weekend or a longer stay in the Alps,
-        we can arrange every element around the Championships, from
-        accommodation and travel to experiences throughout your time
-        in Crans-Montana.
-      </p>
-
-
-      <!-- =========================
-           KEY DATES
-      ========================= -->
-
-      <section class="dates-section">
-
-        <h2 class="section-title" id="datesTitle">
-          Key Dates
-        </h2>
-
-        <div class="dates-list">
-
-
-          <div class="date-row">
-
-            <span class="date" id="date1">
-              6 February 2027
-            </span>
-
-            <span class="event" id="event1">
-              Women’s Downhill
-            </span>
-
-          </div>
-
-
-          <div class="date-row">
-
-            <span class="date" id="date2">
-              7 February 2027
-            </span>
-
-            <span class="event" id="event2">
-              Men’s Downhill
-            </span>
-
-          </div>
-
-
-          <div class="date-row">
-
-            <span class="date" id="date3">
-              13 February 2027
-            </span>
-
-            <span class="event" id="event3">
-              Women’s Slalom Final
-            </span>
-
-          </div>
-
-
-          <div class="date-row">
-
-            <span class="date" id="date4">
-              14 February 2027
-            </span>
-
-            <span class="event" id="event4">
-              Men’s Slalom Final
-            </span>
-
-          </div>
-
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           ENDING
-      ========================= -->
-
-      <div class="closing" id="closing">
-        Experience the world of Alpine skiing at its highest level.
-      </div>
-
-
-      <div class="contact">
-
-        <a
-          id="contact"
-          href="mailto:concierge.belgium@quintessentially.com"
-        >
-          Contact me for more information
-        </a>
-
-      </div>
-
-
-    </div>
-
-  </main>
+  <p class="hero-tagline" id="subtitle">
+    The World’s Best Return to Crans-Montana
+  </p>
 
 </div>
 
+<!-- CONTENT -->
+
+<div class="content">
+
+  <p id="intro1">
+    In February 2027, all eyes turn to Crans-Montana, Switzerland,
+    as the FIS Alpine World Ski Championships return to the resort
+    after forty years. For two weeks, the world’s leading skiers
+    will compete for 11 world titles, bringing the excitement of
+    elite alpine sport to one of Switzerland’s most celebrated
+    mountain destinations.
+  </p>
+
+  <p id="intro2">
+    The programme will feature the sport’s major disciplines,
+    including downhill, Super-G, giant slalom and slalom,
+    alongside team events. Highlights include the women’s downhill
+    on 6 February, the men’s downhill on 7 February, and the final
+    slalom races on 13 and 14 February.
+  </p>
+
+  <!-- IMAGE 2 -->
+
+  <div class="image-frame section-image">
+    <img
+      src="crans 2.png"
+      alt="Alpine skiing at Crans-Montana"
+      draggable="false"
+    >
+  </div>
+
+  <!-- MORE THAN A CHAMPIONSHIP -->
+
+  <h2 class="section-title" id="section1">
+    More Than a Championship
+  </h2>
+
+  <p id="text1">
+    Beyond the competition, Crans-Montana will take on a festive
+    atmosphere throughout the Championships. Medal ceremonies,
+    concerts, fan experiences and après-ski events will accompany
+    the racing, while the resort itself offers exceptional skiing,
+    mountain dining and spectacular Alpine scenery.
+  </p>
+
+  <p id="text2">
+    It is an opportunity to combine the excitement of world-class
+    sport with a winter escape in one of Switzerland’s most
+    celebrated mountain destinations.
+  </p>
+
+  <!-- IMAGE 3 -->
+
+  <div class="image-frame section-image">
+    <img
+      src="crans 3.jpg"
+      alt="Crans-Montana in winter"
+      draggable="false"
+    >
+  </div>
+
+  <!-- EXPERIENCE -->
+
+  <h2 class="section-title" id="section2">
+    Experience Crans-Montana 2027
+  </h2>
+
+  <p id="text3">
+    Whether for a major race weekend or a longer stay in the Alps,
+    we can arrange every element around the Championships, from
+    accommodation and travel to experiences throughout your time
+    in Crans-Montana.
+  </p>
+
+  <!-- KEY DATES -->
+
+  <section class="dates-section">
+
+    <h2 class="section-title" id="datesTitle">
+      Key Dates
+    </h2>
+
+    <div class="dates-list">
+
+      <div class="date-row">
+        <span class="date" id="date1">
+          6 February 2027
+        </span>
+        <span class="event" id="event1">
+          Women’s Downhill
+        </span>
+      </div>
+
+      <div class="date-row">
+        <span class="date" id="date2">
+          7 February 2027
+        </span>
+        <span class="event" id="event2">
+          Men’s Downhill
+        </span>
+      </div>
+
+      <div class="date-row">
+        <span class="date" id="date3">
+          13 February 2027
+        </span>
+        <span class="event" id="event3">
+          Women’s Slalom Final
+        </span>
+      </div>
+
+      <div class="date-row">
+        <span class="date" id="date4">
+          14 February 2027
+        </span>
+        <span class="event" id="event4">
+          Men’s Slalom Final
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ENDING -->
+
+  <div class="closing" id="closing">
+    Experience the world of Alpine skiing at its highest level.
+  </div>
+
+  <div class="contact">
+    <a
+      id="contact"
+      href="mailto:qbenelux@quintessentially.com?subject=Crans-Montana%202027%3A%20The%20Alpine%20World%20Ski%20Championships"
+    >
+      Contact me for more information
+    </a>
+  </div>
+
+</div>
+</main>
+</div>
 
 <script>
 
-
-/* ==========================================================
-   TRANSLATIONS
-========================================================== */
+/* TRANSLATIONS */
 
 const translations = {
 
-
-  /* =========================
-     ENGLISH
-  ========================= */
-
   en: {
-
     title:
-      "Crans-Montana 2027: The Alpine World Ski Championships",
+      "Crans-Montana 2027",
+
+    eventTitle:
+      "The Alpine World Ski Championships",
 
     subtitle:
       "The World’s Best Return to Crans-Montana",
@@ -681,18 +542,14 @@ const translations = {
 
     contact:
       "Contact me for more information"
-
   },
 
-
-  /* =========================
-     FRENCH
-  ========================= */
-
   fr: {
-
     title:
-      "Crans-Montana 2027 : Les Championnats du monde de ski alpin",
+      "Crans-Montana 2027",
+
+    eventTitle:
+      "Les Championnats du monde de ski alpin",
 
     subtitle:
       "Les meilleurs skieurs du monde reviennent à Crans-Montana",
@@ -750,18 +607,14 @@ const translations = {
 
     contact:
       "Contactez-moi pour plus d’informations"
-
   },
 
-
-  /* =========================
-     DUTCH
-  ========================= */
-
   nl: {
-
     title:
-      "Crans-Montana 2027: De Wereldkampioenschappen Alpineskiën",
+      "Crans-Montana 2027",
+
+    eventTitle:
+      "De Wereldkampioenschappen Alpineskiën",
 
     subtitle:
       "De wereldtop keert terug naar Crans-Montana",
@@ -819,41 +672,27 @@ const translations = {
 
     contact:
       "Contacteer mij voor meer informatie"
-
   }
 
 };
 
+/* GET LANGUAGE */
 
-/* =========================
-   GET LANGUAGE
-========================= */
+const params = new URLSearchParams(window.location.search);
 
-const params =
-  new URLSearchParams(
-    window.location.search
-  );
-
-let lang =
-  params.get("lang");
+let lang = params.get("lang");
 
 if (!translations[lang]) {
   lang = "en";
 }
 
-const t =
-  translations[lang];
+const t = translations[lang];
 
-document.documentElement.lang =
-  lang;
+document.documentElement.lang = lang;
 
-
-/* =========================
-   APPLY TRANSLATION
-========================= */
+/* APPLY TRANSLATIONS */
 
 const fields = [
-
   "title",
   "subtitle",
   "intro1",
@@ -874,53 +713,30 @@ const fields = [
   "event4",
   "closing",
   "contact"
-
 ];
 
-
 fields.forEach(function(field) {
+  const element = document.getElementById(field);
 
-  const element =
-    document.getElementById(field);
-
-  if (
-    element &&
-    t[field]
-  ) {
-
-    element.textContent =
-      t[field];
-
+  if (element && t[field]) {
+    element.textContent = t[field];
   }
-
 });
 
+/* TRANSLATE EVENT TITLE */
 
-/* =========================
-   ACTIVE LANGUAGE
-========================= */
+document.getElementById("event-title").textContent =
+  t.eventTitle;
 
-document
-  .querySelectorAll(".languages a")
-  .forEach(function(link) {
+/* ACTIVE LANGUAGE BUTTON */
 
-    link.classList.remove(
-      "active"
-    );
+document.querySelectorAll(".languages a").forEach(function(link) {
+  link.classList.remove("active");
 
-    if (
-      link.getAttribute("href") ===
-      "?lang=" + lang
-    ) {
-
-      link.classList.add(
-        "active"
-      );
-
-    }
-
-  });
-
+  if (link.getAttribute("href") === "?lang=" + lang) {
+    link.classList.add("active");
+  }
+});
 
 </script>
 
