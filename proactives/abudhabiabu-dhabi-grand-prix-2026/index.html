@@ -1,1 +1,501 @@
-h
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abu Dhabi Grand Prix 2026 | Quintessentially</title>
+<meta name="description" content="Experience the Abu Dhabi Grand Prix 2026 with Quintessentially.">
+
+<style>
+:root {
+  --gold: #a98b58;
+  --dark: #242424;
+  --line: #e8e3dc;
+  --content: 920px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--dark);
+  font-family: Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-header {
+  text-align: center;
+  padding: 18px 20px 34px;
+  border-bottom: 1px solid var(--line);
+}
+
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: #888;
+  font: 11px Arial, sans-serif;
+  letter-spacing: .13em;
+  cursor: pointer;
+  padding: 7px 3px;
+  border-bottom: 1px solid transparent;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+  color: var(--dark);
+  border-bottom-color: var(--gold);
+}
+
+.brand {
+  font: 400 clamp(28px, 4.5vw, 60px)/1.2 Arial, sans-serif;
+  letter-spacing: .16em;
+}
+
+.page {
+  width: min(var(--content), calc(100% - 44px));
+  margin: auto;
+}
+
+.hero { margin-top: 37px; }
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 570px;
+  object-fit: cover;
+}
+
+.article-heading {
+  text-align: center;
+  padding: 49px 12px 48px;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.18;
+  margin: 0 0 20px;
+}
+
+.subtitle {
+  font: 700 15px/1.7 Arial, sans-serif;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+}
+
+.section { margin-bottom: 70px; }
+
+.section h2 {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 25px;
+}
+
+.section h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ded8ce;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.95;
+  color: #45413e;
+  margin: 0 0 20px;
+}
+
+strong {
+  font-weight: 600;
+  color: #252525;
+}
+
+p a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 3px;
+}
+
+p a:hover { color: var(--gold); }
+
+.image-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.image-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.image-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-grid.two img {
+  height: 310px;
+  object-fit: cover;
+}
+
+.details p { margin-bottom: 8px; }
+
+.contact {
+  padding: 10px 0 80px;
+  border-top: 1px solid var(--line);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 10px 0;
+  color: var(--gold);
+  font: 12px Arial, sans-serif;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+}
+
+.cta:hover { color: #6e5432; }
+
+footer {
+  text-align: center;
+  border-top: 1px solid var(--line);
+  padding: 30px 16px 36px;
+  color: #888;
+  font: 10px Arial, sans-serif;
+  letter-spacing: .16em;
+}
+
+[data-lang] { display: none; }
+[data-lang].visible { display: block; }
+
+@media (max-width: 640px) {
+  .site-header { padding: 18px 12px 27px; }
+  .brand {
+    font-size: clamp(23px, 6vw, 36px);
+    letter-spacing: .08em;
+  }
+  .page { width: calc(100% - 32px); }
+  .hero { margin-top: 22px; }
+  .article-heading { padding: 37px 8px 35px; }
+  .subtitle { font-size: 12px; letter-spacing: .08em; }
+  p { font-size: 15px; line-height: 1.85; }
+  .section { margin-bottom: 54px; }
+  .section h2 { font-size: 27px; gap: 14px; }
+  .image-grid { gap: 7px; margin-top: 25px; }
+  .image-grid.two img { height: 180px; }
+  .contact { padding-bottom: 55px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="language-switcher" aria-label="Select language">
+    <button class="lang-btn active" data-switch="en" onclick="setLanguage('en')">EN</button>
+    <button class="lang-btn" data-switch="fr" onclick="setLanguage('fr')">FR</button>
+    <button class="lang-btn" data-switch="nl" onclick="setLanguage('nl')">NL</button>
+  </nav>
+  <div class="brand">QUINTESSENTIALLY</div>
+</header>
+
+<main class="page">
+
+<div class="hero">
+  <img src="hero.jpg" alt="Abu Dhabi Grand Prix at Yas Marina Circuit" fetchpriority="high">
+</div>
+
+<!-- ENGLISH -->
+
+<article data-lang="en" class="visible">
+
+<div class="article-heading">
+  <h1>Abu Dhabi Grand Prix 2026</h1>
+  <div class="subtitle">The Final Race. An Unforgettable Weekend.</div>
+</div>
+
+<section class="section">
+  <h2>One Final Race. One Spectacular Setting.</h2>
+
+  <p>From <strong>4 to 6 December 2026</strong>, the world's finest drivers arrive at <strong>Yas Marina Circuit</strong> for the <a href="https://www.abudhabigp.com/en/" target="_blank" rel="noopener noreferrer">Formula 1 Etihad Airways Abu Dhabi Grand Prix</a>, bringing the 2026 season to a spectacular close.</p>
+
+  <p>Few races offer a setting quite like Abu Dhabi. As the sun sets over Yas Marina, the circuit comes alive beneath the lights, with the excitement of Formula 1 unfolding against a backdrop of waterfront views, luxury yachts and an electric atmosphere.</p>
+
+  <p>Whether the championship is still to be decided or the final race becomes a celebration of the season, Abu Dhabi promises a weekend worth experiencing.</p>
+</section>
+
+<section class="section">
+  <h2>The Final Weekend of Formula 1</h2>
+
+  <p>The action begins on <strong>Friday, 4 December</strong>, with practice sessions, followed by qualifying on <strong>Saturday, 5 December</strong>, when drivers compete for their final starting positions of the year.</p>
+
+  <p>On <strong>Sunday, 6 December</strong>, the lights go out at <strong>17:00 local time</strong> for 58 laps around Yas Marina Circuit.</p>
+
+  <p>For those looking to experience the Grand Prix beyond the grandstands, premium hospitality options offer exceptional circuit views, refined dining and an exciting atmosphere throughout the weekend.</p>
+
+  <div class="image-grid two">
+    <img src="abudhabi1.jpg" alt="Abu Dhabi Grand Prix experience" loading="lazy">
+    <img src="abudhabi2.jpg" alt="Formula 1 at Yas Marina" loading="lazy">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Beyond the Chequered Flag</h2>
+
+  <p>In Abu Dhabi, the experience continues long after the racing ends.</p>
+
+  <p>The <strong>Yasalam After-Race Concerts</strong> bring international music stars to Yas Island, with <strong>Lewis Capaldi, Zara Larsson, Imagine Dragons, The Chainsmokers and The Script</strong> among the announced performers.</p>
+
+  <p>Beyond the circuit, Abu Dhabi invites visitors to discover its exceptional hotels, waterfront restaurants, beautiful beaches and cultural landmarks.</p>
+
+  <p>From an evening at a celebrated restaurant to a few additional days of relaxation, the Grand Prix is the perfect occasion to discover more of the city.</p>
+
+  <div class="image-grid">
+    <img src="concert.jpg" alt="Yasalam after-race concert" loading="lazy">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Your Grand Prix Experience</h2>
+
+  <p>Whether you are planning a weekend centred around the race or a longer escape to Abu Dhabi, Quintessentially can help arrange an experience tailored to your preferences.</p>
+
+  <p>From <strong>race tickets and premium hospitality to luxury accommodation, restaurant reservations and travel arrangements</strong>, our team would be delighted to assist with the details.</p>
+
+  <div class="image-grid">
+    <img src="abudhabi4.jpg" alt="Abu Dhabi Grand Prix luxury experience" loading="lazy">
+  </div>
+</section>
+
+<section class="section details">
+  <h2>Event Details</h2>
+  <p><strong>Dates:</strong> 4–6 December 2026</p>
+  <p><strong>Race:</strong> Sunday, 6 December at 17:00 local time</p>
+  <p><strong>Location:</strong> Yas Marina Circuit, Abu Dhabi, United Arab Emirates</p>
+</section>
+
+<div class="contact">
+  <a class="cta" href="mailto:qbenelux@quintessentially.com?subject=Abu%20Dhabi%20Grand%20Prix%202026">Contact me for more information</a>
+</div>
+
+</article>
+
+<!-- FRENCH -->
+
+<article data-lang="fr">
+
+<div class="article-heading">
+  <h1>Grand Prix d’Abou Dhabi 2026</h1>
+  <div class="subtitle">La dernière course. Un week-end inoubliable.</div>
+</div>
+
+<section class="section">
+  <h2>Une dernière course. Un cadre spectaculaire.</h2>
+
+  <p>Du <strong>4 au 6 décembre 2026</strong>, les meilleurs pilotes du monde se retrouvent au <strong>circuit de Yas Marina</strong> pour le <a href="https://www.abudhabigp.com/en/" target="_blank" rel="noopener noreferrer">Formula 1 Etihad Airways Abu Dhabi Grand Prix</a>, qui marque la fin spectaculaire de la saison 2026.</p>
+
+  <p>Peu de courses offrent un décor comparable à celui d’Abou Dhabi. Au coucher du soleil, le circuit de Yas Marina s’illumine, tandis que la Formule 1 prend vie entre vues sur le front de mer, yachts de luxe et ambiance électrique.</p>
+
+  <p>Que le championnat reste à départager ou que la dernière course célèbre la saison écoulée, Abou Dhabi promet un week-end mémorable.</p>
+</section>
+
+<section class="section">
+  <h2>Le dernier week-end de Formule 1</h2>
+
+  <p>Le programme débute le <strong>vendredi 4 décembre</strong> avec les essais, suivis des qualifications le <strong>samedi 5 décembre</strong>, lorsque les pilotes se disputent leurs dernières positions sur la grille de départ de l’année.</p>
+
+  <p>Le <strong>dimanche 6 décembre</strong>, le départ sera donné à <strong>17 h, heure locale</strong>, pour 58 tours du circuit de Yas Marina.</p>
+
+  <p>Pour vivre le Grand Prix au-delà des tribunes, les offres d’hospitalité premium proposent des vues privilégiées sur le circuit, une restauration raffinée et une atmosphère animée tout au long du week-end.</p>
+
+  <div class="image-grid two">
+    <img src="abudhabi1.jpg" alt="Grand Prix d’Abou Dhabi" loading="lazy">
+    <img src="abudhabi2.jpg" alt="Formule 1 à Yas Marina" loading="lazy">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Au-delà du drapeau à damier</h2>
+
+  <p>À Abou Dhabi, l’expérience se poursuit bien après l’arrivée de la course.</p>
+
+  <p>Les <strong>concerts Yasalam après la course</strong> accueillent des stars internationales sur Yas Island, notamment <strong>Lewis Capaldi, Zara Larsson, Imagine Dragons, The Chainsmokers et The Script</strong>, parmi les artistes annoncés.</p>
+
+  <p>Au-delà du circuit, Abou Dhabi invite à découvrir ses hôtels d’exception, ses restaurants en bord de mer, ses magnifiques plages et ses sites culturels.</p>
+
+  <p>Qu’il s’agisse d’une soirée dans un restaurant renommé ou de quelques jours supplémentaires de détente, le Grand Prix est l’occasion idéale d’explorer davantage la ville.</p>
+
+  <div class="image-grid">
+    <img src="concert.jpg" alt="Concert Yasalam" loading="lazy">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Votre expérience du Grand Prix</h2>
+
+  <p>Que vous envisagiez un week-end consacré à la course ou un séjour prolongé à Abou Dhabi, Quintessentially peut organiser une expérience adaptée à vos envies.</p>
+
+  <p>Des <strong>billets de course et prestations d’hospitalité premium aux hôtels de luxe, réservations de restaurants et déplacements</strong>, notre équipe se fera un plaisir de prendre en charge les détails.</p>
+
+  <div class="image-grid">
+    <img src="abudhabi4.jpg" alt="Séjour de luxe à Abou Dhabi" loading="lazy">
+  </div>
+</section>
+
+<section class="section details">
+  <h2>Informations pratiques</h2>
+  <p><strong>Dates :</strong> du 4 au 6 décembre 2026</p>
+  <p><strong>Course :</strong> dimanche 6 décembre à 17 h, heure locale</p>
+  <p><strong>Lieu :</strong> circuit de Yas Marina, Abou Dhabi, Émirats arabes unis</p>
+</section>
+
+<div class="contact">
+  <a class="cta" href="mailto:qbenelux@quintessentially.com?subject=Abu%20Dhabi%20Grand%20Prix%202026">Contactez-moi pour plus d’informations</a>
+</div>
+
+</article>
+
+<!-- DUTCH -->
+
+<article data-lang="nl">
+
+<div class="article-heading">
+  <h1>Grand Prix van Abu Dhabi 2026</h1>
+  <div class="subtitle">De laatste race. Een onvergetelijk weekend.</div>
+</div>
+
+<section class="section">
+  <h2>Eén laatste race. Een spectaculaire locatie.</h2>
+
+  <p>Van <strong>4 tot en met 6 december 2026</strong> komen de beste coureurs ter wereld samen op het <strong>Yas Marina Circuit</strong> voor de <a href="https://www.abudhabigp.com/en/" target="_blank" rel="noopener noreferrer">Formula 1 Etihad Airways Abu Dhabi Grand Prix</a>, de spectaculaire afsluiting van het seizoen 2026.</p>
+
+  <p>Weinig races hebben een decor zoals Abu Dhabi. Terwijl de zon ondergaat boven Yas Marina, komt het circuit onder de lichten tot leven, met de spanning van de Formule 1 tegen een achtergrond van uitzicht op het water, luxejachten en een bruisende sfeer.</p>
+
+  <p>Of de wereldtitel nog beslist moet worden of de laatste race een viering van het seizoen wordt, Abu Dhabi belooft een weekend om niet te vergeten.</p>
+</section>
+
+<section class="section">
+  <h2>Het laatste Formule 1-weekend</h2>
+
+  <p>Het programma begint op <strong>vrijdag 4 december</strong> met de vrije trainingen, gevolgd door de kwalificatie op <strong>zaterdag 5 december</strong>, wanneer de coureurs strijden om hun laatste startposities van het jaar.</p>
+
+  <p>Op <strong>zondag 6 december</strong> doven de startlichten om <strong>17.00 uur lokale tijd</strong> voor 58 ronden op het Yas Marina Circuit.</p>
+
+  <p>Voor wie de Grand Prix buiten de tribunes wil beleven, bieden premium hospitality-arrangementen een prachtig uitzicht op het circuit, verfijnde gastronomie en een levendige sfeer gedurende het hele weekend.</p>
+
+  <div class="image-grid two">
+    <img src="abudhabi1.jpg" alt="Grand Prix van Abu Dhabi" loading="lazy">
+    <img src="abudhabi2.jpg" alt="Formule 1 op Yas Marina" loading="lazy">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Meer dan de finishvlag</h2>
+
+  <p>In Abu Dhabi gaat de beleving nog lang na de race verder.</p>
+
+  <p>De <strong>Yasalam After-Race Concerts</strong> brengen internationale artiesten naar Yas Island, met onder anderen <strong>Lewis Capaldi, Zara Larsson, Imagine Dragons, The Chainsmokers en The Script</strong> als aangekondigde namen.</p>
+
+  <p>Buiten het circuit nodigt Abu Dhabi bezoekers uit om bijzondere hotels, restaurants aan het water, prachtige stranden en culturele bezienswaardigheden te ontdekken.</p>
+
+  <p>Van een avond in een gerenommeerd restaurant tot enkele extra dagen ontspanning: de Grand Prix is de perfecte gelegenheid om de stad verder te verkennen.</p>
+
+  <div class="image-grid">
+    <img src="concert.jpg" alt="Yasalam After-Race Concert" loading="lazy">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Uw Grand Prix-ervaring</h2>
+
+  <p>Of u nu een weekend rond de race plant of langer in Abu Dhabi wilt verblijven, Quintessentially helpt u graag een ervaring samen te stellen die bij uw wensen past.</p>
+
+  <p>Van <strong>racetickets en premium hospitality tot luxueuze accommodaties, restaurantreserveringen en reisarrangementen</strong>: ons team helpt u graag met alle details.</p>
+
+  <div class="image-grid">
+    <img src="abudhabi4.jpg" alt="Luxueuze ervaring in Abu Dhabi" loading="lazy">
+  </div>
+</section>
+
+<section class="section details">
+  <h2>Evenementgegevens</h2>
+  <p><strong>Data:</strong> 4–6 december 2026</p>
+  <p><strong>Race:</strong> zondag 6 december om 17.00 uur lokale tijd</p>
+  <p><strong>Locatie:</strong> Yas Marina Circuit, Abu Dhabi, Verenigde Arabische Emiraten</p>
+</section>
+
+<div class="contact">
+  <a class="cta" href="mailto:qbenelux@quintessentially.com?subject=Abu%20Dhabi%20Grand%20Prix%202026">Contacteer mij voor meer informatie</a>
+</div>
+
+</article>
+
+</main>
+
+<footer>
+  QUINTESSENTIALLY &nbsp; | &nbsp; ABU DHABI GRAND PRIX 2026
+</footer>
+
+<script>
+function setLanguage(lang) {
+  if (!["en", "fr", "nl"].includes(lang)) {
+    lang = "en";
+  }
+
+  document.querySelectorAll("[data-lang]").forEach(article => {
+    article.classList.toggle(
+      "visible",
+      article.dataset.lang === lang
+    );
+  });
+
+  document.querySelectorAll("[data-switch]").forEach(button => {
+    const active = button.dataset.switch === lang;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  document.documentElement.lang = lang;
+
+  try {
+    localStorage.setItem("quintessentially-language", lang);
+  } catch (error) {}
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  let lang = "en";
+
+  try {
+    lang = localStorage.getItem("quintessentially-language") || "en";
+  } catch (error) {}
+
+  setLanguage(lang);
+});
+</script>
+
+</body>
+</html>
