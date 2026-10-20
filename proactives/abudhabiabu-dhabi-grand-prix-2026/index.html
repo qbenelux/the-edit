@@ -187,7 +187,7 @@ p a:hover {
   margin-top: 32px;
 }
 
-/* TWO LARGE PORTRAIT IMAGES */
+/* TWO LARGE PORTRAIT IMAGES - UNCHANGED */
 
 .image-grid.two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -203,14 +203,14 @@ p a:hover {
   object-position: center;
 }
 
-/* CONCERT AND ABUDHABI4 - FULL TEXT WIDTH */
+/* CONCERT AND ABUDHABI4 - CROPPED TOP AND BOTTOM */
 
 .image-grid:not(.two) img {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: none;
+  height: 420px;
   object-fit: cover;
+  object-position: center center;
 }
 
 /* EVENT DETAILS */
@@ -332,10 +332,13 @@ footer {
     object-fit: cover;
   }
 
+  /* LAST TWO IMAGES ON MOBILE */
+
   .image-grid:not(.two) img {
     width: 100%;
-    height: auto;
-    max-height: none;
+    height: 210px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .contact {
