@@ -65,7 +65,9 @@ body {
   margin: auto;
 }
 
-.hero { margin-top: 37px; }
+.hero {
+  margin-top: 37px;
+}
 
 .hero img {
   display: block;
@@ -87,14 +89,22 @@ h1 {
   margin: 0 0 20px;
 }
 
+/* ELEGANT ITALIC GOLD SUBTITLE */
+
 .subtitle {
-  font: 700 15px/1.7 Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(20px, 2.8vw, 27px);
+  font-style: italic;
+  font-weight: 400;
   color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: .13em;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
 }
 
-.section { margin-bottom: 70px; }
+.section {
+  margin-bottom: 70px;
+}
 
 .section h2 {
   display: flex;
@@ -133,7 +143,11 @@ p a {
   text-underline-offset: 3px;
 }
 
-p a:hover { color: var(--gold); }
+p a:hover {
+  color: var(--gold);
+}
+
+/* IMAGES - ALL ALIGNED WITH TEXT */
 
 .image-grid {
   display: grid;
@@ -143,23 +157,39 @@ p a:hover { color: var(--gold); }
   margin-top: 32px;
 }
 
+/* TWO EQUAL IMAGES WITHOUT CROPPING */
+
 .image-grid.two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
 }
 
 .image-grid img {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .image-grid.two img {
-  height: 310px;
-  object-fit: cover;
+  width: 100%;
+  height: 270px;
+  object-fit: contain;
+  object-position: center;
 }
 
-.details p { margin-bottom: 8px; }
+/* CONCERT AND ABUDHABI4 - SMALLER HEIGHT */
+
+.image-grid:not(.two) img {
+  width: 100%;
+  max-height: 390px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.details p {
+  margin-bottom: 8px;
+}
 
 .contact {
   padding: 10px 0 80px;
@@ -178,7 +208,9 @@ p a:hover { color: var(--gold); }
   border-bottom: 1px solid var(--gold);
 }
 
-.cta:hover { color: #6e5432; }
+.cta:hover {
+  color: #6e5432;
+}
 
 footer {
   text-align: center;
@@ -189,25 +221,74 @@ footer {
   letter-spacing: .16em;
 }
 
-[data-lang] { display: none; }
-[data-lang].visible { display: block; }
+[data-lang] {
+  display: none;
+}
+
+[data-lang].visible {
+  display: block;
+}
+
+/* MOBILE */
 
 @media (max-width: 640px) {
-  .site-header { padding: 18px 12px 27px; }
+  .site-header {
+    padding: 18px 12px 27px;
+  }
+
   .brand {
     font-size: clamp(23px, 6vw, 36px);
     letter-spacing: .08em;
   }
-  .page { width: calc(100% - 32px); }
-  .hero { margin-top: 22px; }
-  .article-heading { padding: 37px 8px 35px; }
-  .subtitle { font-size: 12px; letter-spacing: .08em; }
-  p { font-size: 15px; line-height: 1.85; }
-  .section { margin-bottom: 54px; }
-  .section h2 { font-size: 27px; gap: 14px; }
-  .image-grid { gap: 7px; margin-top: 25px; }
-  .image-grid.two img { height: 180px; }
-  .contact { padding-bottom: 55px; }
+
+  .page {
+    width: calc(100% - 32px);
+  }
+
+  .hero {
+    margin-top: 22px;
+  }
+
+  .article-heading {
+    padding: 37px 8px 35px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    letter-spacing: 0.01em;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .section {
+    margin-bottom: 54px;
+  }
+
+  .section h2 {
+    font-size: 27px;
+    gap: 14px;
+  }
+
+  .image-grid {
+    gap: 7px;
+    margin-top: 25px;
+  }
+
+  .image-grid.two img {
+    height: 170px;
+    object-fit: contain;
+  }
+
+  .image-grid:not(.two) img {
+    max-height: 280px;
+  }
+
+  .contact {
+    padding-bottom: 55px;
+  }
 }
 </style>
 </head>
@@ -216,20 +297,22 @@ footer {
 
 <header class="site-header">
   <nav class="language-switcher" aria-label="Select language">
-    <button class="lang-btn active" data-switch="en" onclick="setLanguage('en')">EN</button>
-    <button class="lang-btn" data-switch="fr" onclick="setLanguage('fr')">FR</button>
-    <button class="lang-btn" data-switch="nl" onclick="setLanguage('nl')">NL</button>
+    <button type="button" class="lang-btn active" data-switch="en" onclick="setLanguage('en')">EN</button>
+    <button type="button" class="lang-btn" data-switch="fr" onclick="setLanguage('fr')">FR</button>
+    <button type="button" class="lang-btn" data-switch="nl" onclick="setLanguage('nl')">NL</button>
   </nav>
   <div class="brand">QUINTESSENTIALLY</div>
 </header>
 
 <main class="page">
 
+<!-- HERO IMAGE -->
+
 <div class="hero">
   <img src="hero.jpg" alt="Abu Dhabi Grand Prix at Yas Marina Circuit" fetchpriority="high">
 </div>
 
-<!-- ENGLISH -->
+<!-- ================= ENGLISH ================= -->
 
 <article data-lang="en" class="visible">
 
@@ -304,7 +387,7 @@ footer {
 
 </article>
 
-<!-- FRENCH -->
+<!-- ================= FRENCH ================= -->
 
 <article data-lang="fr">
 
@@ -379,7 +462,7 @@ footer {
 
 </article>
 
-<!-- DUTCH -->
+<!-- ================= DUTCH ================= -->
 
 <article data-lang="nl">
 
