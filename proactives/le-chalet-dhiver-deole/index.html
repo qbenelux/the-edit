@@ -1,1 +1,1115 @@
-f
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Chalet d’Hiver d’Éole | Quintessentially</title>
+<meta name="description" content="Discover Le Chalet d’Hiver d’Éole: Alpine dining, private gondolas, a Christmas market and elegant overnight stays in Belgium.">
+
+<style>
+:root {
+  --gold: #a98b58;
+  --dark: #242424;
+  --line: #e8e3dc;
+  --content: 920px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--dark);
+  font-family: Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+
+.site-header {
+  width: 100%;
+  padding: 18px 20px 34px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: #888;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: .13em;
+  cursor: pointer;
+  padding: 7px 3px;
+  border-bottom: 1px solid transparent;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  color: var(--dark);
+  border-bottom-color: var(--gold);
+}
+
+.brand {
+  font-family: Arial, sans-serif;
+  font-size: clamp(28px, 4.5vw, 60px);
+  font-weight: 400;
+  letter-spacing: .16em;
+  line-height: 1.2;
+}
+
+/* PAGE AND HERO */
+
+.page {
+  width: min(var(--content), calc(100% - 44px));
+  margin: 0 auto;
+}
+
+.hero {
+  width: 100%;
+  height: 480px;
+  margin-top: 37px;
+  overflow: hidden;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 72%;
+}
+
+/* ARTICLE */
+
+.article-heading {
+  text-align: center;
+  padding: 49px 20px 40px;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.18;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.subtitle {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--gold);
+  font-style: italic;
+  font-size: clamp(17px, 2.5vw, 23px);
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+}
+
+.intro {
+  margin: 0 0 66px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.95;
+  color: #45413e;
+  margin: 0 0 20px;
+}
+
+strong {
+  color: #252525;
+  font-weight: 600;
+}
+
+.section {
+  margin-bottom: 70px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 25px;
+  color: #292622;
+}
+
+.section h2,
+.closing h2 {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-style: italic;
+}
+
+.section h2::after,
+.closing h2::after {
+  content: "";
+  flex: 1;
+  min-width: 15px;
+  height: 1px;
+  background: #ded8ce;
+}
+
+.section-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* ALL IMAGE GRIDS */
+
+.image-grid {
+  display: grid;
+  width: 100%;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.image-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* FOUR EQUAL CHALET IMAGES */
+
+.chalet-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 290px);
+}
+
+/* GONDOLA: IMAGE LEFT, DETAILS RIGHT */
+
+.gondola-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+  width: 100%;
+  margin-top: 36px;
+}
+
+.gondola-layout img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gondola-details {
+  padding: 12px 0;
+}
+
+.gondola-details h3 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 22px;
+  color: #292622;
+}
+
+.gondola-details ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #45413e;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.gondola-details li {
+  margin-bottom: 10px;
+}
+
+/* TWO EQUAL CHRISTMAS IMAGES */
+
+.christmas-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 350px;
+}
+
+/* FOUR EQUAL HOTEL IMAGES */
+
+.hotel-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 285px);
+}
+
+/* CLOSING */
+
+.closing {
+  padding: 13px 0 35px;
+  border-top: 1px solid var(--line);
+}
+
+.closing h2 {
+  margin-top: 46px;
+}
+
+.closing p {
+  margin-bottom: 20px;
+}
+
+/* LOCATION AND DATES SIDE BY SIDE */
+
+.visit-info {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 55px;
+  width: 100%;
+  margin: 25px 0 45px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.visit-info h3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: 400;
+  margin: 0 0 22px;
+  color: #292622;
+}
+
+.visit-info p {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.visit-info ul {
+  margin: 0;
+  padding-left: 19px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #45413e;
+}
+
+.visit-info li {
+  margin-bottom: 12px;
+}
+
+/* CONTACT */
+
+.contact-area {
+  margin: 15px 0 75px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 0;
+  color: var(--gold);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  transition: color .2s ease;
+}
+
+.cta:hover {
+  color: #6e5432;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 20px 36px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: #888;
+}
+
+/* LANGUAGE VISIBILITY */
+
+[data-lang] {
+  display: none;
+}
+
+[data-lang].visible {
+  display: block;
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+  .site-header {
+    padding: 18px 12px 27px;
+  }
+
+  .language-switcher {
+    margin-bottom: 25px;
+  }
+
+  .brand {
+    font-size: clamp(23px, 6vw, 36px);
+    letter-spacing: .10em;
+  }
+
+  .page {
+    width: calc(100% - 32px);
+  }
+
+  .hero {
+    height: 260px;
+    margin-top: 22px;
+  }
+
+  .article-heading {
+    padding: 37px 8px 29px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .intro {
+    margin-bottom: 48px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  h2 {
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    margin-bottom: 54px;
+  }
+
+  .section h2,
+  .closing h2 {
+    gap: 14px;
+  }
+
+  .image-grid {
+    gap: 7px;
+    margin-top: 25px;
+  }
+
+  .chalet-grid {
+    grid-template-rows: repeat(2, 170px);
+  }
+
+  .christmas-grid {
+    grid-template-rows: 190px;
+  }
+
+  .hotel-grid {
+    grid-template-rows: repeat(2, 170px);
+  }
+
+  .gondola-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .gondola-layout img {
+    height: 235px;
+  }
+
+  .gondola-details h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .gondola-details ul {
+    font-size: 13px;
+    line-height: 1.6;
+    padding-left: 16px;
+  }
+
+  .gondola-details li {
+    margin-bottom: 8px;
+  }
+
+  .visit-info {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 20px;
+  }
+
+  .visit-info h3 {
+    font-size: 20px;
+  }
+
+  .visit-info p,
+  .visit-info ul {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand {
+    font-size: 23px;
+    letter-spacing: .07em;
+  }
+
+  .chalet-grid {
+    grid-template-rows: repeat(2, 145px);
+  }
+
+  .christmas-grid {
+    grid-template-rows: 160px;
+  }
+
+  .hotel-grid {
+    grid-template-rows: repeat(2, 145px);
+  }
+
+  .gondola-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gondola-layout img {
+    height: 300px;
+  }
+
+  .visit-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="language-switcher" aria-label="Select language">
+    <button type="button" class="lang-btn active" data-switch="en" onclick="setLanguage('en')">EN</button>
+    <button type="button" class="lang-btn" data-switch="fr" onclick="setLanguage('fr')">FR</button>
+    <button type="button" class="lang-btn" data-switch="nl" onclick="setLanguage('nl')">NL</button>
+  </nav>
+
+  <div class="brand">QUINTESSENTIALLY</div>
+</header>
+
+<main class="page">
+
+  <!-- HERO IMAGE -->
+
+  <div class="hero">
+    <img src="hero.png" alt="Le Chalet d'Hiver d'Éole illuminated at night" fetchpriority="high">
+  </div>
+
+  <!-- ================= ENGLISH ================= -->
+
+  <article data-lang="en" class="visible">
+
+    <div class="article-heading">
+      <h1>Le Chalet d’Hiver d’Éole</h1>
+      <div class="subtitle">
+        Where the Spirit of Courchevel Meets the Belgian Countryside
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>
+        This winter, <strong>Domaine du Chant d’Éole</strong> brings the charm of Courchevel to the Belgian countryside, transforming its vineyard into an Alpine-inspired retreat.
+      </p>
+      <p>
+        From cosy chalet dining and private ski gondolas to a festive Christmas market and elegant overnight stays, discover a unique winter escape just outside Mons, perfect for a romantic evening, a gathering with friends or a weekend away.
+      </p>
+    </div>
+
+    <section class="section">
+      <h2>Alpine Flavours at La Brasserie d’Éole</h2>
+
+      <div class="section-copy">
+        <p>
+          Winter begins around the table at <strong>La Brasserie d’Éole</strong>, where the autumn and winter menu introduces the comforting flavours of Alpine cuisine.
+        </p>
+
+        <p>
+          From <strong>15 October 2026</strong>, guests can enjoy traditional mountain specialities, including raclette and fondue, prepared for leisurely lunches and evenings spent together.
+        </p>
+
+        <p>
+          On <strong>18 November</strong>, the brasserie completes its seasonal transformation into a charming Alpine chalet. Warm wooden interiors, soft lighting and a welcoming atmosphere bring the spirit of the mountains to the heart of the vineyard.
+        </p>
+
+        <p>
+          Whether for a relaxed lunch or a cosy evening with friends, it is an inviting way to enjoy the winter season without travelling to the Alps.
+        </p>
+      </div>
+
+      <div class="image-grid chalet-grid">
+        <img src="chalet1.png" alt="Alpine dining experience" loading="lazy">
+        <img src="chalet2.png" alt="Winter dining at Domaine du Chant d'Éole" loading="lazy">
+        <img src="chalet3.png" alt="Warm Alpine chalet interior" loading="lazy">
+        <img src="chalet4.png" alt="Chalet dining atmosphere" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Your Own Private Alpine Gondola</h2>
+
+      <div class="section-copy">
+        <p>
+          For something truly different, Domaine du Chant d’Éole introduces one of the season's most charming experiences: <strong>private dining inside a ski gondola</strong>.
+        </p>
+
+        <p>
+          From <strong>18 November 2026</strong>, guests can settle into their own intimate cabin, surrounded by the atmosphere of an Alpine retreat, and share a traditional raclette or fondue.
+        </p>
+
+        <p>
+          Designed for <strong>two to four guests</strong>, the gondolas offer a distinctive setting for a romantic dinner, a special celebration or an evening with close friends.
+        </p>
+
+        <p>
+          A cosy and memorable way to experience the spirit of Courchevel, right in the heart of the Belgian countryside.
+        </p>
+      </div>
+
+      <div class="gondola-layout">
+        <img src="cabinet.png" alt="Private ski gondola dining experience" loading="lazy">
+
+        <div class="gondola-details">
+          <h3>Private Gondola Experience</h3>
+          <ul>
+            <li>Available from <strong>18 November 2026</strong></li>
+            <li>Capacity: <strong>2–4 guests</strong> per gondola</li>
+            <li>Price: <strong>€50 per gondola</strong>, excluding dining charges</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Christmas Among the Vines</h2>
+
+      <div class="section-copy">
+        <p>
+          As the festive season approaches, Domaine du Chant d’Éole welcomes its own <strong>Christmas market</strong>, bringing the magic of the holidays to the heart of the vineyard.
+        </p>
+
+        <p>
+          From <strong>18 to 20 December 2026</strong>, the estate comes alive with Belgian artisans, local producers and independent creators offering handcrafted gifts, seasonal specialities and festive discoveries.
+        </p>
+
+        <p>
+          Wander between the stalls, find thoughtful presents for loved ones and enjoy the atmosphere of Christmas accompanied by music, seasonal food and a glass of something special.
+        </p>
+
+        <p>
+          For those wishing to make an occasion of it, combine an afternoon at the market with a cosy dinner at the Alpine chalet.
+        </p>
+      </div>
+
+      <div class="image-grid christmas-grid">
+        <img src="christmas1.png" alt="Christmas festivities at Domaine du Chant d'Éole" loading="lazy">
+        <img src="christmas2.png" alt="Christmas market at Domaine du Chant d'Éole" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Extend the Experience at L’Éole Resort</h2>
+
+      <div class="section-copy">
+        <p>
+          Why let the evening end when you could turn your visit into a winter getaway?
+        </p>
+
+        <p>
+          Set within beautifully restored former stables and an <strong>18th-century farmhouse</strong>, <strong>L’Éole Resort</strong> offers elegant rooms and suites surrounded by the peaceful Belgian countryside.
+        </p>
+
+        <p>
+          After an evening of Alpine dining, retreat to the comfort of your accommodation and enjoy a slower start to the following morning.
+        </p>
+
+        <p>
+          Guests looking for a different culinary experience can also discover <strong>L’Impératif d’Éole</strong>, the estate's gastronomic restaurant.
+        </p>
+
+        <p>
+          Whether for a romantic overnight stay or a weekend combining fine dining and relaxation, the resort offers a lovely way to prolong the experience.
+        </p>
+      </div>
+
+      <div class="image-grid hotel-grid">
+        <img src="hotel0.webp" alt="L'Éole Resort accommodation" loading="lazy">
+        <img src="hotel1.webp" alt="Elegant room at L'Éole Resort" loading="lazy">
+        <img src="hotel2.webp" alt="Luxury accommodation at Domaine du Chant d'Éole" loading="lazy">
+        <img src="hotel%203.webp" alt="L'Éole Resort interior" loading="lazy">
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Your Winter Escape, Thoughtfully Arranged</h2>
+
+      <p>
+        Whether for an intimate dinner in a private gondola, a festive afternoon among the vineyards or a relaxing overnight stay, <strong>Quintessentially would be delighted to arrange your visit</strong> and take care of the details.
+      </p>
+    </section>
+
+    <div class="visit-info">
+      <div>
+        <h3>Location</h3>
+        <p>
+          Domaine du Chant d’Éole<br>
+          Grand’Route 58<br>
+          7040 Quévy-le-Grand, Belgium<br>
+          Near Mons
+        </p>
+      </div>
+
+      <div>
+        <h3>Key Dates</h3>
+        <ul>
+          <li><strong>15 October 2026:</strong> Autumn and winter menu begins</li>
+          <li><strong>18 November 2026:</strong> Alpine chalet transformation and private gondola dining begin</li>
+          <li><strong>18–20 December 2026:</strong> Christmas market</li>
+          <li><strong>Overnight stays:</strong> Available through L’Éole Resort, subject to availability</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-area">
+      <a class="cta" href="mailto:qbenelux@quintessentially.com?subject=Le%20Chalet%20d%27Hiver%20d%27%C3%89ole">
+        Contact me for more information
+      </a>
+    </div>
+
+  </article>
+
+  <!-- ================= FRENCH ================= -->
+
+  <article data-lang="fr">
+
+    <div class="article-heading">
+      <h1>Le Chalet d’Hiver d’Éole</h1>
+      <div class="subtitle">
+        L’esprit de Courchevel au cœur de la campagne belge
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>
+        Cet hiver, le <strong>Domaine du Chant d’Éole</strong> invite le charme de Courchevel dans la campagne belge et transforme son vignoble en une véritable escapade aux accents alpins.
+      </p>
+      <p>
+        Entre gastronomie montagnarde, télécabines privatives, marché de Noël et séjours élégants, découvrez une expérience hivernale originale à quelques minutes de Mons, idéale pour une soirée romantique, un moment entre amis ou un week-end d'évasion.
+      </p>
+    </div>
+
+    <section class="section">
+      <h2>Les saveurs des Alpes à La Brasserie d’Éole</h2>
+
+      <div class="section-copy">
+        <p>
+          L’hiver se savoure autour de la table à <strong>La Brasserie d’Éole</strong>, où la carte automne-hiver met à l’honneur les saveurs généreuses de la cuisine montagnarde.
+        </p>
+
+        <p>
+          Dès le <strong>15 octobre 2026</strong>, les convives peuvent retrouver les grands classiques de la saison, notamment la raclette et la fondue, à partager lors de déjeuners prolongés ou de soirées conviviales.
+        </p>
+
+        <p>
+          À partir du <strong>18 novembre</strong>, la brasserie se métamorphose en un charmant chalet alpin. Boiseries chaleureuses, éclairage tamisé et atmosphère accueillante transportent l’esprit des montagnes au cœur du vignoble.
+        </p>
+
+        <p>
+          Pour un déjeuner détendu ou une soirée chaleureuse entre amis, c’est une belle manière de profiter de l’hiver sans quitter la Belgique.
+        </p>
+      </div>
+
+      <div class="image-grid chalet-grid">
+        <img src="chalet1.png" alt="Gastronomie alpine" loading="lazy">
+        <img src="chalet2.png" alt="Repas hivernal" loading="lazy">
+        <img src="chalet3.png" alt="Intérieur chaleureux du chalet" loading="lazy">
+        <img src="chalet4.png" alt="Ambiance du chalet alpin" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Votre télécabine alpine privée</h2>
+
+      <div class="section-copy">
+        <p>
+          Pour une expérience vraiment différente, le Domaine du Chant d’Éole propose l’une des expériences les plus originales de la saison : <strong>un dîner dans une télécabine de ski privatisée</strong>.
+        </p>
+
+        <p>
+          Dès le <strong>18 novembre 2026</strong>, installez-vous dans votre propre cabine intimiste, plongée dans l’atmosphère d’un refuge alpin, pour partager une raclette ou une fondue traditionnelle.
+        </p>
+
+        <p>
+          Conçues pour accueillir <strong>deux à quatre personnes</strong>, les télécabines offrent un cadre original pour un dîner romantique, une occasion spéciale ou une soirée entre amis proches.
+        </p>
+
+        <p>
+          Une expérience chaleureuse et mémorable qui fait revivre l’esprit de Courchevel au cœur de la campagne belge.
+        </p>
+      </div>
+
+      <div class="gondola-layout">
+        <img src="cabinet.png" alt="Télécabine privée" loading="lazy">
+
+        <div class="gondola-details">
+          <h3>Expérience en télécabine privée</h3>
+          <ul>
+            <li>Disponible dès le <strong>18 novembre 2026</strong></li>
+            <li>Capacité : <strong>2 à 4 personnes</strong> par télécabine</li>
+            <li>Tarif : <strong>50 € par télécabine</strong>, hors repas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>La magie de Noël au cœur des vignes</h2>
+
+      <div class="section-copy">
+        <p>
+          À l’approche des fêtes, le Domaine du Chant d’Éole accueille son propre <strong>marché de Noël</strong>, apportant toute la magie de cette période au cœur du vignoble.
+        </p>
+
+        <p>
+          Du <strong>18 au 20 décembre 2026</strong>, le domaine s’anime avec des artisans belges, des producteurs locaux et des créateurs indépendants proposant des cadeaux faits main, des spécialités de saison et de belles découvertes festives.
+        </p>
+
+        <p>
+          Flânez entre les stands, trouvez des attentions originales pour vos proches et profitez de l’atmosphère de Noël, entre musique, gourmandises de saison et un verre à partager.
+        </p>
+
+        <p>
+          Pour prolonger ce moment, associez votre visite du marché à un dîner chaleureux au chalet alpin.
+        </p>
+      </div>
+
+      <div class="image-grid christmas-grid">
+        <img src="christmas1.png" alt="Festivités de Noël" loading="lazy">
+        <img src="christmas2.png" alt="Marché de Noël" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Prolongez l’expérience à L’Éole Resort</h2>
+
+      <div class="section-copy">
+        <p>
+          Pourquoi terminer la soirée si vous pouvez transformer votre visite en véritable escapade hivernale ?
+        </p>
+
+        <p>
+          Aménagé dans d’anciennes écuries magnifiquement restaurées et une <strong>ferme du XVIIIe siècle</strong>, <strong>L’Éole Resort</strong> propose des chambres et suites élégantes, au cœur de la campagne belge.
+        </p>
+
+        <p>
+          Après une soirée autour des saveurs alpines, retrouvez le confort de votre chambre et profitez d’un réveil tout en douceur le lendemain.
+        </p>
+
+        <p>
+          Les amateurs de gastronomie peuvent également découvrir <strong>L’Impératif d’Éole</strong>, le restaurant gastronomique du domaine.
+        </p>
+
+        <p>
+          Pour une nuit romantique ou un week-end mêlant gastronomie et détente, le resort offre une belle occasion de prolonger le plaisir.
+        </p>
+      </div>
+
+      <div class="image-grid hotel-grid">
+        <img src="hotel0.webp" alt="L'Éole Resort" loading="lazy">
+        <img src="hotel1.webp" alt="Chambre élégante" loading="lazy">
+        <img src="hotel2.webp" alt="Hébergement de prestige" loading="lazy">
+        <img src="hotel%203.webp" alt="Intérieur du resort" loading="lazy">
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Votre escapade hivernale, sur mesure</h2>
+
+      <p>
+        Qu’il s’agisse d’un dîner intimiste dans une télécabine privée, d’un après-midi festif au milieu des vignes ou d’un séjour relaxant, <strong>Quintessentially se fera un plaisir d’organiser votre visite</strong> et de prendre soin de chaque détail.
+      </p>
+    </section>
+
+    <div class="visit-info">
+      <div>
+        <h3>Adresse</h3>
+        <p>
+          Domaine du Chant d’Éole<br>
+          Grand’Route 58<br>
+          7040 Quévy-le-Grand, Belgique<br>
+          Près de Mons
+        </p>
+      </div>
+
+      <div>
+        <h3>Dates clés</h3>
+        <ul>
+          <li><strong>15 octobre 2026 :</strong> Lancement de la carte automne-hiver</li>
+          <li><strong>18 novembre 2026 :</strong> Transformation en chalet alpin et début des repas en télécabine privée</li>
+          <li><strong>18–20 décembre 2026 :</strong> Marché de Noël</li>
+          <li><strong>Séjours :</strong> Disponibles à L’Éole Resort, sous réserve de disponibilité</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-area">
+      <a class="cta" href="mailto:qbenelux@quintessentially.com?subject=Le%20Chalet%20d%27Hiver%20d%27%C3%89ole">
+        Contactez-moi pour plus d’informations
+      </a>
+    </div>
+
+  </article>
+
+  <!-- ================= DUTCH ================= -->
+
+  <article data-lang="nl">
+
+    <div class="article-heading">
+      <h1>Le Chalet d’Hiver d’Éole</h1>
+      <div class="subtitle">
+        De sfeer van Courchevel in het Belgische landschap
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>
+        Deze winter brengt <strong>Domaine du Chant d’Éole</strong> de charme van Courchevel naar het Belgische platteland en verandert het wijndomein in een sfeervol, door de Alpen geïnspireerd winterverblijf.
+      </p>
+      <p>
+        Van gezellige chaletdiners en privégondels tot een feestelijke kerstmarkt en elegante overnachtingen: ontdek een bijzondere winterervaring vlak bij Bergen, ideaal voor een romantische avond, een gezellig samenzijn met vrienden of een weekendje weg.
+      </p>
+    </div>
+
+    <section class="section">
+      <h2>Alpiene smaken bij La Brasserie d’Éole</h2>
+
+      <div class="section-copy">
+        <p>
+          De winter begint aan tafel bij <strong>La Brasserie d’Éole</strong>, waar de herfst- en winterkaart de heerlijke, hartverwarmende smaken van de Alpen centraal stelt.
+        </p>
+
+        <p>
+          Vanaf <strong>15 oktober 2026</strong> kunnen gasten genieten van traditionele bergspecialiteiten, waaronder raclette en fondue, ideaal voor uitgebreide lunches en gezellige avonden samen.
+        </p>
+
+        <p>
+          Op <strong>18 november</strong> ondergaat de brasserie haar volledige winterse metamorfose tot een charmant Alpenchalet. Warme houten interieurs, zachte verlichting en een uitnodigende sfeer brengen het berggevoel naar het hart van de wijngaard.
+        </p>
+
+        <p>
+          Of het nu gaat om een ontspannen lunch of een gezellige avond met vrienden, het is een heerlijke manier om van de winter te genieten zonder naar de Alpen te reizen.
+        </p>
+      </div>
+
+      <div class="image-grid chalet-grid">
+        <img src="chalet1.png" alt="Alpiene gastronomie" loading="lazy">
+        <img src="chalet2.png" alt="Winterse gerechten" loading="lazy">
+        <img src="chalet3.png" alt="Gezellig chaletinterieur" loading="lazy">
+        <img src="chalet4.png" alt="Sfeer in het Alpenchalet" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Uw eigen privégondel in Alpiene sfeer</h2>
+
+      <div class="section-copy">
+        <p>
+          Voor wie iets echt bijzonders zoekt, introduceert Domaine du Chant d’Éole een van de charmantste ervaringen van het seizoen: <strong>privé dineren in een skigondel</strong>.
+        </p>
+
+        <p>
+          Vanaf <strong>18 november 2026</strong> kunnen gasten plaatsnemen in hun eigen intieme cabine, omringd door de sfeer van een Alpenverblijf, en samen genieten van een traditionele raclette of fondue.
+        </p>
+
+        <p>
+          De gondels zijn ontworpen voor <strong>twee tot vier gasten</strong> en vormen een bijzondere setting voor een romantisch diner, een speciale gelegenheid of een avond met goede vrienden.
+        </p>
+
+        <p>
+          Een gezellige en onvergetelijke manier om de sfeer van Courchevel te beleven, midden in het Belgische landschap.
+        </p>
+      </div>
+
+      <div class="gondola-layout">
+        <img src="cabinet.png" alt="Privégondel voor een diner" loading="lazy">
+
+        <div class="gondola-details">
+          <h3>Privégondelervaring</h3>
+          <ul>
+            <li>Beschikbaar vanaf <strong>18 november 2026</strong></li>
+            <li>Capaciteit: <strong>2–4 gasten</strong> per gondel</li>
+            <li>Prijs: <strong>€50 per gondel</strong>, exclusief de kosten van het diner</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Kerst tussen de wijngaarden</h2>
+
+      <div class="section-copy">
+        <p>
+          Naarmate de feestdagen dichterbij komen, verwelkomt Domaine du Chant d’Éole zijn eigen <strong>kerstmarkt</strong>, die de magie van Kerstmis naar het hart van de wijngaard brengt.
+        </p>
+
+        <p>
+          Van <strong>18 tot en met 20 december 2026</strong> komt het domein tot leven met Belgische ambachtslieden, lokale producenten en onafhankelijke ontwerpers die handgemaakte geschenken, seizoensspecialiteiten en feestelijke ontdekkingen aanbieden.
+        </p>
+
+        <p>
+          Wandel langs de kraampjes, ontdek originele cadeaus voor uw dierbaren en geniet van de kerstsfeer, begeleid door muziek, winterse lekkernijen en een heerlijk glas om samen van te genieten.
+        </p>
+
+        <p>
+          Wie er een bijzondere gelegenheid van wil maken, kan een middag op de kerstmarkt combineren met een gezellig diner in het Alpenchalet.
+        </p>
+      </div>
+
+      <div class="image-grid christmas-grid">
+        <img src="christmas1.png" alt="Kerstfeest op het domein" loading="lazy">
+        <img src="christmas2.png" alt="Kerstmarkt van Domaine du Chant d'Éole" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Verleng uw verblijf bij L’Éole Resort</h2>
+
+      <div class="section-copy">
+        <p>
+          Waarom zou u de avond laten eindigen als u van uw bezoek een volledig winterweekend kunt maken?
+        </p>
+
+        <p>
+          <strong>L’Éole Resort</strong> is gevestigd in prachtig gerestaureerde voormalige paardenstallen en een <strong>18e-eeuwse boerderij</strong>. Het resort biedt elegante kamers en suites, omgeven door het rustige Belgische landschap.
+        </p>
+
+        <p>
+          Na een avond vol Alpiene smaken kunt u zich terugtrekken in het comfort van uw kamer en de volgende ochtend rustig aan de dag beginnen.
+        </p>
+
+        <p>
+          Gasten die op zoek zijn naar een andere culinaire ervaring kunnen ook <strong>L’Impératif d’Éole</strong> ontdekken, het gastronomische restaurant van het domein.
+        </p>
+
+        <p>
+          Of het nu gaat om een romantische overnachting of een weekend vol gastronomie en ontspanning, het resort biedt een prachtige gelegenheid om uw bezoek te verlengen.
+        </p>
+      </div>
+
+      <div class="image-grid hotel-grid">
+        <img src="hotel0.webp" alt="L'Éole Resort" loading="lazy">
+        <img src="hotel1.webp" alt="Elegante hotelkamer" loading="lazy">
+        <img src="hotel2.webp" alt="Luxueuze accommodatie" loading="lazy">
+        <img src="hotel%203.webp" alt="Interieur van L'Éole Resort" loading="lazy">
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Uw winteruitstap, tot in de puntjes geregeld</h2>
+
+      <p>
+        Of u nu kiest voor een intiem diner in een privégondel, een feestelijke middag tussen de wijngaarden of een ontspannen overnachting, <strong>Quintessentially helpt u graag bij het organiseren van uw bezoek</strong> en verzorgt alle details.
+      </p>
+    </section>
+
+    <div class="visit-info">
+      <div>
+        <h3>Locatie</h3>
+        <p>
+          Domaine du Chant d’Éole<br>
+          Grand’Route 58<br>
+          7040 Quévy-le-Grand, België<br>
+          Nabij Bergen
+        </p>
+      </div>
+
+      <div>
+        <h3>Belangrijke data</h3>
+        <ul>
+          <li><strong>15 oktober 2026:</strong> Start van de herfst- en winterkaart</li>
+          <li><strong>18 november 2026:</strong> Opening van het Alpenchalet en start van de privégondeldiners</li>
+          <li><strong>18–20 december 2026:</strong> Kerstmarkt</li>
+          <li><strong>Overnachtingen:</strong> Beschikbaar bij L’Éole Resort, afhankelijk van beschikbaarheid</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-area">
+      <a class="cta" href="mailto:qbenelux@quintessentially.com?subject=Le%20Chalet%20d%27Hiver%20d%27%C3%89ole">
+        Contacteer mij voor meer informatie
+      </a>
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  QUINTESSENTIALLY &nbsp; | &nbsp; LE CHALET D’HIVER D’ÉOLE
+</footer>
+
+<script>
+function setLanguage(lang) {
+  const supported = ["en", "fr", "nl"];
+
+  if (!supported.includes(lang)) {
+    lang = "en";
+  }
+
+  document.querySelectorAll("[data-lang]").forEach(article => {
+    article.classList.toggle(
+      "visible",
+      article.dataset.lang === lang
+    );
+  });
+
+  document.querySelectorAll("[data-switch]").forEach(button => {
+    const isActive = button.dataset.switch === lang;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  document.documentElement.lang = lang;
+
+  try {
+    localStorage.setItem("quintessentially-language", lang);
+  } catch (error) {
+    // Language switching works without storage.
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  let savedLanguage = "en";
+
+  try {
+    savedLanguage =
+      localStorage.getItem("quintessentially-language") || "en";
+  } catch (error) {
+    savedLanguage = "en";
+  }
+
+  setLanguage(savedLanguage);
+});
+</script>
+
+</body>
+</html>
